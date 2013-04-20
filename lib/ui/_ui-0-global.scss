@@ -1,0 +1,51 @@
+@import "ui_taplist";
+@import "ui_submenu";
+@import "ui_accordian";
+@import "ui-tap-btn";
+@import "ui-styles";
+@import "ui-tapmenu";
+@import "ui-ratings";
+@import "ui-dividers";
+
+
+/* ***************************************** */
+/*  Make Menu Horizotnal */
+/* ***************************************** */
+
+.ui-h-list li {
+	float:left;
+}
+
+.ui-h-list li a {
+	margin: inherit;
+	@include rem(padding-left, 10px);
+	@include rem(padding-right, 10px);
+}
+
+/* ***************************************** */
+/*  Make Menu Vertical  */
+/* This is a rest for horziontal menu. Useful for submenus.
+/* ***************************************** */
+
+.ui-v-list li {
+	float:none;
+}
+
+
+/* ***************************************** */
+/*  Suckerfish Menu */
+/* ***************************************** */
+
+.ui-suckerfish li {
+position:relative;
+}
+
+.ui-suckerfish li ul {
+position:absolute;
+left:-999em;
+@include rem(min-width, 160px);
+}
+
+.ui-suckerfish li:hover ul  {
+left:0;
+}

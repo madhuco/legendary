@@ -1,0 +1,8 @@
+/* ***************************************** */
+/*  Resets the unnecessary styling that the module adds*/
+/* ***************************************** */
+.qtip, .qtip-tip, .qtip-wrapper, .qtip-contentWrapper, .qtip-content  {
+	background:transparent !Important;
+	padding:0 !Important;
+	margin:0 !Important;
+}

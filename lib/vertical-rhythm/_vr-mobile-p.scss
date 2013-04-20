@@ -1,0 +1,209 @@
+
+/* ***************************************** */
+/*  Section Dividers (Bumpers) */
+/* ***************************************** */
+.wrapper .vr-breather {
+@include rem(padding-left, 5px);	
+@include rem(padding-right, 5px);	
+@include box-sizing(border-box);
+}
+
+
+.vr-section {
+	@include rem('margin-top', 30px);
+	@include rem('margin-bottom', 30px);
+	@include rem('padding-top', 30px);
+	@include rem('padding-bottom', 30px);
+}
+
+.vr-section-top {
+	@include rem('margin-top', 30px);
+	@include rem('padding-top', 30px);
+}
+
+.vr-section-bottom {
+	@include rem('margin-bottom', 30px);
+	@include rem('padding-bottom', 30px);
+}
+
+
+.vr-section-inside {
+	@include rem('padding-top', 30px);
+	@include rem('padding-bottom', 30px);
+}
+
+.vr-section-inside-top {
+	@include rem('margin-top', 30px);
+}
+
+.vr-section-inside-bottom {
+	@include rem('margin-bottom', 30px);
+}
+
+.vr-section-outside {
+	@include rem('margin-top', 30px);
+	@include rem('margin-bottom', 30px);
+}
+
+.vr-section-outside-top {
+	@include rem('margin-top', 30px);
+}
+
+.vr-section-outside-bottom {
+	@include rem('margin-bottom', 30px);
+}
+
+/* ***************************************** */
+/*  Sub Section Dividers (Spacers) */
+/* ***************************************** */
+
+.vr-spacer {
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+.vr-spacer-top {
+	@include rem('margin-top', 10px);
+	@include rem('padding-top', 10px);
+}
+
+
+.vr-spacer-bottom {
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+
+.vr-spacer-inside {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+.vr-spacer-inside-top {
+	@include rem('margin-top', 10px);
+}
+
+.vr-spacer-inside-bottom {
+	@include rem('margin-bottom', 10px);
+}
+
+.vr-spacer-outside {
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+}
+
+.vr-spacer-outside-top {
+	@include rem('margin-top', 10px);
+}
+
+.vr-spacer-outside-bottom {
+	@include rem('margin-bottom', 10px);
+}
+
+
+
+
+/* ***************************************** */
+/*  Type Units */
+/* ***************************************** */
+
+
+.vr-title-1 {
+	@include rem('margin-bottom', 30px);
+}
+
+.vr-title-2 {
+		@include rem('margin-bottom', 5px);
+}
+
+.vr-title-3 {
+		@include rem('margin-bottom', 5px);
+}
+
+.vr-title-4 {
+		@include rem('margin-bottom', 5px);
+}
+
+
+
+
+.vr-intro-1 {
+	@include rem('margin-top', -20px);
+	@include rem('margin-bottom', 30px);
+}
+
+.vr-intro-2 {
+		@include rem('margin-bottom', 5px);
+}
+
+.vr-intro-3 {
+		@include rem('margin-top', -3px);
+		@include rem('margin-bottom', 5px);
+}
+
+.vr-intro-4 {
+@extend .vr-title-4;
+}
+
+
+
+
+/* Standard Text  */
+
+
+
+
+.vr-paragraph, .vr-paragraph p {
+	@include rem('margin-bottom', 20px);
+}
+
+
+
+/* ***************************************** */
+/*  Special */
+/* ***************************************** */
+
+
+.ui-accordian .vr-title {
+		@include rem('margin-top', 10px);
+}
+
+
+
+
+
+.vr-footerbumper {
+	@include rem('margin-top', 30px);
+}
+
+.vr-thumbs  {
+	@include rem('margin-bottom', 5px);
+}
+
+.vr-pane-heading {
+	@include rem('margin-bottom', 5px);
+}
+
+.sidebar-active .vr-thumbs-title {
+	margin-bottom:0;
+}
+
+.vr-thumbs img {
+	@include rem('margin-bottom', 10px);
+}
+
+
+.vr-grid {
+	@include rem('margin-bottom', 10px);
+}
+
+.vr-caption {
+	@include rem('margin-top', 5px);
+}
+
+.vr-label {
+	display:inline;
+	@include rem('margin-right', 5px);
+}

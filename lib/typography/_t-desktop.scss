@@ -1,0 +1,268 @@
+
+/* ***************************************** */
+/* Titles */
+/* ***************************************** */
+
+.t-title-1 {
+ @include rem('font-size', 53px);
+ @include rem('line-height', 60px);
+ @include rem('letter-spacing', -3px);
+}
+
+.t-title-2 {
+ @include rem('font-size', 39px);
+ @include rem('line-height', 44px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-title-3 {
+ @include rem('font-size', 23px);
+ @include rem('line-height', 27px);
+ @include rem('letter-spacing', 0px);
+}
+
+.t-title-4 {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+/* ***************************************** */
+/* Intro */
+/* ***************************************** */
+
+.t-intro-1 {
+ @include rem('font-size', 20px);
+ @include rem('line-height', 26px);
+}
+
+.t-intro-2 {
+ @include rem('font-size', 20px);
+ @include rem('line-height', 23px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-intro-3 {
+ @include rem('font-size', 23px);
+ @include rem('line-height', 27px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-intro-4 {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* Body Text */
+/* ***************************************** */
+
+.t-body-text {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 24px);
+}
+
+.t-body-small {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 16px);
+letter-spacing:0;
+}
+
+.t-body-label, label {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+letter-spacing:0;
+}
+
+.t-body-bullets {
+
+}
+
+
+.t-quote {
+ @include rem('font-size', 23px);
+ @include rem('line-height', 30px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* Panes */
+/* ***************************************** */
+
+.t-pane-heading {
+ @include rem('font-size', 19px);
+ @include rem('line-height', 26px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-pane-text {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 20px);
+}
+
+.sidebar-active .t-pane-heading {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 24px);
+ @include rem('letter-spacing', -1px);
+}
+
+.sidebar-active .t-pane-text {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 20px);
+}
+
+
+/* ***************************************** */
+/* Footer */
+/* ***************************************** */
+
+.t-footer-heading {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
+.t-footer-text {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-footer-link {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
+
+/* ***************************************** */
+/* Tapagation */
+/* ***************************************** */
+
+.t-tap-heading {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', 0px);
+}
+
+.t-tap-normal {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-tap-small {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-tap-note {
+ @include rem('font-size', 13px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* General Ui */
+/* ***************************************** */
+
+.t-ui-breadcrumbs {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-ui-pager-numbers {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-ui-pager-shortcuts {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-ui-navigation  a {
+@include rem('font-size', 14px);
+ @include rem('line-height', 17px);
+}
+
+.t-ui-navigation-secondary li, .t-ui-navigation-secondary li a, .t-ui-navigation-secondary h2  {
+	@include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}
+
+
+/* ***************************************** */
+/* Shop Ui */
+/* ***************************************** */
+
+.t-shop-thumbs {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-shop-author {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-shop-stock {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-shop-intro-bullets {
+ @include rem('font-size', 21px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-shop-data-labels {
+	 @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', 0px);
+
+}
+
+
+/* ***************************************** */
+/* CTA Main */
+/* ***************************************** */
+
+.t-cta-intro {
+ @include rem('font-size', 22px);	
+ @include rem('line-height', 26px);	
+}
+
+
+.t-cta-outro  {
+ @include rem('font-size', 18px);	
+ @include rem('line-height', 20px);	
+}
+
+
+.t-cta-prompt {
+ @include rem('font-size', 15px);	
+ @include rem('line-height', 17px);	
+}
+
+
+
+/* ***************************************** */
+/* Sidebar */
+/* ***************************************** */
+.t-sidebar {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}

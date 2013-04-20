@@ -1,0 +1,16 @@
+@import "sixcol-base";
+
+
+$total-columns       : 6;
+$column-width        : 12.1em;
+$gutter-width        : 3em;
+$gutter-padding      : 4em;
+
+    .layout-legend-sixcol {
+      @include container;
+      @include susy-grid-background;
+    }
+	
+	
+	
+@include susy-classes(desk);

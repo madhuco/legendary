@@ -1,0 +1,112 @@
+
+/* ***************************************** */
+/* Titles */
+/* ***************************************** */
+
+.t-title-1 {
+ @include rem('font-size', 32px);
+ @include rem('line-height', 34px);
+}
+
+.t-title-2 {
+ @include rem('font-size', 25px);
+ @include rem('line-height', 27px);
+}
+
+.t-title-3 {
+ @include rem('font-size', 18px);
+ @include rem('line-height', 21px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-title-4 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 18px);
+ @include rem('letter-spacing', -1px);
+}
+
+/* ***************************************** */
+/* Intro */
+/* ***************************************** */
+
+.t-intro-1 {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 18px);
+}
+
+.t-intro-2 {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 19px);
+}
+
+.t-intro-3 {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 19px);
+}
+
+.t-intro-4 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 18px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* Body Text */
+/* ***************************************** */
+
+.t-body-text {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 20px);
+}
+
+.t-body-small {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}
+
+.t-body-label, label {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 18px);
+}
+
+.t-body-bullets {
+
+}
+
+.t-quote {
+ @include rem('font-size', 22px);
+ @include rem('line-height', 76px);
+ @include rem('letter-spacing', -1px);
+  @include rem('padding-top', 20px);
+}
+
+
+.t-ui-navigation-secondary li,  .t-ui-navigation-secondary li a,  .t-ui-navigation-secondary h2  {
+	@include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}
+
+
+
+/* ***************************************** */
+/* CTA Main */
+/* ***************************************** */
+
+.t-cta-intro {
+ @include rem('font-size', 22px);	
+ @include rem('line-height', 26px);	
+}
+
+
+.t-cta-outro  {
+ @include rem('font-size', 20px);	
+ @include rem('line-height', 22px);	
+}
+
+
+.t-cta-prompt {
+ @include rem('font-size', 14px);	
+ @include rem('line-height', 16px);	
+}
+

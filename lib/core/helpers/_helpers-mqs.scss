@@ -1,0 +1,23 @@
+$mob-p:  "all and (min-width: 0px) and (max-width: 480px)"; 
+
+$mob-l: "all and (min-width: 480px) and (max-width: 599px)"; 
+
+$mob: "all and (min-width: 0px) and (max-width: 599px)"; 
+
+$fab: "all and (min-width: 600px) and (max-width: 767px)"; 
+
+$tab: "all and (min-width: 768px) and (max-width: 959px)";  
+
+$desk: "all and (min-width: 960px)";  
+
+/* Fablets and Phones =================================================== */
+$portables: "all and (min-width: 0px) and (max-width: 767px)"; 
+
+/* Fablets, Phones and Tablets (Devices) =================================================== */
+$devices: "all and (min-width: 0px) and (max-width: 959px)"; 
+
+$fabplus: "all and (min-width: 600px)"; 
+
+$tabplus: "all and (min-width: 768px)"; 
+
+$mob-lplus: "all and (min-width: 480px)"; 

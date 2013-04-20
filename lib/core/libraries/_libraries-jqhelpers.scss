@@ -1,0 +1,139 @@
+@import "../helpers/helpers-mqs";
+
+@media #{$mob} {
+html body .mobshow {
+ display:block !important;
+}
+ html body .mobhide {
+ display:none !important;
+}
+ html body .mob-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+
+/* Stop Logo from expanding */
+
+html body .mob-widthexpand.panel-region-logo  {
+	width:ingore ;
+}
+
+
+}
+
+ @media #{$mob-p} {
+html body .mobpshow {
+ display:block !important;
+}
+ html body .mobphide {
+ display:none !important;
+}
+ html body .mobp-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+
+ @media #{$mob-l} {
+html body .moblshow {
+ display:block !important;
+}
+ html body .moblhide {
+ display:none !important;
+}
+ html body .mobl-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+
+ @media #{$fab} {
+ html body .fabshow {
+ display:block !important;
+}
+ html body .fabhide {
+ display:none !important;
+}
+ html body .fab-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+ @media #{$tab} {
+ html body .tabshow {
+ display:block !important;
+}
+ html body .tabhide {
+ display:none !important;
+}
+ html body .tab-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+
+@media #{$desk} {
+ html body .deskshow {
+ display:block !important;
+}
+ html body .deskhide {
+ display:none !important;
+}
+ html body .desk-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+
+
+ @media #{$portables} {
+ html body .portablesshow {
+ display:inline-block !important;
+}
+ html body .portableshide {
+ display:none !important;
+}
+ html body .portables-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+}
+
+ @media #{$devices} {
+ html body .devicesshow {
+ display:block !important;
+}
+ html body .deviceshide {
+ display:none !important;
+}
+ html body .devices-widthexpand {
+ width:100% !important;
+ float:left !important;
+}
+
+ html body .devices-maximise {
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+}
+
+}
+
+html body .show {
+	display: block !important;
+}
+
+html body .hide {
+	display: none !important;
+}
+
+html body .widthexpand {
+	width: 100% !important;
+	float: left !important;
+}
+
+.z-index-top {
+z-index:999 !Important;	
+}
