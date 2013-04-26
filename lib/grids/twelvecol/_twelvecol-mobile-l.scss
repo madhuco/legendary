@@ -1,0 +1,16 @@
+@import "sixcol-base";
+
+@media #{$mob-l} { 
+
+$total-columns       : 12;
+$column-width        : 2.725em;
+$gutter-width        : 1em;
+$gutter-padding      : 2em;
+
+    .layout-legend-twelvecol {
+      @include container;
+      @include susy-grid-background;
+    }
+	
+@include susy-classes(mob-l, mob, portables, devices);
+}

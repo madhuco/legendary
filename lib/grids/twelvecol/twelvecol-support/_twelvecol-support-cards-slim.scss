@@ -1,0 +1,102 @@
+/* Dimensions for Thumbs Hieght and Thumbs images*/
+/* Desktop first for IE*/
+
+
+@media #{$mob-p} {
+
+}
+
+
+@media #{$mob-l} {
+
+}
+
+
+@media #{$fab} {
+.cards-twelvecol.content-and-aside-slim .unit {
+@include span-columns(8, 8);
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row,
+.cards-twelvecol.content-and-aside-slim .views-row-8 {
+@include span-columns(4, 8);
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row-1  {
+@include span-columns(8, 8);
+}
+
+.cards.content-and-aside-slim .views-row-3,
+.cards.content-and-aside-slim .views-row-5, {
+@include omega;
+}
+
+}
+
+
+
+@media #{$tab} {
+
+.cards-twelvecol.content-and-aside-slim .unit {
+@include span-columns(8, 8);
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row {
+@include span-columns(4, 8);
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row-1,
+.cards-twelvecol.content-and-aside-slim .views-row-6 {
+@include span-columns(8, 8);
+}
+
+.cards.content-and-aside-slim .views-row-3,
+.cards.content-and-aside-slim .views-row-5, {
+@include omega;
+}
+
+}
+
+
+@media #{$desk} { 
+.cards-twelvecol.content-and-aside-slim .unit {
+position:relative;
+@include span-columns(9, 9);
+@include omega;
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row {
+@include span-columns(3, 9);
+}
+
+.cards-twelvecol.content-and-aside-slim .views-row-1,
+.cards-twelvecol.content-and-aside-slim .views-row-8 {
+@include span-columns(6, 9);
+}
+
+.cards.content-and-aside-slim .views-row-2,
+.cards.content-and-aside-slim .views-row-3, 
+.cards.content-and-aside-slim .views-row-6 {
+@include omega;
+right:0;
+}
+
+
+.cards-twelvecol.content-and-aside-slim .views-row.cards-expand {
+@include span-columns(9, 9);
+@include omega();
+background:pink;
+}
+
+.cards-twelvecol.content-and-aside-slim .cards-back .unit-img {
+@include span-columns(6, 9);
+}
+
+.cards-twelvecol.content-and-aside-slim .cards-back .unit-txt {
+@include span-columns(3, 9);
+@include omega;
+}
+
+
+
+}

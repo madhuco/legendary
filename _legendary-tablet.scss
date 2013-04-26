@@ -7,8 +7,9 @@
 @import "compass";
 
 @media #{$tab} { 
-
+@import "lib/grids/sixcol/sixcol-tablet";
+@import "lib/grids/twelvecol/twelvecol-tablet";
 @import "lib/typography/_t-tablet";
 @import "lib/vertical-rhythm/vr-tablet";
-@import "lib/grids/sixcol/sixcol-tablet";
+
 }

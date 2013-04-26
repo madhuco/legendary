@@ -1,0 +1,17 @@
+@import "sixcol-base";
+
+@media #{$tab} { 
+$total-columns       : 12;
+$column-width        : 3.8em;
+$gutter-width        : 2em;
+$gutter-padding      : 4em;
+
+    .layout-legend-twelvecol {
+      @include container;
+      @include susy-grid-background;
+    }
+	
+	@include susy-classes(tab, portables, devices);
+	
+}
+

@@ -16,8 +16,8 @@
 }
 
 .t-title-3 {
- @include rem('font-size', 23px);
- @include rem('line-height', 27px);
+ @include rem('font-size', 20px);
+ @include rem('line-height', 29px);
  @include rem('letter-spacing', 0px);
 }
 
@@ -61,7 +61,7 @@
 
 .t-body-text {
  @include rem('font-size', 16px);
- @include rem('line-height', 24px);
+ @include rem('line-height', 20px);
 }
 
 .t-body-small {
@@ -143,14 +143,14 @@ letter-spacing:0;
 /* ***************************************** */
 
 .t-tap-heading {
- @include rem('font-size', 14px);
- @include rem('line-height', 16px);
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
  @include rem('letter-spacing', 0px);
 }
 
 .t-tap-normal {
- @include rem('font-size', 17px);
- @include rem('line-height', 20px);
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
  @include rem('letter-spacing', -1px);
 }
 
