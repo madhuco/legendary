@@ -2,10 +2,10 @@
 
 @media #{$fab} { 
 
-$total-columns       : 6;
-$column-width        : 3.500em;
-$gutter-width        : 1em;
-$gutter-padding      : 2em;
+$total-columns       : 12;
+$column-width        : 3.00em;
+$gutter-width        : 3em;
+$gutter-padding      : 4em;
 
     .layout-legend-twelvecol {
       @include container;
