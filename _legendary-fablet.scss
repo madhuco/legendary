@@ -7,6 +7,7 @@
 @import "compass";
 
 @media #{$fab} { 
+@import "lib/grids/twelvecol/twelvecol-fablet";
 @import "lib/typography/_t-fablet";
 @import "lib/vertical-rhythm/vr-fablet";
 }

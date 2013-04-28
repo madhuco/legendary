@@ -16,6 +16,9 @@ $portables: "all and (min-width: 0px) and (max-width: 767px)";
 /* Fablets, Phones and Tablets (Devices) =================================================== */
 $devices: "all and (min-width: 0px) and (max-width: 959px)"; 
 
+/* Pads are tablets and fablets */
+$pads: "all and (min-width: 600px) and (max-width: 959px)";
+
 $fabplus: "all and (min-width: 600px)"; 
 
 $tabplus: "all and (min-width: 768px)"; 

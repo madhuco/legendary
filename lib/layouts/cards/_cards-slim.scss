@@ -1,0 +1,41 @@
+/* Dimensions for Thumbs Hieght and Thumbs images*/
+
+@import "cards-global";
+
+
+@media #{$mob-p} {
+
+}
+
+
+@media #{$mob-l} {
+
+}
+
+
+@media #{$fab} {
+
+.cards.content-and-aside-slim .unit-row,
+.cards.content-and-aside-slim .unit-row-8  {
+@include rem(height, 141px);
+}
+
+.cards.content-and-aside-slim .unit-row-1,
+.cards.content-and-aside-slim .unit-row-6 {
+@include rem(height, 397px); 
+}
+}
+
+@media #{$tab} {
+
+.cards.content-and-aside-slim .unit-row,
+.cards.content-and-aside-slim .unit-row-8 {
+@include rem(height, 180px);
+}
+
+.cards.content-and-aside-slim .unit-row-1,
+.cards.content-and-aside-slim .unit-row-6 {
+@include rem(height, 397px); 
+}
+
+}

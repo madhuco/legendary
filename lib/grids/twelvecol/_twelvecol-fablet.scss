@@ -3,9 +3,9 @@
 @media #{$fab} { 
 
 $total-columns       : 12;
-$column-width        : 3.00em;
-$gutter-width        : 3em;
-$gutter-padding      : 4em;
+$column-width        : 2.750em;
+$gutter-width        : 2em;
+$gutter-padding      : 2em;
 
     .layout-legend-twelvecol {
       @include container;
@@ -13,5 +13,5 @@ $gutter-padding      : 4em;
     }
 	
 	@include susy-classes(fab, portables, devices);
-
+	
 }

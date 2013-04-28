@@ -1,0 +1,98 @@
+/* ***************************************** */
+/*  Basic Set Up */
+/* ***************************************** */
+
+
+.cards .img {
+	width: 100%;
+	height: 100%;
+}
+
+.cards-back {
+	display: none;
+}
+
+.jq .cards .heading {
+	display: none;
+}
+
+.cards .unit-row {
+position:relative;	
+}
+
+
+
+/* ***************************************** */
+/*  Inital Display for Jquery  */
+/* ***************************************** */
+
+body.jq .cards .unit {
+	display: none;
+}
+
+body.jq .cards .unit:first-of-type {
+	display: block;
+}
+
+
+
+/* ***************************************** */
+/*  Display of Text Boxes  */
+/* ***************************************** */
+
+.cards-front {
+position:relative;	
+}
+
+.cards-front .unit-txt {
+position:absolute;	
+bottom:0;
+@include rem(padding, 10px);
+background: #FFF; 
+background: rgba(255, 255, 255, 0.8); 
+}
+
+/* ***************************************** */
+/*  Cards Expand Mode  */
+/* ***************************************** */
+
+.cards-back {
+	width:100%;
+	height:100%;
+	background:#FFF;
+}
+
+.cards-expand .cards-back {
+	display: block;
+	border:1px solid $scratch;
+}
+
+.cards-expand .cards-front {
+display:none;	
+}
+
+
+/* ***************************************** */
+/*  Exit Expand Mode  */
+/* ***************************************** */
+.cards-back .close:after {
+	font-size:50px;
+@include icon($icon-remove-circle);
+top:-0.2em;
+right:-0.2em;
+position:absolute;
+}
+
+.cards-back .close {
+cursor:pointer;
+cursor:hand;	
+}
+
+/* ***************************************** */
+/*  Ghost DIV to ensure expanded cards don't break layout */
+/* The Ghost DIV is just disabled here. It needs dimensions to work. */
+/* ***************************************** */
+
+.cards-ghost {
+	display:none;
+}

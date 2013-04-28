@@ -12,30 +12,8 @@
 }
 
 
-@media #{$fab} {
-.cards-twelvecol.content-and-aside-slim .unit {
-@include span-columns(8, 8);
-}
 
-.cards-twelvecol.content-and-aside-slim .unit-row,
-.cards-twelvecol.content-and-aside-slim .unit-row-8 {
-@include span-columns(4, 8);
-}
-
-.cards-twelvecol.content-and-aside-slim .unit-row-1  {
-@include span-columns(8, 8);
-}
-
-.cards.content-and-aside-slim .unit-row-3,
-.cards.content-and-aside-slim .unit-row-5 {
-@include omega;
-}
-
-}
-
-
-
-@media #{$tab} {
+@media #{$pads} {
 
 .cards-twelvecol.content-and-aside-slim .unit {
 @include span-columns(8, 8);
