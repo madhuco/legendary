@@ -6,6 +6,8 @@
 @import "ui-tapmenu";
 @import "ui-ratings";
 @import "ui-dividers";
+@import "ui-bullets";
+@import "ui-tags";
 
 
 /* ***************************************** */
@@ -49,3 +51,8 @@ left:-999em;
 .ui-suckerfish li:hover ul  {
 left:0;
 }
+
+.ui-popup {
+display:none;	
+}
+

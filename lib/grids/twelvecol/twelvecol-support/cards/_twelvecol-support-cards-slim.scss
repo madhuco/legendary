@@ -1,0 +1,164 @@
+
+@media #{$mob} { 
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit {
+@include span-columns(12, 12);
+}
+
+}
+
+@media #{$mob-p} {
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row {
+@include span-columns(12, 12);
+@inlcude omega;
+@include rem(height, 278px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back{
+@include rem(height, 475px);
+}
+
+}
+
+
+
+
+@media #{$mob-l} {
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row {
+@include span-columns(6, 12);
+@include rem(height, 206px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-child(even) {
+@include omega;
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-child(even) {
+@include omega;
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back{
+@include span-columns(12 omega, 6);
+@include rem(height, 374px);
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(even) .cards-back {
+right:0;
+top:0;
+}
+
+
+}
+
+
+
+@media #{$pads} {
+
+/* ***************************************** */
+/*   Cards Front */
+/* ***************************************** */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit {
+@include span-columns(8, 8);
+}
+
+/*Generic card Set Up */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row {
+@include span-columns(4, 8);
+}
+
+
+/*Large Card sized Set Up */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n + 1)  {
+@include span-columns(8, 8);
+@include omega;
+}
+
+/* Floats for right sides */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n) {
+@include omega;
+}
+
+/* ***************************************** */
+/*  Cards Expanded */
+/* ***************************************** */
+
+
+/*Generic card Set Up */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back {
+@include span-columns(8, 4);
+@include omega();
+bottom:0;
+}
+
+
+/*Large Card size Set Up */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n + 1) .cards-back {
+@include span-columns(8, 8);
+top:0;
+bottom:inherit;
+}
+
+/*Right Side Card Positioning */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n) .cards-back {
+right:0;
+}
+
+
+
+}
+
+/* ***************************************** */
+/*  Cards front Height */
+/* ***************************************** */
+
+
+@media #{$fab} {
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row  {
+@include rem(height, 141px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back {
+@include rem(height, 568px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back .img {
+@include rem(height, 212px);
+}
+
+
+}
+
+@media #{$tab} {
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row {
+@include rem(height, 180px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back {
+@include rem(height, 610px);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back .img {
+@include rem(height, 297px);
+}
+
+
+
+}
+

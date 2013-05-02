@@ -8,7 +8,7 @@
 	height: 100%;
 }
 
-.cards-back {
+#wrapper .cards-back {
 	display: none;
 }
 
@@ -21,16 +21,21 @@ position:relative;
 }
 
 
+.cards-expand .cards-back{
+position:absolute;
+z-index:999;
+}
+
 
 /* ***************************************** */
 /*  Inital Display for Jquery  */
 /* ***************************************** */
 
-body.jq .cards .unit {
+.jq .cards .unit {
 	display: none;
 }
 
-body.jq .cards .unit:first-of-type {
+.jq .cards .unit:first-of-type {
 	display: block;
 }
 
@@ -42,6 +47,7 @@ body.jq .cards .unit:first-of-type {
 
 .cards-front {
 position:relative;	
+@include box-sizing(border-box); 
 }
 
 .cards-front .unit-txt {
@@ -60,9 +66,18 @@ background: rgba(255, 255, 255, 0.8);
 	width:100%;
 	height:100%;
 	background:#FFF;
+    @include box-sizing(border-box); 
+
 }
 
-.cards-expand .cards-back {
+
+.cards-back .unit-footer {
+@include rem(bottom, 10px);
+position:absolute;
+@include rem(right, 10px);
+}
+
+#wrapper .cards-expand .cards-back  {
 	display: block;
 	border:1px solid $scratch;
 }
@@ -76,23 +91,21 @@ display:none;
 /*  Exit Expand Mode  */
 /* ***************************************** */
 .cards-back .close:after {
-	font-size:50px;
+font-size:50px;
 @include icon($icon-remove-circle);
-top:-0.2em;
-right:-0.2em;
+color: $lightest;
+top:-0.5em;
+right:-0.5em;
 position:absolute;
 }
+
+.cards-back .close:hover:after {
+color: $darkest;
+}
+
+
 
 .cards-back .close {
 cursor:pointer;
 cursor:hand;	
-}
-
-/* ***************************************** */
-/*  Ghost DIV to ensure expanded cards don't break layout */
-/* The Ghost DIV is just disabled here. It needs dimensions to work. */
-/* ***************************************** */
-
-.cards-ghost {
-	display:none;
 }

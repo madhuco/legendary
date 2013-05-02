@@ -116,13 +116,10 @@
 		@include rem('margin-bottom', 5px);
 }
 
-.vr-title-3 {
+.vr-title-3, .vr-title-4, .vr-title-5 {
 		@include rem('margin-bottom', 5px);
 }
 
-.vr-title-4 {
-@extend .vr-title-3;
-}
 
 
 
@@ -196,7 +193,7 @@
 
 
 .vr-grid {
-	@include rem('margin-bottom', 20px);
+	@include rem('margin-bottom', 30px);
 }
 
 .vr-caption {

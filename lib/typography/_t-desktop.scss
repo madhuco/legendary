@@ -27,6 +27,12 @@
  @include rem('letter-spacing', -1px);
 }
 
+.t-title-5 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
 /* ***************************************** */
 /* Intro */
 /* ***************************************** */
@@ -51,6 +57,12 @@
 .t-intro-4 {
  @include rem('font-size', 17px);
  @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+.t-intro-5 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 18px);
  @include rem('letter-spacing', -1px);
 }
 

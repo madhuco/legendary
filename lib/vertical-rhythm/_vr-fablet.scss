@@ -65,18 +65,9 @@
 	@include rem('margin-bottom', 15px);
 }
 
-.vr-title-2 {
+.vr-title-2, .vr-title-3, .vr-title-4, .vr-title-5 {
 		@include rem('margin-bottom', 10px);
 }
-
-.vr-title-3 {
-	@extend .vr-title-2;
-}
-
-.vr-title-4 {
-@extend .vr-title-3;
-}
-
 
 
 
@@ -94,8 +85,8 @@
 		@include rem('margin-bottom', 10px);
 }
 
-.vr-intro-4 {
-@extend .vr-title-4;
+.vr-intro-4, .vr-intro-5 {
+		@include rem('margin-bottom', 10px);
 }
 
 
@@ -147,7 +138,7 @@
 
 
 .vr-grid {
-	@include rem('margin-bottom', 10px);
+	@include rem('margin-bottom', 30px);
 }
 
 .vr-caption {

@@ -16,26 +16,3 @@
 .content-and-aside-slim .content-main {
 @include  span-columns(9 omega, 12);	
 }
-
-@media #{$fab} {
-.content-and-aside-slim .content-aside {
-@include  span-columns(4);	
-}
-
-.content-and-aside-slim .content-main {
-@include  span-columns(8 omega);	
-}
-}
-
-
-
-@media #{$tab} {
-.content-and-aside-slim .content-aside {
-@include  span-columns(4);	
-}
-
-.content-and-aside-slim .content-main {
-@include  span-columns(8 omega);	
-}
-
-}

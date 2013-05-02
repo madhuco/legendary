@@ -1,0 +1,136 @@
+
+/* ***************************************** */
+/*   Set Up */
+/* ***************************************** */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit {
+position:relative;
+@include span-columns(9, 9);
+@include omega;
+}
+
+
+/* ***************************************** */
+/*  Cards Front */
+/* ***************************************** */
+
+/* Basic Card - Container */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row {
+@include span-columns(3, 9);
+@include rem(height, 188px);
+}
+
+/* Basic Card - Layout */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back .unit-img {
+@include span-columns(6, 9);
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back .unit-txt {
+@include span-columns(3, 9);
+@include omega;
+}
+
+
+/* Special Cards - Containers */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-1,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-8,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-13  {
+@include span-columns(6, 9);
+@include rem(height, 407px); 
+}
+
+
+/* Cards that need float clearing */
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-2,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-3, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-6, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-8,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-12,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-14,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-15,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-18 {
+@include omega;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Outer Layout */
+/* ***************************************** */
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-expand .cards-back{
+@include span-columns(9, 3);
+@include omega();
+@include rem(height, 407px); 
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-1.cards-expand .cards-back,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-13.cards-expand .cards-back {
+@include span-columns(9, 6);
+left:0;
+top:0;
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-2.cards-expand .cards-back, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-14.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-3.cards-expand .cards-back, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-15.cards-expand .cards-back {
+right:0;
+bottom:0;
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-4.cards-expand .cards-back{
+left:0;
+top:0;
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-5.cards-expand .cards-back, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-11.cards-expand .cards-back,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-17.cards-expand .cards-back  {
+left: -(columns(9,7.6));
+top:0;
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-6.cards-expand .cards-back, 
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-12.cards-expand .cards-back,
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-18.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-8.cards-expand .cards-back{
+@include span-columns(9, 6);
+@include omega;
+right:0;
+top:0;
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .unit-row-9.cards-expand .cards-back{
+left:0;
+bottom:0;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Contents Layout */
+/* ***************************************** */
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back {
+@include rem(padding, 10px);	
+}
+
+.layout-legend-twelvecol .cards.content-and-aside-slim.has-layout .cards-back .unit-footer {
+@include span-columns(3 omega, 9);
+}
