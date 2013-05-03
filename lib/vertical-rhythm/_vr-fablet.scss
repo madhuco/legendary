@@ -1,58 +1,99 @@
+@import "lib/core/helpers/helpers-vertical-rhythm/helpers-vr-fablet";
+
+/* ***************************************** */
+/*  Section Dividers (Bumpers) */
+/* ***************************************** */
+
+.wrapper .vr-breather {
+@include vr-breather;
+}
+
+
+.vr-section {
+@include vr-section;
+}
+
+
+
+.vr-section-top {
+	@include vr-section-top;
+
+	}
+
+
+
+.vr-section-bottom {
+		@include vr-section-bottom;
+
+}
+
+
+.vr-section-inside {
+	@include vr-section-inside;
+
+}
+
+.vr-section-inside-top {
+	@include vr-section-inside-top;
+}
+
+.vr-section-inside-bottom {
+	@include vr-section-inside-bottom;
+}
+
+.vr-section-outside {
+	@include vr-section-outside;
+}
+
+.vr-section-outside-top {
+	@include vr-section-outside-top;
+}
+
+.vr-section-outside-bottom {
+	@include vr-section-outside-bottom;
+}
+
 /* ***************************************** */
 /*  Sub Section Dividers (Spacers) */
 /* ***************************************** */
-.wrapper .vr-breather {
-@include rem(padding-left, 5px);	
-@include rem(padding-right, 5px);	
-@include box-sizing(border-box);
-}
-
-
 
 .vr-spacer {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
+	@include vr-spacer;
 }
 
 .vr-spacer-top {
-	@include rem('margin-top', 15px);
-	@include rem('padding-top', 15px);
+	@include vr-spacer-top;
 }
 
+
 .vr-spacer-bottom {
-	@include rem('margin-bottom', 15px);
-	@include rem('padding-bottom', 15px);
-}
+	@include vr-spacer-bottom;
+	}
 
 
 .vr-spacer-inside {
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
+	@include vr-spacer-inside;
 }
 
 .vr-spacer-inside-top {
-	@include rem('margin-top', 15px);
+	@include vr-spacer-inside-top;
 }
 
 .vr-spacer-inside-bottom {
-	@include rem('margin-bottom', 15px);
+	@include vr-spacer-inside-bottom;
 }
 
 .vr-spacer-outside {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
+	@include vr-spacer-outside;
 }
 
 .vr-spacer-outside-top {
-	@include rem('margin-top', 15px);
+	@include vr-spacer-outside-top;
 }
 
 .vr-spacer-outside-bottom {
-	@include rem('margin-bottom', 15px);
+	@include vr-spacer-outside-bottom;
 }
-
 
 
 
@@ -62,32 +103,45 @@
 
 
 .vr-title-1 {
-	@include rem('margin-bottom', 15px);
+	@include vr-title-1;
 }
 
-.vr-title-2, .vr-title-3, .vr-title-4, .vr-title-5 {
-		@include rem('margin-bottom', 10px);
+.vr-title-2 {
+		@include vr-title-2;
 }
 
+.vr-title-3 {
+		@include vr-title-3;
+}
 
+.vr-title-4 {
+		@include vr-title-4;
+}
+
+.vr-title-5 {
+		@include vr-title-5;
+}
 
 .vr-intro-1 {
-	@include rem('margin-top', -10px);
-	@include rem('margin-bottom', 30px);
+	@include vr-intro-1;
 }
 
 .vr-intro-2 {
-		@include rem('margin-bottom', 5px);
+		@include vr-intro-2;
 }
 
 .vr-intro-3 {
-		@include rem('margin-top', -3px);
-		@include rem('margin-bottom', 10px);
+		@include vr-intro-3;
 }
 
-.vr-intro-4, .vr-intro-5 {
-		@include rem('margin-bottom', 10px);
+.vr-intro-4 {
+		@include vr-intro-4;
 }
+
+.vr-intro-5 {
+		@include vr-intro-5;
+}
+
 
 
 
@@ -98,7 +152,7 @@
 
 
 .vr-paragraph, .vr-paragraph p {
-	@include rem('margin-bottom', 20px);
+	@include vr-paragraph;
 }
 
 
@@ -109,43 +163,38 @@
 
 
 .ui-accordian .vr-title {
-		@include rem('margin-top', 10px);
+		@include vr-title;
 }
-
-
-
 
 
 .vr-footerbumper {
-	@include rem('margin-top', 30px);
+	@include vr-footerbumper;
 }
 
 .vr-thumbs  {
-	@include rem('margin-bottom', 5px);
+	@include vr-thumbs;
 }
 
 .vr-pane-heading {
-	@include rem('margin-bottom', 5px);
+	@include vr-pane-heading;
 }
 
 .sidebar-active .vr-thumbs-title {
-	margin-bottom:0;
+	@include vr-thumbs-title;
 }
 
 .vr-thumbs img {
-	@include rem('margin-bottom', 10px);
+	@include vr-thumbs-img;
 }
 
-
 .vr-grid {
-	@include rem('margin-bottom', 30px);
+	@include vr-grid;
 }
 
 .vr-caption {
-	@include rem('margin-top', 5px);
+	@include vr-caption;
 }
 
 .vr-label {
-	display:inline;
-	@include rem('margin-right', 5px);
+	@include vr-label;
 }

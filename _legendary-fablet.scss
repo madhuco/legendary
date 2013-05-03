@@ -4,10 +4,11 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "lib/core/helpers";
+@import "lib/core/helpers/helpers-typography/helpers-t-desktop";
+@import "lib/core/helpers/helpers-vertical-rhythm/helpers-vr-fablet";
+@import "lib/core/helpers/helpers-typography/helpers-t-fablet";
+
 @import "compass";
 
-@media #{$fab} { 
-@import "lib/grids/twelvecol/twelvecol-fablet";
-@import "lib/typography/_t-fablet";
-@import "lib/vertical-rhythm/vr-fablet";
-}
+
+@import "lib/grids/grid12/grid12-fablet";

@@ -2,7 +2,6 @@
 
 @import "lib/core/helpers";
 @import "compass";
-@import "lib/grids/sixcol/sixcol-desktop";
-@import "lib/grids/twelvecol/twelvecol-desktop";
-@import "lib/typography/_t-desktop";
-@import "lib/vertical-rhythm/_vr-desktop";
+@import "lib/grids/grid12/grid12-desktop";
+@import "lib/core/helpers/helpers-vertical-rhythm/helpers-vr-desktop";
+@import "lib/core/helpers/helpers-typography/helpers-t-desktop";

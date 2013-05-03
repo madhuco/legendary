@@ -5,8 +5,7 @@
 
 @import "lib/core/helpers";
 @import "compass";
-@import "lib/grids/sixcol/sixcol-mobile-p";
-@import "lib/grids/twelvecol/twelvecol-mobile-p";
+@import "lib/grids/grid12/grid12-mobile-p";
 
-@import "lib/typography/_t-mobile-p";
-@import "lib/vertical-rhythm/vr-mobile-p";
+@import "lib/core/helpers/helpers-vertical-rhythm/helpers-vr-mobile-p";
+@import "lib/core/helpers/helpers-typography/helpers-t-mobile-p";

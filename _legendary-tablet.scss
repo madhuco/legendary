@@ -5,11 +5,10 @@
 
 @import "lib/core/helpers";
 @import "compass";
+@import "lib/core/helpers/helpers-vertical-rhythm/helpers-vr-tablet";
+@import "lib/core/helpers/helpers-typography/helpers-t-tablet";
 
-@media #{$tab} { 
-@import "lib/grids/sixcol/sixcol-tablet";
-@import "lib/grids/twelvecol/twelvecol-tablet";
-@import "lib/typography/_t-tablet";
-@import "lib/vertical-rhythm/vr-tablet";
 
-}
+
+
+@import "lib/grids/grid12/grid12-tablet";
