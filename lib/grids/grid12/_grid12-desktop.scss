@@ -1,0 +1,16 @@
+@import "grid12-base";
+
+
+$total-columns       : 12;
+$column-width        : 4.5em;
+$gutter-width        : 3em;
+$gutter-padding      : 4em;
+
+    .grid12 {
+      @include container;
+      @include susy-grid-background;
+    }
+	
+	
+	
+@include susy-classes(desk);

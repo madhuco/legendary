@@ -1,0 +1,226 @@
+
+/* ***************************************** */
+/*  Section Dividers (Bumpers) */
+/* ***************************************** */
+
+@mixin vr-breather {
+@include rem(padding-left, 10px);	
+@include rem(padding-right, 10px);	
+@include box-sizing(border-box);
+}
+
+
+@mixin vr-section {
+	@include rem('margin-top', 25px);
+	@include rem('margin-bottom', 25px);
+	@include rem('padding-top', 25px);
+	@include rem('padding-bottom', 25px);
+}
+
+
+
+@mixin vr-section-top {
+	@include rem('margin-top', 25px);
+	@include rem('padding-top', 25px);
+	}
+
+
+
+@mixin vr-section-bottom {
+		@include rem('margin-bottom', 25px);
+		@include rem('padding-bottom', 25px);
+}
+
+
+@mixin vr-section-inside {
+	@include rem('padding-top', 25px);
+	@include rem('padding-bottom', 25px);
+}
+
+@mixin vr-section-inside-top {
+	@include rem('margin-top', 25px);
+}
+
+@mixin vr-section-inside-bottom {
+	@include rem('margin-bottom', 25px);
+}
+
+@mixin vr-section-outside {
+	@include rem('margin-top', 25px);
+	@include rem('margin-bottom', 25px);
+}
+
+@mixin vr-section-outside-top {
+	@include rem('margin-top', 25px);
+}
+
+@mixin vr-section-outside-bottom {
+	@include rem('margin-bottom', 25px);
+}
+
+/* ***************************************** */
+/*  Sub Section Dividers (Spacers) */
+/* ***************************************** */
+
+@mixin vr-spacer {
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+@mixin vr-spacer-top {
+	@include rem('margin-top', 10px);
+	@include rem('padding-top', 10px);
+}
+
+
+@mixin vr-spacer-bottom {
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+
+@mixin vr-spacer-inside {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+@mixin vr-spacer-inside-top {
+	@include rem('margin-top', 10px);
+}
+
+@mixin vr-spacer-inside-bottom {
+	@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-spacer-outside {
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-spacer-outside-top {
+	@include rem('margin-top', 10px);
+}
+
+@mixin vr-spacer-outside-bottom {
+	@include rem('margin-bottom', 10px);
+}
+
+
+
+/* ***************************************** */
+/*  Type Units */
+/* ***************************************** */
+
+
+@mixin vr-title-1 {
+	@include rem('margin-bottom', 50px);
+}
+
+@mixin vr-title-2 {
+		@include rem('margin-bottom', 30px);
+}
+
+@mixin vr-title-3 {
+		@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-title-4 {
+		@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-title-5 {
+		@include rem('margin-bottom', 10px);
+}
+
+
+
+
+
+
+@mixin vr-intro-1 {
+	@include rem('margin-top', -45px);
+	@include rem('margin-bottom', 50px);
+}
+
+@mixin vr-intro-2 {
+		@include rem('margin-top', -25px);
+		@include rem('margin-bottom', 30px);
+}
+
+@mixin vr-intro-3 {
+		@include rem('margin-top', -5px);
+		@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-intro-4 {
+		@include rem('margin-top', -5px);
+		@include rem('margin-bottom', 10px);
+}
+
+@mixin vr-intro-5 {
+		@include rem('margin-bottom', 10px);
+}
+
+
+
+
+
+/* Standard Text  */
+
+
+
+
+@mixin vr-paragraph {
+	@include rem('margin-bottom', 20px);
+}
+
+
+
+/* ***************************************** */
+/*  Special */
+/* ***************************************** */
+
+
+@mixin vr-title {
+		@include rem('margin-top', 10px);
+}
+
+
+
+
+
+@mixin vr-footerbumper {
+	@include rem('margin-top', 40px);
+}
+
+@mixin vr-thumbs  {
+	@include rem('margin-bottom', 35px);
+}
+
+@mixin vr-pane-heading {
+	@include rem('margin-bottom', 2px);
+}
+
+@mixin vr-thumbs-title {
+	margin-bottom:0;
+}
+
+@mixin vr-thumbs-img {
+	@include rem('margin-bottom', 10px);
+}
+
+
+@mixin vr-grid {
+	@include rem('margin-bottom', 30px);
+}
+
+@mixin vr-caption {
+	@include rem('margin-top', 5px);
+}
+
+@mixin vr-label {
+	display:inline;
+	@include rem('margin-right', 5px);
+}
