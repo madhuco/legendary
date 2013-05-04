@@ -1,54 +1,55 @@
+@include media($tablet…){ 
 
 /* ***************************************** */
 /*  Section Dividers (Bumpers) */
 /* ***************************************** */
-@mixin vr-breather {
+%vr-breather {
 @include rem(padding-left, 10px);	
 @include rem(padding-right, 10px);	
 @include box-sizing(border-box);
 }
 
 
-@mixin vr-section {
+%vr-section {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
 	@include rem('padding-top', 20px);
 	@include rem('padding-bottom', 20px);
 }
 
-@mixin vr-section-top {
+%vr-section-top {
 	@include rem('margin-top', 20px);
 	@include rem('padding-top', 20px);
 	}
 	
-	@mixin vr-section-bottom {
+	%vr-section-bottom {
 	@include rem('margin-bottom', 20px);
 	@include rem('padding-bottom', 20px);
 	}
 
-@mixin vr-section-inside {
+%vr-section-inside {
 	@include rem('padding-top', 20px);
 	@include rem('padding-bottom', 20px);
 }
 
-@mixin vr-section-inside-top {
+%vr-section-inside-top {
 	@include rem('margin-top', 20px);
 }
 
-@mixin vr-section-inside-bottom {
+%vr-section-inside-bottom {
 	@include rem('margin-bottom', 20px);
 }
 
-@mixin vr-section-outside {
+%vr-section-outside {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
 }
 
-@mixin vr-section-outside-top {
+%vr-section-outside-top {
 	@include rem('margin-top', 20px);
 }
 
-@mixin vr-section-outside-bottom {
+%vr-section-outside-bottom {
 	@include rem('margin-bottom', 20px);
 }
 
@@ -56,48 +57,48 @@
 /*  Sub Section Dividers (Spacers) */
 /* ***************************************** */
 
-@mixin vr-spacer {
+%vr-spacer {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-@mixin vr-spacer-top {
+%vr-spacer-top {
 	@include rem('margin-top', 15px);
 	@include rem('padding-top', 15px);
 }
 
 
-@mixin vr-spacer-bottom {
+%vr-spacer-bottom {
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
 
-@mixin vr-spacer-inside {
+%vr-spacer-inside {
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-@mixin vr-spacer-inside-top {
+%vr-spacer-inside-top {
 	@include rem('margin-top', 15px);
 }
 
-@mixin vr-spacer-inside-bottom {
+%vr-spacer-inside-bottom {
 	@include rem('margin-bottom', 15px);
 }
 
-@mixin vr-spacer-outside {
+%vr-spacer-outside {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 }
 
-@mixin vr-spacer-outside-top {
+%vr-spacer-outside-top {
 	@include rem('margin-top', 15px);
 }
 
-@mixin vr-spacer-outside-bottom {
+%vr-spacer-outside-bottom {
 	@include rem('margin-bottom', 15px);
 }
 
@@ -108,50 +109,50 @@
 /* ***************************************** */
 
 
-@mixin vr-title-1 {
+%vr-title-1 {
 	@include rem('margin-bottom', 30px);
 }
 
-@mixin vr-title-2 {
+%vr-title-2 {
 		@include rem('margin-bottom', 5px);
 }
 
-@mixin vr-title-3 {
-		@include rem('margin-bottom', 5px);
-}
-
-
-@mixin vr-title-4 {
-		@include rem('margin-bottom', 5px);
-}
-
-@mixin vr-title-5 {
+%vr-title-3 {
 		@include rem('margin-bottom', 5px);
 }
 
 
-@mixin vr-intro-1 {
+%vr-title-4 {
+		@include rem('margin-bottom', 5px);
+}
+
+%vr-title-5 {
+		@include rem('margin-bottom', 5px);
+}
+
+
+%vr-intro-1 {
 	@include rem('margin-top', -25px);
 	@include rem('margin-bottom', 30px);
 }
 
-@mixin vr-intro-2 {
+%vr-intro-2 {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
-@mixin vr-intro-3 {
+%vr-intro-3 {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
-@mixin vr-intro-4 {
+%vr-intro-4 {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
 
-@mixin vr-intro-5 {
+%vr-intro-5 {
 		@include rem('margin-bottom', 5px);
 }
 
@@ -161,7 +162,7 @@
 
 
 
-@mixin vr-paragraph {
+%vr-paragraph {
 	@include rem('margin-bottom', 20px);
 }
 
@@ -172,42 +173,43 @@
 /* ***************************************** */
 
 
-@mixin vr-title {
+%vr-title {
 		@include rem('margin-top', 10px);
 }
 
 
 
-@mixin vr-footerbumper {
+%vr-footerbumper {
 	@include rem('margin-top', 35px);
 }
 
-@mixin vr-thumbs  {
+%vr-thumbs  {
 	@include rem('margin-bottom', 30px);
 }
 
-@mixin vr-pane-heading {
+%vr-pane-heading {
 	@include rem('margin-bottom', 3px);
 }
 
- @mixin vr-thumbs-title {
+ %vr-thumbs-title {
 	margin-bottom:0;
 }
 
-@mixin vr-thumbs-img {
+%vr-thumbs-img {
 	@include rem('margin-bottom', 10px);
 }
 
 
-@mixin vr-grid {
+%vr-grid {
 	@include rem('margin-bottom', 30px);
 }
 
-@mixin vr-caption {
+%vr-caption {
 	@include rem('margin-top', 5px);
 }
 
-@mixin vr-label {
+%vr-label {
 	display:inline;
 	@include rem('margin-right', 5px);
+}
 }

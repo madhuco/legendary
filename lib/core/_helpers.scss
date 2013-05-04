@@ -1,7 +1,7 @@
 
-/* Helpers provide Functions. If the function is not called, it wont appear in css */ 
+// Helpers provide Functions. If the function is not called, it wont appear in css 
 
 @import "helpers/helpers-rem";
-@import "helpers/helpers-colours";
 @import "helpers/helpers-mqs";
+@import "helpers/helpers-colours";
 @import "helpers/helpers-fontawesome";

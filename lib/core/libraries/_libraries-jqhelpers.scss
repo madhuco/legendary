@@ -1,6 +1,6 @@
-@import "../helpers/helpers-mqs";
 
-@media #{$mob} {
+
+@include media($mob) {
 html body .mobshow {
  display:block !important;
 }
@@ -12,16 +12,15 @@ html body .mobshow {
  float:left !important;
 }
 
-/* Stop Logo from expanding */
 
 html body .mob-widthexpand.panel-region-logo  {
-	width:ingore ;
+	width:ignore ;
 }
 
 
 }
 
- @media #{$mob-p} {
+ @include media($mob-p) {
 html body .mobpshow {
  display:block !important;
 }
@@ -34,7 +33,7 @@ html body .mobpshow {
 }
 }
 
- @media #{$mob-l} {
+ @include media($mob-l) {
 html body .moblshow {
  display:block !important;
 }
@@ -47,7 +46,7 @@ html body .moblshow {
 }
 }
 
- @media #{$fab} {
+ @include media($fab) {
  html body .fabshow {
  display:block !important;
 }
@@ -59,7 +58,7 @@ html body .moblshow {
  float:left !important;
 }
 }
- @media #{$tab} {
+ @include media($tab) {
  html body .tabshow {
  display:block !important;
 }
@@ -72,7 +71,7 @@ html body .moblshow {
 }
 }
 
-@media #{$desk} {
+@include media($desk) {
  html body .deskshow {
  display:block !important;
 }
@@ -86,7 +85,7 @@ html body .moblshow {
 }
 
 
- @media #{$portables} {
+ @include media($portables) {
  html body .portablesshow {
  display:inline-block !important;
 }
@@ -99,7 +98,7 @@ html body .moblshow {
 }
 }
 
- @media #{$devices} {
+ @include media($devices) {
  html body .devicesshow {
  display:block !important;
 }

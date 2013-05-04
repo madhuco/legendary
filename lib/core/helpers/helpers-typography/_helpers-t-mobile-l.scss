@@ -4,14 +4,14 @@
 /* CTA */
 /* ***************************************** */
 
-@mixin t-cta-intro {
+%t-cta-intro {
  @include rem('font-size', 18px);	
  @include rem('line-height', 21px);	
  @include rem('letter-spacing', -1px);
 }
 
 
-@mixin t-cta-outro  {
+%t-cta-outro  {
  @include rem('font-size', 22px);	
  @include rem('line-height', 26px);	
  @include rem('letter-spacing', -1px);

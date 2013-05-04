@@ -1,7 +1,0 @@
-@charset "UTF-8";
-/* CSS Document */
-
-.ui-bullets li:before {
-@include icon($icon-circle);
-color: $lightest;
-}

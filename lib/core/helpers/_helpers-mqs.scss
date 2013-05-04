@@ -1,26 +1,39 @@
-$mob-p:  "all and (min-width: 0px) and (max-width: 480px)"; 
+$media-queries: true !default;
+$media-query-free-breakpoint: 900px;
+@mixin media($min-width, $max-width: false) {
+  @if $media-queries {
+    @media screen and (min-width: $min-width) {
+       @if $max-width {
+         @media (max-width: $max-width) {
+            @content
+          }
+       } @else {
+         @content;
+       }
+     }
+  }
+  @else if $min-width <= $media-query-free-breakpoint and (not $max-width or $max-width and $max-width >= $media-query-free-breakpoint) {
+    @content;
+  }
+}
 
-$mob-l: "all and (min-width: 480px) and (max-width: 599px)"; 
 
-$mob: "all and (min-width: 0px) and (max-width: 599px)"; 
+$mob-p: 0px, 480px; 
+$mob-l: 480px, 599px; 
+$mob: 0px, 599px; 
+$fab: 600px, 767px; 
+$tab: 768px, 959px;  
+$desk: 960px;  
 
-$fab: "all and (min-width: 600px) and (max-width: 767px)"; 
+// ====== Fablets and Phones 
+$portables: 0, 767px; 
 
-$tab: "all and (min-width: 768px) and (max-width: 959px)";  
+// ====== Fablets, Phones and Tablets (Devices)
+$devices: 0px, 959px; 
 
-$desk: "all and (min-width: 960px)";  
+// ====== Pads are tablets and fablets 
+$pads: 600px, 959px;
 
-/* Fablets and Phones =================================================== */
-$portables: "all and (min-width: 0px) and (max-width: 767px)"; 
-
-/* Fablets, Phones and Tablets (Devices) =================================================== */
-$devices: "all and (min-width: 0px) and (max-width: 959px)"; 
-
-/* Pads are tablets and fablets */
-$pads: "all and (min-width: 600px) and (max-width: 959px)";
-
-$fabplus: "all and (min-width: 600px)"; 
-
-$tabplus: "all and (min-width: 768px)"; 
-
-$mob-lplus: "all and (min-width: 480px)"; 
+$fabplus: 600px; 
+$tabplus: 768px; 
+$mob-lplus: 480px; 
