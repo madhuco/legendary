@@ -1,0 +1,285 @@
+
+/* ***************************************** */
+/* Titles */
+/* ***************************************** */
+
+@mixin t-title-1 {
+ @include rem('font-size', 53px);
+ @include rem('line-height', 60px);
+ @include rem('letter-spacing', -3px);
+}
+
+@mixin t-title-2 {
+ @include rem('font-size', 39px);
+ @include rem('line-height', 44px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-title-3 {
+ @include rem('font-size', 20px);
+ @include rem('line-height', 29px);
+ @include rem('letter-spacing', 0px);
+}
+
+@mixin t-title-4 {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-title-5 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+/* ***************************************** */
+/* Intro */
+/* ***************************************** */
+
+@mixin t-intro-1 {
+ @include rem('font-size', 20px);
+ @include rem('line-height', 26px);
+}
+
+@mixin t-intro-2 {
+ @include rem('font-size', 20px);
+ @include rem('line-height', 23px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-intro-3 {
+ @include rem('font-size', 23px);
+ @include rem('line-height', 27px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-intro-4 {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-intro-5 {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 18px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* Body Text */
+/* ***************************************** */
+
+@mixin t-body-text {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 20px);
+}
+
+@mixin t-body-small {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 16px);
+letter-spacing:0;
+}
+
+@mixin t-body-label {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+letter-spacing:0;
+}
+
+@mixin t-body-bullets {
+
+}
+
+
+@mixin t-quote {
+ @include rem('font-size', 23px);
+ @include rem('line-height', 30px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* Panes */
+/* ***************************************** */
+
+@mixin t-pane-heading {
+ @include rem('font-size', 19px);
+ @include rem('line-height', 26px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-pane-text {
+ @include rem('font-size', 15px);
+ @include rem('line-height', 20px);
+}
+
+@mixin t-pane-heading-sidebar {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 24px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-pane-text-sidebar {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 20px);
+}
+
+
+/* ***************************************** */
+/* Footer */
+/* ***************************************** */
+
+@mixin t-footer-heading {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
+@mixin t-footer-text {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-footer-link {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
+
+/* ***************************************** */
+/* Tapagation */
+/* ***************************************** */
+
+@mixin t-tap-heading {
+ @include rem('font-size', 17px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', 0px);
+}
+
+@mixin t-tap-normal {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-tap-small {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-tap-note {
+ @include rem('font-size', 13px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+
+/* ***************************************** */
+/* General Ui */
+/* ***************************************** */
+
+@mixin t-ui-breadcrumbs {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-ui-pager-numbers {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-ui-pager-shortcuts {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-ui-navigation  {
+@include rem('font-size', 14px);
+ @include rem('line-height', 17px);
+}
+
+@mixin t-ui-navigation-secondary {
+	@include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}
+
+@mixin t-ui-navigation-secondary-title {
+	@include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}
+
+
+/* ***************************************** */
+/* Shop Ui */
+/* ***************************************** */
+
+@mixin t-shop-thumbs {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-shop-author {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-shop-stock {
+ @include rem('font-size', 16px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-shop-intro-bullets {
+ @include rem('font-size', 21px);
+ @include rem('line-height', 20px);
+ @include rem('letter-spacing', -1px);
+}
+
+@mixin t-shop-data-labels {
+	 @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+ @include rem('letter-spacing', 0px);
+
+}
+
+
+/* ***************************************** */
+/* CTA Main */
+/* ***************************************** */
+
+@mixin t-cta-intro {
+ @include rem('font-size', 22px);	
+ @include rem('line-height', 26px);	
+}
+
+
+@mixin t-cta-outro  {
+ @include rem('font-size', 18px);	
+ @include rem('line-height', 20px);	
+}
+
+
+@mixin t-cta-prompt {
+ @include rem('font-size', 15px);	
+ @include rem('line-height', 17px);	
+}
+
+
+
+/* ***************************************** */
+/* Sidebar */
+/* ***************************************** */
+@mixin t-sidebar {
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
+}

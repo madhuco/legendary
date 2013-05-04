@@ -1,0 +1,51 @@
+/* ***************************************** */
+/*  Desktop first as it is used for everything but mobile! */
+/* ***************************************** */
+
+.leader-sixcol .unit {
+	@include span-columns(6);
+	@include omega;	
+}
+
+.leader-sixcol .unit-img {
+	@include span-columns(6);
+	@include omega;	
+}
+
+.leader-sixcol .unit-txt {
+	@include span-columns(3);
+	background:white;
+}
+
+.leader-sixcol .unit-cta {
+	@include span-columns(3);
+	@include omega;	
+}
+
+
+
+
+@media #{$mob} { 
+
+.leader-sixcol .unit-img {
+	@include span-columns(2);
+}
+
+.leader-sixcol .unit-txt {
+	@include span-columns(4);
+	@include omega;	
+}
+
+
+}
+
+@media #{$mob-l} { 
+
+.leader-sixcol .unit-txt * {
+padding:0;
+margin:0;
+}
+}
+
+
+
