@@ -204,7 +204,7 @@ display:none;
 }
 
 %t-ui-navigation-secondary-title {
-	@include t-ui-navigation-secondary;
+	@extend %t-ui-navigation-secondary;
 }
 
 /* ***************************************** */

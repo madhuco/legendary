@@ -2,7 +2,7 @@
 /* ***************************************** */
 /* Titles */
 /* ***************************************** */
-@include media($tablet...) {
+@include media($tab...) {
 
 %t-title-1 {
  @include rem('font-size', 45px);
@@ -119,11 +119,11 @@ letter-spacing:0;
 
 
 %t-pane-heading-sidebar {
- @include t-pane-heading;
+ @extend %t-pane-heading;
 }
 
 %t-pane-text-sidebar {
- @include t-pane-text;
+ @extend %t-pane-text;
 }
 
 
@@ -199,7 +199,7 @@ letter-spacing:0;
 }
 
 %t-ui-navigation-secondary-title { 
-	@include t-ui-navigation-secondary;
+	@extend %t-ui-navigation-secondary;
 }
 
 

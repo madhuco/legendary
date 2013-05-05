@@ -1,3 +1,23 @@
+$mob-p: 0px, 480px; 
+$mob-l: 480px, 599px; 
+$mob: 0px, 599px; 
+$fab: 600px, 767px; 
+$tab: 768px, 959px;  
+$desk: 960px;  
+
+// ====== Fablets and Phones 
+$portables: 0, 767px; 
+
+// ====== Fablets, Phones and Tablets (Devices)
+$devices: 0px, 959px; 
+
+// ====== Pads are tablets and fablets 
+$pads: 600px, 959px;
+
+$fabplus: 600px; 
+$tabplus: 768px; 
+$mob-lplus: 480px; 
+
 $media-queries: true !default;
 $media-query-free-breakpoint: 900px;
 @mixin media($min-width, $max-width: false) {
@@ -18,22 +38,4 @@ $media-query-free-breakpoint: 900px;
 }
 
 
-$mob-p: 0px, 480px; 
-$mob-l: 480px, 599px; 
-$mob: 0px, 599px; 
-$fab: 600px, 767px; 
-$tab: 768px, 959px;  
-$desk: 960px;  
 
-// ====== Fablets and Phones 
-$portables: 0, 767px; 
-
-// ====== Fablets, Phones and Tablets (Devices)
-$devices: 0px, 959px; 
-
-// ====== Pads are tablets and fablets 
-$pads: 600px, 959px;
-
-$fabplus: 600px; 
-$tabplus: 768px; 
-$mob-lplus: 480px; 
