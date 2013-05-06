@@ -3,13 +3,13 @@
 /* Titles */
 /* ***************************************** */
 
-@include media($fab...) { 
-%t-title-1 {
+
+@mixin t-title-1-fab {
  @include rem('font-size', 32px);
  @include rem('line-height', 34px);
 }
 
-%t-title-2 {
+@mixin t-title-2-fab {
  @include rem('font-size', 25px);
  @include rem('line-height', 27px);
 }
@@ -17,24 +17,24 @@
 
 
 
-%t-title-2 {
+@mixin t-title-2-fab {
  @include rem('font-size', 25px);
  @include rem('line-height', 27px);
 }
 
-%t-title-3 {
+@mixin t-title-3-fab {
  @include rem('font-size', 18px);
  @include rem('line-height', 21px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-title-4 {
+@mixin t-title-4-fab {
  @include rem('font-size', 15px);
  @include rem('line-height', 18px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-title-5 {
+@mixin t-title-5-fab {
  @include rem('font-size', 15px);
  @include rem('line-height', 18px);
  @include rem('letter-spacing', -1px);
@@ -45,29 +45,29 @@
 /* Intro */
 /* ***************************************** */
 
-%t-intro-1 {
+@mixin t-intro-1-fab {
  @include rem('font-size', 16px);
  @include rem('line-height', 18px);
 }
 
-%t-intro-2 {
+@mixin t-intro-2-fab {
  @include rem('font-size', 16px);
  @include rem('line-height', 19px);
 }
 
-%t-intro-3 {
+@mixin t-intro-3-fab {
  @include rem('font-size', 16px);
  @include rem('line-height', 19px);
 }
 
-%t-intro-4 {
+@mixin t-intro-4-fab {
  @include rem('font-size', 15px);
  @include rem('line-height', 18px);
  @include rem('letter-spacing', -1px);
 }
 
 
-%t-intro-5 {
+@mixin t-intro-5-fab {
  @include rem('font-size', 15px);
  @include rem('line-height', 18px);
  @include rem('letter-spacing', -1px);
@@ -78,26 +78,26 @@
 /* Body Text */
 /* ***************************************** */
 
-%t-body-text {
+@mixin t-body-text-fab {
  @include rem('font-size', 14px);
  @include rem('line-height', 20px);
 }
 
-%t-body-small {
+@mixin t-body-small-fab {
  @include rem('font-size', 14px);
  @include rem('line-height', 16px);
 }
 
-%t-body-label {
+@mixin t-body-label-fab {
  @include rem('font-size', 16px);
  @include rem('line-height', 18px);
 }
 
-%t-body-bullets {
+@mixin t-body-bullets-fab {
 
 }
 
-%t-quote {
+@mixin t-quote-fab {
  @include rem('font-size', 22px);
  @include rem('line-height', 76px);
  @include rem('letter-spacing', -1px);
@@ -105,7 +105,7 @@
 }
 
 
-%t-ui-navigation-secondary  {
+@mixin t-ui-navigation-secondary-fab {
 	@include rem('font-size', 14px);
  @include rem('line-height', 16px);
 }
@@ -116,22 +116,22 @@
 /* Panes */
 /* ***************************************** */
 
-%t-pane-heading {
+@mixin t-pane-heading-fab {
  @include rem('font-size', 17px);
  @include rem('line-height', 22px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-pane-text {
+@mixin t-pane-text-fab {
  @include rem('font-size', 14px);
  @include rem('line-height', 20px);
 }
 
-%t-pane-heading-sidebar {
+@mixin t-pane-heading-sidebar-fab {
 
 }
 
-%t-pane-text-sidebar {
+@mixin t-pane-text-sidebar-fab {
 }
 
 
@@ -139,14 +139,14 @@
 /* Footer */
 /* ***************************************** */
 
-%t-footer-heading {
+@mixin t-footer-heading-fab {
 
 }
 
-%t-footer-text {
+@mixin t-footer-text-fab {
 }
 
-%t-footer-link {
+@mixin t-footer-link-fab {
 }
 
 
@@ -154,22 +154,22 @@
 /* Tapagation */
 /* ***************************************** */
 
-%t-tap-heading {
+@mixin t-tap-heading-fab {
  @include rem('font-size', 19px);
  @include rem('line-height', 22px);
 }
 
-%t-tap-normal {
+@mixin t-tap-normal-fab {
  @include rem('font-size', 19px);
  @include rem('line-height', 22px);
 }
 
-%t-tap-small {
+@mixin t-tap-small-fab {
  @include rem('font-size', 19px);
  @include rem('line-height', 22px);
 }
 
-%t-tap-note {
+@mixin t-tap-note-fab {
  @include rem('font-size', 12px);
  @include rem('line-height', 15px);
 }
@@ -179,69 +179,70 @@
 /* General Ui */
 /* ***************************************** */
 
-%t-ui-breadcrumbs {
+@mixin t-ui-breadcrumbs-fab {
  @include rem('font-size', 12px);
  @include rem('line-height', 14px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-ui-pager-numbers {
+@mixin t-ui-pager-numbers-fab {
 display:none;
 }
 
-%t-ui-pager-shortcuts {
+@mixin t-ui-pager-shortcuts-fab {
 display:none;
 }
 
-%t-ui-navigation  {
+@mixin t-ui-navigation-fab {
 @include rem('font-size', 16px);
  @include rem('line-height', 20px);
 }
 
-%t-ui-navigation-secondary {
+@mixin t-ui-navigation-secondary-fab {
 	@include rem('font-size', 19px);
  @include rem('line-height', 22px);
 }
 
-%t-ui-navigation-secondary-title {
-	@extend %t-ui-navigation-secondary;
+@mixin t-ui-navigation-secondary-title-fab {
+@include rem('font-size', 19px);
+ @include rem('line-height', 22px);
 }
 
 /* ***************************************** */
 /* Shop Ui */
 /* ***************************************** */
 
-%t-shop-thumbs {
+@mixin t-shop-thumbs-fab {
  @include rem('font-size', 17px);
  @include rem('line-height', 20px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-shop-author {
+@mixin t-shop-author-fab {
  @include rem('font-size', 14px);
  @include rem('line-height', 16px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-shop-stock {
+@mixin t-shop-stock-fab {
  @include rem('font-size', 16px);
  @include rem('line-height', 22px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-shop-intro-bullets {
+@mixin t-shop-intro-bullets-fab {
  @include rem('font-size', 21px);
  @include rem('line-height', 20px);
  @include rem('letter-spacing', -1px);
 }
 
-%t-shop-data-labels {
+@mixin t-shop-data-labels-fab {
 	 @include rem('font-size', 12px);
  @include rem('line-height', 15px);
 
 }
 
-%t-sidebar {
+@mixin t-sidebar-fab {
 
 }
 
@@ -251,21 +252,21 @@ display:none;
 /* CTA Main */
 /* ***************************************** */
 
-%t-cta-intro {
+@mixin t-cta-intro-fab {
  @include rem('font-size', 22px);	
  @include rem('line-height', 26px);	
 }
 
 
-%t-cta-outro  {
+@mixin t-cta-outro-fab {
  @include rem('font-size', 20px);	
  @include rem('line-height', 22px);	
 }
 
 
-%t-cta-prompt {
+@mixin t-cta-prompt-fab {
  @include rem('font-size', 14px);	
  @include rem('line-height', 16px);	
 }
 
-}
+

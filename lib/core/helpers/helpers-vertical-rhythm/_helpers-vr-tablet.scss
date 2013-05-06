@@ -1,215 +1,214 @@
-@include media($tablet…){ 
 
-/* ***************************************** */
-/*  Section Dividers (Bumpers) */
-/* ***************************************** */
-%vr-breather {
+
+// ***************************************** //
+//  Section Dividers (Bumpers) //
+// ***************************************** //
+@mixin vr-breather-tab {
 @include rem(padding-left, 10px);	
 @include rem(padding-right, 10px);	
 @include box-sizing(border-box);
 }
 
 
-%vr-section {
+@mixin vr-section-tab {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
 	@include rem('padding-top', 20px);
 	@include rem('padding-bottom', 20px);
 }
 
-%vr-section-top {
+@mixin vr-section-top-tab {
 	@include rem('margin-top', 20px);
 	@include rem('padding-top', 20px);
 	}
 	
-	%vr-section-bottom {
+	@mixin vr-section-bottom-tab {
 	@include rem('margin-bottom', 20px);
 	@include rem('padding-bottom', 20px);
 	}
 
-%vr-section-inside {
+@mixin vr-section-inside-tab {
 	@include rem('padding-top', 20px);
 	@include rem('padding-bottom', 20px);
 }
 
-%vr-section-inside-top {
+@mixin vr-section-inside-top-tab {
 	@include rem('margin-top', 20px);
 }
 
-%vr-section-inside-bottom {
+@mixin vr-section-inside-bottom-tab {
 	@include rem('margin-bottom', 20px);
 }
 
-%vr-section-outside {
+@mixin vr-section-outside-tab {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
 }
 
-%vr-section-outside-top {
+@mixin vr-section-outside-top-tab {
 	@include rem('margin-top', 20px);
 }
 
-%vr-section-outside-bottom {
+@mixin vr-section-outside-bottom-tab {
 	@include rem('margin-bottom', 20px);
 }
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
+// ***************************************** //
+//  Sub Section Dividers (Spacers) //
+// ***************************************** //
 
-%vr-spacer {
+@mixin vr-spacer-tab {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-%vr-spacer-top {
+@mixin vr-spacer-top-tab {
 	@include rem('margin-top', 15px);
 	@include rem('padding-top', 15px);
 }
 
 
-%vr-spacer-bottom {
+@mixin vr-spacer-bottom-tab {
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
 
-%vr-spacer-inside {
+@mixin vr-spacer-inside-tab {
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-%vr-spacer-inside-top {
+@mixin vr-spacer-inside-top-tab {
 	@include rem('margin-top', 15px);
 }
 
-%vr-spacer-inside-bottom {
+@mixin vr-spacer-inside-bottom-tab {
 	@include rem('margin-bottom', 15px);
 }
 
-%vr-spacer-outside {
+@mixin vr-spacer-outside-tab {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 }
 
-%vr-spacer-outside-top {
+@mixin vr-spacer-outside-top-tab {
 	@include rem('margin-top', 15px);
 }
 
-%vr-spacer-outside-bottom {
+@mixin vr-spacer-outside-bottom-tab {
 	@include rem('margin-bottom', 15px);
 }
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+// ***************************************** //
+//  Type Units //
+// ***************************************** //
 
 
-%vr-title-1 {
+@mixin vr-title-1-tab {
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-title-2 {
+@mixin vr-title-2-tab {
 		@include rem('margin-bottom', 5px);
 }
 
-%vr-title-3 {
-		@include rem('margin-bottom', 5px);
-}
-
-
-%vr-title-4 {
-		@include rem('margin-bottom', 5px);
-}
-
-%vr-title-5 {
+@mixin vr-title-3-tab {
 		@include rem('margin-bottom', 5px);
 }
 
 
-%vr-intro-1 {
+@mixin vr-title-4-tab {
+		@include rem('margin-bottom', 5px);
+}
+
+@mixin vr-title-5-tab {
+		@include rem('margin-bottom', 5px);
+}
+
+
+@mixin vr-intro-1-tab {
 	@include rem('margin-top', -25px);
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-intro-2 {
+@mixin vr-intro-2-tab {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
-%vr-intro-3 {
+@mixin vr-intro-3-tab {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
-%vr-intro-4 {
+@mixin vr-intro-4-tab {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 5px);
 }
 
 
-%vr-intro-5 {
+@mixin vr-intro-5-tab {
 		@include rem('margin-bottom', 5px);
 }
 
 
-/* Standard Text  */
+// Standard Text  //
 
 
 
 
-%vr-paragraph {
+@mixin vr-paragraph-tab {
 	@include rem('margin-bottom', 20px);
 }
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+// ***************************************** //
+//  Special //
+// ***************************************** //
 
 
-%vr-title {
+@mixin vr-title-tab {
 		@include rem('margin-top', 10px);
 }
 
 
 
-%vr-footerbumper {
+@mixin vr-footerbumper-tab {
 	@include rem('margin-top', 35px);
 }
 
-%vr-thumbs  {
+@mixin vr-thumbs-tab {
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-pane-heading {
+@mixin vr-pane-heading-tab {
 	@include rem('margin-bottom', 3px);
 }
 
- %vr-thumbs-title {
+ @mixin vr-thumbs-title-tab {
 	margin-bottom:0;
 }
 
-%vr-thumbs-img {
+@mixin vr-thumbs-img-tab {
 	@include rem('margin-bottom', 10px);
 }
 
 
-%vr-grid {
+@mixin vr-grid-tab {
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-caption {
+@mixin vr-caption-tab {
 	@include rem('margin-top', 5px);
 }
 
-%vr-label {
+@mixin vr-label-tab {
 	display:inline;
 	@include rem('margin-right', 5px);
-}
 }

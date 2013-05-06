@@ -1,6 +1,6 @@
 
 
-@include media($mob) {
+@include media($mob...) {
 html body .mobshow {
  display:block !important;
 }
@@ -20,7 +20,7 @@ html body .mob-widthexpand.panel-region-logo  {
 
 }
 
- @include media($mob-p) {
+ @include media($mob-p...) {
 html body .mobpshow {
  display:block !important;
 }
@@ -33,7 +33,7 @@ html body .mobpshow {
 }
 }
 
- @include media($mob-l) {
+ @include media($mob-l...) {
 html body .moblshow {
  display:block !important;
 }
@@ -46,7 +46,7 @@ html body .moblshow {
 }
 }
 
- @include media($fab) {
+ @include media($fab...) {
  html body .fabshow {
  display:block !important;
 }
@@ -58,7 +58,7 @@ html body .moblshow {
  float:left !important;
 }
 }
- @include media($tab) {
+ @include media($tab...) {
  html body .tabshow {
  display:block !important;
 }
@@ -71,7 +71,7 @@ html body .moblshow {
 }
 }
 
-@include media($desk) {
+@include media($desk...) {
  html body .deskshow {
  display:block !important;
 }
@@ -85,7 +85,7 @@ html body .moblshow {
 }
 
 
- @include media($portables) {
+ @include media($portables...) {
  html body .portablesshow {
  display:inline-block !important;
 }
@@ -98,7 +98,7 @@ html body .moblshow {
 }
 }
 
- @include media($devices) {
+ @include media($devices...) {
  html body .devicesshow {
  display:block !important;
 }

@@ -1,204 +1,202 @@
-@include media($fablet…){ 
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
-%vr-breather {
+
+// ***************************************** //
+//  Sub Section Dividers (Spacers) //
+// ***************************************** //
+@mixin vr-breather-fab {
 @include rem(padding-left, 5px);	
 @include rem(padding-right, 5px);	
 @include box-sizing(border-box);
 }
 
-%vr-section {
+@mixin vr-section-fab {
 	@include rem('margin-top', 30px);
 	@include rem('margin-bottom', 30px);
 	@include rem('padding-top', 30px);
 	@include rem('padding-bottom', 30px);
 }
 
-%vr-section-top {
+@mixin vr-section-top-fab {
 	@include rem('margin-top', 30px);
 	@include rem('padding-top', 30px);
 }
 
-%vr-section-bottom {
+@mixin vr-section-bottom-fab {
 	@include rem('margin-bottom', 30px);
 	@include rem('padding-bottom', 30px);
 }
 
 
-%vr-section-inside {
+@mixin vr-section-inside-fab {
 	@include rem('padding-top', 30px);
 	@include rem('padding-bottom', 30px);
 }
 
-%vr-section-inside-top {
+@mixin vr-section-inside-top-fab {
 	@include rem('margin-top', 30px);
 }
 
-%vr-section-inside-bottom {
+@mixin vr-section-inside-bottom-fab {
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-section-outside {
+@mixin vr-section-outside-fab {
 	@include rem('margin-top', 30px);
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-section-outside-top {
+@mixin vr-section-outside-top-fab {
 	@include rem('margin-top', 30px);
 }
 
-%vr-section-outside-bottom {
+@mixin vr-section-outside-bottom-fab {
 	@include rem('margin-bottom', 30px);
 }
 
 
 
 
-%vr-spacer {
+@mixin vr-spacer-fab {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-%vr-spacer-top {
+@mixin vr-spacer-top-fab {
 	@include rem('margin-top', 15px);
 	@include rem('padding-top', 15px);
 }
 
-%vr-spacer-bottom {
+@mixin vr-spacer-bottom-fab {
 	@include rem('margin-bottom', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
 
-%vr-spacer-inside {
+@mixin vr-spacer-inside-fab {
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-%vr-spacer-inside-top {
+@mixin vr-spacer-inside-top-fab {
 	@include rem('margin-top', 15px);
 }
 
-%vr-spacer-inside-bottom {
+@mixin vr-spacer-inside-bottom-fab {
 	@include rem('margin-bottom', 15px);
 }
 
-%vr-spacer-outside {
+@mixin vr-spacer-outside-fab {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
 }
 
-%vr-spacer-outside-top {
+@mixin vr-spacer-outside-top-fab {
 	@include rem('margin-top', 15px);
 }
 
-%vr-spacer-outside-bottom {
+@mixin vr-spacer-outside-bottom-fab {
 	@include rem('margin-bottom', 15px);
 }
 
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+// ***************************************** //
+//  Type Units //
+// ***************************************** //
 
 
-%vr-title-1 {
+@mixin vr-title-1-fab {
 	@include rem('margin-bottom', 15px);
 }
 
-%vr-title-2 {
+@mixin vr-title-2-fab {
 		@include rem('margin-bottom', 10px);
 }
 
- %vr-title-3 {
+ @mixin vr-title-3-fab {
 		@include rem('margin-bottom', 10px);
 }
 
-%vr-title-4 {
+@mixin vr-title-4-fab {
 		@include rem('margin-bottom', 10px);
 }
 
-%vr-title-5 {
+@mixin vr-title-5-fab {
 		@include rem('margin-bottom', 10px);
 }
 
-%vr-intro-1 {
+@mixin vr-intro-1-fab {
 	@include rem('margin-top', -10px);
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-intro-2 {
+@mixin vr-intro-2-fab {
 		@include rem('margin-bottom', 5px);
 }
 
-%vr-intro-3 {
+@mixin vr-intro-3-fab {
 		@include rem('margin-top', -3px);
 		@include rem('margin-bottom', 10px);
 }
 
-%vr-intro-4 {
+@mixin vr-intro-4-fab {
 		@include rem('margin-bottom', 10px);
 }
 
-%vr-intro-5 {
+@mixin vr-intro-5-fab {
 		@include rem('margin-bottom', 10px);
 }
 
-/* Standard Text  */
+// Standard Text  //
 
-%vr-paragraph {
+@mixin vr-paragraph-fab {
 	@include rem('margin-bottom', 20px);
 }
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+// ***************************************** //
+//  Special //
+// ***************************************** //
 
 
-%vr-title {
+@mixin vr-title-fab {
 		@include rem('margin-top', 10px);
 }
 
 
-%vr-footerbumper {
+@mixin vr-footerbumper-fab {
 	@include rem('margin-top', 30px);
 }
 
-%vr-thumbs  {
+@mixin vr-thumbs-fab {
 	@include rem('margin-bottom', 5px);
 }
 
-%vr-pane-heading {
+@mixin vr-pane-heading-fab {
 	@include rem('margin-bottom', 5px);
 }
 
-%vr-thumbs-title {
+@mixin vr-thumbs-title-fab {
 	margin-bottom:0;
 }
 
-%vr-thumbs-img  {
+@mixin vr-thumbs-img-fab {
 	@include rem('margin-bottom', 10px);
 }
 
-%vr-grid {
+@mixin vr-grid-fab {
 	@include rem('margin-bottom', 30px);
 }
 
-%vr-caption {
+@mixin vr-caption-fab {
 	@include rem('margin-top', 5px);
 }
 
-%vr-label {
+@mixin vr-label-fab {
 	display:inline;
 	@include rem('margin-right', 5px);
-}
-
 }
