@@ -38,11 +38,11 @@
 }
 
 @mixin vr-section-inside-top-desk {
-	@include rem('margin-top', 25px);
+	@include rem('padding-top', 25px);
 }
 
 @mixin vr-section-inside-bottom-desk {
-	@include rem('margin-bottom', 25px);
+	@include rem('padding-bottom', 25px);
 }
 
 @mixin vr-section-outside-desk {
@@ -224,3 +224,6 @@
 	display:inline;
 	@include rem('margin-right', 5px);
 }
+
+
+

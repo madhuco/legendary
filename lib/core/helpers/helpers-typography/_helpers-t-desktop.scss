@@ -266,13 +266,13 @@ letter-spacing:0;
 /* CTA Main */
 /* ***************************************** */
 
-@mixin t-cta-intro-desk {
+@mixin t-cta-primary-desk {
  @include rem('font-size', 22px);	
  @include rem('line-height', 26px);	
 }
 
 
-@mixin t-cta-outro-desk {
+@mixin t-cta-secondary-desk {
  @include rem('font-size', 18px);	
  @include rem('line-height', 20px);	
 }

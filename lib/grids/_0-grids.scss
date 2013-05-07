@@ -1,0 +1,14 @@
+.spotlight {
+text-align:center;
+}
+
+.legal {
+	text-align:right;
+	@include rem(padding-left, 10px);
+	@include rem(padding-right, 10px);
+	@include box-sizing(border-box);
+}
+
+.footer {
+	@include border-top-radius(10px);
+}

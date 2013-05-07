@@ -1,0 +1,25 @@
+html {
+@extend %html;
+}
+
+.typeface-light {
+	@extend %typeface-html;
+	}
+
+body, .typeface-regular {
+	@extend %typeface-regular;
+}
+
+.typeface-medium, form label {
+	@extend %typeface-medium;
+}
+
+.typeface-bold {
+	@extend %typeface-bold;
+}
+
+@import "t-desktop";
+// @import "lib/typography/_t-tablet.scss";
+//  @import "lib/typography/_t-fablet.scss";
+// @import "lib/typography/_t-mobile-l.scss";
+// @import "lib/typography/_t-mobile-p.scss";

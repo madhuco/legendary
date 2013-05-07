@@ -252,13 +252,13 @@ display:none;
 /* CTA Main */
 /* ***************************************** */
 
-@mixin t-cta-intro-fab {
+@mixin t-cta-primary-fab {
  @include rem('font-size', 22px);	
  @include rem('line-height', 26px);	
 }
 
 
-@mixin t-cta-outro-fab {
+@mixin t-cta-secondary-fab {
  @include rem('font-size', 20px);	
  @include rem('line-height', 22px);	
 }

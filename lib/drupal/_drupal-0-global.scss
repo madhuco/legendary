@@ -1,0 +1,13 @@
+@import "drupal-menuminipanel";
+
+/* ***************************************** */
+/*  Tags */
+/* ***************************************** */
+
+.field-tags:after {
+content:"•";	
+}
+
+.field-tags:last-of-type:after {
+	content:none;
+}

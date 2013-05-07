@@ -1,0 +1,198 @@
+/* ***************************************** */
+/*  Section Dividers (Bumpers) */
+/* ***************************************** */
+
+.wrapper .vr-breather {
+@include vr-breather-tab;
+}
+
+
+.vr-section {
+@include vr-section-tab;
+}
+
+
+
+.vr-section-top {
+	@include vr-section-top-tab;
+
+	}
+
+
+
+.vr-section-bottom {
+		@include vr-section-bottom-tab;
+
+}
+
+
+.vr-section-inside {
+	@include vr-section-inside-tab;
+
+}
+
+.vr-section-inside-top {
+	@include vr-section-inside-top-tab;
+}
+
+.vr-section-inside-bottom {
+	@include vr-section-inside-bottom-tab;
+}
+
+.vr-section-outside {
+	@include vr-section-outside-tab;
+}
+
+.vr-section-outside-top {
+	@include vr-section-outside-top-tab;
+}
+
+.vr-section-outside-bottom {
+	@include vr-section-outside-bottom-tab;
+}
+
+/* ***************************************** */
+/*  Sub Section Dividers (Spacers) */
+/* ***************************************** */
+
+.vr-spacer {
+	@include vr-spacer-tab;
+}
+
+.vr-spacer-top {
+	@include vr-spacer-top-tab;
+}
+
+
+.vr-spacer-bottom {
+	@include vr-spacer-bottom-tab;
+	}
+
+
+.vr-spacer-inside {
+	@include vr-spacer-inside-tab;
+}
+
+.vr-spacer-inside-top {
+	@include vr-spacer-inside-top-tab;
+}
+
+.vr-spacer-inside-bottom {
+	@include vr-spacer-inside-bottom-tab;
+}
+
+.vr-spacer-outside {
+	@include vr-spacer-outside-tab;
+}
+
+.vr-spacer-outside-top {
+	@include vr-spacer-outside-top-tab;
+}
+
+.vr-spacer-outside-bottom {
+	@include vr-spacer-outside-bottom-tab;
+}
+
+
+
+/* ***************************************** */
+/*  Type Units */
+/* ***************************************** */
+
+
+.vr-title-1 {
+	@include vr-title-1-tab;
+}
+
+.vr-title-2 {
+		@include vr-title-2-tab;
+}
+
+.vr-title-3 {
+		@include vr-title-3-tab;
+}
+
+.vr-title-4 {
+		@include vr-title-4-tab;
+}
+
+.vr-title-5 {
+		@include vr-title-5-tab;
+}
+
+.vr-intro-1 {
+	@include vr-intro-1-tab;
+}
+
+.vr-intro-2 {
+		@include vr-intro-2-tab;
+}
+
+.vr-intro-3 {
+		@include vr-intro-3-tab;
+}
+
+.vr-intro-4 {
+		@include vr-intro-4-tab;
+}
+
+.vr-intro-5 {
+		@include vr-intro-5-tab;
+}
+
+
+
+
+
+/* Standard Text  */
+
+
+
+
+.vr-paragraph, .vr-paragraph p {
+	@include vr-paragraph-tab;
+}
+
+
+
+/* ***************************************** */
+/*  Special */
+/* ***************************************** */
+
+
+.ui-accordian .vr-title {
+		@include vr-title-tab;
+}
+
+
+.vr-footerbumper {
+	@include vr-footerbumper-tab;
+}
+
+.vr-thumbs  {
+	@include vr-thumbs-tab;
+}
+
+.vr-pane-heading {
+	@include vr-pane-heading-tab;
+}
+
+.sidebar-active .vr-thumbs-title {
+	@include vr-thumbs-title-tab;
+}
+
+.vr-thumbs img {
+	@include vr-thumbs-img-tab;
+}
+
+.vr-grid {
+	@include vr-grid-tab;
+}
+
+.vr-caption {
+	@include vr-caption-tab;
+}
+
+.vr-label {
+	@include vr-label-tab;
+}

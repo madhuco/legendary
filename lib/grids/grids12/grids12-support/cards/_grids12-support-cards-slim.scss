@@ -1,0 +1,306 @@
+@include cards(cards-layout);
+
+@include media($mob...) { 
+
+.grids12 .cards-layout.main-aside-slim .unit {
+@include span-columns(12, 12);
+}
+
+}
+
+@include media($mob-p...) {
+.grids12 .cards-layout.main-aside-slim .unit-row {
+@include span-columns(12, 12);
+@inlcude omega;
+@include rem(height, 278px);
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back{
+@include rem(height, 475px);
+}
+
+}
+
+
+
+
+@include media($mob-l...) {
+
+.grids12 .cards-layout.main-aside-slim .unit-row {
+@include span-columns(6, 12);
+@include rem(height, 206px);
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-child(even) {
+@include omega;
+}
+
+
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-child(even) {
+@include omega;
+}
+
+
+.grids12 .cards-layout.main-aside-slim .cards-back{
+@include span-columns(12 omega, 6);
+@include rem(height, 374px);
+}
+
+
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(even) .cards-back {
+right:0;
+top:0;
+}
+
+
+}
+
+
+
+@include media($pads...) {
+
+/* ***************************************** */
+/*   Cards Front */
+/* ***************************************** */
+.grids12 .cards-layout.main-aside-slim .unit {
+@include span-columns(8, 8);
+}
+
+/*Generic card Set Up */
+.grids12 .cards-layout.main-aside-slim .unit-row {
+@include span-columns(4, 8);
+}
+
+
+/*Large Card sized Set Up */
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n + 1)  {
+@include span-columns(8, 8);
+@include omega;
+
+}
+
+/* Floats for right sides */
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n) {
+@include omega;
+}
+
+/* ***************************************** */
+/*  Cards Expanded */
+/* ***************************************** */
+
+
+/*Generic card Set Up */
+
+.grids12 .cards-layout.main-aside-slim .cards-back {
+@include span-columns(8, 4);
+@include omega();
+bottom:0;
+}
+
+
+/*Large Card size Set Up */
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n + 1) .cards-back {
+@include span-columns(8, 8);
+top:0;
+bottom:inherit;
+}
+
+/*Right Side Card Positioning */
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n) .cards-back {
+right:0;
+}
+
+
+
+}
+
+/* ***************************************** */
+/*  Cards front Height */
+/* ***************************************** */
+
+
+@include media($fab...) {
+
+.grids12 .cards-layout.main-aside-slim .unit-row  {
+@include rem(height, 141px);
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back {
+@include rem(height, 568px);
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back .img {
+@include rem(height, 212px);
+}
+
+
+}
+
+@include media($tab...) {
+
+.grids12 .cards-layout.main-aside-slim .unit-row {
+@include rem(height, 180px);
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+
+
+.grids12 .cards-layout.main-aside-slim .cards-back {
+@include rem(height, 610px);
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back .img {
+@include rem(height, 297px);
+}
+
+
+}
+
+
+@include media($desk...){ 
+
+
+/* ***************************************** */
+/*    Cards:Set Up */
+/* ***************************************** */
+
+.grids12 .cards-layout.main-aside-slim .unit {
+position:relative;
+@include span-columns(9, 9);
+@include omega;
+}
+
+
+/* ***************************************** */
+/*  Cards Front */
+/* ***************************************** */
+
+/* Basic Card - Container */
+
+.grids12 .cards-layout.main-aside-slim .unit-row {
+@include span-columns(3, 9);
+@include rem(height, 188px);
+}
+
+/* Basic Card - Layout */
+
+.grids12 .cards-layout.main-aside-slim .cards-back .unit-img {
+@include span-columns(6, 9);
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back .unit-txt {
+@include span-columns(3, 9);
+@include omega;
+}
+
+
+/* Special Cards - Containers */
+
+.grids12 .cards-layout.main-aside-slim .unit-row-1,
+.grids12 .cards-layout.main-aside-slim .unit-row-8,
+.grids12 .cards-layout.main-aside-slim .unit-row-13  {
+@include span-columns(6, 9);
+@include rem(height, 407px); 
+}
+
+
+/* Cards that need float clearing */
+
+.grids12 .cards-layout.main-aside-slim .unit-row-2,
+.grids12 .cards-layout.main-aside-slim .unit-row-3, 
+.grids12 .cards-layout.main-aside-slim .unit-row-6, 
+.grids12 .cards-layout.main-aside-slim .unit-row-8,
+.grids12 .cards-layout.main-aside-slim .unit-row-12,
+.grids12 .cards-layout.main-aside-slim .unit-row-14,
+.grids12 .cards-layout.main-aside-slim .unit-row-15,
+.grids12 .cards-layout.main-aside-slim .unit-row-18 {
+@include omega;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Outer Layout */
+/* ***************************************** */
+
+
+.grids12 .cards-layout.main-aside-slim .cards-expand .cards-back{
+@include span-columns(9, 3);
+@include omega();
+@include rem(height, 407px); 
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row-1.cards-expand .cards-back,
+.grids12 .cards-layout.main-aside-slim .unit-row-13.cards-expand .cards-back {
+@include span-columns(9, 6);
+left:0;
+top:0;
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row-2.cards-expand .cards-back, 
+.grids12 .cards-layout.main-aside-slim .unit-row-14.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row-3.cards-expand .cards-back, 
+.grids12 .cards-layout.main-aside-slim .unit-row-15.cards-expand .cards-back {
+right:0;
+bottom:0;
+}
+
+
+.grids12 .cards-layout.main-aside-slim .unit-row-4.cards-expand .cards-back{
+left:0;
+top:0;
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row-5.cards-expand .cards-back, 
+.grids12 .cards-layout.main-aside-slim .unit-row-11.cards-expand .cards-back,
+.grids12 .cards-layout.main-aside-slim .unit-row-17.cards-expand .cards-back  {
+left: -(columns(9,7.6));
+top:0;
+}
+
+
+.grids12 .cards-layout.main-aside-slim .unit-row-6.cards-expand .cards-back, 
+.grids12 .cards-layout.main-aside-slim .unit-row-12.cards-expand .cards-back,
+.grids12 .cards-layout.main-aside-slim .unit-row-18.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+
+.grids12 .cards-layout.main-aside-slim .unit-row-8.cards-expand .cards-back{
+@include span-columns(9, 6);
+@include omega;
+right:0;
+top:0;
+}
+
+.grids12 .cards-layout.main-aside-slim .unit-row-9.cards-expand .cards-back{
+left:0;
+bottom:0;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Contents Layout */
+/* ***************************************** */
+.grids12 .cards-layout.main-aside-slim .cards-back {
+@include rem(padding, 10px);	
+}
+
+.grids12 .cards-layout.main-aside-slim .cards-back .unit-footer {
+@include span-columns(3 omega, 9);
+}
+
+}

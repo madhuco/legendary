@@ -1,0 +1,202 @@
+@include media($desk...){ 
+
+/* ***************************************** */
+/*  Section Dividers (Bumpers) */
+/* ***************************************** */
+
+.wrapper .vr-breather {
+@include vr-breather-desk;
+}
+
+
+.vr-section {
+@include vr-section-desk;
+}
+
+
+
+.vr-section-top {
+	@include vr-section-top-desk;
+
+	}
+
+
+
+.vr-section-bottom {
+		@include vr-section-bottom-desk;
+
+}
+
+
+.vr-section-inside {
+	@include vr-section-inside-desk;
+
+}
+
+.vr-section-inside-top {
+	@include vr-section-inside-top-desk;
+}
+
+.vr-section-inside-bottom {
+	@include vr-section-inside-bottom-desk;
+}
+
+.vr-section-outside {
+	@include vr-section-outside-desk;
+}
+
+.vr-section-outside-top {
+	@include vr-section-outside-top-desk;
+}
+
+.vr-section-outside-bottom {
+	@include vr-section-outside-bottom-desk;
+}
+
+/* ***************************************** */
+/*  Sub Section Dividers (Spacers) */
+/* ***************************************** */
+
+.vr-spacer {
+	@include vr-spacer-desk;
+}
+
+.vr-spacer-top {
+	@include vr-spacer-top-desk;
+}
+
+
+.vr-spacer-bottom {
+	@include vr-spacer-bottom-desk;
+	}
+
+
+.vr-spacer-inside {
+	@include vr-spacer-inside-desk;
+}
+
+.vr-spacer-inside-top {
+	@include vr-spacer-inside-top-desk;
+}
+
+.vr-spacer-inside-bottom {
+	@include vr-spacer-inside-bottom-desk;
+}
+
+.vr-spacer-outside {
+	@include vr-spacer-outside-desk;
+}
+
+.vr-spacer-outside-top {
+	@include vr-spacer-outside-top-desk;
+}
+
+.vr-spacer-outside-bottom {
+	@include vr-spacer-outside-bottom-desk;
+}
+
+
+
+/* ***************************************** */
+/*  Type Units */
+/* ***************************************** */
+
+
+.vr-title-1 {
+	@include vr-title-1-desk;
+}
+
+.vr-title-2 {
+		@include vr-title-2-desk;
+}
+
+.vr-title-3 {
+		@include vr-title-3-desk;
+}
+
+.vr-title-4 {
+		@include vr-title-4-desk;
+}
+
+.vr-title-5 {
+		@include vr-title-5-desk;
+}
+
+.vr-intro-1 {
+	@include vr-intro-1-desk;
+}
+
+.vr-intro-2 {
+		@include vr-intro-2-desk;
+}
+
+.vr-intro-3 {
+		@include vr-intro-3-desk;
+}
+
+.vr-intro-4 {
+		@include vr-intro-4-desk;
+}
+
+.vr-intro-5 {
+		@include vr-intro-5-desk;
+}
+
+
+
+
+
+/* Standard Text  */
+
+
+
+
+.vr-paragraph, .vr-paragraph p {
+	@include vr-paragraph-desk;
+}
+
+
+
+/* ***************************************** */
+/*  Special */
+/* ***************************************** */
+
+
+.ui-accordian .vr-title {
+		@include vr-title-desk;
+}
+
+
+.vr-footerbumper {
+	@include vr-footerbumper-desk;
+}
+
+.vr-thumbs  {
+	@include vr-thumbs-desk;
+}
+
+.vr-pane-heading {
+	@include vr-pane-heading-desk;
+}
+
+.sidebar-active .vr-thumbs-title {
+	@include vr-thumbs-title-desk;
+}
+
+.vr-thumbs img {
+	@include vr-thumbs-img-desk;
+}
+
+.vr-grid {
+	@include vr-grid-desk;
+}
+
+.vr-caption {
+	@include vr-caption-desk;
+}
+
+.vr-label {
+	@include vr-label-desk;
+}
+
+}

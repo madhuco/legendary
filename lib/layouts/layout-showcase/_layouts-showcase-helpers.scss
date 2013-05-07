@@ -1,0 +1,14 @@
+@mixin showcase-grid($showcase-grid: showcase-grid) {
+	.#{$showcase-grid} {
+		@include span-columns(12 omega, 12);
+	}
+	
+	.#{$showcase-grid} .unit {
+		@include span-columns(2, 12);
+	}
+
+.#{$showcase-grid} .unit-last {
+		@include omega;
+	}
+
+}

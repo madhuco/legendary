@@ -1,0 +1,5 @@
+.style-mono, .style-mono-unit .unit {
+border:1px $scratch solid;
+@include rem(padding, 10px);
+ @include box-sizing(border-box);
+}

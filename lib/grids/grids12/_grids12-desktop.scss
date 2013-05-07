@@ -1,0 +1,18 @@
+@include media($desk...) { 
+
+
+$total-columns       : 12;
+$column-width        : 4.5em;
+$gutter-width        : 3em;
+$gutter-padding      : 4em;
+
+    .grids12 {
+      @include container;
+      @include susy-grid-background;
+    }
+	
+	
+	
+@include susy-classes(desk);
+
+}

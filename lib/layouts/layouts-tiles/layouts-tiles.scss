@@ -1,0 +1,7 @@
+@mixin tiles($tiles: tiles) {
+	
+.#{$tiles} .unit-heading {
+text-align:center;	
+}
+		
+}

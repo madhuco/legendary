@@ -1,0 +1,54 @@
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+nav.tapmenu {
+position:absolute;	
+}
+
+@include media($portables...) { 
+nav.tapmenu {
+position:fixed;
+width:100%;	
+bottom:0;
+}
+}
+
+
+
+/* ***************************************** */
+/*  Hide tapmenu-anchor for no jquery enabled situations*/
+/* ***************************************** */
+
+.no-jq .tapmenu-anchor {
+	display:none;
+}
+
+/* ***************************************** */
+/*  Arrows*/
+/* ***************************************** */
+
+@mixin tapmenu-arrow {
+color: inherit;
+}
+
+.tapmenu-arrow-left:before {
+	@include tapmenu-arrow;
+	@include icon($icon-chevron-left);
+	}
+
+
+.tapmenu-arrow-right:after {
+	@include tapmenu-arrow;
+	@include icon($icon-chevron-right);
+	@include rem(padding-left, 5px);
+}
+
+
+
+.tapmenu-arrow-down:after {
+	@include tapmenu-arrow;
+	@include icon($icon-chevron-down);
+	@include rem(padding-left, 5px);
+}
+
