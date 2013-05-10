@@ -58,8 +58,8 @@
 }
 
 @mixin t-intro-3-desk {
- @include rem('font-size', 23px);
- @include rem('line-height', 27px);
+ @include rem('font-size', 20px);
+ @include rem('line-height', 29px);
  @include rem('letter-spacing', -1px);
 }
 
@@ -154,6 +154,12 @@ letter-spacing:0;
 
 @mixin t-footer-link-desk {
  @include rem('font-size', 14px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
+@mixin t-footer-small-desk {
+ @include rem('font-size', 10px);
  @include rem('line-height', 22px);
  @include rem('letter-spacing', 0px);
 }

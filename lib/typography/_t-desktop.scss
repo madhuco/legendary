@@ -110,6 +110,10 @@
  @include t-footer-link-desk;
 }
 
+.t-footer-small {
+ @include t-footer-small-desk;
+}
+
 
 /* ***************************************** */
 /* Tapagation */

@@ -1,11 +1,3 @@
-@import "../../../plugins/susy/susy";
-
-$base-font-size: 10px;
-$show-grid-backgrounds: true;
-
-html, body {
-  font-size: 10px;
-}
 
 
 @mixin susy-classes($device, $group1: false, $group2: false, $group3: false, $silent: false) {

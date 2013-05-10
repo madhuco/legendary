@@ -188,9 +188,6 @@
 }
 
 
-
-
-
 @mixin vr-footerbumper-desk {
 	@include rem('margin-top', 40px);
 }
@@ -204,7 +201,7 @@
 }
 
 @mixin vr-thumbs-title-desk {
-	margin-bottom:0;
+	@include rem('margin-bottom', 5px);
 }
 
 @mixin vr-thumbs-img-desk {

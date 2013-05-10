@@ -1,10 +1,12 @@
 
 // Helpers provide Functions. If the function is not called, it wont appear in css 
+//The exceptionn to this is fonts, which will appear in CSS
 
-@import "helpers/helpers-rem";
-@import "helpers/helpers-mqs";
-@import "helpers/helpers-colours";
-@import "helpers/helpers-fontawesome";
-@import "helpers/helpers-typography/0-helpers-typography";
+@import "helpers-rem";
+@import "helpers-mqs";
+@import "helpers-colours";
+@import "helpers-fonts";
+@import "helpers-fontawesome";
+@import "0-helpers-typography";
 @import "helpers-vr-0-global";
 @import "helpers-bonbon";

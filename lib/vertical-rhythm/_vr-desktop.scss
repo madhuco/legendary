@@ -183,6 +183,10 @@
 	@include vr-thumbs-title-desk;
 }
 
+.vr-thumbs-title {
+	@include vr-thumbs-title-desk;
+}
+
 .vr-thumbs img {
 	@include vr-thumbs-img-desk;
 }

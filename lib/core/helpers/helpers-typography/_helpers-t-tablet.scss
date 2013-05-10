@@ -146,6 +146,12 @@ letter-spacing:0;
  @include rem('line-height', 14px);
 }
 
+@mixin t-footer-small-tab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 22px);
+ @include rem('letter-spacing', 0px);
+}
+
 
 /* ***************************************** */
 /* Tapagation */

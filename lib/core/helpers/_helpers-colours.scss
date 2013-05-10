@@ -13,3 +13,131 @@ $darkest: #323232;
 $offwhite: #f3f3f3;
 
 
+// ***************************************** //
+//  Text Colours //
+// ***************************************** //
+
+@mixin txtcolor-default {
+	color: #5b5b5b;
+}
+
+@mixin txtcolor-lighter {
+	color: #888888;
+}
+
+@mixin txtcolor-lightest {
+	color: #bebebe;
+}
+
+@mixin txtcolor-darker {
+	color: #323232;
+}
+
+@mixin txtcolor-darkest {
+	color: #000001;
+}
+
+// ***************************************** //
+// Mono Backgrounds //
+// ***************************************** //
+
+@mixin bgcolor-offwhite-flat {
+	background-color: #f3f3f3;
+}
+
+@mixin bgcolor-lighter-flat {
+	background-color: #888888;
+}
+
+@mixin bgcolor-lightest-flat {
+	background-color: #bebebe;
+}
+
+@mixin bgcolor-darker-flat {
+	background-color: #323232;
+}
+
+@mixin bgcolor-darkest-flat {
+	background-color: #000001;
+}
+
+@mixin bgcolor-offwhite-3d {
+	background-color: #f3f3f3;
+	border: 1px solid #888888;
+}
+
+@mixin bgcolor-lighter-3d {
+	background-color: #888888;
+	border: 1px solid #bebebe;
+}
+
+@mixin bgcolor-lightest-3d {
+	background-color: #bebebe;
+	border: 1px solid #323232;
+}
+
+@mixin bgcolor-darker-3d {
+	background-color: #323232;
+	border: 1px solid #000001;
+}
+
+@mixin bgcolor-darkest-3d {
+	background-color: #000001;
+	border: 1px solid #000001;
+}
+
+// ***************************************** //
+// Stripes Background //
+// ***************************************** //
+
+@mixin stripes  {
+	background: #f3f3f4;
+}
+
+@mixin stripes-primary  {
+	background: #bcc0ff;
+}
+
+@mixin stripes-secondary {
+	background: #d1d4ff;
+}
+
+@mixin stripes-accent  {
+	background: #ffeebf;
+}
+
+
+// ***************************************** //
+// Footer Colours  //
+// ***************************************** //
+
+
+@mixin txtcolor-footer-heading {
+	color: #828283;
+}
+
+@mixin txtcolor-footer-text {
+	color: #999999;
+}
+
+@mixin txtcolor-footer-link {
+	color: #828282;
+}
+
+@mixin bgcolor-footer-mono-primary-flat {
+	background-color: #f9f9f9;
+}
+
+@mixin bgcolor-footer-mono-primary-3d {
+	background-color: #f9f9f9;
+	border: 1px solid #dedede;
+}
+
+@mixin bgcolor-footer-mono-secondary-flat {
+	background-color: #dedede;
+}
+
+@mixin bgcolor-footer-mono-secondary-3d {
+	background-color: #dedede;
+	border: 1px solid #f9f9f9;
+}
