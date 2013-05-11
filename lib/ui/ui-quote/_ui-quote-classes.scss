@@ -1,0 +1,9 @@
+/* CSS Document */
+
+@import "ui-quote-helpers";
+
+@include ui-mono-quote;
+
+@include ui-mono-quote-bars('.ui-mono-quote-bars', '.ui-mono-quote');
+
+@include ui-mono-quote-outside('.ui-mono-quote-outside', '.ui-mono-quote');

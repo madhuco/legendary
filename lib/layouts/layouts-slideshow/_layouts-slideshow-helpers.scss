@@ -1,0 +1,46 @@
+// ===============================================
+// Slideshow: Layout
+// ===============================================
+
+@mixin slideshow-50($slideshow: slideshow-50) {
+			
+}
+
+
+// ===============================================
+// Slideshow: Grid
+// ===============================================
+
+@mixin slideshow-50-grid($slideshow: slideshow-50-grid) {
+
+/* ***************************************** */
+/*  Slideshow: Grid */
+/* ***************************************** */
+
+/* Basic Layout */
+
+ .#{$slideshow}  {
+@include span-columns(12 omega, 12);
+}
+
+ .#{$slideshow} .slides {
+@include span-columns(12 omega, 12);
+}
+
+ .#{$slideshow} .primary {
+@include span-columns(4 omega, 6);
+float:left;	
+}
+
+.#{$slideshow} .secondary {
+@include span-columns(2 omega, 6);	
+float:left;
+}
+
+		
+}
+
+
+// ===============================================
+// Slideshow: Style
+// ===============================================

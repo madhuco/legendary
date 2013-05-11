@@ -1,0 +1,82 @@
+
+.ui-quote {
+display:block;
+}
+
+.ui-quote-bars {
+border-top: 0.5em solid #bebebe;	
+border-bottom: 0.5em solid #bebebe;	
+display:block;
+}
+
+
+@mixin ui-mono-quote($quote: '.ui-mono-quote') {
+
+#{$quote} {
+	display: block;
+	
+	&:before {
+		content: '\201C';
+@include rem(font-size, 240px);
+font-family:"Times New Roman", Times, serif;
+@include rem(margin-top, 70px);
+@include rem(margin-bottom, -30px);
+@include rem(line-height, 0px);
+display: block;
+float: left;
+@include rem(margin-right, 10px);
+color:#bebebe;
+	}
+	
+	@content;
+	
+}
+}
+
+
+@mixin ui-mono-quote-bars($quote: '.ui-mono-quote-bars', $extend: false) {
+
+@if $extend == false {
+@include ui-mono-quote(#{$quote});	
+} 
+
+#{$quote} {
+border-top: 0.5em solid #bebebe;	
+border-bottom: 0.5em solid #bebebe;	
+display:block;
+
+@if $extend != false {
+	@extend #{$extend}	
+}
+
+}
+	
+
+}
+
+
+
+@mixin ui-mono-quote-outside($quote: '.ui-mono-quote-outside', $extend: false) {
+
+@if $extend == false {
+@include ui-mono-quote(#{$quote});	
+} 
+
+
+#{$quote} {
+position:relative;
+
+&:before {
+position:absolute;
+left:-0.45em;	
+}
+	
+	@if $extend != false {
+	@extend #{$extend}	
+}
+	
+}
+
+
+}
+

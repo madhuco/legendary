@@ -1,0 +1,24 @@
+@mixin ui-spot-badges($ui-spot-badges: ui-spot-badges) {
+	
+.#{$ui-spot-badges} {	
+ @include background-image(radial-gradient(1px -11px, circle, white 8%, red 26px )); 
+ background-color: red;
+ border: 2px solid white;
+ @include border-radius(12px);
+ box-shadow: 1px 1px 1px black;
+color: white;
+font: bold 12px/9px Helvetica, Verdana, Tahoma;
+@include rem(height, 12px);
+@include rem(padding, 2px 3px 0 3px);   
+text-align: center;
+min-width: 8px;
+@content;
+
+
+&:after {
+background:red;	
+}
+
+}
+
+}

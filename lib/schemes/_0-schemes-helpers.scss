@@ -1,0 +1,10 @@
+
+@import "schemes-purity";
+@import "schemes-mono-helpers";
+@import "schemes-spotbar-helpers";
+
+.spotbar {
+@include border-radius(10px);
+@include box-sizing(border-box);
+@include rem(padding, 5px);
+}

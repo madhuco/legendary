@@ -1,0 +1,69 @@
+// ===============================================
+// Footer: Layout
+// ===============================================
+
+@mixin footer($footer: footer) {
+	
+.#{$footer} {
+@include border-top-radius(10px);
+}
+		
+}
+
+
+// ===============================================
+// Footer: Grid
+// ===============================================
+
+@mixin footer-grid($footer: footer-grid) {
+
+/* ***************************************** */
+/*  Footer: Grid */
+/* ***************************************** */
+
+/* Basic Layout */
+
+.#{$footer} {
+@include span-columns(12 omega, 12);	
+}
+
+.#{$footer} .unit {
+@include span-columns(4, 12);	
+}
+
+.#{$footer} .logo .unit-heading {
+margin-left:auto;
+margin-right:auto;
+}
+
+
+
+.#{$footer} .unit:last-of-type, 
+.#{$footer} .unit-last {
+@include omega;	
+}
+
+.#{$footer} .footer-ribbon { 
+@include span-columns(12 omega, 12);
+}
+
+.#{$footer} .footer-ribbon ul { 
+@include horizontal-list;
+float:right;
+}
+
+.#{$footer} .footer-ribbon ul li { 
+@include rem(margin, 0 10px);
+}
+
+.#{$footer} a {
+display:block;	
+}
+
+		
+}
+
+
+// ===============================================
+// Footer: Style
+// ===============================================

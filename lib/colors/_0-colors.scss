@@ -1,0 +1,124 @@
+
+
+/* ***************************************** */
+/*  COLORS: Text Colours */
+/* ***************************************** */
+
+.txtcolor-default {
+	@include txtcolor-default;
+}
+
+.txtcolor-lighter {
+@include txtcolor-lighter;
+}
+
+.txtcolor-lightest {
+	@include txtcolor-lightest;
+}
+
+.txtcolor-darker {
+	@include txtcolor-darker;
+}
+
+.txtcolor-darkest {
+	@include txtcolor-darkest;
+}
+
+/* ***************************************** */
+/*  COLORS: Mono Backgrounds */
+/* ***************************************** */
+
+.bgcolor-offwhite-flat {
+	@include bgcolor-offwhite-flat;
+}
+
+.bgcolor-lighter-flat {
+	@include bgcolor-lighter-flat;
+}
+
+.bgcolor-lightest-flat {
+	@include bgcolor-lightest-flat;
+}
+
+.bgcolor-darker-flat {
+	@include bgcolor-darker-flat;
+}
+
+.bgcolor-darkest-flat {
+	@include bgcolor-darkest-flat;
+}
+
+.bgcolor-offwhite-3d {
+	@include bgcolor-offwhite-3d;
+}
+
+.bgcolor-lighter-3d {
+	@include bgcolor-lighter-3d;
+}
+
+.bgcolor-lightest-3d {
+	@include bgcolor-lightest-3d;
+}
+
+.bgcolor-darker-3d {
+	@include bgcolor-darker-3d;
+}
+
+.bgcolor-darkest-3d {
+	@include bgcolor-darkest-3d;
+}
+
+/* ***************************************** */
+/*  COLORS: Stripes Background */
+/* ***************************************** */
+
+.stripes  {
+	@include stripes;
+}
+
+.stripes-primary  {
+	@include stripes-primary;
+}
+
+.stripes-secondary {
+	@include stripes-secondary;
+}
+
+.stripes-accent  {
+	@include stripes-accent;
+}
+
+
+/* ***************************************** */
+/*  COLORS: Footer Colours  */
+/* ***************************************** */
+
+
+.txtcolor-footer-heading {
+	@include txtcolor-footer-heading;
+}
+
+.txtcolor-footer-text {
+	@include txtcolor-footer-text;
+}
+
+.txtcolor-footer-link {
+	@include txtcolor-footer-link;
+}
+
+.bgcolor-footer-mono-primary-flat {
+	@include bgcolor-footer-mono-primary-flat;
+}
+
+.bgcolor-footer-mono-primary-3d {
+	@include bgcolor-footer-mono-primary-3d;
+}
+
+.bgcolor-footer-mono-secondary-flat {
+	@include bgcolor-footer-mono-secondary-flat;
+}
+
+.bgcolor-footer-mono-secondary-3d {
+	@include bgcolor-footer-mono-secondary-3d;
+}
+

@@ -1,0 +1,22 @@
+@mixin spotbar($spotbar: '.spotbar-scheme') {
+
+	#{$spotbar} {
+@include bgcolor-offwhite-flat;
+@include border-radius(5px);
+@include rem(padding, 10px 0);
+	@include box-sizing(border-box);
+	clear:both;
+
+	
+	
+ .content-footer {
+	@include bgcolor-ribbon;
+	text-align:center;
+	@include rem(padding, 10px 0);
+	@include rem(margin, 0 0 -10px 0);
+	}
+	
+	}
+
+}
+

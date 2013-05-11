@@ -1,0 +1,65 @@
+// ===============================================
+// icards: Layout
+// ===============================================
+
+@mixin icards($icards: '.icards') {
+	
+#{$icards} .unit {
+text-align:center;	
+}
+		
+}
+
+
+// ===============================================
+// icards: Grid
+// ===============================================
+
+@mixin icards-grid($icards: '.icards-grid') {
+
+/* ***************************************** */
+/*  icards: Grid */
+/* ***************************************** */
+
+/* Basic Layout */
+
+.aside-main-50 #{$icards},
+.main-aside-50 #{$icards} {
+@include span-columns(6 omega, 6);	
+}
+
+.aside-main-50 #{$icards} .unit,
+.main-aside-50 #{$icards} .unit {
+@include span-columns(2, 6);	
+}
+
+.aside-main-50 #{$icards} .unit:last-of-type, 
+.main-aside-50 #{$icards} .unit:last-of-type, 
+.aside-main-50 #{$icards} .unit-last, 
+.main-aside-50 #{$icards} .unit-last {
+@include omega;	
+}
+
+		
+}
+
+
+// ===============================================
+// icards: Style
+// ===============================================
+
+@mixin icards-style($icards: '.icards-style') {
+	
+	#{$icards}  {
+	
+	
+	.unit-heading {
+	
+		
+	}
+	
+	
+		
+	}
+	
+}

@@ -1,0 +1,40 @@
+@import "0-grids12-helpers";
+@import "grids12-base";
+
+@include media($mob-p...) {
+ .grids12 {
+ @include container;
+ @include susy-grid-background;
+}
+
+}
+
+ @include media($fab...) {
+
+ .grids12 {
+ @include container;
+ @include susy-grid-background;
+}
+
+
+}
+
+ @include media($tab...) {
+ .grids12 {
+ @include container;
+ @include susy-grid-background;
+}
+
+
+}
+
+ @include media($desk...) {
+
+	 
+ .grids12 {
+ @include container;
+ @include susy-grid-background;
+}
+
+
+}
