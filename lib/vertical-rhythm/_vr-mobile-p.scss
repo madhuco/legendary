@@ -8,49 +8,33 @@
 }
 
 
+
 %vr-section {
 @include vr-section-mob;
 }
-
-
 
 %vr-section-top {
 	@include vr-section-top-mob;
 
 	}
 
-
-
 %vr-section-bottom {
 		@include vr-section-bottom-mob;
 
 }
 
-
-%vr-section-inside {
-	@include vr-section-inside-mob;
-
+%vr-section-box {
+	@include vr-section-box-top-mob;
 }
 
-%vr-section-inside-top {
-	@include vr-section-inside-top-mob;
+%vr-section-box-top {
+	@include vr-section-box-top-mob;
 }
 
-%vr-section-inside-bottom {
-	@include vr-section-inside-bottom-mob;
+%vr-section-box-bottom {
+	@include vr-section-box-bottom-mob;
 }
 
-%vr-section-outside {
-	@include vr-section-outside-mob;
-}
-
-%vr-section-outside-top {
-	@include vr-section-outside-top-mob;
-}
-
-%vr-section-outside-bottom {
-	@include vr-section-outside-bottom-mob;
-}
 
 /* ***************************************** */
 /*  Sub Section Dividers (Spacers) */
@@ -65,34 +49,24 @@
 }
 
 
+
 %vr-spacer-bottom {
 	@include vr-spacer-bottom-mob;
 	}
 
 
-%vr-spacer-inside {
-	@include vr-spacer-inside-mob;
+%vr-spacer-box {
+	@include vr-spacer-box-mob;
 }
 
-%vr-spacer-inside-top {
-	@include vr-spacer-inside-top-mob;
+%vr-spacer-box-top {
+	@include vr-spacer-box-top-mob;
 }
 
-%vr-spacer-inside-bottom {
-	@include vr-spacer-inside-bottom-mob;
+%vr-spacer-box-bottom {
+	@include vr-spacer-box-bottom-mob;
 }
 
-%vr-spacer-outside {
-	@include vr-spacer-outside-mob;
-}
-
-%vr-spacer-outside-top {
-	@include vr-spacer-outside-top-mob;
-}
-
-%vr-spacer-outside-bottom {
-	@include vr-spacer-outside-bottom-mob;
-}
 
 
 
@@ -182,7 +156,7 @@
 	@include vr-thumbs-title-mob;
 }
 
-%vr-thumbs img {
+%vr-thumbs-img {
 	@include vr-thumbs-img-mob;
 }
 

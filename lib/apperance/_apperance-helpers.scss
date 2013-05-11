@@ -1,54 +1,21 @@
-@charset "UTF-8";
-/* CSS Document */
-
-
-
 
 @mixin typeface-light {
 	font-family: 'EauDouceSansLight', Arial, Helvetica, sans-serif;
-}
-
-.typeface-light {
-@include typeface-light;	
 }
 
 @mixin typeface-regular {
 	font-family: 'EauDouceSansRegular', Arial, Helvetica, sans-serif;
 }
 
-.typeface-regular {
-@include typeface-regular;	
-}
 
 
 @mixin typeface-medium {
 	font-family: 'EauDouceSansMedium', Arial, Helvetica, sans-serif;
 }
 
-.typeface-medium {
-@include typeface-medium;	
-}
 
 
 @mixin typeface-bold {
 	font-family: 'EauDouceSansBold', Arial, Helvetica, sans-serif;
-}
-
-.typeface-bold {
-@include typeface-bold;	
-}
-
-
-
-html {
-	font-size: 10px;
-}
-
-body {
-	@include typeface-regular;
-}
-
-a {
-color:inherit;	
 }
 

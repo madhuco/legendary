@@ -9,49 +9,33 @@
 }
 
 
+
 %vr-section {
 @include vr-section-tab;
 }
-
-
 
 %vr-section-top {
 	@include vr-section-top-tab;
 
 	}
 
-
-
 %vr-section-bottom {
 		@include vr-section-bottom-tab;
 
 }
 
-
-%vr-section-inside {
-	@include vr-section-inside-tab;
-
+%vr-section-box {
+	@include vr-section-box-top-tab;
 }
 
-%vr-section-inside-top {
-	@include vr-section-inside-top-tab;
+%vr-section-box-top {
+	@include vr-section-box-top-tab;
 }
 
-%vr-section-inside-bottom {
-	@include vr-section-inside-bottom-tab;
+%vr-section-box-bottom {
+	@include vr-section-box-bottom-tab;
 }
 
-%vr-section-outside {
-	@include vr-section-outside-tab;
-}
-
-%vr-section-outside-top {
-	@include vr-section-outside-top-tab;
-}
-
-%vr-section-outside-bottom {
-	@include vr-section-outside-bottom-tab;
-}
 
 /* ***************************************** */
 /*  Sub Section Dividers (Spacers) */
@@ -66,34 +50,26 @@
 }
 
 
+
 %vr-spacer-bottom {
 	@include vr-spacer-bottom-tab;
 	}
 
 
-%vr-spacer-inside {
-	@include vr-spacer-inside-tab;
+%vr-spacer-box {
+	@include vr-spacer-box-tab;
 }
 
-%vr-spacer-inside-top {
-	@include vr-spacer-inside-top-tab;
+%vr-spacer-box-top {
+	@include vr-spacer-box-top-tab;
 }
 
-%vr-spacer-inside-bottom {
-	@include vr-spacer-inside-bottom-tab;
+%vr-spacer-box-bottom {
+	@include vr-spacer-box-bottom-tab;
 }
 
-%vr-spacer-outside {
-	@include vr-spacer-outside-tab;
-}
 
-%vr-spacer-outside-top {
-	@include vr-spacer-outside-top-tab;
-}
 
-%vr-spacer-outside-bottom {
-	@include vr-spacer-outside-bottom-tab;
-}
 
 
 
@@ -183,7 +159,7 @@
 	@include vr-thumbs-title-tab;
 }
 
-%vr-thumbs img {
+%vr-thumbs-img {
 	@include vr-thumbs-img-tab;
 }
 

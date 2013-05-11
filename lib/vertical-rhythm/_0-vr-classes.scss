@@ -29,29 +29,22 @@
 }
 
 
-.vr-section-inside {
-	@extend %vr-section-inside;
-
+.vr-section-box {
+@extend %vr-section-box;
 }
 
-.vr-section-inside-top {
-	@extend %vr-section-inside-top;
-}
 
-.vr-section-inside-bottom {
-	@extend %vr-section-inside-bottom;
-}
 
-.vr-section-outside {
-	@extend %vr-section-outside;
-}
+.vr-section-box-top {
+	@extend %vr-section-box-top;
 
-.vr-section-outside-top {
-	@extend %vr-section-outside-top;
-}
+	}
 
-.vr-section-outside-bottom {
-	@extend %vr-section-outside-bottom;
+
+
+.vr-section-box-bottom {
+		@extend %vr-section-box-bottom;
+
 }
 
 /* ***************************************** */
@@ -72,29 +65,21 @@
 	}
 
 
-.vr-spacer-inside {
-	@extend %vr-spacer-inside;
+
+.vr-spacer-box {
+	@extend %vr-spacer-box;
 }
 
-.vr-spacer-inside-top {
-	@extend %vr-spacer-inside-top;
+.vr-spacer-box-top {
+	@extend %vr-spacer-box-top;
 }
 
-.vr-spacer-inside-bottom {
-	@extend %vr-spacer-inside-bottom;
-}
 
-.vr-spacer-outside {
-	@extend %vr-spacer-outside;
-}
+.vr-spacer-box-bottom {
+	@extend %vr-spacer-box-bottom;
+	}
 
-.vr-spacer-outside-top {
-	@extend %vr-spacer-outside-top;
-}
 
-.vr-spacer-outside-bottom {
-	@extend %vr-spacer-outside-bottom;
-}
 
 
 

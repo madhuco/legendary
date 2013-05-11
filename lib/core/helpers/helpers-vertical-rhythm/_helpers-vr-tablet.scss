@@ -13,45 +13,38 @@
 @mixin vr-section-tab {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
+}
+
+@mixin vr-section-box-tab {
+	@include rem('margin-top', 20px);
+	@include rem('margin-bottom', 20px);
 	@include rem('padding-top', 20px);
 	@include rem('padding-bottom', 20px);
 }
 
+
+
 @mixin vr-section-top-tab {
 	@include rem('margin-top', 20px);
-	@include rem('padding-top', 20px);
 	}
 	
 	@mixin vr-section-bottom-tab {
 	@include rem('margin-bottom', 20px);
+		}
+
+
+@mixin vr-section-box-top-tab {
+	@include rem('margin-top', 20px);
+	@include rem('padding-top', 20px);
+	}
+	
+	@mixin vr-section-box-bottom-tab {
+	@include rem('margin-bottom', 20px);
 	@include rem('padding-bottom', 20px);
 	}
 
-@mixin vr-section-inside-tab {
-	@include rem('padding-top', 20px);
-	@include rem('padding-bottom', 20px);
-}
 
-@mixin vr-section-inside-top-tab {
-	@include rem('margin-top', 20px);
-}
 
-@mixin vr-section-inside-bottom-tab {
-	@include rem('margin-bottom', 20px);
-}
-
-@mixin vr-section-outside-tab {
-	@include rem('margin-top', 20px);
-	@include rem('margin-bottom', 20px);
-}
-
-@mixin vr-section-outside-top-tab {
-	@include rem('margin-top', 20px);
-}
-
-@mixin vr-section-outside-bottom-tab {
-	@include rem('margin-bottom', 20px);
-}
 
 // ***************************************** //
 //  Sub Section Dividers (Spacers) //
@@ -60,47 +53,38 @@
 @mixin vr-spacer-tab {
 	@include rem('margin-top', 15px);
 	@include rem('margin-bottom', 15px);
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
-}
+	}
 
 @mixin vr-spacer-top-tab {
 	@include rem('margin-top', 15px);
-	@include rem('padding-top', 15px);
+	
 }
 
 
 @mixin vr-spacer-bottom-tab {
 	@include rem('margin-bottom', 15px);
-	@include rem('padding-bottom', 15px);
+	
 }
 
 
-@mixin vr-spacer-inside-tab {
+@mixin vr-spacer-box-tab {
+	@include rem('margin-top', 15px);
+	@include rem('margin-bottom', 15px);
 	@include rem('padding-top', 15px);
 	@include rem('padding-bottom', 15px);
 }
 
-@mixin vr-spacer-inside-top-tab {
+@mixin vr-spacer-box-top-tab {
 	@include rem('margin-top', 15px);
+	@include rem('padding-top', 15px);
 }
 
-@mixin vr-spacer-inside-bottom-tab {
+
+@mixin vr-spacer-box-bottom-tab {
 	@include rem('margin-bottom', 15px);
+	@include rem('padding-bottom', 15px);
 }
 
-@mixin vr-spacer-outside-tab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
-}
-
-@mixin vr-spacer-outside-top-tab {
-	@include rem('margin-top', 15px);
-}
-
-@mixin vr-spacer-outside-bottom-tab {
-	@include rem('margin-bottom', 15px);
-}
 
 
 

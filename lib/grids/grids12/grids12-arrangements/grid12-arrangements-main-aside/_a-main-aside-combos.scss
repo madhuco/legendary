@@ -1,0 +1,32 @@
+@import "a-main-aside-helpers";
+
+@include media($desk){ 
+@include  main-aside-50-desk('.main-aside-50');
+}
+
+@include media($desk){ 
+@include  aside-main-50-desk('.aside-main-50');
+}
+
+@include media($desk){ 
+@include  main-aside-narrow-desk('.main-aside-narrow');
+}
+
+@include media($desk){ 
+@include  aside-main-narrow-desk('.aside-main-narrow');
+}
+
+@include media($desk){ 
+@include  main-aside-overlay-50-desk('.main-aside-overlay-50');
+
+}
+
+@include media($desk){ 
+@include  aside-main-overlay-50-desk('.aside-main-overlay-50');
+}
+
+@include media($desk){ 
+@include  aside-main-50-desk('.aside-main-50'); 
+
+
+}

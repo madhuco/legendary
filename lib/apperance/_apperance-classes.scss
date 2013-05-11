@@ -1,0 +1,31 @@
+@import "apperance-helpers";
+
+
+body {
+	@include typeface-regular;
+}
+
+a {
+color:inherit;	
+}
+
+
+.typeface-light {
+	@include typeface-light;
+}
+
+.typeface-regular {
+	@include typeface-regular;
+}
+
+
+
+.typeface-medium {
+	@include typeface-medium;
+}
+
+
+.typeface-bold {
+	@include typeface-bold;
+}
+

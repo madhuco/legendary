@@ -1,0 +1,176 @@
+
+
+
+@mixin main-aside-50-desk($element: '.main-aside-50' ) {
+
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+
+	
+	.content-main {
+		@include span-columns(6, 12);	
+	}
+	
+	.content-aside {
+		@include span-columns(6 omega, 12);		
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin aside-main-50-desk($element: '.aside-main-50-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(6 omega, 12);	
+	}
+	
+	.content-aside {
+			@include span-columns(6, 12);
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);
+	}
+
+	}
+
+}
+
+
+
+/* ***************************************** */
+/*  Main Aside Narrow  */
+/* ***************************************** */
+
+
+@mixin main-aside-narrow-desk($element: '.main-aside-narrow-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(10, 12);		
+	}
+	
+	.content-aside {
+		@include span-columns(10, 12);	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin aside-main-narrow-desk($element: '.aside-main-narrow-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+	@extend .grid-narrow-wide-omega;		
+	}
+	
+	.content-aside {
+	@extend .grid-narrow-narrow;	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+
+@mixin main-aside-overlay-50-desk($element: '.main-aside-overlay-50-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);
+	position:relative;		
+	
+	.content-main {
+	@include span-columns(6, 12);	
+	}
+	
+	.content-aside {
+@include span-columns(6 omega, 12);
+	position:absolute;
+	top:0;
+	right:0;	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+
+@mixin aside-main-overlay-50-desk($element: '.aside-main-overlay-50-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);
+	position:relative;		
+	
+	.content-main {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+		
+	}
+	
+	.content-aside {
+	@include span-columns(6, 12);	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin aside-main-50-desk($element: '.aside-main-50-desk' ) {
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(6 omega, 12);		
+	}
+	
+	.content-aside {
+			@include span-columns(6, 12);		
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+

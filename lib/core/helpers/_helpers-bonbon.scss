@@ -1,43 +1,20 @@
+/* ***************************************** */
+/* BonBon Buttons 1.1 by simurai.com  */
+/* ***************************************** */
 
-
-/* BonBon Buttons 1.1 by simurai.com
-
-1.1 Added unprefixed attributes, :focus style, <button> support
-1.0 Released
-
-Usage:
-	
-	Default button: 			<a href="" class="button">Label</a>
-	More fancy with icon: 		<a href="" class="button orange glossy" data-icon="★">Label</a>
-	
-Following additional class names are supported:
-		
-	Color: 		orange, pink, blue, green, transparent
-	Font: 		serif
-	Material: 	glossy, glass
-	Size: 		xs, xl
-	Shape: 		round, oval, brackets, skew, back, knife, shield, drop, morph
-	Icon only: 	icon
-	Disabled:	disabled
-
-*/
-
-
-@mixin bonbon($bonbon:bonbon, $colour: #FFA600, $materials: false) {
-
-/* -------------- THE button -------------- */
-.#{$bonbon} {
-
-
+/* -------------- Bon Bon Basic button -------------- */
+%bonbon {
 
 /* text */
 	text-decoration: 		none;
 	text-shadow: 			hsla(100%,100%,100%,0.5) 0 1px 0;
 		
 /* layout */
+	padding: 				.5em .6em .4em .6em;
+	margin: 				.5em;
 	display: 				inline-block;
 	position: 				relative;
-	@include rem(padding, 10px);
+	
 	@include border-radius(8px);
 	
 /* effects */
@@ -55,47 +32,32 @@ radial-gradient(color_stops((rgba(255,255,255,0.1)), (rgba(255,255,255,0))), top
   @include transition-duration(.2s);
   @include transition-timing-function(ease-in-out); 
 
-
+		
+/* color */
+	color: 				hsl(0, 0%, 40%);
+	background-color: 	hsl(0, 0%, 75%);
 	
+	@include box-shadow(
+	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px /* drop shadow */
+	);
+						
 	
-		color: 				darken($colour, 25%);
-	background-color: 	$colour;
-
-	@include box-shadow(inset hsla(300,1,100,0.1) 0 0.3em .3em, inset hsla(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
-							darken($colour, 12%) 0 .1em 3px, darken($colour, 18%) 0 .3em 1px, /* color border */
-							hsla(0,0,0,0.2) 0 .5em 5px /* drop shadow */);					
-
-@content;
-	
-}
-
-/* -------------- button (tag) -------------- */
-
-.#{$bonbon} {
-	border-left: none;
-	border-right: none;
-}
-.#{$bonbon}:hover {
-	cursor: pointer;
-}
-
-
 /* -------------- States -------------- */
 
-.#{$bonbon}:hover {
-	background-color: darken($colour, 8%);
+&:hover {
+	background-color: 	hsl(0, 0%, 83%);
 }
 
 
 
-.#{$bonbon}:active {
+&:active {
 
 @include background(
 radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 );
 
-
-background-color: darken($colour, 8%);
 
 	
 	@include box-shadow(
@@ -107,7 +69,7 @@ background-color: darken($colour, 8%);
 @include transform(translateY(.2em));
 }
 
-.#{$bonbon}:focus {
+&:focus {
 	outline: none;
 	color: rgba(254,255,255,0.9);
 	text-shadow: rgba(0,0,0,0.2) 0 1px 2px;
@@ -115,8 +77,12 @@ background-color: darken($colour, 8%);
 
 
 
-@if $materials != false {
-.#{$bonbon}:after {
+}
+
+
+/* -------------- Materials -------------- */
+
+%bonbon-materials:after {
 	content: 	"";
 	position: 	absolute; 
     width: 		99%;
@@ -131,32 +97,47 @@ background-color: darken($colour, 8%);
     background-image: 		-moz-linear-gradient(left, rgba(255,255,255,.55), rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%, rgba(255,255,255,.5) );	
     background-image: 		gradient(linear, 0% 0, 100% 0, from( rgba(255,255,255,.55) ), to( rgba(255,255,255,.5) ),
     							color-stop(.5, rgba(255,255,255,0)), color-stop(.8, rgba(255,255,255,0)) );	
+								opacity: .6;
 }
 
+
+
+/* -------------- Glass + Transparent -------------- */
+%bonbon-glass {
+	text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,0.18) 0 .18em .15em;
+}
+%bonbon-gloss:active {
+	text-shadow: rgba(255,255,255,.3) 0 1px 0, rgba(0,0,0,0.15) 0 .18em .15em;
+}
+
+
+
+@mixin bonbon($colour: #FFA600, $materials: false) {
+@extend %bonbon;
+color:	darken($colour, 25%);
+background-color: $colour;
+	@include box-shadow(inset hsla(300,1,100,0.1) 0 0.3em .3em, inset hsla(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							darken($colour, 12%) 0 .1em 3px, darken($colour, 18%) 0 .3em 1px, /* color border */
+							hsla(0,0,0,0.2) 0 .5em 5px /* drop shadow */);					
+
+
+@if $materials != false {
+@extend %bonbon-materials;
 } //Close Materials if;
 
 
 @if $materials == gloss {
-.#{$bonbon}:active:after,
-.#{$bonbon}:active:after,
-.#{$bonbon}:after
- { opacity: .6; }
+@extend %bonbon-gloss;
  
 } //  Close glass
 
 @if $materials == glass {
-/* -------------- Glass + Transparent -------------- */
-.#{$bonbon} {
-	text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,0.18) 0 .18em .15em;
-}
-.#{$bonbon}:active {
-	text-shadow: rgba(255,255,255,.3) 0 1px 0, rgba(0,0,0,0.15) 0 .18em .15em;
-}
+@extend %bonbon-glass;
 		
 } //Close Glass
 
-} // Close Bon Bon Mixin
+}  //Close mixin
 
+	
 
-
-
+	

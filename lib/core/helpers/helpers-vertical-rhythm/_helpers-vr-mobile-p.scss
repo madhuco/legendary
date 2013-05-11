@@ -9,46 +9,37 @@
 @mixin vr-section-mob {
 	@include rem('margin-top', 30px);
 	@include rem('margin-bottom', 30px);
+}
+
+
+@mixin vr-section-box-mob {
+	@include rem('margin-top', 30px);
+	@include rem('margin-bottom', 30px);
 	@include rem('padding-top', 30px);
 	@include rem('padding-bottom', 30px);
 }
 
+
 @mixin vr-section-top-mob {
 	@include rem('margin-top', 30px);
-	@include rem('padding-top', 30px);
+
 }
 
 @mixin vr-section-bottom-mob {
 	@include rem('margin-bottom', 30px);
-	@include rem('padding-bottom', 30px);
+
 }
 
-
-@mixin vr-section-inside-mob {
+@mixin vr-section-box-top-mob {
+	@include rem('margin-top', 30px);
 	@include rem('padding-top', 30px);
+}
+
+@mixin vr-section-box-bottom-mob {
+	@include rem('margin-bottom', 30px);
 	@include rem('padding-bottom', 30px);
 }
 
-@mixin vr-section-inside-top-mob {
-	@include rem('margin-top', 30px);
-}
-
-@mixin vr-section-inside-bottom-mob {
-	@include rem('margin-bottom', 30px);
-}
-
-@mixin vr-section-outside-mob {
-	@include rem('margin-top', 30px);
-	@include rem('margin-bottom', 30px);
-}
-
-@mixin vr-section-outside-top-mob {
-	@include rem('margin-top', 30px);
-}
-
-@mixin vr-section-outside-bottom-mob {
-	@include rem('margin-bottom', 30px);
-}
 
 // ***************************************** //
 //  Sub Section Dividers (Spacers) //
@@ -57,47 +48,39 @@
 @mixin vr-spacer-mob {
 	@include rem('margin-top', 10px);
 	@include rem('margin-bottom', 10px);
-	@include rem('padding-top', 10px);
-	@include rem('padding-bottom', 10px);
+	
 }
 
 @mixin vr-spacer-top-mob {
 	@include rem('margin-top', 10px);
-	@include rem('padding-top', 10px);
+	
 }
 
 
 @mixin vr-spacer-bottom-mob {
 	@include rem('margin-bottom', 10px);
-	@include rem('padding-bottom', 10px);
+	
 }
 
 
-@mixin vr-spacer-inside-mob {
+@mixin vr-spacer-box-mob {
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
 	@include rem('padding-top', 10px);
 	@include rem('padding-bottom', 10px);
 }
 
-@mixin vr-spacer-inside-top-mob {
+@mixin vr-spacer-box-top-mob {
 	@include rem('margin-top', 10px);
+	@include rem('padding-top', 10px);
 }
 
-@mixin vr-spacer-inside-bottom-mob {
+
+@mixin vr-spacer-box-bottom-mob {
 	@include rem('margin-bottom', 10px);
+	@include rem('padding-bottom', 10px);
 }
 
-@mixin vr-spacer-outside-mob {
-	@include rem('margin-top', 10px);
-	@include rem('margin-bottom', 10px);
-}
-
-@mixin vr-spacer-outside-top-mob {
-	@include rem('margin-top', 10px);
-}
-
-@mixin vr-spacer-outside-bottom-mob {
-	@include rem('margin-bottom', 10px);
-}
 
 
 
