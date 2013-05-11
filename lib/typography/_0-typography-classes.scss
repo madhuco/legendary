@@ -1,26 +1,27 @@
+@import "0-typography-helpers";
 
 /* ***************************************** */
 /* Titles */
 /* ***************************************** */
 
 .t-title-1 {
- @include t-title-1-fab;
+ @extend %t-title-1;
 }
 
 .t-title-2 {
- @include t-title-2-fab;
+ @extend %t-title-2;
 }
 
 .t-title-3 {
- @include t-title-3-fab;
+ @extend %t-title-3;
 }
 
 .t-title-4 {
- @include t-title-4-fab;
+ @extend %t-title-4;
 }
 
 .t-title-5 {
- @include t-title-5-fab;
+ @extend %t-title-5;
 }
 
 /* ***************************************** */
@@ -28,23 +29,23 @@
 /* ***************************************** */
 
 .t-intro-1 {
- @include t-intro-1-fab;
+ @extend %t-intro-1;
 }
 
 .t-intro-2 {
- @include t-intro-2-fab;
+ @extend %t-intro-2;
 }
 
 .t-intro-3 {
- @include t-intro-3-fab;
+ @extend %t-intro-3;
 }
 
 .t-intro-4 {
- @include t-intro-4-fab;
+ @extend %t-intro-4;
 }
 
 .t-intro-5 {
- @include t-intro-5-fab;
+ @extend %t-intro-5;
 }
 
 
@@ -53,15 +54,15 @@
 /* ***************************************** */
 
 .t-body-text {
- @include t-body-text-fab;
+ @extend %t-body-text;
 }
 
 .t-body-small {
- @include t-body-small-fab;
+ @extend %t-body-small;
 }
 
 .t-body-label, label {
- @include t-body-label-fab;
+ @extend %t-body-label;
 }
 
 .t-body-bullets {
@@ -70,29 +71,21 @@
 
 
 .t-quote {
-@include t-quote-fab;
+ @extend %t-quote;
 }
-
 
 /* ***************************************** */
 /* Panes */
 /* ***************************************** */
 
 .t-pane-heading {
- @include t-pane-heading-fab;
+ @extend %t-pane-heading;
 }
 
 .t-pane-text {
- @include t-pane-text-fab;
+ @extend %t-pane-text;
 }
 
-.sidebar-active .t-pane-heading {
- @include t-pane-heading-sidebar-fab;
-}
-
-.sidebar-active .t-pane-text {
- @include t-pane-text-sidebar-fab;
-}
 
 
 /* ***************************************** */
@@ -100,41 +93,40 @@
 /* ***************************************** */
 
 .t-footer-heading {
- @include t-footer-heading-fab;
+ @extend %t-footer-heading;
 }
 
 .t-footer-text {
- @include t-footer-text-fab;
+ @extend %t-footer-text;
 }
 
 .t-footer-link {
- @include t-footer-link-fab;
+ @extend %t-footer-link;
 }
-
-
 
 .t-footer-small {
- @include t-footer-small-fab;
+ @extend %t-footer-small;
 }
+
 
 /* ***************************************** */
 /* Tapagation */
 /* ***************************************** */
 
 .t-tap-heading {
- @include t-tap-heading-fab;
+ @extend %t-tap-heading;
 }
 
 .t-tap-normal {
- @include t-tap-normal-fab;
+ @extend %t-tap-normal;
 }
 
 .t-tap-small {
- @include t-tap-small-fab;
+ @extend %t-tap-small;
 }
 
 .t-tap-note {
- @include t-tap-note-fab;
+ @extend %t-tap-note;
 }
 
 
@@ -143,28 +135,25 @@
 /* ***************************************** */
 
 .t-ui-breadcrumbs {
- @include t-ui-breadcrumbs-fab;
+ @extend %t-ui-breadcrumbs;
 }
 
 .t-ui-pager-numbers {
- @include t-ui-pager-numbers-fab;
+ @extend %t-ui-pager-numbers;
 }
 
 .t-ui-pager-shortcuts {
- @include t-ui-pager-shortcuts-fab;
+ @extend %t-ui-pager-shortcuts;
 }
 
 .t-ui-navigation  {
-@include t-ui-navigation-fab;
+ @extend %t-ui-navigation;
 }
 
-.t-ui-navigation-secondary li, .t-ui-navigation-secondary li a {
-	@include t-ui-navigation-secondary-fab;
+.t-ui-navigation-secondary  {
+	@extend %t-ui-navigation-secondary;
 }
 
-.t-ui-navigation-secondary h2  {
-	@include t-ui-navigation-secondary-title-fab;
-}
 
 
 /* ***************************************** */
@@ -172,23 +161,23 @@
 /* ***************************************** */
 
 .t-shop-thumbs {
- @include t-shop-thumbs-fab;
+ @extend %t-shop-thumbs;
 }
 
 .t-shop-author {
- @include t-shop-author-fab;
+ @extend %t-shop-author;
 }
 
 .t-shop-stock {
- @include t-shop-stock-fab;
+ @extend %t-shop-stock;
 }
 
 .t-shop-intro-bullets {
- @include t-shop-intro-bullets-fab;
+ @extend %t-shop-intro-bullets;
 }
 
 .t-shop-data-labels {
-	 @include t-shop-data-labels-fab;
+	 @extend %t-shop-data-labels;
 
 }
 
@@ -198,17 +187,17 @@
 /* ***************************************** */
 
 .t-cta-primary {
- @include t-cta-primary-fab;	
+ @extend %t-cta-primary;	
 }
 
 
 .t-cta-secondary  {
- @include t-cta-secondary-fab;	
+ @extend %t-cta-secondary;	
 }
 
 
 .t-cta-prompt {
- @include t-cta-prompt-fab;	
+ @extend %t-cta-prompt;	
 }
 
 
@@ -217,5 +206,6 @@
 /* Sidebar */
 /* ***************************************** */
 .t-sidebar {
- @include t-sidebar-fab;
+ @extend %t-sidebar;
 }
+

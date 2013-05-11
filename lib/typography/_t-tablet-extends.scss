@@ -1,25 +1,25 @@
-
+@include media($tab...){ 
 /* ***************************************** */
 /* Titles */
 /* ***************************************** */
 
-.t-title-1 {
+%t-title-1 {
  @include t-title-1-tab;
 }
 
-.t-title-2 {
+%t-title-2 {
  @include t-title-2-tab;
 }
 
-.t-title-3 {
+%t-title-3 {
  @include t-title-3-tab;
 }
 
-.t-title-4 {
+%t-title-4 {
  @include t-title-4-tab;
 }
 
-.t-title-5 {
+%t-title-5 {
  @include t-title-5-tab;
 }
 
@@ -27,23 +27,23 @@
 /* Intro */
 /* ***************************************** */
 
-.t-intro-1 {
+%t-intro-1 {
  @include t-intro-1-tab;
 }
 
-.t-intro-2 {
+%t-intro-2 {
  @include t-intro-2-tab;
 }
 
-.t-intro-3 {
+%t-intro-3 {
  @include t-intro-3-tab;
 }
 
-.t-intro-4 {
+%t-intro-4 {
  @include t-intro-4-tab;
 }
 
-.t-intro-5 {
+%t-intro-5 {
  @include t-intro-5-tab;
 }
 
@@ -52,24 +52,24 @@
 /* Body Text */
 /* ***************************************** */
 
-.t-body-text {
+%t-body-text {
  @include t-body-text-tab;
 }
 
-.t-body-small {
+%t-body-small {
  @include t-body-small-tab;
 }
 
-.t-body-label, label {
+%t-body-label, label {
  @include t-body-label-tab;
 }
 
-.t-body-bullets {
+%t-body-bullets {
 
 }
 
 
-.t-quote {
+%t-quote {
 @include t-quote-tab;
 }
 
@@ -78,19 +78,19 @@
 /* Panes */
 /* ***************************************** */
 
-.t-pane-heading {
+%t-pane-heading {
  @include t-pane-heading-tab;
 }
 
-.t-pane-text {
+%t-pane-text {
  @include t-pane-text-tab;
 }
 
-.sidebar-active .t-pane-heading {
+.sidebar-active %t-pane-heading {
  @include t-pane-heading-sidebar-tab;
 }
 
-.sidebar-active .t-pane-text {
+.sidebar-active %t-pane-text {
  @include t-pane-text-sidebar-tab;
 }
 
@@ -99,20 +99,20 @@
 /* Footer */
 /* ***************************************** */
 
-.t-footer-heading {
+%t-footer-heading {
  @include t-footer-heading-tab;
 }
 
-.t-footer-text {
+%t-footer-text {
  @include t-footer-text-tab;
 }
 
-.t-footer-link {
+%t-footer-link {
  @include t-footer-link-tab;
 }
 
 
-.t-footer-small {
+%t-footer-small {
  @include t-footer-small-tab;
 }
 
@@ -121,19 +121,19 @@
 /* Tapagation */
 /* ***************************************** */
 
-.t-tap-heading {
+%t-tap-heading {
  @include t-tap-heading-tab;
 }
 
-.t-tap-normal {
+%t-tap-normal {
  @include t-tap-normal-tab;
 }
 
-.t-tap-small {
+%t-tap-small {
  @include t-tap-small-tab;
 }
 
-.t-tap-note {
+%t-tap-note {
  @include t-tap-note-tab;
 }
 
@@ -142,27 +142,27 @@
 /* General Ui */
 /* ***************************************** */
 
-.t-ui-breadcrumbs {
+%t-ui-breadcrumbs {
  @include t-ui-breadcrumbs-tab;
 }
 
-.t-ui-pager-numbers {
+%t-ui-pager-numbers {
  @include t-ui-pager-numbers-tab;
 }
 
-.t-ui-pager-shortcuts {
+%t-ui-pager-shortcuts {
  @include t-ui-pager-shortcuts-tab;
 }
 
-.t-ui-navigation  {
+%t-ui-navigation  {
 @include t-ui-navigation-tab;
 }
 
-.t-ui-navigation-secondary li, .t-ui-navigation-secondary li a {
+%t-ui-navigation-secondary li, %t-ui-navigation-secondary li a {
 	@include t-ui-navigation-secondary-tab;
 }
 
-.t-ui-navigation-secondary h2  {
+%t-ui-navigation-secondary h2  {
 	@include t-ui-navigation-secondary-title-tab;
 }
 
@@ -171,23 +171,23 @@
 /* Shop Ui */
 /* ***************************************** */
 
-.t-shop-thumbs {
+%t-shop-thumbs {
  @include t-shop-thumbs-tab;
 }
 
-.t-shop-author {
+%t-shop-author {
  @include t-shop-author-tab;
 }
 
-.t-shop-stock {
+%t-shop-stock {
  @include t-shop-stock-tab;
 }
 
-.t-shop-intro-bullets {
+%t-shop-intro-bullets {
  @include t-shop-intro-bullets-tab;
 }
 
-.t-shop-data-labels {
+%t-shop-data-labels {
 	 @include t-shop-data-labels-tab;
 
 }
@@ -197,18 +197,18 @@
 /* CTA Main */
 /* ***************************************** */
 
-.t-cta-primary {
+%t-cta-primary {
  @include t-cta-primary-tab;	
 }
 
 
-.t-cta-secondary  {
+%t-cta-secondary  {
  @include t-cta-secondary-tab;	
 }
 
 
-.t-cta-prompt {
- @include t-cta-prompt -tab;	
+%t-cta-prompt {
+ @include t-cta-prompt-tab;	
 }
 
 
@@ -216,6 +216,7 @@
 /* ***************************************** */
 /* Sidebar */
 /* ***************************************** */
-.t-sidebar {
+%t-sidebar {
  @include t-sidebar-tab;
+}
 }

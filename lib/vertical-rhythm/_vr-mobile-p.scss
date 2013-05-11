@@ -3,52 +3,52 @@
 /*  Section Dividers (Bumpers) */
 /* ***************************************** */
 
-.wrapper .vr-breather {
+%vr-breather {
 @include vr-breather-mob;
 }
 
 
-.vr-section {
+%vr-section {
 @include vr-section-mob;
 }
 
 
 
-.vr-section-top {
+%vr-section-top {
 	@include vr-section-top-mob;
 
 	}
 
 
 
-.vr-section-bottom {
+%vr-section-bottom {
 		@include vr-section-bottom-mob;
 
 }
 
 
-.vr-section-inside {
+%vr-section-inside {
 	@include vr-section-inside-mob;
 
 }
 
-.vr-section-inside-top {
+%vr-section-inside-top {
 	@include vr-section-inside-top-mob;
 }
 
-.vr-section-inside-bottom {
+%vr-section-inside-bottom {
 	@include vr-section-inside-bottom-mob;
 }
 
-.vr-section-outside {
+%vr-section-outside {
 	@include vr-section-outside-mob;
 }
 
-.vr-section-outside-top {
+%vr-section-outside-top {
 	@include vr-section-outside-top-mob;
 }
 
-.vr-section-outside-bottom {
+%vr-section-outside-bottom {
 	@include vr-section-outside-bottom-mob;
 }
 
@@ -56,41 +56,41 @@
 /*  Sub Section Dividers (Spacers) */
 /* ***************************************** */
 
-.vr-spacer {
+%vr-spacer {
 	@include vr-spacer-mob;
 }
 
-.vr-spacer-top {
+%vr-spacer-top {
 	@include vr-spacer-top-mob;
 }
 
 
-.vr-spacer-bottom {
+%vr-spacer-bottom {
 	@include vr-spacer-bottom-mob;
 	}
 
 
-.vr-spacer-inside {
+%vr-spacer-inside {
 	@include vr-spacer-inside-mob;
 }
 
-.vr-spacer-inside-top {
+%vr-spacer-inside-top {
 	@include vr-spacer-inside-top-mob;
 }
 
-.vr-spacer-inside-bottom {
+%vr-spacer-inside-bottom {
 	@include vr-spacer-inside-bottom-mob;
 }
 
-.vr-spacer-outside {
+%vr-spacer-outside {
 	@include vr-spacer-outside-mob;
 }
 
-.vr-spacer-outside-top {
+%vr-spacer-outside-top {
 	@include vr-spacer-outside-top-mob;
 }
 
-.vr-spacer-outside-bottom {
+%vr-spacer-outside-bottom {
 	@include vr-spacer-outside-bottom-mob;
 }
 
@@ -101,43 +101,43 @@
 /* ***************************************** */
 
 
-.vr-title-1 {
+%vr-title-1 {
 	@include vr-title-1-mob;
 }
 
-.vr-title-2 {
+%vr-title-2 {
 		@include vr-title-2-mob;
 }
 
-.vr-title-3 {
+%vr-title-3 {
 		@include vr-title-3-mob;
 }
 
-.vr-title-4 {
+%vr-title-4 {
 		@include vr-title-4-mob;
 }
 
-.vr-title-5 {
+%vr-title-5 {
 		@include vr-title-5-mob;
 }
 
-.vr-intro-1 {
+%vr-intro-1 {
 	@include vr-intro-1-mob;
 }
 
-.vr-intro-2 {
+%vr-intro-2 {
 		@include vr-intro-2-mob;
 }
 
-.vr-intro-3 {
+%vr-intro-3 {
 		@include vr-intro-3-mob;
 }
 
-.vr-intro-4 {
+%vr-intro-4 {
 		@include vr-intro-4-mob;
 }
 
-.vr-intro-5 {
+%vr-intro-5 {
 		@include vr-intro-5-mob;
 }
 
@@ -150,7 +150,7 @@
 
 
 
-.vr-paragraph, .vr-paragraph p {
+%vr-paragraph, %vr-paragraph p {
 	@include vr-paragraph-mob;
 }
 
@@ -161,40 +161,40 @@
 /* ***************************************** */
 
 
-.ui-accordian .vr-title {
+.ui-accordian %vr-title {
 		@include vr-title-mob;
 }
 
 
-.vr-footerbumper {
+%vr-footerbumper {
 	@include vr-footerbumper-mob;
 }
 
-.vr-thumbs  {
+%vr-thumbs  {
 	@include vr-thumbs-mob;
 }
 
-.vr-pane-heading {
+%vr-pane-heading {
 	@include vr-pane-heading-mob;
 }
 
-.sidebar-active .vr-thumbs-title {
+.sidebar-active %vr-thumbs-title {
 	@include vr-thumbs-title-mob;
 }
 
-.vr-thumbs img {
+%vr-thumbs img {
 	@include vr-thumbs-img-mob;
 }
 
-.vr-grid {
+%vr-grid {
 	@include vr-grid-mob;
 }
 
-.vr-caption {
+%vr-caption {
 	@include vr-caption-mob;
 }
 
-.vr-label {
+%vr-label {
 	@include vr-label-mob;
 }
 

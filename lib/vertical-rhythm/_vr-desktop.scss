@@ -4,40 +4,40 @@
 /*  Section Dividers (Bumpers) */
 /* ***************************************** */
 
-.wrapper .vr-breather {
+%vr-breather {
 @include vr-breather-desk;
 }
 
 
-.vr-section {
+%vr-section {
 @include vr-section-desk;
 }
 
 
 
-.vr-section-top {
+%vr-section-top {
 	@include vr-section-top-desk;
 
 	}
 
 
 
-.vr-section-bottom {
+%vr-section-bottom {
 		@include vr-section-bottom-desk;
 
 }
 
-.vr-section-box {
+%vr-section-box {
 	@include vr-section-box-desk;
 
 }
 
-.vr-section-box-top {
+%vr-section-box-top {
 	@include vr-section-box-top-desk;
 
 }
 
-.vr-section-box-bottom {
+%vr-section-box-bottom {
 	@include vr-section-box-bottom-desk;
 }
 
@@ -45,29 +45,29 @@
 /*  Sub Section Dividers (Spacers) */
 /* ***************************************** */
 
-.vr-spacer {
+%vr-spacer {
 	@include vr-spacer-desk;
 }
 
-.vr-spacer-top {
+%vr-spacer-top {
 	@include vr-spacer-top-desk;
 }
 
 
-.vr-spacer-bottom {
+%vr-spacer-bottom {
 	@include vr-spacer-bottom-desk;
 	}
 
 
-.vr-spacer-box {
+%vr-spacer-box {
 	@include vr-spacer-box-desk;
 }
 
-.vr-spacer-box-top {
+%vr-spacer-box-top {
 	@include vr-spacer-box-top-desk;
 }
 
-.vr-spacer-box-bottom {
+%vr-spacer-box-bottom {
 	@include vr-spacer-box-bottom-desk;
 }
 
@@ -78,43 +78,43 @@
 /* ***************************************** */
 
 
-.vr-title-1 {
+%vr-title-1 {
 	@include vr-title-1-desk;
 }
 
-.vr-title-2 {
+%vr-title-2 {
 		@include vr-title-2-desk;
 }
 
-.vr-title-3 {
+%vr-title-3 {
 		@include vr-title-3-desk;
 }
 
-.vr-title-4 {
+%vr-title-4 {
 		@include vr-title-4-desk;
 }
 
-.vr-title-5 {
+%vr-title-5 {
 		@include vr-title-5-desk;
 }
 
-.vr-intro-1 {
+%vr-intro-1 {
 	@include vr-intro-1-desk;
 }
 
-.vr-intro-2 {
+%vr-intro-2 {
 		@include vr-intro-2-desk;
 }
 
-.vr-intro-3 {
+%vr-intro-3 {
 		@include vr-intro-3-desk;
 }
 
-.vr-intro-4 {
+%vr-intro-4 {
 		@include vr-intro-4-desk;
 }
 
-.vr-intro-5 {
+%vr-intro-5 {
 		@include vr-intro-5-desk;
 }
 
@@ -127,7 +127,7 @@
 
 
 
-.vr-paragraph, .vr-paragraph p {
+%vr-paragraph, %vr-paragraph p {
 	@include vr-paragraph-desk;
 }
 
@@ -138,44 +138,44 @@
 /* ***************************************** */
 
 
-.ui-accordian .vr-title {
+.ui-accordian %vr-title {
 		@include vr-title-desk;
 }
 
 
-.vr-footerbumper {
+%vr-footerbumper {
 	@include vr-footerbumper-desk;
 }
 
-.vr-thumbs  {
+%vr-thumbs  {
 	@include vr-thumbs-desk;
 }
 
-.vr-pane-heading {
+%vr-pane-heading {
 	@include vr-pane-heading-desk;
 }
 
-.sidebar-active .vr-thumbs-title {
+.sidebar-active %vr-thumbs-title {
 	@include vr-thumbs-title-desk;
 }
 
-.vr-thumbs-title {
+%vr-thumbs-title {
 	@include vr-thumbs-title-desk;
 }
 
-.vr-thumbs img {
+%vr-thumbs img {
 	@include vr-thumbs-img-desk;
 }
 
-.vr-grid {
+%vr-grid {
 	@include vr-grid-desk;
 }
 
-.vr-caption {
+%vr-caption {
 	@include vr-caption-desk;
 }
 
-.vr-label {
+%vr-label {
 	@include vr-label-desk;
 }
 

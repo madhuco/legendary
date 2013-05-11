@@ -1,25 +1,25 @@
-
+@include media($desk){ 
 /* ***************************************** */
 /* Titles */
 /* ***************************************** */
 
-.t-title-1 {
+%t-title-1 {
  @include t-title-1-desk;
 }
 
-.t-title-2 {
+%t-title-2 {
  @include t-title-2-desk;
 }
 
-.t-title-3 {
+%t-title-3 {
  @include t-title-3-desk;
 }
 
-.t-title-4 {
+%t-title-4 {
  @include t-title-4-desk;
 }
 
-.t-title-5 {
+%t-title-5 {
  @include t-title-5-desk;
 }
 
@@ -27,23 +27,23 @@
 /* Intro */
 /* ***************************************** */
 
-.t-intro-1 {
+%t-intro-1 {
  @include t-intro-1-desk;
 }
 
-.t-intro-2 {
+%t-intro-2 {
  @include t-intro-2-desk;
 }
 
-.t-intro-3 {
+%t-intro-3 {
  @include t-intro-3-desk;
 }
 
-.t-intro-4 {
+%t-intro-4 {
  @include t-intro-4-desk;
 }
 
-.t-intro-5 {
+%t-intro-5 {
  @include t-intro-5-desk;
 }
 
@@ -52,24 +52,24 @@
 /* Body Text */
 /* ***************************************** */
 
-.t-body-text {
+%t-body-text {
  @include t-body-text-desk;
 }
 
-.t-body-small {
+%t-body-small {
  @include t-body-small-desk;
 }
 
-.t-body-label, label {
+%t-body-label, label {
  @include t-body-label-desk;
 }
 
-.t-body-bullets {
+%t-body-bullets {
 
 }
 
 
-.t-quote {
+%t-quote {
  @include t-quote-desk;
 }
 
@@ -77,19 +77,19 @@
 /* Panes */
 /* ***************************************** */
 
-.t-pane-heading {
+%t-pane-heading {
  @include t-pane-heading-desk;
 }
 
-.t-pane-text {
+%t-pane-text {
  @include t-pane-text-desk;
 }
 
-.sidebar-active .t-pane-heading {
+.sidebar-active %t-pane-heading {
  @include t-pane-heading-sidebar-desk;
 }
 
-.sidebar-active .t-pane-text {
+.sidebar-active %t-pane-text {
  @include t-pane-text-sidebar-desk;
 }
 
@@ -98,19 +98,19 @@
 /* Footer */
 /* ***************************************** */
 
-.t-footer-heading {
+%t-footer-heading {
  @include t-footer-heading-desk;
 }
 
-.t-footer-text {
+%t-footer-text {
  @include t-footer-text-desk;
 }
 
-.t-footer-link {
+%t-footer-link {
  @include t-footer-link-desk;
 }
 
-.t-footer-small {
+%t-footer-small {
  @include t-footer-small-desk;
 }
 
@@ -119,19 +119,19 @@
 /* Tapagation */
 /* ***************************************** */
 
-.t-tap-heading {
+%t-tap-heading {
  @include t-tap-heading-desk;
 }
 
-.t-tap-normal {
+%t-tap-normal {
  @include t-tap-normal-desk;
 }
 
-.t-tap-small {
+%t-tap-small {
  @include t-tap-small-desk;
 }
 
-.t-tap-note {
+%t-tap-note {
  @include t-tap-note-desk;
 }
 
@@ -140,27 +140,27 @@
 /* General Ui */
 /* ***************************************** */
 
-.t-ui-breadcrumbs {
+%t-ui-breadcrumbs {
  @include t-ui-breadcrumbs-desk;
 }
 
-.t-ui-pager-numbers {
+%t-ui-pager-numbers {
  @include t-ui-pager-numbers-desk;
 }
 
-.t-ui-pager-shortcuts {
+%t-ui-pager-shortcuts {
  @include t-ui-pager-shortcuts-desk;
 }
 
-.t-ui-navigation  {
+%t-ui-navigation  {
  @include t-ui-navigation-desk;
 }
 
-.t-ui-navigation-secondary li, .t-ui-navigation-secondary li a {
+%t-ui-navigation-secondary li, %t-ui-navigation-secondary li a {
 	@include t-ui-navigation-secondary-desk;
 }
 
-.t-ui-navigation-secondary h2  {
+%t-ui-navigation-secondary h2  {
 	@include t-ui-navigation-secondary-title-desk;
 }
 
@@ -169,23 +169,23 @@
 /* Shop Ui */
 /* ***************************************** */
 
-.t-shop-thumbs {
+%t-shop-thumbs {
  @include t-shop-thumbs-desk;
 }
 
-.t-shop-author {
+%t-shop-author {
  @include t-shop-author-desk;
 }
 
-.t-shop-stock {
+%t-shop-stock {
  @include t-shop-stock-desk;
 }
 
-.t-shop-intro-bullets {
+%t-shop-intro-bullets {
  @include t-shop-intro-bullets-desk;
 }
 
-.t-shop-data-labels {
+%t-shop-data-labels {
 	 @include t-shop-data-labels-desk;
 
 }
@@ -195,17 +195,17 @@
 /* CTA Main */
 /* ***************************************** */
 
-.t-cta-primary {
+%t-cta-primary {
  @include t-cta-primary-desk;	
 }
 
 
-.t-cta-secondary  {
+%t-cta-secondary  {
  @include t-cta-secondary-desk;	
 }
 
 
-.t-cta-prompt {
+%t-cta-prompt {
  @include t-cta-prompt-desk;	
 }
 
@@ -214,6 +214,8 @@
 /* ***************************************** */
 /* Sidebar */
 /* ***************************************** */
-.t-sidebar {
+%t-sidebar {
  @include t-sidebar-desk;
+}
+
 }

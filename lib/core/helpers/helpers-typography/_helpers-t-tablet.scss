@@ -119,11 +119,11 @@ letter-spacing:0;
 
 
 @mixin t-pane-heading-sidebar-tab {
- @include t-pane-heading;
+ @include t-pane-heading-tab;
 }
 
 @mixin t-pane-text-sidebar-tab {
- @include t-pane-text;
+ @include t-pane-text-tab;
 }
 
 
@@ -205,7 +205,7 @@ letter-spacing:0;
 }
 
 @mixin t-ui-navigation-secondary-title-tab { 
-	@include t-ui-navigation-secondary;
+	@include t-ui-navigation-secondary-tab;
 }
 
 

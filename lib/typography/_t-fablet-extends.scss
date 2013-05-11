@@ -1,0 +1,223 @@
+@include media($fab...){ 
+/* ***************************************** */
+/* Titles */
+/* ***************************************** */
+
+%t-title-1 {
+ @include t-title-1-fab;
+}
+
+%t-title-2 {
+ @include t-title-2-fab;
+}
+
+%t-title-3 {
+ @include t-title-3-fab;
+}
+
+%t-title-4 {
+ @include t-title-4-fab;
+}
+
+%t-title-5 {
+ @include t-title-5-fab;
+}
+
+/* ***************************************** */
+/* Intro */
+/* ***************************************** */
+
+%t-intro-1 {
+ @include t-intro-1-fab;
+}
+
+%t-intro-2 {
+ @include t-intro-2-fab;
+}
+
+%t-intro-3 {
+ @include t-intro-3-fab;
+}
+
+%t-intro-4 {
+ @include t-intro-4-fab;
+}
+
+%t-intro-5 {
+ @include t-intro-5-fab;
+}
+
+
+/* ***************************************** */
+/* Body Text */
+/* ***************************************** */
+
+%t-body-text {
+ @include t-body-text-fab;
+}
+
+%t-body-small {
+ @include t-body-small-fab;
+}
+
+%t-body-label, label {
+ @include t-body-label-fab;
+}
+
+%t-body-bullets {
+
+}
+
+
+%t-quote {
+@include t-quote-fab;
+}
+
+
+/* ***************************************** */
+/* Panes */
+/* ***************************************** */
+
+%t-pane-heading {
+ @include t-pane-heading-fab;
+}
+
+%t-pane-text {
+ @include t-pane-text-fab;
+}
+
+.sidebar-active %t-pane-heading {
+ @include t-pane-heading-sidebar-fab;
+}
+
+.sidebar-active %t-pane-text {
+ @include t-pane-text-sidebar-fab;
+}
+
+
+/* ***************************************** */
+/* Footer */
+/* ***************************************** */
+
+%t-footer-heading {
+ @include t-footer-heading-fab;
+}
+
+%t-footer-text {
+ @include t-footer-text-fab;
+}
+
+%t-footer-link {
+ @include t-footer-link-fab;
+}
+
+
+
+%t-footer-small {
+ @include t-footer-small-fab;
+}
+
+/* ***************************************** */
+/* Tapagation */
+/* ***************************************** */
+
+%t-tap-heading {
+ @include t-tap-heading-fab;
+}
+
+%t-tap-normal {
+ @include t-tap-normal-fab;
+}
+
+%t-tap-small {
+ @include t-tap-small-fab;
+}
+
+%t-tap-note {
+ @include t-tap-note-fab;
+}
+
+
+/* ***************************************** */
+/* General Ui */
+/* ***************************************** */
+
+%t-ui-breadcrumbs {
+ @include t-ui-breadcrumbs-fab;
+}
+
+%t-ui-pager-numbers {
+ @include t-ui-pager-numbers-fab;
+}
+
+%t-ui-pager-shortcuts {
+ @include t-ui-pager-shortcuts-fab;
+}
+
+%t-ui-navigation  {
+@include t-ui-navigation-fab;
+}
+
+%t-ui-navigation-secondary li, %t-ui-navigation-secondary li a {
+	@include t-ui-navigation-secondary-fab;
+}
+
+%t-ui-navigation-secondary h2  {
+	@include t-ui-navigation-secondary-title-fab;
+}
+
+
+/* ***************************************** */
+/* Shop Ui */
+/* ***************************************** */
+
+%t-shop-thumbs {
+ @include t-shop-thumbs-fab;
+}
+
+%t-shop-author {
+ @include t-shop-author-fab;
+}
+
+%t-shop-stock {
+ @include t-shop-stock-fab;
+}
+
+%t-shop-intro-bullets {
+ @include t-shop-intro-bullets-fab;
+}
+
+%t-shop-data-labels {
+	 @include t-shop-data-labels-fab;
+
+}
+
+
+/* ***************************************** */
+/* CTA Main */
+/* ***************************************** */
+
+%t-cta-primary {
+ @include t-cta-primary-fab;	
+}
+
+
+%t-cta-secondary  {
+ @include t-cta-secondary-fab;	
+}
+
+
+%t-cta-prompt {
+ @include t-cta-prompt-fab;	
+}
+
+
+
+/* ***************************************** */
+/* Sidebar */
+/* ***************************************** */
+%t-sidebar {
+ @include t-sidebar-fab;
+}
+
+}
