@@ -28,7 +28,7 @@ $gutter-width : 3em;
 $gutter-padding : 4em;
 }
 
- @include media($desk...) {
+ @include media($desk) {
  $total-columns : 12;
 $column-width : 4.5em;
 $gutter-width : 3em;

@@ -71,7 +71,7 @@ html body .moblshow {
 }
 }
 
-@include media($desk...) {
+@include media($desk) {
  html body .deskshow {
  display:block !important;
 }

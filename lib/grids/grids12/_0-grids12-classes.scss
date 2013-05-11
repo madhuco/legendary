@@ -31,7 +31,7 @@
 
 }
 
- @include media($desk...) {
+ @include media($desk) {
  .grids12 {
  @include container;
  @include susy-grid-background;

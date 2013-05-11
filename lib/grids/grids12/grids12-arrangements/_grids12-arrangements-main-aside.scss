@@ -33,7 +33,7 @@ display:none;
 }
 
 
-@include media($desk...){
+@include media($desk){
 .aside-main-slim  {
 @include span-columns(12 omega, 12);	
 }
@@ -52,7 +52,7 @@ display:none;
 /*  Main Aside Equal */
 /* ***************************************** */
 
-@include media($desk...){ 
+@include media($desk){ 
 .main-aside-50, .aside-main-50,
 .main-aside-50 .content-footer, .aside-main-50 .content-footer  {
 	@include span-columns(12 omega, 12);	
@@ -85,7 +85,7 @@ display:none;
 /*  Main Aside Narrow  */
 /* ***************************************** */
 
-@include media($desk...){ 
+@include media($desk){ 
 
 .main-aside-narrow, .aside-main-narrow  {
 	@include span-columns(12 omega, 12);	
@@ -119,7 +119,7 @@ display:none;
 /*  Main Aside Overlay  */
 /* ***************************************** */
 
-@include media($desk...){ 
+@include media($desk){ 
 
 .main-aside-overlay-50, .aside-main-overlay-50, 
 .main-aside-overlay-50 .content-main,
@@ -156,7 +156,7 @@ display:none;
 
 
 
-@include media($desk...){ 
+@include media($desk){ 
 .smartcol-2 {
   @include column-count(2);
   @include column-gap(30px);
