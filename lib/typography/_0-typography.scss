@@ -1,4 +1,4 @@
-html {
+/*html {
 @extend %html;
 }
 
@@ -16,7 +16,7 @@ body, .typeface-regular {
 
 .typeface-bold {
 	@extend %typeface-bold;
-}
+}*/
 
 @import "t-desktop";
 // @import "lib/typography/_t-tablet.scss";

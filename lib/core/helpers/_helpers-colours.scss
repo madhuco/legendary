@@ -12,6 +12,8 @@ $darkest: #323232;
 
 $offwhite: #f3f3f3;
 
+$default: #5b5b5b;
+
 
 // ***************************************** //
 //  Text Colours //
@@ -85,6 +87,17 @@ $offwhite: #f3f3f3;
 	background-color: #000001;
 	border: 1px solid #000001;
 }
+
+@mixin bgcolor-ribbon {
+	background-color: #dedede;
+}
+
+
+@mixin bgcolor-ribbon-3d {
+	background-color: #dedede;
+	border: 1px solid #000001;
+}
+
 
 // ***************************************** //
 // Stripes Background //

@@ -13,6 +13,13 @@
 @mixin vr-section-desk {
 	@include rem('margin-top', 25px);
 	@include rem('margin-bottom', 25px);
+}
+
+
+
+@mixin vr-section-box-desk {
+	@include rem('margin-top', 25px);
+	@include rem('margin-bottom', 25px);
 	@include rem('padding-top', 25px);
 	@include rem('padding-bottom', 25px);
 }
@@ -21,42 +28,26 @@
 
 @mixin vr-section-top-desk {
 	@include rem('margin-top', 25px);
-	@include rem('padding-top', 25px);
 	}
 
 
 
 @mixin vr-section-bottom-desk {
-		@include rem('margin-bottom', 25px);
-		@include rem('padding-bottom', 25px);
+	@include rem('margin-bottom', 25px);
+	}
+
+
+@mixin vr-section-box-top-desk {
+	@include rem('margin-top', 25px);
+	@include rem('padding-top', 25px);
+	
 }
 
-
-@mixin vr-section-inside-desk {
-	@include rem('padding-top', 25px);
+@mixin vr-section-box-bottom-desk {
+	@include rem('margin-top', 25px);
 	@include rem('padding-bottom', 25px);
 }
 
-@mixin vr-section-inside-top-desk {
-	@include rem('padding-top', 25px);
-}
-
-@mixin vr-section-inside-bottom-desk {
-	@include rem('padding-bottom', 25px);
-}
-
-@mixin vr-section-outside-desk {
-	@include rem('margin-top', 25px);
-	@include rem('margin-bottom', 25px);
-}
-
-@mixin vr-section-outside-top-desk {
-	@include rem('margin-top', 25px);
-}
-
-@mixin vr-section-outside-bottom-desk {
-	@include rem('margin-bottom', 25px);
-}
 
 // ***************************************** //
 //  Sub Section Dividers (Spacers) //
@@ -65,45 +56,31 @@
 @mixin vr-spacer-desk {
 	@include rem('margin-top', 10px);
 	@include rem('margin-bottom', 10px);
-	@include rem('padding-top', 10px);
-	@include rem('padding-bottom', 10px);
-}
+	}
 
 @mixin vr-spacer-top-desk {
 	@include rem('margin-top', 10px);
-	@include rem('padding-top', 10px);
-}
+	}
 
 
 @mixin vr-spacer-bottom-desk {
 	@include rem('margin-bottom', 10px);
-	@include rem('padding-bottom', 10px);
-}
+	}
 
-
-@mixin vr-spacer-inside-desk {
+@mixin vr-spacer-box-desk {
+	@include rem('margin-top', 10px);
 	@include rem('padding-top', 10px);
 	@include rem('padding-bottom', 10px);
-}
-
-@mixin vr-spacer-inside-top-desk {
-	@include rem('margin-top', 10px);
-}
-
-@mixin vr-spacer-inside-bottom-desk {
 	@include rem('margin-bottom', 10px);
 }
 
-@mixin vr-spacer-outside-desk {
+@mixin vr-spacer-box-top-desk {
 	@include rem('margin-top', 10px);
-	@include rem('margin-bottom', 10px);
+	@include rem('padding-top', 10px);
 }
 
-@mixin vr-spacer-outside-top-desk {
-	@include rem('margin-top', 10px);
-}
-
-@mixin vr-spacer-outside-bottom-desk {
+@mixin vr-spacer-box-bottom-desk {
+	@include rem('padding-bottom', 10px);
 	@include rem('margin-bottom', 10px);
 }
 
@@ -115,7 +92,7 @@
 
 
 @mixin vr-title-1-desk {
-	@include rem('margin-bottom', 50px);
+	@include rem('margin-bottom', 25px);
 }
 
 @mixin vr-title-2-desk {

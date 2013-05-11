@@ -27,30 +27,18 @@
 
 }
 
-
-.vr-section-inside {
-	@include vr-section-inside-desk;
+.vr-section-box {
+	@include vr-section-box-desk;
 
 }
 
-.vr-section-inside-top {
-	@include vr-section-inside-top-desk;
+.vr-section-box-top {
+	@include vr-section-box-top-desk;
+
 }
 
-.vr-section-inside-bottom {
-	@include vr-section-inside-bottom-desk;
-}
-
-.vr-section-outside {
-	@include vr-section-outside-desk;
-}
-
-.vr-section-outside-top {
-	@include vr-section-outside-top-desk;
-}
-
-.vr-section-outside-bottom {
-	@include vr-section-outside-bottom-desk;
+.vr-section-box-bottom {
+	@include vr-section-box-bottom-desk;
 }
 
 /* ***************************************** */
@@ -71,28 +59,16 @@
 	}
 
 
-.vr-spacer-inside {
-	@include vr-spacer-inside-desk;
+.vr-spacer-box {
+	@include vr-spacer-box-desk;
 }
 
-.vr-spacer-inside-top {
-	@include vr-spacer-inside-top-desk;
+.vr-spacer-box-top {
+	@include vr-spacer-box-top-desk;
 }
 
-.vr-spacer-inside-bottom {
-	@include vr-spacer-inside-bottom-desk;
-}
-
-.vr-spacer-outside {
-	@include vr-spacer-outside-desk;
-}
-
-.vr-spacer-outside-top {
-	@include vr-spacer-outside-top-desk;
-}
-
-.vr-spacer-outside-bottom {
-	@include vr-spacer-outside-bottom-desk;
+.vr-spacer-box-bottom {
+	@include vr-spacer-box-bottom-desk;
 }
 
 
@@ -202,5 +178,10 @@
 .vr-label {
 	@include vr-label-desk;
 }
+
+.unit-body p {
+		@include vr-paragraph-desk ;
+}
+
 
 }
