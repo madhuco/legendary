@@ -40,16 +40,16 @@ margin-right:auto;
 @include omega;	
 }
 
-.footer-ribbon { 
+.unit-footer { 
 @include span-columns(12 omega, 12);
 }
 
-.footer-ribbon ul { 
+.unit-footer ul { 
 @include horizontal-list;
 float:right;
 }
 
-.footer-ribbon ul li { 
+.unit-footer ul li { 
 @include rem(margin, 0 10px);
 }
 

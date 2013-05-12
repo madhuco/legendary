@@ -148,7 +148,7 @@ letter-spacing:0;
 
 @mixin t-footer-text-desk {
  @include rem('font-size', 14px);
- @include rem('line-height', 22px);
+ @include rem('line-height', 24px);
  @include rem('letter-spacing', -1px);
 }
 

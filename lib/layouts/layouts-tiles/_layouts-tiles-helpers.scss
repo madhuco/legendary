@@ -69,7 +69,10 @@ width: columns(2, 4) + gutter(4);
 
 
 @mixin layouts-tiles-style {
-	
+	@extend	%vr-section; 
+	.unit {
+	@include  scheme-mono;
+	}
 	.unit-heading {
 		
 	@extend	%t-pane-heading; 

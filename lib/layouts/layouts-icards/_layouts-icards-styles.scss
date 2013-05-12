@@ -1,0 +1,6 @@
+@import "layouts-icards-helpers";
+
+.layouts-icards-style {
+	@include layouts-icards;
+	@include layouts-icards-style;
+}

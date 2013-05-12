@@ -1,0 +1,7 @@
+@import "layouts-footer-helpers";
+
+.layouts-footer-combo{
+	@include layouts-footer ;
+	@include layouts-footer-grid;
+	@include layouts-footer-style;
+}

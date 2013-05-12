@@ -1,0 +1,7 @@
+@import "layouts-pager-h-helpers";
+
+.layouts-pager-h-combo{
+	@include layouts-pager-h ;
+	@include layouts-pager-h-grid;
+	@include layouts-pager-h-style;
+}

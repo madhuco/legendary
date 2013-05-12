@@ -1,36 +1,51 @@
 // ===============================================
-// icards: Layout
+// layouts-pager-h: Layout
 // ===============================================
 
-@mixin layouts-icards {
+@mixin layouts-pager-h {
 	
-.unit {
-text-align:center;	
+.page {
+	display:none;
+}
+
+.page-first {
+	display:block;
+}
+
+
+
 }
 		
-}
+
 
 
 // ===============================================
-// icards: Grid
+// layouts-pager-h: Grid
 // ===============================================
 
-@mixin layouts-icards-grid {
+@mixin layouts-pager-h-grid {
 
 /* ***************************************** */
-/*  icards: Grid */
+/*  layouts-pager-h: Grid */
 /* ***************************************** */
 
 /* Basic Layout */
 
-
 @include span-columns(6 omega, 6);	
+
+
+nav {
+@include span-columns(12 omgea, 12);
+}
 
 .unit {
 @include span-columns(2, 6);	
 }
 
- .unit:last-of-type, .unit-last {
+.unit:last-of-type, 
+.unit:last-of-type, 
+.unit-last, 
+.unit-last {
 @include omega;	
 }
 
@@ -39,27 +54,22 @@ text-align:center;
 
 
 // ===============================================
-// icards: Style
+// layouts-pager-h: Style
 // ===============================================
 
-@mixin layouts-icards-style {
-	@include txtcolor-lighter;
-	@extend %t-body-text;
-	@extend %vr-spacer;
+@mixin layouts-pager-h-style {
 	
-	.unit {
-	@include scheme-mono;
+	nav {
+	@include ui-tabs-h;	
 	}
+	
 	
 	.unit-heading {
-	@include txtcolor-default;
-	display:block;
+	
+		
 	}
 	
-	a {
-		@extend %t-body-small;
-		display:block;
-		@include txtcolor-lightest;
+	
+		
 	}
 	
-	}
