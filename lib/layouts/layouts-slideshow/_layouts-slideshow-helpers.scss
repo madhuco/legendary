@@ -2,7 +2,7 @@
 // Slideshow: Layout
 // ===============================================
 
-@mixin layouts-slideshow-50($element: '.slideshow-50') {
+@mixin layouts-slideshow-50 {
 			
 }
 
@@ -11,7 +11,7 @@
 // Slideshow: Grid
 // ===============================================
 
-@mixin layouts-slideshow-50-grid($element: '.slideshow-50-grid') {
+@mixin layouts-slideshow-50-grid {
 
 /* ***************************************** */
 /*  Slideshow: Grid */
@@ -19,7 +19,7 @@
 
 /* Basic Layout */
 
-#{$element}  {
+
 @include span-columns(12 omega, 12);
 
 
@@ -37,9 +37,6 @@ float:left;
 float:left;
 }
 
-@content;
-
-}
 
 		
 }
@@ -49,9 +46,8 @@ float:left;
 // Slideshow: Style
 // ===============================================
 
-@mixin layouts-slideshow-50-style($element: '.slideshow-50-style') {
+@mixin layouts-slideshow-50-style {
 
-#{$element}  {
 
 .title {
 @extend %t-title-2; 
@@ -74,5 +70,4 @@ cite {
 @extend %vr-spacer;	
 }
 
-}
 }

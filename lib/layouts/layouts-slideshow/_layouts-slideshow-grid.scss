@@ -1,3 +1,6 @@
 @import "layouts-slideshow-helpers";
-@include layouts-slideshow-50('.slideshow-50-grid');
-@include layouts-slideshow-50-grid('.slideshow-50-grid');
+
+.layouts-slideshow-grid {
+	@include layouts-slideshow-50;
+	@include layouts-slideshow-50-grid;
+}

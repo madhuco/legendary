@@ -1,3 +1,5 @@
 @import "schemes-spotbar-helpers";
 
-@include scheme-spotbar('.spotbar-scheme');
+.spotbar-scheme {
+@include scheme-spotbar;
+}

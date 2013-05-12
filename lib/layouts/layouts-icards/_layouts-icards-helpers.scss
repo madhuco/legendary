@@ -1,10 +1,10 @@
 // ===============================================
-// icards: Layout
+// x: Layout
 // ===============================================
 
-@mixin layouts-icards($icards: '.icards') {
+@mixin layouts-icards {
 	
-#{$icards} .unit {
+.unit {
 text-align:center;	
 }
 		
@@ -12,31 +12,25 @@ text-align:center;
 
 
 // ===============================================
-// icards: Grid
+// x: Grid
 // ===============================================
 
-@mixin layouts-icards-grid($icards: '.icards-grid') {
+@mixin layouts-icards-grid {
 
 /* ***************************************** */
-/*  icards: Grid */
+/*  x: Grid */
 /* ***************************************** */
 
 /* Basic Layout */
 
-.aside-main-50 #{$icards},
-.main-aside-50 #{$icards} {
-@include span-columns(6 omega, 6);	
-}
 
-.aside-main-50 #{$icards} .unit,
-.main-aside-50 #{$icards} .unit {
+@include span-columns(6 omega, 6);	
+
+.unit {
 @include span-columns(2, 6);	
 }
 
-.aside-main-50 #{$icards} .unit:last-of-type, 
-.main-aside-50 #{$icards} .unit:last-of-type, 
-.aside-main-50 #{$icards} .unit-last, 
-.main-aside-50 #{$icards} .unit-last {
+ .unit:last-of-type, .unit-last {
 @include omega;	
 }
 
@@ -45,12 +39,10 @@ text-align:center;
 
 
 // ===============================================
-// icards: Style
+// x: Style
 // ===============================================
 
-@mixin layouts-icards-style($icards: '.icards-style') {
-	
-	#{$icards}  {
+@mixin layouts-icards-style {
 	@include txtcolor-lighter;
 	@extend %t-body-text;
 	@extend %vr-spacer;
@@ -69,5 +61,3 @@ text-align:center;
 	}
 	
 	}
-	
-}

@@ -1,5 +1,6 @@
 @import "layouts-footer-helpers";
 
-
-@include layout-footer(footer-grid);
-@include layout-footer-grid(footer-grid);
+.layouts-footer-grid {
+	@include layouts-footer;
+	@include layouts-footer-grid;
+}

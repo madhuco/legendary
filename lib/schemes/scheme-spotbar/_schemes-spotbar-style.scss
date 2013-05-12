@@ -1,1 +1,6 @@
-@include showcase-6-grid(showcase-6-style);
+@import "schemes-spotbar-helpers";
+
+
+.spotbar-style {
+@include scheme-spotbar;
+}

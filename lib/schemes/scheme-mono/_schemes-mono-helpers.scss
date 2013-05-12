@@ -1,14 +1,6 @@
-@mixin scheme-mono($mono: '.mono-scheme') {
-
-	#{$mono} {
-border:1px $scratch solid;
+@mixin scheme-mono($line: $scratch) {
+border:1px $line solid;
 @include rem(padding, 10px);
- @include box-sizing(border-box);
- @content;
-}
-
-	
-	
-
+@include box-sizing(border-box);
 }
 

@@ -2,9 +2,9 @@
 // Tiles: Layout
 // ===============================================
 
-@mixin layouts-tiles($element: '.tiles') {
+@mixin layouts-tiles{
 	
-#{$element} .unit-heading {
+.unit-heading {
 text-align:center;	
 }
 		
@@ -15,7 +15,7 @@ text-align:center;
 // Tiles: Grid
 // ===============================================
 
-@mixin layouts-tiles-grid($element: '.tiles-grid') {
+@mixin layouts-tiles-grid {
 
 /* ***************************************** */
 /*  Tiles: Grid */
@@ -23,7 +23,7 @@ text-align:center;
 
 /* Basic Layout */
 
-#{$element} {
+
 @include span-columns(12 omega, 12);	
 
 
@@ -59,8 +59,7 @@ width: columns(2, 4) + gutter(4);
 
 }
 
-		
-}
+
 
 
 // ===============================================
@@ -69,11 +68,7 @@ width: columns(2, 4) + gutter(4);
 
 
 
-@mixin layouts-tiles-style($element: '.tiles-style') {
-	
-	
-	#{$element} {
-
+@mixin layouts-tiles-style {
 	
 	.unit-heading {
 		
@@ -94,8 +89,3 @@ width: columns(2, 4) + gutter(4);
 		
 		
 	}
-}
-
-
-
-

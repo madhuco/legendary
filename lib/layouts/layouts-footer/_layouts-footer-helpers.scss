@@ -2,20 +2,18 @@
 // Footer: Layout
 // ===============================================
 
-@mixin layout-footer($element: '.footer') {
+@mixin layouts-footer {
 	
-#{$element} {
 @include border-top-radius(10px);
 }
 		
-}
 
 
 // ===============================================
 // Footer: Grid
 // ===============================================
 
-@mixin layout-footer-grid($element: '.footer-grid') {
+@mixin layouts-footer-grid {
 
 /* ***************************************** */
 /*  Footer: Grid */
@@ -23,40 +21,39 @@
 
 /* Basic Layout */
 
-#{$element} {
-@include span-columns(12 omega, 12);	
-}
 
-#{$element} .unit {
+@include span-columns(12 omega, 12);	
+
+ .unit {
 @include span-columns(4, 12);	
 }
 
-#{$element} .logo .unit-heading {
+.logo .unit-heading {
 margin-left:auto;
 margin-right:auto;
 }
 
 
 
-#{$element} .unit:last-of-type, 
-#{$element} .unit-last {
+.unit:last-of-type, 
+.unit-last {
 @include omega;	
 }
 
-#{$element} .footer-ribbon { 
+.footer-ribbon { 
 @include span-columns(12 omega, 12);
 }
 
-#{$element} .footer-ribbon ul { 
+.footer-ribbon ul { 
 @include horizontal-list;
 float:right;
 }
 
-#{$element} .footer-ribbon ul li { 
+.footer-ribbon ul li { 
 @include rem(margin, 0 10px);
 }
 
-#{$element} a {
+a {
 display:block;	
 }
 
@@ -67,9 +64,9 @@ display:block;
 // ===============================================
 // Footer: Style
 // ===============================================
-@mixin layout-footer-style($element: '.footer-style') {
+@mixin layouts-footer-style {
 	
-	#{$element} {
+
 	@extend %vr-section-box-top;
 	
 	
@@ -100,9 +97,5 @@ display:block;
 	display:inline;
 	}
 	
-	
-	
-		
-	}
-	
+
 }

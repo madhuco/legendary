@@ -2,8 +2,14 @@
 
 @import "ui-quote-helpers";
 
-@include ui-mono-quote;
+.ui-solo-quote {
+@include ui-solo-quote;
+}
 
-@include ui-mono-quote-bars('.ui-mono-quote-bars', '.ui-mono-quote');
+.ui-solo-quote-bars {
+@include ui-solo-quote-bars('.ui-solo-quote-bars');
+}
 
-@include ui-mono-quote-outside('.ui-mono-quote-outside', '.ui-mono-quote');
+.ui-solo-quote-outside {
+@include ui-solo-quote-outside('.ui-solo-quote');
+}
