@@ -1,7 +1,7 @@
-@import "layouts-icards-helpers";
+@import "0-layouts-icards-helpers";
 
 .layouts-icards-combo{
 	@include layouts-icards ;
-	@include layouts-icards-grid;
+	@include layouts-icards-grid-desk;
 	@include layouts-icards-style;
 }

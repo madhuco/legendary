@@ -5,7 +5,7 @@
 }
 
 
-@mixin layouts-showcase-grid{
+@mixin layouts-showcase-grid-desk{
 
 		@include span-columns(12 omega, 12);
 	
@@ -54,7 +54,11 @@ p {
 	@include txtcolor-lightest;
 }
 
+a:hover * {
 
+		@include  txtcolor-darkest;
+@include transition-property(color);
+@include transition-duration(0.4s);}
 
 
 }

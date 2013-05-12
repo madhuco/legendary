@@ -1,6 +1,6 @@
-@import "layouts-pager-h-helpers";
+@import "0-layouts-pager-h-helpers";
 
 .layouts-pager-h-grid {
 	@include layouts-pager-h;
-	@include layouts-pager-h-grid;
+	@include layouts-pager-h-grid-desk;
 }

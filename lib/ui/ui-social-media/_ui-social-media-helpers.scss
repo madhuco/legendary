@@ -1,0 +1,48 @@
+
+@mixin ui-social-media() {
+
+li {
+float:left;	
+@include rem(padding-right, 10px);
+}
+
+li a {
+@include txtcolor-lighter;
+
+}
+
+li a:before {
+display:block;
+font-size:2em;
+color:inherit;
+}
+
+li a:hover {
+	@include txtcolor-darker;
+}
+
+li a span {
+display:none;	
+}
+
+.facebook a:before {
+@include icon($icon-facebook-sign);	
+}
+
+
+.twitter a:before {
+@include icon($icon-twitter-sign);	
+}
+
+
+.pinterest a:before {
+@include icon($icon-pinterest-sign);	
+}
+
+.google-plus a:before {
+@include icon($icon-google-plus-sign);	
+}
+
+
+
+}

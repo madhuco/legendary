@@ -62,7 +62,7 @@
 	}
 	
 	.content-aside {
-		@include span-columns(10, 12);	
+		@include span-columns(2 omega, 12);	
 	}
 	
 	.content-footer {
@@ -80,11 +80,11 @@
 		@include span-columns(12 omega, 12);		
 	
 	.content-main {
-	@extend .grid-narrow-wide-omega;		
+		@include span-columns(10 omega, 12);	
 	}
 	
 	.content-aside {
-	@extend .grid-narrow-narrow;	
+			@include span-columns(2, 12);		
 	}
 	
 	.content-footer {
@@ -172,5 +172,13 @@
 
 }
 
+
+@mixin main-aside-layered-desk($element: '.main-aside-layered-desk' ) {
+	#{$element}, #{$element} .content-main, #{$element} .content-aside, #{$element} .content-footer  {
+		@include span-columns(12 omega, 12);
+
+	}
+
+}
 
 

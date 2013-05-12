@@ -1,6 +1,6 @@
-@import "layouts-footer-helpers";
+@import "0-layouts-footer-helpers";
 
 .layouts-footer-grid {
 	@include layouts-footer;
-	@include layouts-footer-grid;
+	@include layouts-footer-grid-desk;
 }

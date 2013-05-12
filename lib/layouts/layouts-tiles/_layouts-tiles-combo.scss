@@ -1,7 +1,7 @@
-@import "layouts-tiles-helpers";
+@import "0-layouts-tiles-helpers";
 
 .layouts-tiles-combo{
 	@include layouts-tiles ;
-	@include layouts-tiles-grid;
+	@include layouts-tiles-grid-desk;
 	@include layouts-tiles-style;
 }

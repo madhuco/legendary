@@ -35,8 +35,7 @@ li:hover {
 	@include border-top-radius(5px);	
 	background: $hover-bg; 
 	  @include transition-property(background);
-  @include transition-duration(0.2s);
-  @include transition-timing-function(ease-in); 
+  @include transition-duration(0.4s);  @include transition-timing-function(ease-in); 
 
 }
 

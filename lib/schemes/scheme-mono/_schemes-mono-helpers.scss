@@ -3,5 +3,11 @@ border:1px $line solid;
 @include rem(padding, 10px);
 @include box-sizing(border-box);
 @include border-radius(5px);
+
+&:hover {
+ @include bgcolor-offwhite-flat;	
+ border:1px $default solid;	
+}
+
 }
 

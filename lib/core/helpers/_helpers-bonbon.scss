@@ -120,6 +120,10 @@ background-color: $colour;
 							darken($colour, 12%) 0 .1em 3px, darken($colour, 18%) 0 .3em 1px, /* color border */
 							hsla(0,0,0,0.2) 0 .5em 5px /* drop shadow */);					
 
+&:hover {
+background-color: lighten($colour, 10%);	
+}
+
 
 @if $materials != false {
 @extend %bonbon-materials;

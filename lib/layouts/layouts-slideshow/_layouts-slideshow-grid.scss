@@ -1,6 +1,6 @@
-@import "layouts-slideshow-helpers";
+@import "0-layouts-slideshow-helpers";
 
 .layouts-slideshow-grid {
 	@include layouts-slideshow-50;
-	@include layouts-slideshow-50-grid;
+	@include layouts-slideshow-50-grid-desk;
 }

@@ -13,7 +13,7 @@
 // Footer: Grid
 // ===============================================
 
-@mixin layouts-footer-grid {
+@mixin layouts-footer-grid-desk {
 
 /* ***************************************** */
 /*  Footer: Grid */
@@ -68,7 +68,7 @@ display:block;
 	
 
 	@extend %vr-section-box-top;
-	
+	@include bgcolor-footer-mono-primary-3d;
 	
 	.unit-heading {
 	@extend %t-footer-heading;	
@@ -87,14 +87,19 @@ display:block;
 	}
 	
 	.unit-footer {
-	@include bgcolor-footer-mono-secondary-3d;	
+		
 	@extend %t-footer-small;	
 	@extend %vr-spacer-box-top;	
+		@include bgcolor-footer-mono-secondary-3d;
 	}
 	
 	.unit-footer a {
 	@include txtcolor-darkest;
 	display:inline;
+	}
+	
+	.social-media {
+	@include ui-social-media;	
 	}
 	
 

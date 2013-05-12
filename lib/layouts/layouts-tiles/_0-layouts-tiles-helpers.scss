@@ -15,7 +15,7 @@ text-align:center;
 // Tiles: Grid
 // ===============================================
 
-@mixin layouts-tiles-grid {
+@mixin layouts-tiles-grid-desk {
 
 /* ***************************************** */
 /*  Tiles: Grid */
@@ -88,7 +88,7 @@ width: columns(2, 4) + gutter(4);
 	@extend %vr-pane-heading;
 		
 	}
-		
+	
 		
 		
 	}

@@ -1,0 +1,199 @@
+@mixin themes-monozine($element: '.themes-monozine') {
+
+
+
+/* ***************************************** */
+/*  Global Styles */
+/* ***************************************** */
+
+/* ***************************************** */
+/*  Slideshow: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-slideshow {
+	@include layouts-slideshow-50;
+	@include layouts-slideshow-50-style;
+}
+
+
+/* ***************************************** */
+/*  Tiles: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-tiles {
+	@include layouts-tiles;
+	@include layouts-tiles-style;
+}	
+
+
+/* ***************************************** */
+/*  Showcase: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-showcase {
+	@include layouts-showcase;
+	@include layouts-showcase-style;
+}	
+
+
+
+/* ***************************************** */
+/*  icards: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-icards {
+	@include layouts-icards;
+	@include layouts-icards-style;
+}	
+
+
+/* ***************************************** */
+/*  Footer: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-footer {
+	@include layouts-footer;
+	@include layouts-footer-style;
+}	
+
+
+
+/* ***************************************** */
+/*  pager-h: Global Styles */
+/* ***************************************** */
+
+#{$element} .layouts-pager-h {
+	@include layouts-pager-h;
+	@include layouts-pager-h-style;
+}	
+
+#{$element} .page {
+
+}
+
+
+/* ***************************************** */
+/*  Fonts: Global Styles */
+/* ***************************************** */
+#{$element} .t-title-1 {
+@include typeface-light;
+@extend %vr-title-1;
+@include txtcolor-darkest;	
+text-align:center;
+@extend %vr-section;
+}
+
+
+#{$element} h3.title {
+	@include typeface-light;
+@extend %t-title-2;
+@extend %vr-title-2;
+@include txtcolor-darkest;
+
+}
+
+#{$element} .lead-quote {
+	@extend %t-intro-1; 
+	@extend %vr-spacer; 
+	@include ui-solo-quote-outside;
+	
+}
+
+#{$element} .lead-quote cite {
+@include txtcolor-lightest;
+@extend %t-body-text;	
+}
+
+
+@include media($desk){ 
+
+/* ***************************************** */
+/*  Desktop Styles */
+/* ***************************************** */
+
+/* ***************************************** */
+/*  Slideshow: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-slideshow {
+	@include layouts-slideshow-50-grid-desk;
+}
+
+
+/* ***************************************** */
+/*  Tiles: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-tiles {
+	@include layouts-tiles-grid-desk;
+}	
+
+
+/* ***************************************** */
+/*  Showcase: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-showcase {
+	@include layouts-showcase-grid-desk;
+	
+}	
+
+
+
+/* ***************************************** */
+/*  iCards: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-icards {
+	@include layouts-icards-grid-desk;
+	
+}	
+
+
+
+
+/* ***************************************** */
+/*  Footer: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-footer {
+	@include layouts-footer-grid-desk;
+	
+}	
+
+
+
+
+/* ***************************************** */
+/*  pager-h: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .layouts-pager-h {
+	@include layouts-pager-h-grid-desk;
+}	
+
+
+
+/* ***************************************** */
+/*  page: Desktop Styles */
+/* ***************************************** */
+
+#{$element} .aside-main-article,
+#{$element} .main-aside-article {
+@include span-columns(12 omega, 12);
+}
+
+#{$element} .aside-main-article .content-aside,
+#{$element} .main-aside-article .content-main {
+@include span-columns(7, 12);
+}
+
+#{$element}  .main-aside-article .content-aside,
+#{$element}  .aside-main-article .content-main {
+@include span-columns(5 omega, 12);
+}
+
+}
+
+	
+}
