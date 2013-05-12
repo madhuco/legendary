@@ -1,5 +1,5 @@
 @import "layouts-tiles-helpers";
 
 
-@include tiles(tiles-grid);
-@include tiles-grid(tiles-grid);
+@include layouts-tiles('.tiles-grid');
+@include layouts-tiles-grid('.tiles-grid');

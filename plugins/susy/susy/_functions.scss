@@ -56,10 +56,10 @@ $rem-with-px-fallback               : true !default;
 @function columns-width(
   $columns  : $total-columns
 ) {
-  @if round($columns) != $columns {
-    @warn "Susy works best with integer column-spans.
-    For partial-columns, you may need to finesse the math by hand using functions directly.";
-  }
+//  @if round($columns) != $columns {
+//    @warn "Susy works best with integer column-spans.
+//    For partial-columns, you may need to finesse the math by hand using functions directly.";
+//  }
   @return ($columns * $column-width) + (if($columns >= 1, ceil($columns - 1), 0) * $gutter-width);
 }
 

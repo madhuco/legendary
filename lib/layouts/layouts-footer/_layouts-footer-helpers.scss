@@ -2,9 +2,9 @@
 // Footer: Layout
 // ===============================================
 
-@mixin footer($footer: footer) {
+@mixin layout-footer($element: '.footer') {
 	
-.#{$footer} {
+#{$element} {
 @include border-top-radius(10px);
 }
 		
@@ -15,7 +15,7 @@
 // Footer: Grid
 // ===============================================
 
-@mixin footer-grid($footer: footer-grid) {
+@mixin layout-footer-grid($element: '.footer-grid') {
 
 /* ***************************************** */
 /*  Footer: Grid */
@@ -23,40 +23,40 @@
 
 /* Basic Layout */
 
-.#{$footer} {
+#{$element} {
 @include span-columns(12 omega, 12);	
 }
 
-.#{$footer} .unit {
+#{$element} .unit {
 @include span-columns(4, 12);	
 }
 
-.#{$footer} .logo .unit-heading {
+#{$element} .logo .unit-heading {
 margin-left:auto;
 margin-right:auto;
 }
 
 
 
-.#{$footer} .unit:last-of-type, 
-.#{$footer} .unit-last {
+#{$element} .unit:last-of-type, 
+#{$element} .unit-last {
 @include omega;	
 }
 
-.#{$footer} .footer-ribbon { 
+#{$element} .footer-ribbon { 
 @include span-columns(12 omega, 12);
 }
 
-.#{$footer} .footer-ribbon ul { 
+#{$element} .footer-ribbon ul { 
 @include horizontal-list;
 float:right;
 }
 
-.#{$footer} .footer-ribbon ul li { 
+#{$element} .footer-ribbon ul li { 
 @include rem(margin, 0 10px);
 }
 
-.#{$footer} a {
+#{$element} a {
 display:block;	
 }
 
@@ -67,3 +67,42 @@ display:block;
 // ===============================================
 // Footer: Style
 // ===============================================
+@mixin layout-footer-style($element: '.footer-style') {
+	
+	#{$element} {
+	@extend %vr-section-box-top;
+	
+	
+	.unit-heading {
+	@extend %t-footer-heading;	
+	@extend %vr-footer-heading;	
+	
+	}
+	
+	p {
+	@include txtcolor-lighter;
+	@extend %t-footer-text;		
+	}
+	
+	a {
+	@include txtcolor-darker;
+	display:block;
+	}
+	
+	.unit-footer {
+	@include bgcolor-footer-mono-secondary-3d;	
+	@extend %t-footer-small;	
+	@extend %vr-spacer-box-top;	
+	}
+	
+	.unit-footer a {
+	@include txtcolor-darkest;
+	display:inline;
+	}
+	
+	
+	
+		
+	}
+	
+}

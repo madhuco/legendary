@@ -1,4 +1,4 @@
-@mixin mono($mono: '.mono-scheme') {
+@mixin scheme-mono($mono: '.mono-scheme') {
 
 	#{$mono} {
 border:1px $scratch solid;
@@ -11,3 +11,4 @@ border:1px $scratch solid;
 	
 
 }
+

@@ -1,1 +1,3 @@
-@include icards(icards-style); 
+@import "layouts-icards-helpers";
+@include layouts-icards-grid('.icards-style'); 
+@include layouts-icards('.icards-style'); 

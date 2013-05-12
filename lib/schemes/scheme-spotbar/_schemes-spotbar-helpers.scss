@@ -1,4 +1,4 @@
-@mixin spotbar($spotbar: '.spotbar-scheme') {
+@mixin scheme-spotbar($spotbar: '.spotbar-scheme') {
 
 	#{$spotbar} {
 @include bgcolor-offwhite-flat;
@@ -19,4 +19,7 @@
 	}
 
 }
+
+
+
 

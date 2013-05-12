@@ -2,7 +2,7 @@
 // icards: Layout
 // ===============================================
 
-@mixin icards($icards: '.icards') {
+@mixin layouts-icards($icards: '.icards') {
 	
 #{$icards} .unit {
 text-align:center;	
@@ -15,7 +15,7 @@ text-align:center;
 // icards: Grid
 // ===============================================
 
-@mixin icards-grid($icards: '.icards-grid') {
+@mixin layouts-icards-grid($icards: '.icards-grid') {
 
 /* ***************************************** */
 /*  icards: Grid */
@@ -48,18 +48,26 @@ text-align:center;
 // icards: Style
 // ===============================================
 
-@mixin icards-style($icards: '.icards-style') {
+@mixin layouts-icards-style($icards: '.icards-style') {
 	
 	#{$icards}  {
+	@include txtcolor-lighter;
+	@extend %t-body-text;
+	@extend %vr-spacer;
+	@include scheme-mono;
 	
-	
-	.unit-heading {
-	
-		
+	.unit {
+	@include border-radius(5px);	
 	}
 	
+	.unit-heading {
+	@include txtcolor-default;
+	}
 	
-		
+	a {
+		@extend %t-body-tiny;
+	}
+	
 	}
 	
 }

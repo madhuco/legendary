@@ -1,1 +1,2 @@
-@include footer(footer-style); 
+@import "layouts-footer-helpers";
+@include layout-footer(footer-style); 

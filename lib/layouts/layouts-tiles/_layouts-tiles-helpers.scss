@@ -2,9 +2,9 @@
 // Tiles: Layout
 // ===============================================
 
-@mixin tiles($tiles: tiles) {
+@mixin layouts-tiles($element: '.tiles') {
 	
-.#{$tiles} .unit-heading {
+#{$element} .unit-heading {
 text-align:center;	
 }
 		
@@ -15,7 +15,7 @@ text-align:center;
 // Tiles: Grid
 // ===============================================
 
-@mixin tiles-grid($tiles: tiles-grid) {
+@mixin layouts-tiles-grid($element: '.tiles-grid') {
 
 /* ***************************************** */
 /*  Tiles: Grid */
@@ -23,28 +23,28 @@ text-align:center;
 
 /* Basic Layout */
 
-.#{$tiles} {
+#{$element} {
 @include span-columns(12 omega, 12);	
-}
 
-.#{$tiles} .unit {
+
+.unit {
 @include span-columns(4, 12);	
 @include rem(height, 130px);
 position:relative;
 }
 
-.#{$tiles} .unit:last-of-type, 
-.#{$tiles} .unit-last {
+.unit:last-of-type, 
+.unit-last {
 @include omega;	
 }
 
 /* Images, text and heading */
 
-.#{$tiles} .unit-heading {
+.unit-heading {
 @include span-columns(4, 4);	
 }
 
-.#{$tiles} .unit-img {
+.unit-img {
 @include span-columns(2, 4);
 position:absolute;
 @include rem(bottom, -2px);
@@ -52,12 +52,12 @@ position:absolute;
 text-align:right;
 }
 
-.#{$tiles} .unit-txt {
+.unit-txt {
 width: columns(2, 4) + gutter(4);
 @include omega;
 }
 
-
+}
 
 		
 }
@@ -66,3 +66,36 @@ width: columns(2, 4) + gutter(4);
 // ===============================================
 // Tiles: Style
 // ===============================================
+
+
+
+@mixin layouts-tiles-style($element: '.tiles-style') {
+	
+	
+	#{$element} {
+
+	
+	.unit-heading {
+		
+	@extend	%t-pane-heading; 
+	@extend %vr-pane-heading;
+		
+	}
+		
+		
+		
+	.unit-txt {
+		
+	@extend	%t-pane-text; 
+	@extend %vr-pane-heading;
+		
+	}
+		
+		
+		
+	}
+}
+
+
+
+

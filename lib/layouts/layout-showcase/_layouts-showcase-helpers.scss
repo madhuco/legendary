@@ -1,17 +1,51 @@
-@mixin showcase-6-grid($showcase-grid: showcase-6-grid) {
-	.#{$showcase-grid} {
+@mixin layouts-showcase-grid($element: '.showcase-6-grid') {
+	#{$element} {
 		@include span-columns(12 omega, 12);
-	}
 	
-	.#{$showcase-grid} .unit {
+	.unit {
 		width: columns(1.8, 12) + gutter(12);
 		display:inline;
 		float:left;
 		text-align:center;
 	}
 
-.#{$showcase-grid} .unit-last {
+.unit-last {
 		@include omega;
-	}
+}
+
+}
+	
+
+}
+
+
+@mixin layouts-showcase-style($element: '.showcase-style') {
+	#{$element} {
+		
+.title {
+	@extend %t-title-3; 
+	@extend %txtcolor-dark;
+	
+}
+
+.unit-heading {
+
+@extend %t-shop-thumbs; 
+@extend %vr-thumbs-title;
+	
+}
+
+
+.unit-txt {
+
+@extend %t-shop-thumbs; 
+@extend %vr-thumbs-title;
+@include txtcolor-ligher
+	
+}
+
+
+}
+	
 
 }
