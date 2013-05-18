@@ -1,7 +1,15 @@
 @import "0-grids12-helpers";
 @import "grids12-base";
 
+
+/* ***************************************** */
+/* Master Grid Set up */
+/* This is the udnerlying 12 column grid for each page */
+/* ***************************************** */
+
 @include media($mob-p...) {
+
+/* ***** Mobile Portrait Grid  ***** */
  .grids12 {
  @include container;
  @include susy-grid-background;
@@ -10,7 +18,7 @@
 }
 
  @include media($fab...) {
-
+/* ***** Fablet Grid  ***** */
  .grids12 {
  @include container;
  @include susy-grid-background;
@@ -20,6 +28,7 @@
 }
 
  @include media($tab...) {
+/* ***** Tablet Grid  ***** */
  .grids12 {
  @include container;
  @include susy-grid-background;
@@ -30,7 +39,7 @@
 
  @include media($desk) {
 
-	 
+	/* ***** Desktop Grid  ***** */ 
  .grids12 {
  @include container;
  @include susy-grid-background;

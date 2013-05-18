@@ -4,6 +4,11 @@
 
 @mixin layouts-footer {
 	
+/* ***************************************** */
+/* Layouts Footer: Grid */
+/* Creates footer at the bottom of each page */
+/* ***************************************** */
+	
 @include border-top-radius(10px);
 }
 		
@@ -15,9 +20,7 @@
 
 @mixin layouts-footer-grid-desk {
 
-/* ***************************************** */
-/*  Footer: Grid */
-/* ***************************************** */
+
 
 /* Basic Layout */
 
@@ -35,7 +38,10 @@ margin-right:auto;
 
 
 
-.unit:last-of-type, 
+.unit:last-of-type {
+@include omega;	
+}
+
 .unit-last {
 @include omega;	
 }

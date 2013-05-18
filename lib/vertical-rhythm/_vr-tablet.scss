@@ -1,8 +1,8 @@
 @include media($tab...){ 
 
-/* ***************************************** */
-/*  Section Dividers (Bumpers) */
-/* ***************************************** */
+
+/*  Tablet VR: Section Dividers (Bumpers) */
+
 
 %vr-breather {
 @include vr-breather-tab;
@@ -37,9 +37,9 @@
 }
 
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
+
+/*  Tablet VR: Sub Section Dividers (Spacers) */
+
 
 %vr-spacer {
 	@include vr-spacer-tab;
@@ -73,9 +73,9 @@
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+
+/*  Tablet VR: Type Units */
+
 
 
 %vr-title-1 {
@@ -122,7 +122,7 @@
 
 
 
-/* Standard Text  */
+/*  Tablet VR:Standard Text  */
 
 
 
@@ -133,9 +133,9 @@
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+
+/*  Tablet VR: Special */
+
 
 
 .ui-accordian %vr-title {

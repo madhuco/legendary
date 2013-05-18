@@ -3,12 +3,12 @@
 
 
 /* ***************************************** */
-/*  Global Styles */
+/*  Section: Main Page Layouts (MAIN PAGE LAYOUTS: ) */
 /* ***************************************** */
 
-/* ***************************************** */
-/*  Slideshow: Global Styles */
-/* ***************************************** */
+
+/* *****   MAIN PAGE LAYOUTS:  - Slideshow: Global Styles  ***** */
+
 
 #{$element} .layouts-slideshow {
 	@include layouts-slideshow-50;
@@ -16,9 +16,10 @@
 }
 
 
-/* ***************************************** */
-/*  Tiles: Global Styles */
-/* ***************************************** */
+
+/* *****   MAIN PAGE LAYOUTS:  -  Tiles: Global Styles ***** */
+/* Displays content as 'tiles' of information  */
+
 
 #{$element} .layouts-tiles {
 	@include layouts-tiles;
@@ -26,9 +27,9 @@
 }	
 
 
-/* ***************************************** */
-/*  Showcase: Global Styles */
-/* ***************************************** */
+
+/* *****  MAIN PAGE LAYOUTS:  - Showcase: Global Styles   ***** */  
+/* Displays content in a row  with text under each photo*/
 
 #{$element} .layouts-showcase {
 	@include layouts-showcase;
@@ -37,9 +38,9 @@
 
 
 
-/* ***************************************** */
-/*  icards: Global Styles */
-/* ***************************************** */
+
+/* ***** MAIN PAGE LAYOUTS:  -  icards: Global Styles ***** */
+/* Displays content as icards (information cards). Used to present bite sized bits of informaiton */
 
 #{$element} .layouts-icards {
 	@include layouts-icards;
@@ -47,9 +48,9 @@
 }	
 
 
-/* ***************************************** */
-/*  Footer: Global Styles */
-/* ***************************************** */
+
+/* ***** MAIN PAGE LAYOUTS:  -  Footer: Global Styles ***** */
+/* Displays the footer at the bottom of every page */
 
 #{$element} .layouts-footer {
 	@include layouts-footer;
@@ -58,9 +59,9 @@
 
 
 
-/* ***************************************** */
-/*  pager-h: Global Styles */
-/* ***************************************** */
+
+/* *****  MAIN PAGE LAYOUTS:   pager-h: Global Styles  ***** */
+/*Breaks up content into seperate pages that are tabbed horizontally */
 
 #{$element} .layouts-pager-h {
 	@include layouts-pager-h;
@@ -73,10 +74,12 @@
 
 
 /* ***************************************** */
-/*  Fonts: Global Styles */
+/*  Font-styles: Global Styles */
+/* Bundles of properties for displaying text */
 /* ***************************************** */
-#{$element} .t-title-1 {
+#{$element} .main-title {
 @include typeface-light;
+@extend %t-title-1;
 @extend %vr-title-1;
 @include txtcolor-darkest;	
 text-align:center;
@@ -84,7 +87,7 @@ text-align:center;
 }
 
 
-#{$element} h3.title {
+#{$element} .title {
 	@include typeface-light;
 @extend %t-title-2;
 @extend %vr-title-2;
@@ -108,30 +111,31 @@ text-align:center;
 @include media($desk){ 
 
 /* ***************************************** */
-/*  Desktop Styles */
+/*  Desktop Specific Styles 
+Refer to earlier  gloabl styles for descriptions */
 /* ***************************************** */
 
-/* ***************************************** */
-/*  Slideshow: Desktop Styles */
-/* ***************************************** */
+
+/* MAIN PAGE LAYOUTS:  -  Slideshow: Desktop Specific Styles */
+
 
 #{$element} .layouts-slideshow {
 	@include layouts-slideshow-50-grid-desk;
 }
 
 
-/* ***************************************** */
-/*  Tiles: Desktop Styles */
-/* ***************************************** */
+
+/* MAIN PAGE LAYOUTS:  -  Tiles: Desktop Specific Styles */
+
 
 #{$element} .layouts-tiles {
 	@include layouts-tiles-grid-desk;
 }	
 
 
-/* ***************************************** */
-/*  Showcase: Desktop Styles */
-/* ***************************************** */
+
+/*  MAIN PAGE LAYOUTS:  - Showcase: Desktop Specific Styles */
+
 
 #{$element} .layouts-showcase {
 	@include layouts-showcase-grid-desk;
@@ -140,9 +144,9 @@ text-align:center;
 
 
 
-/* ***************************************** */
-/*  iCards: Desktop Styles */
-/* ***************************************** */
+
+/*  MAIN PAGE LAYOUTS:  -  iCards: Desktop Specific Styles */
+
 
 #{$element} .layouts-icards {
 	@include layouts-icards-grid-desk;
@@ -152,9 +156,9 @@ text-align:center;
 
 
 
-/* ***************************************** */
-/*  Footer: Desktop Styles */
-/* ***************************************** */
+
+/*  MAIN PAGE LAYOUTS:  -  Footer: Desktop Specific Styles */
+
 
 #{$element} .layouts-footer {
 	@include layouts-footer-grid-desk;
@@ -164,9 +168,8 @@ text-align:center;
 
 
 
-/* ***************************************** */
-/*  pager-h: Desktop Styles */
-/* ***************************************** */
+/* MAIN PAGE LAYOUTS:  -   pager-h: Desktop Specific Styles */
+
 
 #{$element} .layouts-pager-h {
 	@include layouts-pager-h-grid-desk;
@@ -175,7 +178,7 @@ text-align:center;
 
 
 /* ***************************************** */
-/*  page: Desktop Styles */
+/*  page: Desktop Specific Styles */
 /* ***************************************** */
 
 #{$element} .aside-main-article,

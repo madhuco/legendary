@@ -4,6 +4,11 @@
 
 @mixin layouts-icards {
 	
+/* ***************************************** */
+/*  Layouts: icards: Displays text in three 'card' styles boxes. */
+/* Useful for highlighting information */
+/* ***************************************** */	
+	
 .unit {
 text-align:center;	
 }
@@ -17,10 +22,6 @@ text-align:center;
 
 @mixin layouts-icards-grid-desk {
 
-/* ***************************************** */
-/*  icards: Grid */
-/* ***************************************** */
-
 /* Basic Layout */
 
 
@@ -30,9 +31,14 @@ text-align:center;
 @include span-columns(2, 6);	
 }
 
- .unit:last-of-type, .unit-last {
+ .unit:last-of-type {
 @include omega;	
 }
+
+.unit-last {
+@include omega;
+}
+
 
 		
 }

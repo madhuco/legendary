@@ -3,7 +3,9 @@
 // ===============================================
 
 @mixin layouts-tiles{
-	
+/* ***************************************** */
+/*  Layouts Tiles: Displays content in small 'tile' shapes */
+/* ***************************************** */
 .unit-heading {
 text-align:center;	
 }
@@ -17,9 +19,7 @@ text-align:center;
 
 @mixin layouts-tiles-grid-desk {
 
-/* ***************************************** */
-/*  Tiles: Grid */
-/* ***************************************** */
+
 
 /* Basic Layout */
 
@@ -33,7 +33,10 @@ text-align:center;
 position:relative;
 }
 
-.unit:last-of-type, 
+.unit:last-of-type {
+@include omega;	
+}
+
 .unit-last {
 @include omega;	
 }
@@ -73,6 +76,13 @@ width: columns(2, 4) + gutter(4);
 	.unit {
 	@include  scheme-mono;
 	}
+	 
+	 a:hover {
+	 @include bgcolor-offwhite-flat;	
+ border:1px $default solid;	
+ 
+	 }
+	
 	.unit-heading {
 		
 	@extend	%t-pane-heading; 

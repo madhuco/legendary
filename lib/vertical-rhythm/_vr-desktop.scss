@@ -1,8 +1,8 @@
 @include media($desk){ 
 
-/* ***************************************** */
-/*  Section Dividers (Bumpers) */
-/* ***************************************** */
+
+/*  Desktop VR:  Section Dividers (Bumpers) */
+
 
 %vr-breather {
 @include vr-breather-desk;
@@ -41,9 +41,9 @@
 	@include vr-section-box-bottom-desk;
 }
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
+
+/*  Desktop VR:  Sub Section Dividers (Spacers) */
+
 
 %vr-spacer {
 	@include vr-spacer-desk;
@@ -73,9 +73,9 @@
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+
+/*  Desktop VR:  Type Units */
+
 
 
 %vr-title-1 {
@@ -122,7 +122,7 @@
 
 
 
-/* Standard Text  */
+/*  Desktop VR: Standard Text  */
 
 
 
@@ -133,9 +133,9 @@
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+
+/*  Desktop VR:  Special */
+
 
 
 .ui-accordian %vr-title {

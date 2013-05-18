@@ -1,4 +1,7 @@
-
+/* ***************************************** */
+/* Responsive Transition Classes  */
+/* These are used to hide elements when switching between mobile and tablet displays  */
+/* ***************************************** */
 
 @include media($mob...) {
 html body .mobshow {

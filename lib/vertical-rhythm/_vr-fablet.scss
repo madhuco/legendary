@@ -1,8 +1,8 @@
 @include media($fab...){ 
 
-/* ***************************************** */
-/*  Section Dividers (Bumpers) */
-/* ***************************************** */
+
+/*  Fablet VR:  Section Dividers (Bumpers) */
+
 
 %vr-breather {
 @include vr-breather-fab;
@@ -36,9 +36,9 @@
 }
 
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
+
+/*  Fablet VR:  Sub Section Dividers (Spacers) */
+
 
 %vr-spacer {
 	@include vr-spacer-fab;
@@ -69,9 +69,9 @@
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+
+/*  Fablet VR:  Type Units */
+
 
 
 %vr-title-1 {
@@ -118,7 +118,7 @@
 
 
 
-/* Standard Text  */
+/*  Fablet VR: Standard Text  */
 
 
 
@@ -129,9 +129,9 @@
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+
+/*  Fablet VR:  Special */
+
 
 
 .ui-accordian %vr-title {

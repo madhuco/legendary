@@ -1,7 +1,7 @@
 @include media($mob...){
-/* ***************************************** */
-/*  Section Dividers (Bumpers) */
-/* ***************************************** */
+
+/*  Mobile VR:  Section Dividers (Bumpers) */
+
 
 %vr-breather {
 @include vr-breather-mob;
@@ -36,9 +36,9 @@
 }
 
 
-/* ***************************************** */
-/*  Sub Section Dividers (Spacers) */
-/* ***************************************** */
+
+/*  Mobile VR:  Sub Section Dividers (Spacers) */
+
 
 %vr-spacer {
 	@include vr-spacer-mob;
@@ -70,9 +70,9 @@
 
 
 
-/* ***************************************** */
-/*  Type Units */
-/* ***************************************** */
+
+/*  Mobile VR:  Type Units */
+
 
 
 %vr-title-1 {
@@ -119,7 +119,7 @@
 
 
 
-/* Standard Text  */
+/*  Mobile VR: Standard Text  */
 
 
 
@@ -130,9 +130,9 @@
 
 
 
-/* ***************************************** */
-/*  Special */
-/* ***************************************** */
+
+/*  Mobile VR:  Special */
+
 
 
 .ui-accordian %vr-title {

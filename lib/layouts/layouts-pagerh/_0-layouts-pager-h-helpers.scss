@@ -4,6 +4,11 @@
 
 @mixin layouts-pager-h {
 	
+/* ***************************************** */
+/*  Layouts: Pager-h: 
+Breaks up pages into smaller pages which can be displayed horizontally. */
+/* ***************************************** */
+	
 .page {
 	display:none;
 	clear:both;
@@ -26,9 +31,7 @@
 
 @mixin layouts-pager-h-grid-desk {
 
-/* ***************************************** */
-/*  layouts-pager-h: Grid */
-/* ***************************************** */
+
 
 /* Basic Layout */
 
