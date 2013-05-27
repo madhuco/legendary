@@ -1,0 +1,10 @@
+@import "0-layouts-taptabs-helpers";
+
+	@include layouts-taptabs($class: '.layouts-taptabs-style');
+
+	@include layouts-taptabs-style($class: '.layouts-taptabs-style');
+
+	@include media($mob...){ 
+	@include layouts-taptabs-style-mob($class: '.layouts-taptabs-style');
+	@include layouts-taptabs-mob($class: '.layouts-taptabs-style');
+	}

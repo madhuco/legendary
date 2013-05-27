@@ -1,5 +1,5 @@
-@mixin layouts-showcase{
-	.unit {
+@mixin layouts-showcase($showcase: '.showcase'){
+#{$showcase}	.unit {
 	text-align:center;	
 	}
 }
@@ -30,7 +30,7 @@
 .title {
 	@extend %t-title-3; 
 	@extend %vr-title-3;
-	@extend %txtcolor-dark;
+	@include txtcolor-darker;
 	
 }
 

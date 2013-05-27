@@ -1,0 +1,43 @@
+@mixin scheme-purity($hover:true) {
+background:white;
+border-width:1px;
+border-style:solid;
+border-color:$scratch;
+@include box-shadow($scratch 1px 1px 2px);
+@include box-sizing(border-box); 
+@include border-radius(10px);	
+@include rem(padding-left, 5px);
+@include rem(padding-right, 5px);
+
+@if $hover == 'true' {
+  &:hover {
+  @include transition-property(box-shadow);
+  @include transition-property(color);
+  @include transition-duration(0.4s);
+  @include transition-timing-function(ease-in);   
+  @include box-shadow(#333 1px 1px 8px);
+  color:#333;
+  } // Close Hover
+} // Close If
+
+
+} // Close Mixin
+
+
+@mixin scheme-purity-reset($hover:true) {
+background:transparent;
+border-width:0;
+border-style:none;
+@include box-shadow($scratch 0 0 0);
+@include border-radius(0);	
+
+@if $hover == 'true' {
+  &:hover {
+  color:#333;
+  @include box-shadow($scratch 0 0 0);
+  color:inherit;
+  } // Close Hover
+
+} //Close If
+
+} //Close Mixin

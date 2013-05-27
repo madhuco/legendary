@@ -1,0 +1,35 @@
+@import "0-layouts-cards-helpers";
+
+@include media($mob...){ 
+	@include layouts-cards-grid-mob($class: '.layouts-cards-grid');
+}
+
+
+@include media($mob-p...){ 
+	@include layouts-cards-grid-mob-p($class: '.layouts-cards-grid');
+}
+
+
+@include media($mob-l...){ 
+	@include layouts-cards-grid-mob-l($class: '.layouts-cards-grid');
+}
+
+
+@include media($pads...){ 
+	@include layouts-cards-grid-pads($class: '.layouts-cards-grid');
+}
+
+
+@include media($fab...){ 
+	@include layouts-cards-grid-fab($class: '.layouts-cards-grid');
+}
+
+@include media($tab...){ 
+	@include layouts-cards-grid-tab($class: '.layouts-cards-grid');
+}
+
+@include media($desk...){ 
+	@include layouts-cards-grid-desk($class: '.layouts-cards-grid');
+}
+
+	@include layouts-cards($class: '.layouts-cards-grid');

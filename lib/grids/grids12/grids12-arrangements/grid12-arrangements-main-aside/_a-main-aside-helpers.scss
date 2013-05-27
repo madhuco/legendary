@@ -200,3 +200,90 @@ Aside is layered underneath it. */
 }
 
 
+
+
+
+
+@mixin main-aside-slim-desk($element: '.main-aside-slim-desk' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-Narrow 
+Displays Main then Aside with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the right */
+/* ***************************************** */
+
+	
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(9, 12);		
+	}
+	
+	.content-aside {
+		@include span-columns(3 omega, 12);	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin aside-main-slim-mob {
+@include  span-columns(12 omega, 12);	
+
+.content-aside {
+	@include  span-columns(12 omega, 12);
+}
+
+.content-main {
+@include  span-columns(12 omega, 12);
+}
+
+}
+
+
+@mixin aside-main-slim-pads {
+
+@include  span-columns(12 omega, 12);	
+
+.content-aside {
+	@include  span-columns(4, 12);
+}
+
+.content-main {
+display:none;
+@include  span-columns(8 omega, 12);
+}
+
+	
+}
+
+
+
+@mixin aside-main-slim-desk {
+/* ***************************************** */
+/*  Layotus: Aside-Main-Narrow 
+Displays Aside then Main with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the left */
+/* ***************************************** */
+		@include span-columns(12 omega, 12);		
+	
+	.content-aside {
+		@include span-columns(3, 12);	
+	}
+	
+	.content-main {
+		@include span-columns(9 omega, 12);		
+	}
+	
+
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}

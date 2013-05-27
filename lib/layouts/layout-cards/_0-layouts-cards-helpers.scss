@@ -1,0 +1,437 @@
+@mixin layouts-cards($class: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
+
+/* ***************************************** */
+/*   Cards: Inital Display for Jquery  */
+/* ***************************************** */
+
+.jq #{$class} .unit {
+	display: none;
+}
+
+.jq #{$class} .unit:first-of-type {
+	display: block;
+}
+
+
+
+/* ***************************************** */
+/*   Cards: Display of Text Boxes  */
+/* ***************************************** */
+
+.cards-front {
+position:relative;	
+@include box-sizing(border-box); 
+}
+
+.cards-front .unit-txt {
+position:absolute;	
+bottom:0;
+@include rem(padding, 10px);
+background: #FFF; 
+background: rgba(255, 255, 255, 0.8); 
+}
+
+/* ***************************************** */
+/*   Cards: Cards Expand Mode  */
+/* ***************************************** */
+
+.cards-back {
+	width:100%;
+	height:100%;
+	background:#FFF;
+    @include box-sizing(border-box); 
+	@include rem(padding, 10px);	
+}
+
+
+#{$class} .content-main .cards-expand .cards-back  {
+	display: block;
+	border:1px solid $scratch;
+}
+
+.cards-expand .cards-front {
+display:none;	
+}
+
+
+/* ***************************************** */
+/*   Cards: Exit Expand Mode  */
+/* ***************************************** */
+.cards-back .close:after {
+font-size:50px;
+@include icon($icon-remove-circle);
+color: $lightest;
+top:-0.5em;
+right:-0.5em;
+position:absolute;
+}
+
+.cards-back .close:hover:after {
+color: $darkest;
+}
+
+.cards-back .close {
+cursor:pointer;
+cursor:hand;	
+}
+
+
+/* ***************************************** */
+/*   Cards: Basic Set Up - Called Last to prevent overides */
+/* ***************************************** */
+
+
+#{$class} .img {
+	width: 100%;
+	height: 100%;
+}
+
+#{$class} .unit-row .cards-back {
+	display: none;
+}
+
+.jq #{$class} .heading {
+	display: none;
+}
+
+#{$class} .unit-row {
+position:relative;	
+}
+
+
+.cards-expand .cards-back{
+position:absolute;
+z-index:999;
+}
+
+
+
+@content;
+
+}
+
+
+@mixin layouts-cards-grid-mob($class: '.layouts-cards-grid') {
+#{$class} {
+
+.unit {
+@include span-columns(12, 12);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+@mixin layouts-cards-grid-mob-p($class: '.layouts-cards-grid') {
+#{$class} {
+
+.unit-row {
+@include span-columns(12, 12);
+@inlcude omega;
+@include rem(height, 278px);
+}
+
+.cards-back{
+@include rem(height, 475px);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin layouts-cards-grid-mob-l($class: '.layouts-cards-grid') {
+#{$class} {
+
+.unit-row {
+@include span-columns(6, 12);
+@include rem(height, 206px);
+}
+
+.unit-row:nth-child(even) {
+@include omega;
+}
+
+
+.unit-row:nth-child(even) {
+@include omega;
+}
+
+.unit-row:nth-of-type(even) .cards-back {
+right:0;
+top:0;
+}
+
+
+} //Close Class
+
+
+#{$class} .cards-back{
+@include span-columns(12 omega, 6);
+@include rem(height, 374px);
+}
+
+} //Close Mixin
+
+
+@mixin layouts-cards-grid-pads($class: '.layouts-cards-grid') {
+
+#{$class} {
+/* ***************************************** */
+/*   Cards Front */
+/* ***************************************** */
+.unit {
+@include span-columns(8, 8);
+}
+
+/*Generic card Set Up */
+.unit-row {
+@include span-columns(4, 8);
+}
+
+
+/*Large Card sized Set Up */
+.unit-row:nth-of-type(3n + 1)  {
+@include span-columns(8, 8);
+@include omega;
+
+}
+
+/* Floats for right sides */
+.unit-row:nth-of-type(3n) {
+@include omega;
+}
+
+/* ***************************************** */
+/*  Cards Expanded */
+/* ***************************************** */
+
+
+/*Generic card Set Up */
+
+.cards-back {
+@include span-columns(8, 4);
+@include omega();
+bottom:0;
+}
+
+
+/*Large Card size Set Up */
+.cards-expanded .unit-row:nth-of-type(3n + 1) .cards-back {
+@include span-columns(8, 8);
+top:0;
+bottom:inherit;
+}
+
+/*Right Side Card Positioning */
+.unit-row:nth-of-type(3n) .cards-back {
+right:0;
+}
+
+
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin layouts-cards-grid-fab($class: '.layouts-cards-grid') {
+#{$class} {
+
+.unit-row  {
+@include rem(height, 141px);
+}
+
+.unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+.cards-back {
+@include rem(height, 568px);
+}
+
+.cards-back .img {
+@include rem(height, 212px);
+}
+
+
+} //Close Class
+} //Close Mixin
+
+
+@mixin layouts-cards-grid-tab($class: '.layouts-cards-grid') {
+#{$class} {
+
+.unit-row {
+@include rem(height, 180px);
+}
+
+.unit-row:nth-of-type(3n + 1) {
+@include rem(height, 397px); 
+}
+
+.cards-back {
+@include rem(height, 610px);
+}
+
+.cards-back .img {
+@include rem(height, 297px);
+}
+
+
+
+} //Close Class
+} //Close Mixin
+
+
+@mixin layouts-cards-grid-desk($class: '.layouts-cards-grid') {
+#{$class} {
+
+/* ***************************************** */
+/*    Cards:Set Up */
+/* ***************************************** */
+
+.unit {
+position:relative;
+@include span-columns(9, 9);
+@include omega;
+}
+
+
+/* ***************************************** */
+/*  Cards Front */
+/* ***************************************** */
+
+/* Basic Card - Container */
+
+.unit-row {
+@include span-columns(3, 9);
+@include rem(height, 188px);
+}
+
+/* Special Cards - Containers */
+
+.unit-row-1,
+.unit-row-8,
+.unit-row-13  {
+@include span-columns(6, 9);
+@include rem(height, 407px); 
+}
+
+
+/* Cards that need float clearing */
+
+.unit-row-2,
+.unit-row-3, 
+.unit-row-6, 
+.unit-row-8,
+.unit-row-12,
+.unit-row-14,
+.unit-row-15,
+.unit-row-18 {
+@include omega;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Outer Layout */
+/* ***************************************** */
+
+
+.cards-expand .cards-back{
+@include span-columns(9, 3);
+@include omega();
+@include rem(height, 407px); 
+}
+
+.unit-row-1.cards-expand .cards-back,
+.unit-row-13.cards-expand .cards-back {
+@include span-columns(9, 6);
+left:0;
+top:0;
+}
+
+.unit-row-2.cards-expand .cards-back, 
+.unit-row-14.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+.unit-row-3.cards-expand .cards-back, 
+.unit-row-15.cards-expand .cards-back {
+right:0;
+bottom:0;
+}
+
+
+.unit-row-4.cards-expand .cards-back{
+left:0;
+top:0;
+}
+
+.unit-row-5.cards-expand .cards-back, 
+.unit-row-11.cards-expand .cards-back,
+.unit-row-17.cards-expand .cards-back  {
+left: -(columns(9,7.6));
+top:0;
+}
+
+
+.unit-row-6.cards-expand .cards-back, 
+.unit-row-12.cards-expand .cards-back,
+.unit-row-18.cards-expand .cards-back {
+right:0;
+top:0;
+}
+
+
+.unit-row-8.cards-expand .cards-back{
+@include span-columns(9, 6);
+@include omega;
+right:0;
+top:0;
+}
+
+.unit-row-9.cards-expand .cards-back{
+left:0;
+bottom:0;
+}
+
+
+
+/* ***************************************** */
+/*  Cards Back - Contents Layout */
+/* ***************************************** */
+
+.cards-back .unit-footer {
+@include span-columns(3 omega, 9);
+@include rem(bottom, 10px);
+position:absolute;
+@include rem(right, 10px);
+}
+
+
+
+
+} //Close Class
+
+
+/* Basic Card - Layout */
+
+#{$class} .cards-back .unit-img {
+@include span-columns(6, 9);
+}
+
+#{$class} .cards-back .unit-txt {
+@include span-columns(3, 9);
+@include omega;
+}
+
+
+} //Close Mixin
+
+
+
+@mixin layouts-cards-style($class: 'layouts-cards-style') {
+
+}

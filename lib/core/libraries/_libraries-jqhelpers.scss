@@ -20,6 +20,10 @@ html body .mob-widthexpand.panel-region-logo  {
 	width:ignore ;
 }
 
+.tap-btn {
+display:	block;
+}
+
 
 }
 
@@ -138,4 +142,9 @@ html body .widthexpand {
 
 .z-index-top {
 z-index:999 !Important;	
+}
+
+
+.tap-btn {
+display: none;
 }

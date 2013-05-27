@@ -17,6 +17,17 @@
 
 }
 
+@include media($mob-l...) {
+
+/* ***** Mobile Portrait Grid  ***** */
+ .grids12 {
+ @include container;
+ @include susy-grid-background;
+}
+
+}
+
+
  @include media($fab...) {
 /* ***** Fablet Grid  ***** */
  .grids12 {

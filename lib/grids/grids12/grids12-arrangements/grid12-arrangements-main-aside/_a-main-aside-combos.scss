@@ -34,3 +34,17 @@
 }
 
 
+.aside-main-slim {
+@include media($mob...){ 	
+@include aside-main-slim-mob;
+}
+
+@include media($pads...){ 	
+@include aside-main-slim-pads;
+}
+
+@include media($desk){ 	
+@include aside-main-slim-desk;
+}
+
+}

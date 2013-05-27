@@ -1,0 +1,8 @@
+/* ***** UI Classes: Popbox   ***** */
+/* This creates a popbox (works with Jquery, to make pop up dialoge boxes to appear )  */
+
+@import "ui-popbox-helpers";
+
+.ui-popbox  {
+@include ui-popbox($direction:'down');
+}

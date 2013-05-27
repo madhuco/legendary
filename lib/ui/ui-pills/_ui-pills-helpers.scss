@@ -1,0 +1,20 @@
+@mixin ui-pills($class: '.ui-pills', $bgcolor: $crumbs, $color: #fff) {
+
+#{$class} > * {
+@include border-radius(5px);
+background: $bgcolor;
+@include rem(padding, 5px);
+@include rem(margin, 5px 5px 0 0);
+color:$color;
+display:block;
+float:left;
+}
+
+
+#{$class}:after{
+content:"";
+clear:both;
+display:block;
+}
+
+} //Close Mixin

@@ -32,7 +32,7 @@
 /* Displays content in a row  with text under each photo*/
 
 #{$element} .layouts-showcase {
-	@include layouts-showcase;
+	@include layouts-showcase('.powerrangers');
 	@include layouts-showcase-style;
 }	
 

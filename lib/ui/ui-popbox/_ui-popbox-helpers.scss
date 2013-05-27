@@ -1,0 +1,65 @@
+
+%popbox {
+@include scheme-purity;	
+display:none;
+position:absolute;
+@include rem(padding, 10px);
+cursor:default;
+
+&:after {
+content: "";
+position: absolute;
+
+border-style: solid;
+border-color: $scratch transparent;
+display: block;
+width: 0;
+} //Close After
+
+} //Close Popbox
+
+
+
+@mixin ui-popbox($class:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
+
+a {
+position:relative;
+display:block;
+}
+
+@if $direction == 'down' {
+
+#{$class}-#{$direction} {
+@extend %popbox;
+top:30px;
+	
+&:after {
+@include rem(top, -15px);
+border-width: 0 15px 15px;
+} //Close after
+
+} //Close $class
+
+
+} //Close If-down
+
+
+
+@if $direction == 'top' {
+
+#{$class}-#{$direction} {
+@extend %popbox;
+	
+&:after {
+@include rem(bottom, -15px);
+@include rem(left, 50px);
+} //Close after
+
+} //Close $class
+
+
+} //Close If-down
+
+
+
+} //Close Mixin

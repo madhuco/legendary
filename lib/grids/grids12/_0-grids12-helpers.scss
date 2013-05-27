@@ -8,29 +8,36 @@ html, body {
 }
 
 @include media($mob-p...) {
- $total-columns : 1112;
-$column-width : 1.4em;
-$gutter-width : 1.0em;
-$gutter-padding : 2em;
+$total-columns       : 12;
+$column-width        : 1.4em;
+$gutter-width        : 1.0em;
+$grid-padding        : 2em;
+}
+
+@include media($mob-l...) {
+$total-columns       : 12;
+$column-width        : 2.725em;
+$gutter-width        : 1em;
+$grid-padding        : 2em;
 }
 
  @include media($fab...) {
- $total-columns : 5;
-$column-width : 2.750em;
-$gutter-width : 2em;
-$gutter-padding : 2em;
+$total-columns       : 6;
+$column-width        : 3.500em;
+$gutter-width        : 1em;
+$grid-padding        : 2em;
 }
 
  @include media($tab...) {
- $total-columns : 120;
-$column-width : 2.9em;
-$gutter-width : 3em;
-$gutter-padding : 4em;
+$total-columns       : 12;
+$column-width        : 3.8em;
+$gutter-width        : 2em;
+$grid-padding        : 4em;
 }
 
  @include media($desk) {
- $total-columns : 12;
-$column-width : 4.5em;
-$gutter-width : 3em;
-$grid-padding : 4em;
+$total-columns       : 12;
+$column-width        : 4.5em;
+$gutter-width        : 3em;
+$grid-padding      	 : 4em;
 }
