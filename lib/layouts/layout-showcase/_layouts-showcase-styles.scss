@@ -1,6 +1,5 @@
 @import "0-layouts-showcase-helpers";
 
-.layouts-showcase-style {
-	@include layouts-showcase;
+
+	@include layouts-showcase('.layouts-showcase-style');
 	@include layouts-showcase-style;
-}

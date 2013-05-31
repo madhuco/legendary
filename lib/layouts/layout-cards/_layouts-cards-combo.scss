@@ -1,7 +1,3 @@
 @import "0-layouts-cards-helpers";
 
-.layouts-cards-combo{
-	@include layouts-cards ;
-	@include layouts-cards-grid-desk;
-	@include layouts-cards-style;
-}
+@include layouts-cards-combo;

@@ -1,6 +1,6 @@
 
 
-@mixin aside-main-narrow($class: '.aside-main-narrow' ) {
+@mixin aside-main-narrow($element: '.aside-main-narrow' ) {
 /* ***************************************** */
 /*  Layotus: Aside-Main-Narrow 
 Displays Aside then Main with aside taking up a smaller column size (e.g. two column layout)  
@@ -8,7 +8,7 @@ Aside is on the left */
 /* ***************************************** */
 	
 	
-	#{$class} {
+	#{$element} {
 		@include span-columns(12 omega, 12);		
 	
 	.content-main {
@@ -29,27 +29,27 @@ Aside is on the left */
 
 
 
-@mixin aside-main-narrow-mob-p($class: '.aside-main-narrow-mob-p' ) {
-	@include aside-main-narrow;
+@mixin aside-main-narrow-mob-p($element: '.aside-main-narrow-mob-p' ) {
+	@include aside-main-narrow($element: $element);
 }
 
-@mixin aside-main-narrow-mob-l($class: '.aside-main-narrow-mob-l' ) {
-	@include aside-main-narrow;
+@mixin aside-main-narrow-mob-l($element: '.aside-main-narrow-mob-l' ) {
+	@include aside-main-narrow($element: $element);
 }
 
-@mixin aside-main-narrow-fab($class: '.aside-main-narrow-fab' ) {
-	@include aside-main-narrow;
+@mixin aside-main-narrow-fab($element: '.aside-main-narrow-fab' ) {
+	@include aside-main-narrow($element: $element);
 }
 
-@mixin aside-main-narrow-tab($class: '.aside-main-narrow-tab' ) {
-	@include aside-main-narrow;
+@mixin aside-main-narrow-tab($element: '.aside-main-narrow-tab' ) {
+	@include aside-main-narrow($element: $element);
 }
 
-@mixin aside-main-narrow-desk($class: '.aside-main-narrow-desk' ) {
-	@include aside-main-narrow;
+@mixin aside-main-narrow-desk($element: '.aside-main-narrow-desk' ) {
+	@include aside-main-narrow($element: $element);
 }
 
-@mixin aside-main-narrow-r($class: '.aside-main-narrow') {
-@include aside-main-narrow;
+@mixin aside-main-narrow-r($element: '.aside-main-narrow') {
+@include aside-main-narrow($element: $element);
 }
 

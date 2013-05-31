@@ -1,6 +1,6 @@
-@mixin ui-taplist($class: '.ui-taplist', $color: $default, $arrow-color: $lightest) {
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest) {
 
-#{$class} li {
+#{$element} li {
 border-bottom: 1px solid $line;
 
 a {display:block;	
@@ -30,5 +30,5 @@ top:0.7em;
  border-bottom: 0;
 }
 
-} //Close $class
+} //Close $element
 } //Close Mixin

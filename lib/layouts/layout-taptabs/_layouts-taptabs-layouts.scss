@@ -1,8 +1,5 @@
 @import "layouts-taptabs-helpers";
 
 
-	@include layouts-taptabs($class: 'layouts-taptabs-layout');
-	
-	@include media($mob...){
-		@include layouts-taptabs-mob($class: 'layouts-taptabs-layout')
-	}
+	@include layouts-taptabs($element: 'layouts-taptabs-layout');
+

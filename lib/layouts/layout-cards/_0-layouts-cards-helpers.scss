@@ -1,14 +1,17 @@
-@mixin layouts-cards($class: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
+// ===============================================
+// Layouts
+// ===============================================
+@mixin layouts-cards($element: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
 
 /* ***************************************** */
 /*   Cards: Inital Display for Jquery  */
 /* ***************************************** */
 
-.jq #{$class} .unit {
+.jq #{$element} .unit {
 	display: none;
 }
 
-.jq #{$class} .unit:first-of-type {
+.jq #{$element} .unit:first-of-type {
 	display: block;
 }
 
@@ -44,7 +47,7 @@ background: rgba(255, 255, 255, 0.8);
 }
 
 
-#{$class} .content-main .cards-expand .cards-back  {
+#{$element} .content-main .cards-expand .cards-back  {
 	display: block;
 	border:1px solid $scratch;
 }
@@ -81,20 +84,20 @@ cursor:hand;
 /* ***************************************** */
 
 
-#{$class} .img {
+#{$element} .img {
 	width: 100%;
 	height: 100%;
 }
 
-#{$class} .unit-row .cards-back {
+#{$element} .unit-row .cards-back {
 	display: none;
 }
 
-.jq #{$class} .heading {
+.jq #{$element} .heading {
 	display: none;
 }
 
-#{$class} .unit-row {
+#{$element} .unit-row {
 position:relative;	
 }
 
@@ -111,19 +114,17 @@ z-index:999;
 }
 
 
-@mixin layouts-cards-grid-mob($class: '.layouts-cards-grid') {
-#{$class} {
+// ===============================================
+// Grid
+// ===============================================
+
+@mixin layouts-cards-grid-mob-p($element: '.layouts-cards-grid-mob-p') {
+#{$element} {
 
 .unit {
 @include span-columns(12, 12);
 }
 
-} //Close Class
-} //Close Mixin
-
-
-@mixin layouts-cards-grid-mob-p($class: '.layouts-cards-grid') {
-#{$class} {
 
 .unit-row {
 @include span-columns(12, 12);
@@ -140,8 +141,10 @@ z-index:999;
 
 
 
-@mixin layouts-cards-grid-mob-l($class: '.layouts-cards-grid') {
-#{$class} {
+
+
+@mixin layouts-cards-grid-mob-l($element: '.layouts-cards-grid-mob-l') {
+#{$element} {
 
 .unit-row {
 @include span-columns(6, 12);
@@ -162,21 +165,18 @@ right:0;
 top:0;
 }
 
-
-} //Close Class
-
-
-#{$class} .cards-back{
+.cards-back{
 @include span-columns(12 omega, 6);
 @include rem(height, 374px);
 }
 
+} //Close Class
 } //Close Mixin
 
 
-@mixin layouts-cards-grid-pads($class: '.layouts-cards-grid') {
+@mixin layouts-cards-grid-pads($element: '.layouts-cards-grid-pads') {
 
-#{$class} {
+#{$element} {
 /* ***************************************** */
 /*   Cards Front */
 /* ***************************************** */
@@ -234,8 +234,8 @@ right:0;
 
 
 
-@mixin layouts-cards-grid-fab($class: '.layouts-cards-grid') {
-#{$class} {
+@mixin layouts-cards-grid-fab($element: '.layouts-cards-grid-fab') {
+#{$element} {
 
 .unit-row  {
 @include rem(height, 141px);
@@ -258,8 +258,8 @@ right:0;
 } //Close Mixin
 
 
-@mixin layouts-cards-grid-tab($class: '.layouts-cards-grid') {
-#{$class} {
+@mixin layouts-cards-grid-tab($element: '.layouts-cards-grid-tab') {
+#{$element} {
 
 .unit-row {
 @include rem(height, 180px);
@@ -283,8 +283,8 @@ right:0;
 } //Close Mixin
 
 
-@mixin layouts-cards-grid-desk($class: '.layouts-cards-grid') {
-#{$class} {
+@mixin layouts-cards-grid-desk($element: '.layouts-cards-grid-desk') {
+#{$element} {
 
 /* ***************************************** */
 /*    Cards:Set Up */
@@ -418,11 +418,11 @@ position:absolute;
 
 /* Basic Card - Layout */
 
-#{$class} .cards-back .unit-img {
+#{$element} .cards-back .unit-img {
 @include span-columns(6, 9);
 }
 
-#{$class} .cards-back .unit-txt {
+#{$element} .cards-back .unit-txt {
 @include span-columns(3, 9);
 @include omega;
 }
@@ -431,7 +431,55 @@ position:absolute;
 } //Close Mixin
 
 
+@mixin layouts-cards-grid-r($element: '.layouts-cards-grid') {
 
-@mixin layouts-cards-style($class: 'layouts-cards-style') {
+@include media($mob-p...){ 
+@include layouts-cards-grid-mob-p($element: $element);
+}
+
+@include media($mob-l...){ 
+@include layouts-cards-grid-mob-l($element: $element);
+}
+
+@include media($pads...){ 
+@include layouts-cards-grid-pads($element: $element);
+}
+
+@include media($fab...){ 
+@include layouts-cards-grid-fab($element: $element);
+}
+
+
+@include media($tab...){ 
+@include layouts-cards-grid-tab($element: $element);
+}
+
+
+@include media($desk){ 
+@include layouts-cards-grid-desk($element: $element);
+}
+	
+	
+	
+}
+
+
+
+// ===============================================
+// Style
+// ===============================================
+
+
+@mixin layouts-cards-style($element: 'layouts-cards-style') {
 
 }
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-cards-combo($element: 'layouts-cards-combo') {
+@include layouts-cards-grid-r($element: $element);
+@include layouts-cards($element: $element);
+}
+

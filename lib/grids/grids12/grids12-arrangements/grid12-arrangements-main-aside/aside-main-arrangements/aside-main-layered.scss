@@ -1,13 +1,13 @@
 
 
-@mixin aside-main-layered($class: '.aside-main-layered' ) {
+@mixin aside-main-layered($element: '.aside-main-layered' ) {
 /* ***************************************** */
 /*  Layotus: Main-Aside-layered 
 Main Takes up the full width of the page.
 Aside is layered underneath it. */
 /* ***************************************** */
 
-	#{$class}, #{$class} .content-main, #{$class} .content-aside, #{$class} .content-footer  {
+	#{$element}, #{$element} .content-main, #{$element} .content-aside, #{$element} .content-footer  {
 		@include span-columns(12 omega, 12);
 
 	}
@@ -15,26 +15,26 @@ Aside is layered underneath it. */
 }
 
 
-@mixin aside-main-layered-mob-p($class: '.aside-main-layered-mob-p' ) {
-	@include aside-main-layered;
+@mixin aside-main-layered-mob-p($element: '.aside-main-layered-mob-p' ) {
+	@include aside-main-layered($element: $element);
 }
 
-@mixin aside-main-layered-mob-l($class: '.aside-main-layered-mob-l' ) {
-	@include aside-main-layered;
+@mixin aside-main-layered-mob-l($element: '.aside-main-layered-mob-l' ) {
+	@include aside-main-layered($element: $element);
 }
 
-@mixin aside-main-layered-fab($class: '.aside-main-layered-fab' ) {
-	@include aside-main-layered;
+@mixin aside-main-layered-fab($element: '.aside-main-layered-fab' ) {
+	@include aside-main-layered($element: $element);
 }
 
-@mixin aside-main-layered-tab($class: '.aside-main-layered-tab' ) {
-	@include aside-main-layered;
+@mixin aside-main-layered-tab($element: '.aside-main-layered-tab' ) {
+	@include aside-main-layered($element: $element);
 }
 
-@mixin aside-main-layered-desk($class: '.aside-main-layered-desk' ) {
-	@include aside-main-layered;
+@mixin aside-main-layered-desk($element: '.aside-main-layered-desk' ) {
+	@include aside-main-layered($element: $element);
 }
 
-@mixin aside-main-layered-r($class: '.aside-main-layered') {
-@include aside-main-layered;
+@mixin aside-main-layered-r($element: '.aside-main-layered') {
+@include aside-main-layered($element: $element);
 }

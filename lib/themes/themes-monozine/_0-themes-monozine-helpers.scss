@@ -1,4 +1,4 @@
-@mixin themes-monozine($element: '.themes-monozine') {
+@mixin themes-monozine($root: '.themes-monozine') {
 
 
 
@@ -10,7 +10,7 @@
 /* *****   MAIN PAGE LAYOUTS:  - Slideshow: Global Styles  ***** */
 
 
-#{$element} .layouts-slideshow {
+#{$root} .layouts-slideshow {
 	@include layouts-slideshow-50;
 	@include layouts-slideshow-50-style;
 }
@@ -21,7 +21,7 @@
 /* Displays content as 'tiles' of information  */
 
 
-#{$element} .layouts-tiles {
+#{$root} .layouts-tiles {
 	@include layouts-tiles;
 	@include layouts-tiles-style;
 }	
@@ -31,9 +31,9 @@
 /* *****  MAIN PAGE LAYOUTS:  - Showcase: Global Styles   ***** */  
 /* Displays content in a row  with text under each photo*/
 
-#{$element} .layouts-showcase {
-	@include layouts-showcase('.powerrangers');
-	@include layouts-showcase-style;
+#{$root}  {
+	@include layouts-showcase-combo($element: '.layouts-showcase');
+
 }	
 
 
@@ -42,7 +42,7 @@
 /* ***** MAIN PAGE LAYOUTS:  -  icards: Global Styles ***** */
 /* Displays content as icards (information cards). Used to present bite sized bits of informaiton */
 
-#{$element} .layouts-icards {
+#{$root} .layouts-icards {
 	@include layouts-icards;
 	@include layouts-icards-style;
 }	
@@ -52,7 +52,7 @@
 /* ***** MAIN PAGE LAYOUTS:  -  Footer: Global Styles ***** */
 /* Displays the footer at the bottom of every page */
 
-#{$element} .layouts-footer {
+#{$root} .layouts-footer {
 	@include layouts-footer;
 	@include layouts-footer-style;
 }	
@@ -63,12 +63,12 @@
 /* *****  MAIN PAGE LAYOUTS:   pager-h: Global Styles  ***** */
 /*Breaks up content into seperate pages that are tabbed horizontally */
 
-#{$element} .layouts-pager-h {
+#{$root} .layouts-pager-h {
 	@include layouts-pager-h;
 	@include layouts-pager-h-style;
 }	
 
-#{$element} .page {
+#{$root} .page {
 
 }
 
@@ -77,7 +77,7 @@
 /*  Font-styles: Global Styles */
 /* Bundles of properties for displaying text */
 /* ***************************************** */
-#{$element} .main-title {
+#{$root} .main-title {
 @include typeface-light;
 @extend %t-title-1;
 @extend %vr-title-1;
@@ -87,7 +87,7 @@ text-align:center;
 }
 
 
-#{$element} .title {
+#{$root} .title {
 	@include typeface-light;
 @extend %t-title-2;
 @extend %vr-title-2;
@@ -95,14 +95,14 @@ text-align:center;
 
 }
 
-#{$element} .lead-quote {
+#{$root} .lead-quote {
 	@extend %t-intro-1; 
 	@extend %vr-spacer; 
 	@include ui-solo-quote-outside;
 	
 }
 
-#{$element} .lead-quote cite {
+#{$root} .lead-quote cite {
 @include txtcolor-lightest;
 @extend %t-body-text;	
 }
@@ -119,7 +119,7 @@ Refer to earlier  gloabl styles for descriptions */
 /* MAIN PAGE LAYOUTS:  -  Slideshow: Desktop Specific Styles */
 
 
-#{$element} .layouts-slideshow {
+#{$root} .layouts-slideshow {
 	@include layouts-slideshow-50-grid-desk;
 }
 
@@ -128,7 +128,7 @@ Refer to earlier  gloabl styles for descriptions */
 /* MAIN PAGE LAYOUTS:  -  Tiles: Desktop Specific Styles */
 
 
-#{$element} .layouts-tiles {
+#{$root} .layouts-tiles {
 	@include layouts-tiles-grid-desk;
 }	
 
@@ -137,7 +137,7 @@ Refer to earlier  gloabl styles for descriptions */
 /*  MAIN PAGE LAYOUTS:  - Showcase: Desktop Specific Styles */
 
 
-#{$element} .layouts-showcase {
+#{$root} .layouts-showcase {
 	@include layouts-showcase-grid-desk;
 	
 }	
@@ -148,7 +148,7 @@ Refer to earlier  gloabl styles for descriptions */
 /*  MAIN PAGE LAYOUTS:  -  iCards: Desktop Specific Styles */
 
 
-#{$element} .layouts-icards {
+#{$root} .layouts-icards {
 	@include layouts-icards-grid-desk;
 	
 }	
@@ -160,7 +160,7 @@ Refer to earlier  gloabl styles for descriptions */
 /*  MAIN PAGE LAYOUTS:  -  Footer: Desktop Specific Styles */
 
 
-#{$element} .layouts-footer {
+#{$root} .layouts-footer {
 	@include layouts-footer-grid-desk;
 	
 }	
@@ -171,7 +171,7 @@ Refer to earlier  gloabl styles for descriptions */
 /* MAIN PAGE LAYOUTS:  -   pager-h: Desktop Specific Styles */
 
 
-#{$element} .layouts-pager-h {
+#{$root} .layouts-pager-h {
 	@include layouts-pager-h-grid-desk;
 }	
 
@@ -181,18 +181,18 @@ Refer to earlier  gloabl styles for descriptions */
 /*  page: Desktop Specific Styles */
 /* ***************************************** */
 
-#{$element} .aside-main-article,
-#{$element} .main-aside-article {
+#{$root} .aside-main-article,
+#{$root} .main-aside-article {
 @include span-columns(12 omega, 12);
 }
 
-#{$element} .aside-main-article .content-aside,
-#{$element} .main-aside-article .content-main {
+#{$root} .aside-main-article .content-aside,
+#{$root} .main-aside-article .content-main {
 @include span-columns(7, 12);
 }
 
-#{$element}  .main-aside-article .content-aside,
-#{$element}  .aside-main-article .content-main {
+#{$root}  .main-aside-article .content-aside,
+#{$root}  .aside-main-article .content-main {
 @include span-columns(5 omega, 12);
 }
 

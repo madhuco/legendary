@@ -1,65 +1,52 @@
 @import "_ui-taplist-helpers.scss";
 
-@mixin layouts-taptabs($class: '.layouts-taptabs-layout') { //This Mixin should always be called last (ie. after all the platforms). 
+// ===============================================
+// Layouts
+// ===============================================
 
-@include ui-taplist($class: #{$class});
+@mixin layouts-taptabs($element: '.layouts-taptabs-layout') { 
 
+@include ui-taplist($element: #{$element});
 
- //Close Class
-} //Close Mixin
-
-
-
-
-@mixin layouts-taptabs-mob($class: '.layouts-taptabs-layout') { //This Mixin should always be called last (ie. after all the platforms). 
-
-.jq #{$class} .content-main .unit {
+@include media($mob...){ 
+.jq #{$element} .content-main .unit {
 	display:none;	
-	}
+}
 	
 .no-jq .content-aside {
 display:none;	
 }
-	
 
-
+}
 } //Close Mixin
 
 
 
-
-@mixin layouts-taptabs-grid($class: '.layouts-taptabs-grid') {
+@mixin layouts-taptabs-grid($element: '.layouts-taptabs-grid') {
 
 	
 } //Close Mixin
 
 
-@mixin layouts-taptabs-style-mob($class: '.layouts-taptabs-style') {
-	#{$class}  .content-aside {
-border:1px solid $line;
-@include border-radius(10px);
-
-
-} //Close Class
-} //Close Mixin
-
-
-@mixin layouts-taptabs-style($class: '.layouts-taptabs-style') {
-	#{$class} .content-aside a {
+@mixin layouts-taptabs-style($element: '.layouts-taptabs-style') {
+	#{$element} .content-aside a {
 @extend %t-ui-navigation; 
 } //Close Class
+
+
+@include media($mob...){ 
+#{$element}  .content-aside {
+border:1px solid $line;
+@include border-radius(10px);
+} 
+}
+
 } //Close Mixin
 
 
 
-@mixin layouts-taptabs-combo {
-@include layouts-taptabs($class: '.layouts-taptabs-combo');
-	@include layouts-taptabs-grid($class: '.layouts-taptabs-combo');
-	@include layouts-taptabs-style($class: '.layouts-taptabs-combo');
-
-@include media($mob...){ 
-	@include layouts-taptabs-mob($class: '.layouts-taptabs-combo');
-	@include layouts-taptabs-style-mob($class: '.layouts-taptabs-combo');
-}
-
+@mixin layouts-taptabs-combo($element: '.layouts-taptabs-combo') {
+@include layouts-taptabs($element: $element);
+	@include layouts-taptabs-grid($element: $element);
+	@include layouts-taptabs-style($element: $element);
 }

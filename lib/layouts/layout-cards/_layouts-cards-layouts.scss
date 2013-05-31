@@ -1,4 +1,4 @@
 @import "layouts-cards-helpers";
 
 
-	@include layouts-cards($class: 'layouts-cards-layout');
+	@include layouts-cards($element: '.layouts-cards-layout');

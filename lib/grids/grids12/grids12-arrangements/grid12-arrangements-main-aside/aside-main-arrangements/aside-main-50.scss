@@ -1,10 +1,10 @@
-@mixin aside-main-50($class: '.aside-main-50' ) {
+@mixin aside-main-50($element: '.aside-main-50' ) {
 /* ***************************************** */
 /*  Layotus: Aside-main-50 
 Displays aside then Main with equal widths (e.g. two column layout)  */
 /* ***************************************** */
 
-	#{$class} {
+	#{$element} {
 		@include span-columns(12 omega, 12);		
 	
 	.content-main {
@@ -24,26 +24,26 @@ Displays aside then Main with equal widths (e.g. two column layout)  */
 }
 
 
-@mixin aside-main-50-mob-p($class: '.aside-main-50-mob-p' ) {
+@mixin aside-main-50-mob-p($element: '.aside-main-50-mob-p' ) {
 	@include aside-main-50;
 }
 
-@mixin aside-main-50-mob-l($class: '.aside-main-50-mob-l' ) {
+@mixin aside-main-50-mob-l($element: '.aside-main-50-mob-l' ) {
 	@include aside-main-50;
 }
 
-@mixin aside-main-50-fab($class: '.aside-main-50-fab' ) {
+@mixin aside-main-50-fab($element: '.aside-main-50-fab' ) {
 	@include aside-main-50;
 }
 
-@mixin aside-main-50-tab($class: '.aside-main-50-tab' ) {
+@mixin aside-main-50-tab($element: '.aside-main-50-tab' ) {
 	@include aside-main-50;
 }
 
-@mixin aside-main-50-desk($class: '.aside-main-50-desk' ) {
+@mixin aside-main-50-desk($element: '.aside-main-50-desk' ) {
 	@include aside-main-50;
 }
 
-@mixin aside-main-50-r($class: '.aside-main-50') {
+@mixin aside-main-50-r($element: '.aside-main-50') {
 @include aside-main-50;
 }

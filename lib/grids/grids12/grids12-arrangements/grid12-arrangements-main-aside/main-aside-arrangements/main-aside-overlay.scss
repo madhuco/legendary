@@ -1,11 +1,11 @@
-@mixin main-aside-overlay-50($class: '.main-aside-overlay-50' ) {
+@mixin main-aside-overlay-50($element: '.main-aside-overlay-50' ) {
 /* ***************************************** */
 /*  Layotus: Main-Aside-overlay 
 Aside and Main are split into equal columns 
 Aside is overlayed on top of Main  */
 /* ***************************************** */
 
-	#{$class} {
+	#{$element} {
 		@include span-columns(12 omega, 12);
 	position:relative;		
 	
@@ -31,26 +31,26 @@ Aside is overlayed on top of Main  */
 
 
 
-@mixin main-aside-overlay-50-mob-p($class: '.main-aside-overlay-50-mob-p' ) {
-	@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-mob-p($element: '.main-aside-overlay-50-mob-p' ) {
+	@include main-aside-overlay-50($element: $element);
 }
 
-@mixin main-aside-overlay-50-mob-l($class: '.main-aside-overlay-50-mob-l' ) {
-	@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-mob-l($element: '.main-aside-overlay-50-mob-l' ) {
+	@include main-aside-overlay-50($element: $element);
 }
 
-@mixin main-aside-overlay-50-fab($class: '.main-aside-overlay-50-fab' ) {
-	@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-fab($element: '.main-aside-overlay-50-fab' ) {
+	@include main-aside-overlay-50($element: $element);
 }
 
-@mixin main-aside-overlay-50-tab($class: '.main-aside-overlay-50-tab' ) {
-	@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-tab($element: '.main-aside-overlay-50-tab' ) {
+	@include main-aside-overlay-50($element: $element);
 }
 
-@mixin main-aside-overlay-50-desk($class: '.main-aside-overlay-50-desk' ) {
-	@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-desk($element: '.main-aside-overlay-50-desk' ) {
+	@include main-aside-overlay-50($element: $element);
 }
 
-@mixin main-aside-overlay-50-r($class: '.main-aside-overlay-50') {
-@include main-aside-overlay-50;
+@mixin main-aside-overlay-50-r($element: '.main-aside-overlay-50') {
+@include main-aside-overlay-50($element: $element);
 }

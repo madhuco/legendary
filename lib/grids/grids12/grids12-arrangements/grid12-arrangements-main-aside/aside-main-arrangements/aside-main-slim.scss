@@ -1,12 +1,12 @@
 
-@mixin aside-main-slim($class: '.aside-main-slim')  {
+@mixin aside-main-slim($element: '.aside-main-slim')  {
 /* ***************************************** */
 /*  Layotus: Aside-Main-Narrow 
 Displays Aside then Main with aside taking up a smaller column size (e.g. two column layout)  
 Aside is on the left */
 /* ***************************************** */
 		
-	#{$class} {
+	#{$element} {
 
 	@include span-columns(12 omega, 12);		
 	
@@ -27,9 +27,9 @@ Aside is on the left */
 	} //Close Mixin
 
 
-@mixin aside-main-slim-mob-p($class: '.aside-main-slim-p' )  {
+@mixin aside-main-slim-mob-p($element: '.aside-main-slim-p' )  {
 
-	#{$class} {
+	#{$element} {
 @include  span-columns(12 omega, 12);	
 
 .content-aside {
@@ -44,14 +44,14 @@ Aside is on the left */
 	} //Close Mixin
 
 
-@mixin aside-main-slim-mob-l($class: '.aside-main-slim-mob-l' ) {
-	@include aside-main-slim-mob-p;
+@mixin aside-main-slim-mob-l($element: '.aside-main-slim-mob-l' ) {
+	@include aside-main-slim-mob-p($element: $element);
 }
 
 
 
-@mixin aside-main-slim-fab($class: '.aside-main-slim-fab' ) {
-	#{$class} {
+@mixin aside-main-slim-fab($element: '.aside-main-slim-fab' ) {
+	#{$element} {
 @include  span-columns(12 omega, 12);	
 
 .content-aside {
@@ -69,25 +69,25 @@ display:none;
 
 
 
-@mixin aside-main-slim-tab($class: '.aside-main-slim-tab' ) {
-@include aside-main-slim-fab;
+@mixin aside-main-slim-tab($element: '.aside-main-slim-tab' ) {
+@include aside-main-slim-fab($element: $element);
 }
 
-@mixin aside-main-slim-desk($class: '.aside-main-slim-desk' ) {
-	@include aside-main-slim;
+@mixin aside-main-slim-desk($element: '.aside-main-slim-desk' ) {
+	@include aside-main-slim($element: $element);
 }
 
 
-@mixin aside-main-slim-r($class: '.aside-main-slim') {
+@mixin aside-main-slim-r($element: '.aside-main-slim') {
 @include media($mob...){ 
-@include aside-main-slim-mob-p;
+@include aside-main-slim-mob-p($element: $element);
 }
 
 @include media($pads...){ 
-	@include aside-main-slim-fab;
+	@include aside-main-slim-fab($element: $element);
 }
 
 @include media($desk){ 
-@include aside-main-slim-desk;
+@include aside-main-slim-desk($element: $element);
 }
 }

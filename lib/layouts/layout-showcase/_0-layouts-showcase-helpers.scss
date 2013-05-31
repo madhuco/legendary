@@ -1,12 +1,22 @@
-@mixin layouts-showcase($showcase: '.showcase'){
-#{$showcase}	.unit {
+// ===============================================
+// Layout
+// ===============================================
+
+@mixin layouts-showcase($element: '.layouts-showcase'){
+#{$element}	.unit {
 	text-align:center;	
 	}
+	
 }
 
 
-@mixin layouts-showcase-grid-desk{
 
+// ===============================================
+// Grid 
+// ===============================================
+@mixin layouts-showcase-grid($element: '.layouts-showcase-grid'){
+
+#{$element} {
 		@include span-columns(12 omega, 12);
 	
 	.unit {
@@ -19,35 +29,66 @@
 		@include omega;
 }
 
+} //Close Class
+} //Close Mixin
 
+
+@mixin layouts-showcase-grid-mob-p($element: '.layouts-showcase-grid-mob-p') {
+	@include layouts-showcase-grid;
 }
 
 
-@mixin layouts-showcase-style {
-	
+@mixin layouts-showcase-grid-mob-l($element: '.layouts-showcase-grid-mob-l') {
+	@include layouts-showcase-grid;
+}
+
+
+@mixin layouts-showcase-grid-fab($element: '.layouts-showcase-grid-fab') {
+	@include layouts-showcase-grid;
+}
+
+
+@mixin layouts-showcase-grid-tab($element: '.layouts-showcase-grid-tab') {
+	@include layouts-showcase-grid;
+}
+
+
+@mixin layouts-showcase-grid-desk($element: '.layouts-showcase-grid-desk') {
+	@include layouts-showcase-grid;
+}
+
+
+@mixin layouts-showcase-grid-r($element: '.layouts-showcase-grid') {
+	@include layouts-showcase-grid($element:$element);
+}
+
+
+
+// ===============================================
+// Style
+// ===============================================
+
+@mixin layouts-showcase-style($element: '.layouts-showcase-style') {
+
+#{$element} {	
 	@extend %vr-section; 
 		
 .title {
 	@extend %t-title-3; 
 	@extend %vr-title-3;
 	@include txtcolor-darker;
-	
 }
 
 .unit-heading {
-
 @extend %t-shop-thumbs; 
 @extend %vr-thumbs-title;
-	
 }
 
 
 .unit-txt {
-
 @extend %t-shop-thumbs; 
 @extend %vr-thumbs-title;
 @include txtcolor-lighter
-	
 }
 
 p {
@@ -55,12 +96,19 @@ p {
 }
 
 a:hover * {
-
-		@include  txtcolor-darkest;
+@include  txtcolor-darkest;
 @include transition-property(color);
 @include transition-duration(0.4s);}
+} //Close Class
+} //Close Mixin
 
 
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-showcase-combo($element: '.layouts-showcase-combo') {
+	@include layouts-showcase($element: $element);
+	@include layouts-showcase-grid-r($element: $element);
+	@include layouts-showcase-style($element: $element);
 }
-	
-
