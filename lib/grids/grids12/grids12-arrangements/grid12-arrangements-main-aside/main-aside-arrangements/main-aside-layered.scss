@@ -1,0 +1,43 @@
+
+
+@mixin main-aside-layered($class: '.main-aside-layered' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-layered 
+Main Takes up the full width of the page.
+Aside is layered underneath it. */
+/* ***************************************** */
+
+	#{$class}, #{$class} .content-main, #{$class} .content-aside, #{$class} .content-footer  {
+		@include span-columns(12 omega, 12);
+
+	}
+
+}
+
+
+
+
+
+@mixin main-aside-layered-mob-p($class: '.main-aside-layered-mob-p' ) {
+	@include main-aside-layered;
+}
+
+@mixin main-aside-layered-mob-l($class: '.main-aside-layered-mob-l' ) {
+	@include main-aside-layered;
+}
+
+@mixin main-aside-layered-fab($class: '.main-aside-layered-fab' ) {
+	@include main-aside-layered;
+}
+
+@mixin main-aside-layered-tab($class: '.main-aside-layered-tab' ) {
+	@include main-aside-layered;
+}
+
+@mixin main-aside-layered-desk($class: '.main-aside-layered-desk' ) {
+	@include main-aside-layered;
+}
+
+@mixin main-aside-layered-r($class: '.main-aside-layered') {
+@include main-aside-layered;
+}

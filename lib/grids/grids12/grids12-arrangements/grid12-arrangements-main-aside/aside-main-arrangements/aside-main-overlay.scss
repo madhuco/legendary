@@ -1,0 +1,58 @@
+@mixin aside-main-overlay-50($class: '.aside-main-overlay-50' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-overlay 
+Aside and Main are split into equal columns 
+Main is overlayed on top of Aside  */
+/* ***************************************** */
+	#{$class} {
+		@include span-columns(12 omega, 12);
+	position:relative;		
+	
+	.content-main {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+		
+	}
+	
+	.content-aside {
+	@include span-columns(6, 12);	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	} //Close Class
+
+} //Close Mixin
+
+
+
+
+@mixin aside-main-overlay-50-mob-p($class: '.aside-main-overlay-50-mob-p' ) {
+	@include aside-main-overlay-50;
+}
+
+@mixin aside-main-overlay-50-mob-l($class: '.aside-main-overlay-50-mob-l' ) {
+	@include aside-main-overlay-50;
+}
+
+@mixin aside-main-overlay-50-fab($class: '.aside-main-overlay-50-fab' ) {
+	@include aside-main-overlay-50;
+}
+
+@mixin aside-main-overlay-50-tab($class: '.aside-main-overlay-50-tab' ) {
+	@include aside-main-overlay-50;
+}
+
+@mixin aside-main-overlay-50-desk($class: '.aside-main-overlay-50-desk' ) {
+	@include aside-main-overlay-50;
+}
+
+@mixin aside-main-overlay-50-r($class: '.aside-main-overlay-50') {
+@include aside-main-overlay-50;
+}
+
+

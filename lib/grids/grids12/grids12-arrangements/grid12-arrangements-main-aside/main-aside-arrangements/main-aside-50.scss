@@ -1,0 +1,50 @@
+@mixin main-aside-50($class: '.main-aside-50' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-50 
+Displays Aside then Main with equal widths (e.g. two column layout)  */
+/* ***************************************** */
+
+	#{$class} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(6, 12);	
+	}
+	
+	.content-aside {
+		@include span-columns(6 omega, 12);		
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin main-aside-50-mob-p($class: '.main-aside-50-mob-p' ) {
+	@include main-aside-50;
+}
+
+@mixin main-aside-50-mob-l($class: '.main-aside-50-mob-l' ) {
+	@include main-aside-50;
+}
+
+@mixin main-aside-50-fab($class: '.main-aside-50-fab' ) {
+	@include main-aside-50;
+}
+
+@mixin main-aside-50-tab($class: '.main-aside-50-tab' ) {
+	@include main-aside-50;
+}
+
+@mixin main-aside-50-desk($class: '.main-aside-50-desk' ) {
+	@include main-aside-50;
+}
+
+@mixin main-aside-50-r($class: '.main-aside-50') {
+@include main-aside-50;
+}

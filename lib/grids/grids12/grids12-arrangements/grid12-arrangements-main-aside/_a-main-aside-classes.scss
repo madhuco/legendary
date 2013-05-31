@@ -1,12 +1,17 @@
-@import "a-main-aside-helpers";
+@import "0-a-main-aside-helpers";
 
-@include media($desk){ 
-@include  main-aside-50-desk();
-@include  aside-main-50-desk();
-@include  main-aside-narrow-desk();
-@include  aside-main-narrow-desk();
-@include  main-aside-overlay-50-desk();
-@include  aside-main-overlay-50-desk();
-@include  aside-main-50-desk(); 
-@include main-aside-layered-desk();
-}
+
+@include  main-aside-50-r();
+@include  aside-main-50-r();
+
+@include  main-aside-narrow-r();
+@include  aside-main-narrow-r();
+
+@include  main-aside-overlay-50-r();
+@include  aside-main-overlay-50-r();
+
+@include  main-aside-layered-r();
+@include  aside-main-layered-r();
+
+@include  main-aside-slim-r();
+@include  aside-main-slim-r();

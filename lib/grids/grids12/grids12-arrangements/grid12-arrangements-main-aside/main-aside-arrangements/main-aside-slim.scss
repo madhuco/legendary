@@ -1,0 +1,90 @@
+@mixin main-aside-slim($class: '.main-aside-slim' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-Narrow 
+Displays Main then Aside with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the right */
+/* ***************************************** */
+
+	
+	#{$class} {
+		@include span-columns(12 omega, 12);		
+	
+	.content-main {
+		@include span-columns(9, 12);		
+	}
+	
+	.content-aside {
+		@include span-columns(3 omega, 12);	
+	}
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+@mixin main-aside-slim-mob-p($class: '.main-aside-slim-mob-p' ) {
+#{$class} {
+@include  span-columns(12 omega, 12);	
+
+.content-aside {
+	@include  span-columns(12 omega, 12);
+}
+
+.content-main {
+@include  span-columns(12 omega, 12);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+
+
+@mixin main-aside-slim-mob-l($class: '.main-aside-slim-mob-l' ) {
+	@include main-aside-slim-mob-p;
+}
+
+@mixin main-aside-slim-fab($class: '.main-aside-slim-fab' ) {
+	#{$class} {
+@include  span-columns(12 omega, 12);	
+
+.content-aside {
+	@include  span-columns(4 omega, 12);
+}
+
+.content-main {
+@include  span-columns(8, 12);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin main-aside-slim-tab($class: '.main-aside-slim-tab' ) {
+@include main-aside-slim-fab;
+}
+
+@mixin main-aside-slim-desk($class: '.main-aside-slim-desk' ) {
+	@include main-aside-slim;
+}
+
+
+@mixin main-aside-slim-r($class: '.main-aside-slim') {
+@include media($mob...){ 
+	@include main-aside-slim-mob-p;
+}
+
+@include media($pads...){ 
+	@include main-aside-slim-fab;
+}
+
+@include media($desk){ 
+@include main-aside-slim-desk;
+}
+}
