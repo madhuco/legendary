@@ -4,7 +4,7 @@
 // Layouts
 // ===============================================
 
-@mixin layouts-taptabs($element: '.layouts-taptabs-layout') { 
+@mixin layouts-taptabs-layout($element: '.layouts-taptabs-layout') { 
 
 @include ui-taplist($element: #{$element});
 
@@ -20,6 +20,9 @@ display:none;
 }
 } //Close Mixin
 
+// ===============================================
+// Grid
+// ===============================================
 
 
 @mixin layouts-taptabs-grid($element: '.layouts-taptabs-grid') {
@@ -27,6 +30,47 @@ display:none;
 	
 } //Close Mixin
 
+
+
+
+@mixin layouts-taptabs-grid-mob-p($element: '.layouts-taptabs-grid-mob-p') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+@mixin layouts-taptabs-grid-mob-l($element: '.layouts-taptabs-grid-mob-l') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+@mixin layouts-taptabs-grid-fab($element: '.layouts-taptabs-grid-fab') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+@mixin layouts-taptabs-grid-tab($element: '.layouts-taptabs-grid-tab') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+@mixin layouts-taptabs-grid-desk($element: '.layouts-taptabs-grid-desk') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+@mixin layouts-taptabs-grid-r($element: '.layouts-taptabs-grid') {
+	@include layouts-taptabs-grid($element:$element);
+}
+
+
+
+
+
+
+
+// ===============================================
+// Style
+// ===============================================
 
 @mixin layouts-taptabs-style($element: '.layouts-taptabs-style') {
 	#{$element} .content-aside a {
@@ -44,9 +88,13 @@ border:1px solid $line;
 } //Close Mixin
 
 
+// ===============================================
+// Combo
+// ===============================================
+
 
 @mixin layouts-taptabs-combo($element: '.layouts-taptabs-combo') {
-@include layouts-taptabs($element: $element);
+@include layouts-taptabs-layout($element: $element);
 	@include layouts-taptabs-grid($element: $element);
 	@include layouts-taptabs-style($element: $element);
 }

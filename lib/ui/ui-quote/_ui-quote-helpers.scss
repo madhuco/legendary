@@ -1,5 +1,7 @@
 
-@mixin ui-solo-quote($quote: '.ui-solo-quote') {
+@mixin ui-solo-quote($element: '.ui-solo-quote') {
+
+#{$element} {
 
 	display: block;
 	
@@ -16,13 +18,14 @@ float: left;
 color:#bebebe;
 	}
 	
-		
+@content;
+	
+} //Close $element
+} //Close Mixin
 
-}
 
-
-@mixin ui-solo-quote-bars($extend: false) {
-
+@mixin ui-solo-quote-bars($element: 'ui-solo-quote-bars', $extend: false) {
+#{$element} {
 @if $extend == false {
 @include ui-solo-quote;	
 } 
@@ -35,25 +38,32 @@ display:block;
 	@extend #{$extend}	
 }
 
-}
+} //Close $element
+} //Close Mixin
 
 
+@mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false) {
 
-@mixin ui-solo-quote-outside($extend: false) {
 
 @if $extend == false {
-@include ui-solo-quote;	
-} 
-
+@include ui-solo-quote($element: $element) {
+	
 position:relative;
 
 &:before {
 position:absolute;
 left:-0.55em;	
 }
+	@content;
+
+}
+
+} 
+
 	
 	@if $extend != false {
 	@extend #{$extend}	
 }
-	
-}
+
+
+} //Close Mixin

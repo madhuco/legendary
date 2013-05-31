@@ -2,29 +2,31 @@
 // icards: Layout
 // ===============================================
 
-@mixin layouts-icards {
+@mixin layouts-icards-layout($element: '.layouts-icards-layout') {
 	
 /* ***************************************** */
 /*  Layouts: icards: Displays text in three 'card' styles boxes. */
 /* Useful for highlighting information */
 /* ***************************************** */	
+#{$element} {	
 	
 .unit {
 text-align:center;	
 }
-		
-}
+
+} //Close Class
+} //Close Mixin
 
 
 // ===============================================
 // icards: Grid
 // ===============================================
 
-@mixin layouts-icards-grid-desk {
+@mixin layouts-icards-grid($element: '.layouts-icards-grid') {
+
+#{$element} {
 
 /* Basic Layout */
-
-
 @include span-columns(6 omega, 6);	
 
 .unit {
@@ -38,17 +40,52 @@ text-align:center;
 .unit-last {
 @include omega;
 }
-
-
 		
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin layouts-icards-grid-mob-p($element: '.layouts-icards-grid-mob-p') {
+	@include layouts-icards-grid($element:$element);
 }
+
+
+@mixin layouts-icards-grid-mob-l($element: '.layouts-icards-grid-mob-l') {
+	@include layouts-icards-grid($element:$element);
+}
+
+
+@mixin layouts-icards-grid-fab($element: '.layouts-icards-grid-fab') {
+	@include layouts-icards-grid($element:$element);
+}
+
+
+@mixin layouts-icards-grid-tab($element: '.layouts-icards-grid-tab') {
+	@include layouts-icards-grid($element:$element);
+}
+
+
+@mixin layouts-icards-grid-desk($element: '.layouts-icards-grid-desk') {
+	@include layouts-icards-grid($element:$element);
+}
+
+
+@mixin layouts-icards-grid-r($element: '.layouts-icards-grid') {
+	@include layouts-icards-grid($element:$element);
+}
+
+
+
+
 
 
 // ===============================================
 // icards: Style
 // ===============================================
 
-@mixin layouts-icards-style {
+@mixin layouts-icards-style($element: '.layouts-icards-style') {
+#{$element} {	
 	@include txtcolor-lighter;
 	@extend %t-body-text;
 	@extend %vr-spacer;
@@ -68,4 +105,18 @@ text-align:center;
 		@include txtcolor-lightest;
 	}
 	
-	}
+} //Close Class
+} //Close Mixin
+
+
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-icards-combo($element: '.layouts-icards-combo') {
+	@include layouts-icards-layout($element: $element);
+	@include layouts-icards-grid-r($element: $element);
+	@include layouts-icards-style($element: $element);
+}

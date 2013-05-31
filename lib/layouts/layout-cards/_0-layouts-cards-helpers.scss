@@ -1,7 +1,7 @@
 // ===============================================
 // Layouts
 // ===============================================
-@mixin layouts-cards($element: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
+@mixin layouts-cards-layout($element: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
 
 /* ***************************************** */
 /*   Cards: Inital Display for Jquery  */
@@ -480,6 +480,6 @@ position:absolute;
 
 @mixin layouts-cards-combo($element: 'layouts-cards-combo') {
 @include layouts-cards-grid-r($element: $element);
-@include layouts-cards($element: $element);
+@include layouts-cards-layout($element: $element);
 }
 

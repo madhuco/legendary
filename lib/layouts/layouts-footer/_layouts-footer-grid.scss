@@ -1,6 +1,4 @@
 @import "0-layouts-footer-helpers";
 
-.layouts-footer-grid {
-	@include layouts-footer;
-	@include layouts-footer-grid-desk;
-}
+@include layouts-footer-layout($element: '.layouts-footer-grid');
+@include layouts-footer-grid-r($element: '.layouts-footer-grid');

@@ -1,6 +1,5 @@
 @import "0-layouts-pager-h-helpers";
 
-.layouts-pager-h-style {
-	@include layouts-pager-h;
+
+	@include layouts-pager-h-layout('.layouts-pager-h-style');
 	@include layouts-pager-h-style;
-}

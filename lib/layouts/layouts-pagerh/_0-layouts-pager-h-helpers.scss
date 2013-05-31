@@ -2,12 +2,14 @@
 // layouts-pager-h: Layout
 // ===============================================
 
-@mixin layouts-pager-h {
+@mixin layouts-pager-h-layout($element: '.layouts-pager-h-layout') {
 	
 /* ***************************************** */
 /*  Layouts: Pager-h: 
 Breaks up pages into smaller pages which can be displayed horizontally. */
 /* ***************************************** */
+	
+#{$element}	{
 	
 .page {
 	display:none;
@@ -18,9 +20,8 @@ Breaks up pages into smaller pages which can be displayed horizontally. */
 	display:block;
 }
 
-
-
-}
+} //Close Element
+} //Close Mixin
 		
 
 
@@ -29,10 +30,10 @@ Breaks up pages into smaller pages which can be displayed horizontally. */
 // layouts-pager-h: Grid
 // ===============================================
 
-@mixin layouts-pager-h-grid-desk {
+@mixin layouts-pager-h-grid($element: '.layouts-pager-h-grid') {
 
 
-
+#{$element}	{
 /* Basic Layout */
 
 @include span-columns(6 omega, 6);	
@@ -41,17 +42,59 @@ Breaks up pages into smaller pages which can be displayed horizontally. */
 nav {
 @include span-columns(12 omgea, 12);
 }
-
 		
+} //Close Element
+} //Close Mixin
+
+
+
+
+@mixin layouts-pager-h-grid-mob-p($element: '.layouts-pager-h-grid-mob-p') {
+	@include layouts-pager-h-grid($element:$element);
 }
+
+
+@mixin layouts-pager-h-grid-mob-l($element: '.layouts-pager-h-grid-mob-l') {
+	@include layouts-pager-h-grid($element:$element);
+}
+
+
+@mixin layouts-pager-h-grid-fab($element: '.layouts-pager-h-grid-fab') {
+	@include layouts-pager-h-grid($element:$element);
+}
+
+
+@mixin layouts-pager-h-grid-tab($element: '.layouts-pager-h-grid-tab') {
+	@include layouts-pager-h-grid($element:$element);
+}
+
+
+@mixin layouts-pager-h-grid-desk($element: '.layouts-pager-h-grid-desk') {
+	@include layouts-pager-h-grid($element:$element);
+}
+
+
+@mixin layouts-pager-h-grid-r($element: '.layouts-pager-h-grid') {
+	@include layouts-pager-h-grid($element:$element);
+}
+
+
+
+
+
+
+
+
+
 
 
 // ===============================================
 // layouts-pager-h: Style
 // ===============================================
 
-@mixin layouts-pager-h-style {
+@mixin layouts-pager-h-style($element: '.layouts-pager-h-style') {
 	
+#{$element}	{	
 	nav {
 	@include ui-tabs-h;	
 	}
@@ -64,5 +107,18 @@ nav {
 	
 	
 		
-	}
-	
+} //Close Element
+} //Close Mixin
+
+
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-pager-h-combo($element: '.layouts-pager-h-combo') {
+	@include layouts-pager-h-layout($element: $element);
+	@include layouts-pager-h-grid-r($element: $element);
+	@include layouts-pager-h-style($element: $element);
+}

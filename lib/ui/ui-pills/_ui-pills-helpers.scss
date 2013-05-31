@@ -1,6 +1,6 @@
-@mixin ui-pills($class: '.ui-pills', $bgcolor: $crumbs, $color: #fff) {
+@mixin ui-pills($element: '.ui-pills', $bgcolor: $crumbs, $color: #fff) {
 
-#{$class} > * {
+#{$element} > * {
 @include border-radius(5px);
 background: $bgcolor;
 @include rem(padding, 5px);
@@ -11,7 +11,7 @@ float:left;
 }
 
 
-#{$class}:after{
+#{$element}:after{
 content:"";
 clear:both;
 display:block;

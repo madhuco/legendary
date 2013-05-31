@@ -20,7 +20,8 @@ width: 0;
 
 
 
-@mixin ui-popbox($class:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
+@mixin ui-popbox($element:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
+#{$element} {
 
 a {
 position:relative;
@@ -29,7 +30,7 @@ display:block;
 
 @if $direction == 'down' {
 
-#{$class}-#{$direction} {
+#{$element}-#{$direction} {
 @extend %popbox;
 top:30px;
 	
@@ -38,7 +39,7 @@ top:30px;
 border-width: 0 15px 15px;
 } //Close after
 
-} //Close $class
+} //Close $element
 
 
 } //Close If-down
@@ -47,7 +48,7 @@ border-width: 0 15px 15px;
 
 @if $direction == 'top' {
 
-#{$class}-#{$direction} {
+#{$element}-#{$direction} {
 @extend %popbox;
 	
 &:after {
@@ -55,11 +56,11 @@ border-width: 0 15px 15px;
 @include rem(left, 50px);
 } //Close after
 
-} //Close $class
+} //Close $element
 
 
 } //Close If-down
 
 
-
+} // Close $element
 } //Close Mixin

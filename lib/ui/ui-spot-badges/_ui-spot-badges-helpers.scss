@@ -1,5 +1,6 @@
-@mixin ui-spot-badges {
-	
+@mixin ui-spot-badges($element: '.ui-spot-badges') {
+
+	#{$element} {
 	
  @include background-image(radial-gradient(1px -11px, circle, white 8%, red 26px )); 
  background-color: red;
@@ -20,4 +21,5 @@ background:red;
 }
 
 
-}
+} //Close $element
+} // Close $mixin

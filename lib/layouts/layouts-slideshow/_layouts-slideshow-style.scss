@@ -1,6 +1,5 @@
 @import "0-layouts-slideshow-helpers";
 
-.layouts-slideshow-style {
-	@include layouts-slideshow-50;
+
+	@include layouts-slideshow-50-layout('.layouts-slideshow-50-style');
 	@include layouts-slideshow-50-style;
-}

@@ -2,28 +2,27 @@
 // Footer: Layout
 // ===============================================
 
-@mixin layouts-footer {
+@mixin layouts-footer-layout($element: '.layout-footer') {
 	
 /* ***************************************** */
 /* Layouts Footer: Grid */
 /* Creates footer at the bottom of each page */
 /* ***************************************** */
 	
+#{$element} {
 @include border-top-radius(10px);
 }
-		
 
+} //Close Mixin
 
 // ===============================================
 // Footer: Grid
 // ===============================================
 
-@mixin layouts-footer-grid-desk {
-
-
+@mixin layouts-footer-grid($element: '.layout-footer-grid') {
 
 /* Basic Layout */
-
+#{$element} {
 
 @include span-columns(12 omega, 12);	
 
@@ -35,8 +34,6 @@
 margin-left:auto;
 margin-right:auto;
 }
-
-
 
 .unit:last-of-type {
 @include omega;	
@@ -63,23 +60,56 @@ a {
 display:block;	
 }
 
-		
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin layouts-footer-grid-mob-p($element: '.layouts-footer-grid-mob-p') {
+	@include layouts-footer-grid($element:$element);
 }
+
+
+@mixin layouts-footer-grid-mob-l($element: '.layouts-footer-grid-mob-l') {
+	@include layouts-footer-grid($element:$element);
+}
+
+
+@mixin layouts-footer-grid-fab($element: '.layouts-footer-grid-fab') {
+	@include layouts-footer-grid($element:$element);
+}
+
+
+@mixin layouts-footer-grid-tab($element: '.layouts-footer-grid-tab') {
+	@include layouts-footer-grid($element:$element);
+}
+
+
+@mixin layouts-footer-grid-desk($element: '.layouts-footer-grid-desk') {
+	@include layouts-footer-grid($element:$element);
+}
+
+
+@mixin layouts-footer-grid-r($element: '.layouts-footer-grid') {
+	@include layouts-footer-grid($element:$element);
+}
+
+
+
+
 
 
 // ===============================================
 // Footer: Style
 // ===============================================
-@mixin layouts-footer-style {
+@mixin layouts-footer-style($element: '.layout-footer-style') {
 	
-
+	#{$element} {
 	@extend %vr-section-box-top;
 	@include bgcolor-footer-mono-primary-3d;
 	
 	.unit-heading {
 	@extend %t-footer-heading;	
-	
-	
 	}
 	
 	p {
@@ -93,10 +123,9 @@ display:block;
 	}
 	
 	.unit-footer {
-		
 	@extend %t-footer-small;	
 	@extend %vr-spacer-box-top;	
-		@include bgcolor-footer-mono-secondary-3d;
+	@include bgcolor-footer-mono-secondary-3d;
 	}
 	
 	.unit-footer a {
@@ -109,4 +138,17 @@ display:block;
 	}
 	
 
+} //Close Class
+} //Close Mixin
+
+
+// ===============================================
+// Footer Combo
+// ===============================================
+
+
+@mixin layouts-footer-combo($element: '.layouts-footer-combo') {
+@include layouts-footer-layout($element: $element);
+	@include layouts-footer-grid($element: $element);
+	@include layouts-footer-style($element: $element);
 }

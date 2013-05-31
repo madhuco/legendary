@@ -1,5 +1,7 @@
 
-@mixin ui-social-media() {
+@mixin ui-social-media($element: '.ui-social-media') {
+
+#{$element} {
 
 li {
 float:left;	
@@ -43,6 +45,5 @@ display:none;
 @include icon($icon-google-plus-sign);	
 }
 
-
-
-}
+} //Close $element
+} // Close $mixin

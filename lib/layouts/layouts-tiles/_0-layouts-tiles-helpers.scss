@@ -2,24 +2,26 @@
 // Tiles: Layout
 // ===============================================
 
-@mixin layouts-tiles{
+@mixin layouts-tiles-layout($element: '.layouts-tiles-layout'){
 /* ***************************************** */
 /*  Layouts Tiles: Displays content in small 'tile' shapes */
 /* ***************************************** */
+#{$element} {
 .unit-heading {
 text-align:center;	
 }
 		
-}
+} // Close $element
+} // Close $Mixin
 
 
 // ===============================================
 // Tiles: Grid
 // ===============================================
 
-@mixin layouts-tiles-grid-desk {
+@mixin layouts-tiles-grid($element: '.layouts-tiles-grid') {
 
-
+#{$element} {
 
 /* Basic Layout */
 
@@ -60,7 +62,43 @@ width: columns(2, 4) + gutter(4);
 @include omega;
 }
 
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-tiles-grid-mob-p($element: '.layouts-tiles-grid-mob-p') {
+	@include layouts-tiles-grid($element:$element);
 }
+
+
+@mixin layouts-tiles-grid-mob-l($element: '.layouts-tiles-grid-mob-l') {
+	@include layouts-tiles-grid($element:$element);
+}
+
+
+@mixin layouts-tiles-grid-fab($element: '.layouts-tiles-grid-fab') {
+	@include layouts-tiles-grid($element:$element);
+}
+
+
+@mixin layouts-tiles-grid-tab($element: '.layouts-tiles-grid-tab') {
+	@include layouts-tiles-grid($element:$element);
+}
+
+
+@mixin layouts-tiles-grid-desk($element: '.layouts-tiles-grid-desk') {
+	@include layouts-tiles-grid($element:$element);
+}
+
+
+@mixin layouts-tiles-grid-r($element: '.layouts-tiles-grid') {
+	@include layouts-tiles-grid($element:$element);
+}
+
+
+
+
 
 
 
@@ -71,7 +109,9 @@ width: columns(2, 4) + gutter(4);
 
 
 
-@mixin layouts-tiles-style {
+@mixin layouts-tiles-style($element: '.layouts-tiles-grid-mob-p') {
+
+#{$element} {
 	@extend	%vr-section; 
 	.unit {
 	@include  scheme-mono;
@@ -101,4 +141,18 @@ width: columns(2, 4) + gutter(4);
 	
 		
 		
-	}
+} // Close $element
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-tiles-combo($element: '.layouts-tiles-combo') {
+	@include layouts-tiles-layout($element: $element);
+	@include layouts-tiles-grid-r($element: $element);
+	@include layouts-tiles-style($element: $element);
+}

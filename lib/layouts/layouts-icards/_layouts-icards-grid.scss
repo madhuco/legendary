@@ -1,6 +1,4 @@
 @import "0-layouts-icards-helpers";
 
-.layouts-icards-grid {
-	@include layouts-icards;
-	@include layouts-icards-grid-desk;
-}
+@include layouts-icards-layout($element: '.layouts-icards-grid');
+@include layouts-icards-grid-r($element: '.layouts-icards-grid');

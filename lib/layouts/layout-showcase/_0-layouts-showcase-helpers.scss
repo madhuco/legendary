@@ -2,7 +2,7 @@
 // Layout
 // ===============================================
 
-@mixin layouts-showcase($element: '.layouts-showcase'){
+@mixin layouts-showcase-layout($element: '.layouts-showcase'){
 #{$element}	.unit {
 	text-align:center;	
 	}
@@ -34,27 +34,27 @@
 
 
 @mixin layouts-showcase-grid-mob-p($element: '.layouts-showcase-grid-mob-p') {
-	@include layouts-showcase-grid;
+	@include layouts-showcase-grid($element:$element);
 }
 
 
 @mixin layouts-showcase-grid-mob-l($element: '.layouts-showcase-grid-mob-l') {
-	@include layouts-showcase-grid;
+	@include layouts-showcase-grid($element:$element);
 }
 
 
 @mixin layouts-showcase-grid-fab($element: '.layouts-showcase-grid-fab') {
-	@include layouts-showcase-grid;
+	@include layouts-showcase-grid($element:$element);
 }
 
 
 @mixin layouts-showcase-grid-tab($element: '.layouts-showcase-grid-tab') {
-	@include layouts-showcase-grid;
+	@include layouts-showcase-grid($element:$element);
 }
 
 
 @mixin layouts-showcase-grid-desk($element: '.layouts-showcase-grid-desk') {
-	@include layouts-showcase-grid;
+	@include layouts-showcase-grid($element:$element);
 }
 
 
@@ -108,7 +108,7 @@ a:hover * {
 // ===============================================
 
 @mixin layouts-showcase-combo($element: '.layouts-showcase-combo') {
-	@include layouts-showcase($element: $element);
+	@include layouts-showcase-layout($element: $element);
 	@include layouts-showcase-grid-r($element: $element);
 	@include layouts-showcase-style($element: $element);
 }

@@ -1,6 +1,5 @@
 @import "0-layouts-footer-helpers";
 
-.layouts-footer-style {
-	@include layouts-footer;
+
+	@include layouts-footer-layout('.layouts-footer-style');
 	@include layouts-footer-style;
-}

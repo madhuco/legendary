@@ -1,6 +1,4 @@
 @import "0-layouts-pager-h-helpers";
 
-.layouts-pager-h-grid {
-	@include layouts-pager-h;
-	@include layouts-pager-h-grid-desk;
-}
+@include layouts-pager-h-layout($element: '.layouts-pager-h-grid');
+@include layouts-pager-h-grid-r($element: '.layouts-pager-h-grid');

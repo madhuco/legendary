@@ -10,9 +10,8 @@
 /* *****   MAIN PAGE LAYOUTS:  - Slideshow: Global Styles  ***** */
 
 
-#{$root} .layouts-slideshow {
-	@include layouts-slideshow-50;
-	@include layouts-slideshow-50-style;
+#{$root} {
+	@include layouts-slideshow-50-combo($element: '.layouts-slideshow');
 }
 
 
@@ -21,9 +20,8 @@
 /* Displays content as 'tiles' of information  */
 
 
-#{$root} .layouts-tiles {
-	@include layouts-tiles;
-	@include layouts-tiles-style;
+#{$root}  {
+	@include layouts-tiles-combo($element: '.layouts-tiles');
 }	
 
 
@@ -42,9 +40,8 @@
 /* ***** MAIN PAGE LAYOUTS:  -  icards: Global Styles ***** */
 /* Displays content as icards (information cards). Used to present bite sized bits of informaiton */
 
-#{$root} .layouts-icards {
-	@include layouts-icards;
-	@include layouts-icards-style;
+#{$root}  {
+	@include layouts-icards-combo($element: '.layouts-icards');
 }	
 
 
@@ -52,9 +49,8 @@
 /* ***** MAIN PAGE LAYOUTS:  -  Footer: Global Styles ***** */
 /* Displays the footer at the bottom of every page */
 
-#{$root} .layouts-footer {
-	@include layouts-footer;
-	@include layouts-footer-style;
+#{$root}  {
+	@include layouts-footer-combo($element: '.layouts-footer');
 }	
 
 
@@ -63,14 +59,9 @@
 /* *****  MAIN PAGE LAYOUTS:   pager-h: Global Styles  ***** */
 /*Breaks up content into seperate pages that are tabbed horizontally */
 
-#{$root} .layouts-pager-h {
-	@include layouts-pager-h;
-	@include layouts-pager-h-style;
+#{$root}  {
+	@include layouts-pager-h-combo($element: '.layouts-pager-h');
 }	
-
-#{$root} .page {
-
-}
 
 
 /* ***************************************** */
@@ -95,12 +86,15 @@ text-align:center;
 
 }
 
-#{$root} .lead-quote {
+#{$root} {
+	@include ui-solo-quote-outside($element: '.lead-quote') {
+		
 	@extend %t-intro-1; 
 	@extend %vr-spacer; 
-	@include ui-solo-quote-outside;
-	
+		
+	}	
 }
+
 
 #{$root} .lead-quote cite {
 @include txtcolor-lightest;
@@ -109,73 +103,6 @@ text-align:center;
 
 
 @include media($desk){ 
-
-/* ***************************************** */
-/*  Desktop Specific Styles 
-Refer to earlier  gloabl styles for descriptions */
-/* ***************************************** */
-
-
-/* MAIN PAGE LAYOUTS:  -  Slideshow: Desktop Specific Styles */
-
-
-#{$root} .layouts-slideshow {
-	@include layouts-slideshow-50-grid-desk;
-}
-
-
-
-/* MAIN PAGE LAYOUTS:  -  Tiles: Desktop Specific Styles */
-
-
-#{$root} .layouts-tiles {
-	@include layouts-tiles-grid-desk;
-}	
-
-
-
-/*  MAIN PAGE LAYOUTS:  - Showcase: Desktop Specific Styles */
-
-
-#{$root} .layouts-showcase {
-	@include layouts-showcase-grid-desk;
-	
-}	
-
-
-
-
-/*  MAIN PAGE LAYOUTS:  -  iCards: Desktop Specific Styles */
-
-
-#{$root} .layouts-icards {
-	@include layouts-icards-grid-desk;
-	
-}	
-
-
-
-
-
-/*  MAIN PAGE LAYOUTS:  -  Footer: Desktop Specific Styles */
-
-
-#{$root} .layouts-footer {
-	@include layouts-footer-grid-desk;
-	
-}	
-
-
-
-
-/* MAIN PAGE LAYOUTS:  -   pager-h: Desktop Specific Styles */
-
-
-#{$root} .layouts-pager-h {
-	@include layouts-pager-h-grid-desk;
-}	
-
-
 
 /* ***************************************** */
 /*  page: Desktop Specific Styles */
@@ -196,7 +123,7 @@ Refer to earlier  gloabl styles for descriptions */
 @include span-columns(5 omega, 12);
 }
 
-}
+} //Close Media Query
 
-	
-}
+
+} //Close Main Mixin

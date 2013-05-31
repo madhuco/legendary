@@ -2,7 +2,7 @@
 // Slideshow: Layout
 // ===============================================
 
-@mixin layouts-slideshow-50 {
+@mixin layouts-slideshow-50-layout($element: '.layouts-slideshow-50-grid-mob-p') {
 /* ***************************************** */
 /*  Layouts: Slideshow: 
 Displays Content as a symmeterical slideshow*/
@@ -14,9 +14,9 @@ Displays Content as a symmeterical slideshow*/
 // Slideshow: Grid
 // ===============================================
 
-@mixin layouts-slideshow-50-grid-desk {
+@mixin layouts-slideshow-50-grid($element: '.layouts-slideshow-50-grid') {
 
-
+#{$element}	{
 /* Basic Layout */
 
 
@@ -37,8 +37,38 @@ float:left;
 float:left;
 }
 
+} //Close element
+} //Close Mixin
 
-		
+
+
+@mixin layouts-slideshow-50-grid-mob-p($element: '.layouts-slideshow-50-grid-mob-p') {
+	@include layouts-slideshow-50-grid($element:$element);
+}
+
+
+@mixin layouts-slideshow-50-grid-mob-l($element: '.layouts-slideshow-50-grid-mob-l') {
+	@include layouts-slideshow-50-grid($element:$element);
+}
+
+
+@mixin layouts-slideshow-50-grid-fab($element: '.layouts-slideshow-50-grid-fab') {
+	@include layouts-slideshow-50-grid($element:$element);
+}
+
+
+@mixin layouts-slideshow-50-grid-tab($element: '.layouts-slideshow-50-grid-tab') {
+	@include layouts-slideshow-50-grid($element:$element);
+}
+
+
+@mixin layouts-slideshow-50-grid-desk($element: '.layouts-slideshow-50-grid-desk') {
+	@include layouts-slideshow-50-grid($element:$element);
+}
+
+
+@mixin layouts-slideshow-50-grid-r($element: '.layouts-slideshow-50-grid') {
+	@include layouts-slideshow-50-grid($element:$element);
 }
 
 
@@ -46,8 +76,8 @@ float:left;
 // Slideshow: Style
 // ===============================================
 
-@mixin layouts-slideshow-50-style {
-
+@mixin layouts-slideshow-50-style($element: '.layouts-slideshow-50-grid-style') {
+#{$element}	{
 
 .title {
 @extend %t-title-2; 
@@ -70,4 +100,17 @@ cite {
 @extend %vr-spacer;	
 }
 
+} //Close element
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-slideshow-50-combo($element: '.layouts-slideshow-50-combo') {
+	@include layouts-slideshow-50-layout($element: $element);
+	@include layouts-slideshow-50-grid-r($element: $element);
+	@include layouts-slideshow-50-style($element: $element);
 }
+

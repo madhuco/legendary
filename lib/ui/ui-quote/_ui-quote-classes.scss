@@ -3,14 +3,6 @@
 
 @import "ui-quote-helpers";
 
-.ui-solo-quote {
 @include ui-solo-quote;
-}
-
-.ui-solo-quote-bars {
-@include ui-solo-quote-bars('.ui-solo-quote-bars');
-}
-
-.ui-solo-quote-outside {
-@include ui-solo-quote-outside('.ui-solo-quote');
-}
+@include ui-solo-quote-bars;
+@include ui-solo-quote-outside;

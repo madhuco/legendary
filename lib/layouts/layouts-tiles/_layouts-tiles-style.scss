@@ -1,6 +1,5 @@
 @import "0-layouts-tiles-helpers";
 
-.layouts-tiles-style {
-	@include layouts-tiles;
+
+	@include layouts-tiles-layout('.layouts-tiles-style');
 	@include layouts-tiles-style;
-}
