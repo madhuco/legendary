@@ -32,6 +32,19 @@
 
 }
 
+
+
+@mixin vr-section-inside-top-mob {
+	@include rem('padding-top', 30px);
+
+}
+
+@mixin vr-section-inside-bottom-mob {
+	@include rem('padding-bottom', 30px);
+
+}
+
+
 @mixin vr-section-box-top-mob {
 	@include rem('margin-top', 30px);
 	@include rem('padding-top', 30px);
@@ -137,7 +150,7 @@
 
 // Standard Text  //
 
-@mixin vr-paragraph-mob {
+@mixin vr-body-text-mob {
 	@include rem('margin-bottom', 20px);
 }
 

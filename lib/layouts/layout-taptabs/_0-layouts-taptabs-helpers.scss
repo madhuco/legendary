@@ -6,7 +6,13 @@
 
 @mixin layouts-taptabs-layout($element: '.layouts-taptabs-layout') { 
 
-@include ui-taplist($element: #{$element});
+@include ui-taplist($element: '#{$element} > .content-aside ');
+
+
+#{$element} {
+
+
+}
 
 @include media($mob...){ 
 .jq #{$element} .content-main .unit {
@@ -73,13 +79,13 @@ display:none;
 // ===============================================
 
 @mixin layouts-taptabs-style($element: '.layouts-taptabs-style') {
-	#{$element} .content-aside a {
+	#{$element} > .content-aside a {
 @extend %t-ui-navigation; 
 } //Close Class
 
 
 @include media($mob...){ 
-#{$element}  .content-aside {
+#{$element} >  .content-aside {
 border:1px solid $line;
 @include border-radius(10px);
 } 

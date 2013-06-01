@@ -470,7 +470,7 @@ position:absolute;
 // ===============================================
 
 
-@mixin layouts-cards-style($element: 'layouts-cards-style') {
+@mixin layouts-cards-style($element: '.layouts-cards-style') {
 
 }
 
@@ -478,7 +478,7 @@ position:absolute;
 // Combo
 // ===============================================
 
-@mixin layouts-cards-combo($element: 'layouts-cards-combo') {
+@mixin layouts-cards-combo($element: '.layouts-cards-combo') {
 @include layouts-cards-grid-r($element: $element);
 @include layouts-cards-layout($element: $element);
 }

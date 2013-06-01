@@ -1,11 +1,13 @@
 @mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest) {
 
+
 #{$element} li {
 border-bottom: 1px solid $line;
 
+
 a {display:block;	
 @include rem('padding', 15px);
-@include rem('padding-right', 20px);
+@include rem('padding-right', 30px);
 text-align: left;
 position:relative;
 color: $color;
@@ -16,7 +18,7 @@ color: $color;
 @include icon($icon-chevron-right);
 float:right;
 position:absolute;
-@include rem(right, 10px);
+right:0;
 bottom:0;
 line-height:1em;
 color: $arrow-color;

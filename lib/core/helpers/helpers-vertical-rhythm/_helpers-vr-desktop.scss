@@ -24,17 +24,24 @@
 	@include rem('padding-bottom', 25px);
 }
 
-
-
 @mixin vr-section-top-desk {
 	@include rem('margin-top', 25px);
 	}
 
-
-
 @mixin vr-section-bottom-desk {
 	@include rem('margin-bottom', 25px);
 	}
+	
+	
+	@mixin vr-section-inside-top-desk {
+	@include rem('padding-top', 25px);
+	}
+
+@mixin vr-section-inside-bottom-desk {
+	@include rem('padding-bottom', 25px);
+	}
+
+	
 
 
 @mixin vr-section-box-top-desk {
@@ -149,7 +156,7 @@
 
 
 
-@mixin vr-paragraph-desk {
+@mixin vr-body-text-desk {
 	@include rem('margin-bottom', 20px);
 }
 

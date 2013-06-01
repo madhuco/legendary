@@ -23,6 +23,18 @@
 
 }
 
+%vr-section-inside-top {
+	@include vr-section-inside-top-fab;
+	}
+	
+	
+	%vr-section-bottom {
+	@include vr-section-inside-bottom-fab;
+	}
+	
+
+
+
 %vr-section-box {
 	@include vr-section-box-top-fab;
 }
@@ -123,8 +135,8 @@
 
 
 
-%vr-paragraph, %vr-paragraph p {
-	@include vr-paragraph-fab;
+%vr-body-text, %vr-body-text p {
+	@include vr-body-text-fab;
 }
 
 

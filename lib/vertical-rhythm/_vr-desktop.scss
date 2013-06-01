@@ -20,12 +20,21 @@
 
 	}
 
-
-
 %vr-section-bottom {
 		@include vr-section-bottom-desk;
-
 }
+
+%vr-section-inside-top {
+	@include vr-section-inside-top-desk;
+	}
+	
+	
+	%vr-section-bottom {
+	@include vr-section-inside-bottom-desk;
+	}
+	
+
+
 
 %vr-section-box {
 	@include vr-section-box-desk;
@@ -127,8 +136,8 @@
 
 
 
-%vr-paragraph, %vr-paragraph p {
-	@include vr-paragraph-desk;
+%vr-body-text, %vr-body-text p {
+	@include vr-body-text-desk;
 }
 
 
@@ -180,7 +189,7 @@
 }
 
 .unit-body p {
-		@include vr-paragraph-desk ;
+		@include vr-body-text-desk ;
 }
 
 

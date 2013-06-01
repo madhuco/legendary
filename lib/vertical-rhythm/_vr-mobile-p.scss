@@ -23,6 +23,19 @@
 
 }
 
+%vr-section-inside-top {
+	@include vr-section-inside-top-mob;
+	}
+	
+	
+	%vr-section-bottom {
+	@include vr-section-inside-bottom-mob;
+	}
+	
+
+
+
+
 %vr-section-box {
 	@include vr-section-box-top-mob;
 }
@@ -124,8 +137,8 @@
 
 
 
-%vr-paragraph, %vr-paragraph p {
-	@include vr-paragraph-mob;
+%vr-body-text, %vr-body-text p {
+	@include vr-body-text-mob;
 }
 
 
