@@ -24,12 +24,18 @@
 		@include vr-section-bottom-desk;
 }
 
+
+%vr-section-inside {
+	@include vr-section-inside-desk;
+	}
+	
+
 %vr-section-inside-top {
 	@include vr-section-inside-top-desk;
 	}
 	
 	
-	%vr-section-bottom {
+	%vr-section-inside-bottom {
 	@include vr-section-inside-bottom-desk;
 	}
 	

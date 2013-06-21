@@ -24,6 +24,11 @@
 
 }
 
+%vr-section-inside {
+	@include vr-section-inside-tab;
+	}
+
+
 %vr-section-inside-top {
 	@include vr-section-inside-top-tab;
 	}

@@ -1,0 +1,35 @@
+@mixin ui-tapmenu($element: '.ui-tapmenu', $direction: right) {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+
+#{$element} {
+position:absolute;	
+display:none;
+} //Close $element
+
+@include media($portables...) { 
+#{$element} {
+position:fixed;
+width:100%;	
+bottom:0;
+}
+
+
+} //Close Mixin
+
+
+
+/* ***************************************** */
+/*  Hide tapmenu-anchor for no jquery enabled situations*/
+/* ***************************************** */
+
+.no-jq .ui-tapmenu-anchor {
+	display:none;
+}
+
+
+
+} //Close Mixin

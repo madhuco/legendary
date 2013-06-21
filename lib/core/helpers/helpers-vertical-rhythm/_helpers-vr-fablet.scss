@@ -9,45 +9,48 @@
 }
 
 @mixin vr-section-fab {
-	@include rem('margin-top', 30px);
-	@include rem('margin-bottom', 30px);
+	@include rem('margin-top', 25px);
+	@include rem('margin-bottom', 25px);
 }
 
 @mixin vr-section-box-fab {
-		@include rem('margin-top', 30px);
-	@include rem('margin-bottom', 30px);
-	@include rem('padding-top', 30px);
-	@include rem('padding-bottom', 30px);
+		@include rem('margin-top', 25px);
+	@include rem('margin-bottom', 25px);
+	@include rem('padding-top', 25px);
+	@include rem('padding-bottom', 25px);
 }
 
 
 @mixin vr-section-top-fab {
-	@include rem('margin-top', 30px);
+	@include rem('margin-top', 25px);
 }
 
 @mixin vr-section-bottom-fab {
-	@include rem('margin-bottom', 30px);
+	@include rem('margin-bottom', 25px);
 }
 
-
+@mixin vr-section-inside-fab {
+	@include rem('padding-top', 25px);
+	@include rem('padding-bottom', 25px);
+}
 
 @mixin vr-section-inside-top-fab {
-	@include rem('padding-top', 30px);
+	@include rem('padding-top', 25px);
 }
 
 @mixin vr-section-inside-bottom-fab {
-	@include rem('padding-bottom', 30px);
+	@include rem('padding-bottom', 25px);
 }
 
 
 @mixin vr-section-box-top-fab {
-	@include rem('margin-top', 30px);
-	@include rem('padding-top', 30px);
+	@include rem('margin-top', 25px);
+	@include rem('padding-top', 25px);
 }
 
 @mixin vr-section-box-bottom-fab {
-	@include rem('margin-bottom', 30px);
-	@include rem('padding-bottom', 30px);
+	@include rem('margin-bottom', 25px);
+	@include rem('padding-bottom', 25px);
 }
 
 
@@ -112,11 +115,12 @@
 
 @mixin vr-intro-1-fab {
 	@include rem('margin-top', -10px);
-	@include rem('margin-bottom', 30px);
+	@include rem('margin-bottom', 25px);
 }
 
 @mixin vr-intro-2-fab {
-		@include rem('margin-bottom', 5px);
+		@include rem('margin-top', -5px);
+		@include rem('margin-bottom', 20px);
 }
 
 @mixin vr-intro-3-fab {
@@ -151,7 +155,7 @@
 
 
 @mixin vr-footerbumper-fab {
-	@include rem('margin-top', 30px);
+	@include rem('margin-top', 25px);
 }
 
 @mixin vr-thumbs-fab {
@@ -171,7 +175,7 @@
 }
 
 @mixin vr-grid-fab {
-	@include rem('margin-bottom', 30px);
+	@include rem('margin-bottom', 25px);
 }
 
 @mixin vr-caption-fab {

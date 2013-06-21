@@ -1,0 +1,122 @@
+@mixin main-aside-wide($element: '.main-aside-wide' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-Narrow 
+Displays Main then Aside with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the right */
+/* ***************************************** */
+
+	
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	> .content-main {
+		@include span-columns(7, 12);		
+	}
+	
+	> .content-aside {
+		@include span-columns(5 omega, 12);	
+	}
+	
+	> .content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+@mixin main-aside-wide($element: '.main-aside-wide' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-Narrow 
+Displays Main then Aside with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the right */
+/* ***************************************** */
+
+	
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	
+	> .content-main {
+		@include span-columns(7, 12);		
+	}
+	
+	> .content-aside {
+		@include span-columns(5 omega, 12);	
+	}
+	
+	> .content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	}
+
+}
+
+
+
+
+
+
+
+@mixin main-aside-wide-mob-p($element: '.main-aside-wide-mob-p' ) {
+#{$element} {
+@include  span-columns(12 omega, 12);	
+
+> .content-aside {
+	@include  span-columns(12 omega, 12);
+}
+
+> .content-main {
+@include  span-columns(12 omega, 12);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+
+
+@mixin main-aside-wide-mob-l($element: '.main-aside-wide-mob-l' ) {
+	@include main-aside-wide-mob-p;
+}
+
+@mixin main-aside-wide-fab($element: '.main-aside-wide-fab' ) {
+	#{$element} {
+@include  span-columns(12 omega, 12);	
+
+> .content-aside {
+	@include  span-columns(4 omega, 12);
+}
+
+> .content-main {
+@include  span-columns(8, 12);
+}
+
+} //Close Class
+} //Close Mixin
+
+
+
+@mixin main-aside-wide-tab($element: '.main-aside-wide-tab' ) {
+@include main-aside-wide-fab($element: $element);
+}
+
+@mixin main-aside-wide-desk($element: '.main-aside-wide-desk' ) {
+	@include main-aside-wide($element: $element);
+}
+
+
+@mixin main-aside-wide-r($element: '.main-aside-wide') {
+
+@include media($mob...){ 
+	@include main-aside-wide-mob-p($element: $element);
+}
+
+@include media($pads...){ 
+	@include main-aside-wide-fab($element: $element);
+}
+
+@include media($desk){ 
+@include main-aside-wide-desk($element: $element);
+}
+}

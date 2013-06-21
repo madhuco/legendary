@@ -8,7 +8,6 @@
 }
 
 
-
 %vr-section {
 @include vr-section-mob;
 }
@@ -23,18 +22,17 @@
 
 }
 
-%vr-section-inside-top {
+%vr-section-inside {
+	@include vr-section-inside-mob;
+	}
+
+	%vr-section-inside-top {
 	@include vr-section-inside-top-mob;
 	}
 	
-	
-	%vr-section-bottom {
+	%vr-section-inside-bottom {
 	@include vr-section-inside-bottom-mob;
 	}
-	
-
-
-
 
 %vr-section-box {
 	@include vr-section-box-top-mob;
@@ -47,7 +45,6 @@
 %vr-section-box-bottom {
 	@include vr-section-box-bottom-mob;
 }
-
 
 
 /*  Mobile VR:  Sub Section Dividers (Spacers) */

@@ -1,0 +1,5 @@
+@import "0-layouts-pager-helpers";
+
+
+	@include layouts-pager-layout('.layouts-pager-style');
+	@include layouts-pager-style;

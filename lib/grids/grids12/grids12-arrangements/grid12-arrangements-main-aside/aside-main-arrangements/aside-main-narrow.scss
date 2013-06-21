@@ -11,15 +11,15 @@ Aside is on the left */
 	#{$element} {
 		@include span-columns(12 omega, 12);		
 	
-	.content-main {
+	> .content-main {
 		@include span-columns(10 omega, 12);	
 	}
 	
-	.content-aside {
+	> .content-aside {
 			@include span-columns(2, 12);		
 	}
 	
-	.content-footer {
+	> .content-footer {
 		@include span-columns(12 omega, 12);	
 	}
 

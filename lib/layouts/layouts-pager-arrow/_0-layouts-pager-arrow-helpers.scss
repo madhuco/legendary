@@ -1,0 +1,291 @@
+@import "0-layouts-pager-helpers";
+
+// ===============================================
+// pager: Layout
+// ===============================================
+
+@mixin layouts-pager-arrow-layout($element: '.layouts-pager-arrow-layout') {
+@include layouts-pager-layout;
+}
+
+
+// ===============================================
+// pager: Grid
+// ===============================================
+
+@mixin layouts-pager-arrow-grid($element: '.layouts-pager-arrow-grid') {
+@include layouts-pager-grid($element:$element);
+
+#{$element}	{
+
+	li {
+	width:50%;
+	}
+	
+	.pager-central {
+	display:none;	
+	}
+	
+}
+
+@include media($tabplus){
+
+
+
+#{$element}	{
+
+	li {
+	margin-right:0;
+	width:33.33%;	
+	}
+	
+		.pager-central {
+	display:block;	
+	}
+	
+	
+	
+} //Close Element
+
+} // Close Tab Query
+
+} //Close Mixin
+
+
+
+@mixin layouts-pager-arrow-grid-mob-p($element: '.layouts-pager-arrow-grid-mob-p') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+@mixin layouts-pager-arrow-grid-mob-l($element: '.layouts-pager-arrow-grid-mob-l') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+@mixin layouts-pager-arrow-grid-fab($element: '.layouts-pager-arrow-grid-fab') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+@mixin layouts-pager-arrow-grid-tab($element: '.layouts-pager-arrow-grid-tab') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+@mixin layouts-pager-arrow-grid-desk($element: '.layouts-pager-arrow-grid-desk') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+@mixin layouts-pager-arrow-grid-r($element: '.layouts-pager-arrow-grid') {
+	@include layouts-pager-arrow-grid($element:$element);
+}
+
+
+// ===============================================
+// pager: Style
+// ===============================================
+
+
+@mixin pager-hover($property) {
+  @include transition-duration(0.4s);
+  @include transition-property($property);
+  #{$property}: $offwhite
+}
+
+
+
+
+@mixin layouts-pager-arrow-style($element: '.layouts-pager-arrow-grid-style') {
+
+
+#{$element}	{
+@extend %vr-section;	
+
+@include rem(padding, 0 20px);
+@include box-sizing(border-box);
+
+
+
+.pager {
+	@extend %t-ui-navigation;
+	@include rem(padding, 10px 0);
+	@include rem(margin, 10px 0);
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #cacaca;
+}
+
+.pager a {
+	width:100%;
+	display:block;
+	padding:0 10px;
+}
+
+
+
+.pager:after, .pager:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.pager:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-width: 1.4em;
+	top: 50%;
+	margin-top: -1.4em;
+}
+.pager:before {
+	border-color: rgba(202, 202, 202, 0);
+	border-width: 1.46em;
+	top: 50%;
+	margin-top: -1.46em;
+}
+
+.pager-previous:after, .pager-previous:before {
+		right: 100%;
+}
+
+.pager-previous:after {
+		border-right-color: #ffffff;
+}
+
+.pager-previous:before {
+		border-right-color: #cacaca;
+}
+
+.pager-next:after, .pager-next:before {
+		left: 100%;
+}
+
+
+.pager-next:after {
+			border-left-color: #ffffff;
+}
+
+.pager-next:before {
+		border-left-color: #cacaca;
+}
+
+.pager-central {
+border-width-left:0;
+border-width-right:0;	
+}
+
+.pager a {
+width:100%;	
+@include txtcolor-lightest;
+}
+
+.pager .label {
+@include txtcolor-default;	
+}
+
+.pager-next .label {
+@include typeface-bold;	
+}
+
+
+} //Close element
+
+
+@include media($fabplus...){ 
+#{$element} .pager-arrow-next a:after {
+@include icon($icon-caret-right);	
+}
+
+#{$element} .pager-arrow-previous .label:before {
+@include icon($icon-caret-left);	
+}
+} //Close Element
+
+
+.black #{$element} .pager {
+	background: #000;
+}
+
+
+.black #{$element} .pager-previous:after {
+		border-right-color: #000;
+}
+
+
+.black #{$element} .pager-next:after {
+		border-left-color: #000;
+}
+
+
+.black #{$element} .pager-previous:before {
+		border-right-color:  $darkest;
+}
+
+
+.black #{$element} .pager-next:before {
+		border-left-color: $darkest;
+}
+
+
+
+.black #{$element} .pager  {
+	border-color: $darkest;
+	}
+
+
+@include media($mob...){ 
+#{$element} .pager {
+min-height: 5.8em;
+}
+
+#{$element} .pager:after {
+	border-width: 2.8em;
+	margin-top: -2.8em;
+}
+#{$element} .pager:before {
+	border-width: 2.9em;
+	margin-top: -2.9em;
+}
+
+
+}
+
+
+
+// ===============================================
+// Hover 
+// ===============================================
+
+ #{$element} .pager:hover, .black  #{$element} .pager:hover  {
+@include pager-hover(background);
+}
+
+ #{$element} .pager-previous:hover:after, .black  #{$element} .pager-previous:hover:after  {
+@include pager-hover(border-right-color);
+}
+
+
+ #{$element} .pager-next:hover:after, .black  #{$element} .pager-next:hover:after  {
+@include pager-hover(border-left-color);
+}
+
+
+
+
+
+} //Close Mixin
+
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-pager-arrow-combo($element: '.layouts-pager-arrow-combo') {
+	@include layouts-pager-arrow-layout($element: $element);
+	@include layouts-pager-arrow-grid-r($element: $element);
+	@include layouts-pager-arrow-style($element: $element);
+}

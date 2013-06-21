@@ -1,0 +1,426 @@
+
+// ===============================================
+// Tiles: Layout
+// ===============================================
+
+@mixin layouts-flexinavi-layout($element: '.layouts-flexinavi-layout', $display: 3, $top: 0, $top-tab:100px, $tapmode: false){
+/* ***************************************** */
+/*  FlexiNavi: Responsive Flexbile Navigation Bar*/
+/* ***************************************** */
+
+#{$element} {
+	  .main {
+		@include display-box;	
+	  }
+	  
+	  .main li {
+	   @include box-flex(1);	
+	  }
+		  
+	
+} //Close $element
+
+  #{$element}-menu#menu-main-menu{
+	  display:none;	
+		  }
+	
+	
+	  #{$element}-menu#menu-main-menu .title  {
+width:100%;
+text-align:center;
+	  }
+	
+	  #{$element}-menu#menu-main-menu .title a {
+float:right;
+	  }
+	
+
+
+@include media($portables...){ 
+.primary-nav .main  {
+	display:none;
+}
+
+
+  #{$element}-menu#menu-main-menu {
+	  top:$top;
+	  }
+
+}
+
+
+
+@include media($desk){ 
+	  #{$element}-menu #menu-main-menu, #{$element}  .ui-tapmenu-anchor  {
+	  display:none;	
+	  }
+	  
+	  html body .show#{$element}-menu#menu-main-menu {
+	  display:none !Important;	
+		  }
+}
+
+
+$main-none: ($display + 1);
+
+
+@include media($tab...){ 
+
+#{$element}-menu#menu-main-menu .title {
+display:none;	
+}
+
+
+#{$element} .main li:nth-child(n+#{$main-none}) {
+	display:none;
+}
+
+
+#{$element}-menu#menu-main-menu li:nth-child(-n+#{$display}) {
+	display:none;
+}
+
+
+#{$element} {
+ height:auto;
+  overflow:hidden;	
+}
+
+
+#{$element} .main {
+    float:left;
+    height:100%;
+    padding-top: 100%;
+    margin-top: -100%;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+	width: 83%;
+}
+
+#{$element} .main li {
+padding:2.6% 0;
+}
+
+#{$element} #main-menu {
+    float: right;	
+	width:16%;
+	@include box-sizing(border-box);
+}
+}
+
+
+
+
+
+@if $tapmode == true {
+	
+	@include media($mob...){ 
+	
+		
+#{$element}-bar {
+display:block;
+top:inherit;
+bottom:0;
+@include rem(height, 53px);
+left:0;
+right:0;
+position:absolute !Important;
+
+
+ul {
+height:100%;	
+}
+
+li {
+position:relative;
+height:100%;	
+}
+
+a {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+
+
+} //Close $element
+
+
+
+} //Close MQ
+} //Close if
+
+
+
+} // Close $Mixin
+
+
+// ===============================================
+// Tiles: Grid
+// ===============================================
+
+@mixin layouts-flexinavi-grid($element: '.layouts-flexinavi-grid') {
+
+#{$element} {
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-flexinavi-grid-mob-p($element: '.layouts-flexinavi-grid-mob-p', $tapmode: false) {
+
+
+@if $tapmode == true {
+	
+
+	
+	
+	
+#{$element}-bar {
+	
+	width:100%;
+	
+		
+	ul {
+width:100%;
+		}
+	
+	
+	li {
+width:20%;
+float:left;
+display:block;
+	}
+	
+	.ui-tapmenu-anchor {
+
+	}
+	
+	
+	} //Close $element
+
+
+
+} //Close if
+
+		
+} //Close Mixin
+
+
+@mixin layouts-flexinavi-grid-mob-l($element: '.layouts-flexinavi-grid-mob-l') {
+	@include layouts-flexinavi-grid($element:$element);
+}
+
+
+@mixin layouts-flexinavi-grid-fab($element: '.layouts-flexinavi-grid-fab') {
+	@include layouts-flexinavi-grid($element:$element);
+}
+
+
+@mixin layouts-flexinavi-grid-tab($element: '.layouts-flexinavi-grid-tab') {
+	@include layouts-flexinavi-grid($element:$element);
+}
+
+
+@mixin layouts-flexinavi-grid-desk($element: '.layouts-flexinavi-grid-desk') {
+	@include layouts-flexinavi-grid($element:$element);
+}
+
+
+@mixin layouts-flexinavi-grid-r($element: '.layouts-flexinavi-grid', $tapmode: false) {
+
+
+@if $tapmode == true {
+@include media($mob...){ 
+@include layouts-flexinavi-grid-mob-p($element: $element, $tapmode: true);
+}
+}
+
+
+	@include layouts-flexinavi-grid($element:$element);
+	
+	
+	
+	
+}
+
+
+
+// ===============================================
+// Tiles: Style
+// ===============================================
+
+@mixin layouts-flexinavi-style($element: '.layouts-flexinavi-grid-mob-p', $top:0, $top-tab:100px, $tapmode: false) {
+
+	
+	.tap-btn {
+	float:right;	
+     box-sizing: border-box;
+     text-align: center;
+	 padding:2%;
+	 @include border-radius(5px);
+	 @include box-sizing(border-box);
+ 	text-align:center;
+	@include typeface-regular;	
+	color: $lighter;			
+	}
+
+
+#{$element}-menu {
+
+.tap-btn {
+@include rem(margin, 0 20px);
+@include rem(padding-right, 50px);
+position:relative;
+	@extend %t-ui-navigation; 
+	border:1px solid $scratch;
+
+&:after{
+			@include rem(font-size, 30px);
+			@include rem(margin-left, 10px);
+			@include icon($icon-remove-circle);	
+			position:absolute;
+}
+}
+
+
+.title {
+margin:0;	
+overflow:auto;
+@include rem(padding, 15px 0);
+}
+
+
+
+} //Close $element-menu
+
+
+
+
+#{$element} {
+
+	
+	ul {
+	display:inline;	
+	}
+	
+	.ui-tapmenu-anchor {
+		 border:1px solid $scratch;	
+	}
+		
+	.ui-tapmenu-anchor:after {
+		@include icon($icon-reorder);	
+	}
+	
+			
+} // Close $element
+@include ui-taplist($element: '#menu-main-menu ul');
+
+#{$element}-menu#menu-main-menu {
+@extend %t-ui-navigation; 	
+width:100%;
+background:#FFF;
+left:0;
+right:0;
+}
+
+
+@include media($tab...){ 
+#{$element}-menu#menu-main-menu {
+@include scheme-purity;
+left:inherit;
+width:30%;
+top: $top-tab;
+
+
+&:after, &:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+&:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 20px;
+	left: 68%;
+	margin-left: -20px;
+}
+
+&:before {
+	border-color: rgba(225, 225, 225, 0);
+	border-bottom-color: $scratch;
+	border-width: 23px;
+	left: 68%;
+	margin-left: -23px;
+}
+} //Close element
+} //Close MQ
+
+
+@if $tapmode == true {
+@include media($mob...){ 
+
+#{$element}-bar {
+	
+	li {
+	text-align:center;	
+	border:1px solid $scratch;	
+	@include box-sizing(border-box);
+	@include t-ui-navibar-mob;
+	}
+	
+	.ui-tapmenu-anchor:after	{
+		@include icon($icon-reorder);	
+	}
+	
+	
+	li a:nth-child(n):after {
+	width: 100%;
+height: 100%;
+@include rem(margin-top, -38px);
+@include rem(font-size, 38px);
+float:left;
+color:$scratch;
+	}
+	
+li a.active:nth-child(n):after  {
+		color:$darker;
+		
+	}
+	
+	li a:nth-child(n):active:after  {
+		color:$default;
+		
+	}
+
+
+	
+	
+} //Close Element
+} //Close MQ
+} //Close If
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-flexinavi-combo($element: '.layouts-flexinavi-combo', $top: 0, $top-tab:100px, $tapmode: false) {
+	@include layouts-flexinavi-layout($element: $element, $top: $top, $top-tab: $top-tab, $tapmode: $tapmode);
+	@include layouts-flexinavi-grid-r($element: $element, $tapmode: $tapmode);
+	@include layouts-flexinavi-style($element: $element, $top: $top,  $top-tab: $top-tab, $tapmode: $tapmode);
+}

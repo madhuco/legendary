@@ -12,7 +12,7 @@ $darkest: #323232;
 
 $offwhite: #f3f3f3;
 
-$default: #5b5b5b;
+$default: #757575;
 
 
 // ***************************************** //
@@ -20,24 +20,49 @@ $default: #5b5b5b;
 // ***************************************** //
 
 @mixin txtcolor-default {
-	color: #5b5b5b;
+	color: $default;
 }
 
 @mixin txtcolor-lighter {
-	color: #888888;
+	color: $lighter;
 }
 
 @mixin txtcolor-lightest {
-	color: #bebebe;
+	color: $lightest;
 }
 
 @mixin txtcolor-darker {
-	color: #323232;
+	color: $darker;
 }
 
 @mixin txtcolor-darkest {
-	color: #000001;
+	color:  $darkest;
 }
+
+
+
+%txtcolor-default {
+@include txtcolor-default 
+}
+
+%txtcolor-lighter {
+@include txtcolor-lighter
+}
+
+%txtcolor-lightest {
+@include txtcolor-lightest
+}
+
+%txtcolor-darker {
+@include txtcolor-darker
+}
+
+%txtcolor-darkest {
+@include txtcolor-darkest
+}
+
+
+
 
 // ***************************************** //
 // Mono Backgrounds //

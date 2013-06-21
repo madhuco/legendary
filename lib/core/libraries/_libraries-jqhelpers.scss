@@ -3,6 +3,20 @@
 /* These are used to hide elements when switching between mobile and tablet displays  */
 /* ***************************************** */
 
+$jq-top: 100px !default;
+
+@mixin expanded($top: $jq-top) {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	top: $top;
+	background-color:#fff;
+	@include rem(padding, 15px);
+}
+
+
+
 @include media($mob...) {
 html body .mobshow {
  display:block !important;
@@ -24,6 +38,10 @@ html body .mob-widthexpand.panel-region-logo  {
 display:	block;
 }
 
+html body .taptabs-mob-expanded {
+	@include expanded;
+}
+
 
 }
 
@@ -38,6 +56,11 @@ html body .mobpshow {
  width:100% !important;
  float:left !important;
 }
+
+html body .taptabs-mob-p-expanded {
+	@include expanded;
+}
+
 }
 
  @include media($mob-l...) {
@@ -50,6 +73,9 @@ html body .moblshow {
  html body .mobl-widthexpand {
  width:100% !important;
  float:left !important;
+}
+html body .taptabs-mob-l-expanded {
+	@include expanded;
 }
 }
 
@@ -64,6 +90,9 @@ html body .moblshow {
  width:100% !important;
  float:left !important;
 }
+html body .taptabs-fab-expanded {
+	@include expanded;
+}
 }
  @include media($tab...) {
  html body .tabshow {
@@ -75,6 +104,9 @@ html body .moblshow {
  html body .tab-widthexpand {
  width:100% !important;
  float:left !important;
+}
+html body .taptabs-tab-expanded {
+	@include expanded;
 }
 }
 
@@ -89,6 +121,9 @@ html body .moblshow {
  width:100% !important;
  float:left !important;
 }
+html body .taptabs-desk-expanded {
+	@include expanded;
+}
 }
 
 
@@ -102,6 +137,9 @@ html body .moblshow {
  html body .portables-widthexpand {
  width:100% !important;
  float:left !important;
+}
+html body .taptabs-portables-expanded {
+	@include expanded;
 }
 }
 
@@ -125,6 +163,10 @@ bottom:0;
 right:0;
 }
 
+html body .taptabs-devices-expanded {
+	@include expanded;
+}
+
 }
 
 html body .show {
@@ -144,7 +186,3 @@ html body .widthexpand {
 z-index:999 !Important;	
 }
 
-
-.tap-btn {
-display: none;
-}

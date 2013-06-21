@@ -7,6 +7,18 @@
 /*  Layouts: Slideshow: 
 Displays Content as a symmeterical slideshow*/
 /* ***************************************** */		
+#{$element}	{
+
+.unit-row {
+height:0;
+}	
+
+.unit-row.present {
+height:auto;	
+}
+	
+}
+
 }
 
 
@@ -19,7 +31,6 @@ Displays Content as a symmeterical slideshow*/
 #{$element}	{
 /* Basic Layout */
 
-
 @include span-columns(12 omega, 12);
 
 
@@ -27,15 +38,11 @@ Displays Content as a symmeterical slideshow*/
 @include span-columns(12 omega, 12);
 }
 
-.primary {
-@include span-columns(4 omega, 6);
-float:left;	
+.unit-row {
+	@include span-columns(12 omega, 12);
 }
 
- .secondary {
-@include span-columns(2 omega, 6);	
-float:left;
-}
+
 
 } //Close element
 } //Close Mixin
@@ -43,32 +50,110 @@ float:left;
 
 
 @mixin layouts-slideshow-50-grid-mob-p($element: '.layouts-slideshow-50-grid-mob-p') {
-	@include layouts-slideshow-50-grid($element:$element);
+	#{$element} {
+	
+	.title {
+		@include span-columns(12, 12);
+		text-align:center;
+	}
+	
+.content-aside {
+	display:none;	
+	}
+	
+	.unit-row {
+	@include span-columns(12 omega, 12);
 }
+	
+	.unit-txt {
+	@include span-columns(8, 12);
+	}
+	
+	.primary {
+	@include span-columns(8, 12);
+	}
+
+	.secondary {
+	@include span-columns(4 omega, 12);
+	}
+	
+} //Close element
+} //Close Mixin
 
 
 @mixin layouts-slideshow-50-grid-mob-l($element: '.layouts-slideshow-50-grid-mob-l') {
-	@include layouts-slideshow-50-grid($element:$element);
-}
+@include layouts-slideshow-50-grid-mob-p($element:$element);
 
+#{$element}	{	
+	.title {
+		@include span-columns(9, 12);
+		text-align:center;
+	}
+	
+} //Close element
+} //Close Mixin
 
 @mixin layouts-slideshow-50-grid-fab($element: '.layouts-slideshow-50-grid-fab') {
-	@include layouts-slideshow-50-grid($element:$element);
+#{$element}	{	
+
+.unit-txt {
+	@include span-columns(6 omega, 6);
 }
 
+.primary {
+@include span-columns(4, 6);
+
+}
+
+ .secondary {
+@include span-columns(2 omega, 6);	
+
+}
+} //Close element
+} //Close Mixin
 
 @mixin layouts-slideshow-50-grid-tab($element: '.layouts-slideshow-50-grid-tab') {
-	@include layouts-slideshow-50-grid($element:$element);
+	@include layouts-slideshow-50-grid-fab($element:$element);
 }
 
 
 @mixin layouts-slideshow-50-grid-desk($element: '.layouts-slideshow-50-grid-desk') {
-	@include layouts-slideshow-50-grid($element:$element);
-}
-
+	@include layouts-slideshow-50-grid-fab($element:$element);
+#{$element}	{	
+	.img {
+	overflow:visible;	
+	}
+} //Close element
+} //Close Mixin
 
 @mixin layouts-slideshow-50-grid-r($element: '.layouts-slideshow-50-grid') {
-	@include layouts-slideshow-50-grid($element:$element);
+
+@include layouts-slideshow-50-grid($element:$element);
+
+@include media($mob...){ 
+	@include layouts-slideshow-50-grid-mob-p($element:$element);
+	}
+	
+	@include media($mob-l...){ 
+#{$element}	{	
+	.title {
+		@include span-columns(9, 12);
+		text-align:center;
+	}
+	
+	} //Close Element
+	} //Close MQ
+
+
+	@include media($fabplus...){ 
+	@include layouts-slideshow-50-grid-fab($element:$element);
+	}
+	
+	@include media($desk...){ 
+	.img {
+	overflow:visible;	
+	}
+	}
 }
 
 
@@ -78,16 +163,25 @@ float:left;
 
 @mixin layouts-slideshow-50-style($element: '.layouts-slideshow-50-grid-style') {
 #{$element}	{
+		@extend %vr-section;	
+
+
+.unit-row {
+
+}
+
+.content-aside {
+}
+
+.content-main {
+		@extend %vr-section-inside;	
+}
 
 .title {
 @extend %t-title-2; 
 @include txtcolor-darkest; 
 @include typeface-light; 
-@extend %vr-title-3;
-}
-
-.unit-txt {
-@extend %vr-spacer-box;	
+margin-bottom:0;
 }
 
 
@@ -99,6 +193,29 @@ q {
 cite {
 @extend %vr-spacer;	
 }
+
+
+@include media($mob...){ 
+
+.content-main {
+	padding-top:0;
+	padding-bottom:0;
+	}
+
+}
+
+
+
+
+@include media($mob-l...){ 
+
+.primary, .title, .unit-txt {
+	text-align:center;
+}
+
+
+}
+
 
 } //Close element
 } //Close Mixin

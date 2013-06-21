@@ -7,7 +7,7 @@ Main Takes up the full width of the page.
 Aside is layered underneath it. */
 /* ***************************************** */
 
-	#{$element}, #{$element} .content-main, #{$element} .content-aside, #{$element} .content-footer  {
+	#{$element}, #{$element} > .content-main, #{$element} > .content-aside, #{$element} > .content-footer  {
 		@include span-columns(12 omega, 12);
 
 	}

@@ -45,6 +45,14 @@
 }
 
 
+@mixin vr-section-inside-mob {
+	@include rem('padding-top', 30px);
+	@include rem('padding-bottom', 30px);
+
+}
+
+
+
 @mixin vr-section-box-top-mob {
 	@include rem('margin-top', 30px);
 	@include rem('padding-top', 30px);

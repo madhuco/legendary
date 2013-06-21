@@ -3,9 +3,15 @@
 @import "aside-main-narrow";
 @import "aside-main-overlay";
 @import "aside-main-slim";
+@import "aside-main-wide";
 
 @import "main-aside-50";
 @import "main-aside-layered";
 @import "main-aside-narrow";
 @import "main-aside-overlay";
 @import "main-aside-slim";
+@import "main-aside-wide";
+
+.unit-footer {
+@include span-columns(12 omega, 12);	
+}

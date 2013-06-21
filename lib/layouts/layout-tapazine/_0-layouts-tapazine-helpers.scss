@@ -1,0 +1,203 @@
+@import "0-layouts-taptabs-helpers";
+
+// ===============================================
+// Layout
+// ===============================================
+
+@mixin layouts-tapazine-layout($element: '.layouts-tapazine'){
+@include layouts-taptabs-layout($element: #{$element});
+
+
+#{$element} {
+min-height:400px;
+}
+
+#{$element} .unit {
+display:none;
+}
+
+@include media($fabplus){ 
+#{$element} .unit-row-1 {
+display:block;
+
+}
+
+
+
+#{$element} > .content-aside {
+	height:100%;
+	position:absolute;
+}
+
+#{$element} ul {	
+height:100%;
+}
+
+
+
+}
+}
+
+
+
+// ===============================================
+// Grid 
+// ===============================================
+@mixin layouts-tapazine-grid($element: '.layouts-tapazine-grid'){
+
+#{$element} > .content-main  {
+padding-right:4%;
+
+
+} //Close Class
+} //Close Mixin
+
+
+@mixin layouts-tapazine-grid-mob-p($element: '.layouts-tapazine-grid-mob-p') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+@mixin layouts-tapazine-grid-mob-l($element: '.layouts-tapazine-grid-mob-l') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+@mixin layouts-tapazine-grid-fab($element: '.layouts-tapazine-grid-fab') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+@mixin layouts-tapazine-grid-tab($element: '.layouts-tapazine-grid-tab') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+@mixin layouts-tapazine-grid-desk($element: '.layouts-tapazine-grid-desk') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+@mixin layouts-tapazine-grid-r($element: '.layouts-tapazine-grid') {
+	@include layouts-tapazine-grid($element:$element);
+}
+
+
+
+// ===============================================
+// Style
+// ===============================================
+
+@mixin layouts-tapazine-style($element: '.layouts-tapazine-style') {
+@include layouts-taptabs-style($element: $element);
+
+#{$element}  {	
+
+> .content-main {	
+@extend %vr-section;
+@extend %vr-breather;
+}
+
+> .content-aside ul {	
+@extend %vr-section-inside-top;
+}
+
+.unit-title {
+@extend %t-title-2;
+@extend %vr-title-2;
+text-align:center;
+@include txtcolor-darkest;
+@include typeface-light;
+}
+
+.unit-intro {
+@extend %t-intro-2;
+@extend %vr-intro-2;
+text-align:center;	
+}
+
+.unit-txt p {
+@extend %t-body-text;
+@extend %vr-body-text;	
+}
+
+
+} //Close Class
+
+
+
+.black #{$element} ul li {	
+border-bottom: 1px solid $darkest;
+}
+
+
+@include media($mob...){ 
+
+
+#{$element}  > .content-aside ul {
+	padding-top:0;
+	background:#FFF;
+	@include border-radius(10px);
+}
+
+
+.pager-nav:after {
+width: 100%;
+position: absolute;
+background: red;
+height: auto;
+content: "";
+display: block;
+}
+
+
+.pager-nav {
+position: relative;
+}
+
+
+
+}
+
+
+@include media($fabplus...){ 
+#{$element} {	
+border: 1px solid $line;
+@include border-radius(10px);
+position:relative;
+overflow:hidden;
+background:#FFF;
+}
+
+
+
+#{$element} ul {	
+border-right: 1px solid $line;
+}
+
+.black #{$element} ul {	
+border-right: 1px solid $darkest;
+}
+
+.black #{$element} {
+	border: 1px solid $darkest;
+}
+
+
+} // Close MQ
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-tapazine-combo($element: '.layouts-tapazine-combo') {
+#{$element} {
+
+}
+	@include layouts-tapazine-layout($element: $element);
+	@include layouts-tapazine-grid-r($element: $element);
+	@include layouts-tapazine-style($element: $element);
+	
+}

@@ -24,6 +24,7 @@
 .cards-front {
 position:relative;	
 @include box-sizing(border-box); 
+display:block;
 }
 
 .cards-front .unit-txt {
@@ -45,6 +46,20 @@ background: rgba(255, 255, 255, 0.8);
     @include box-sizing(border-box); 
 	@include rem(padding, 10px);	
 }
+
+
+.cards-back .unit-link {
+	display:block;
+}
+
+
+.cards-back .target .unit-link {
+@include rem(margin, 10px 0 5px);
+cursor:pointer;
+}
+
+
+
 
 
 #{$element} .content-main .cards-expand .cards-back  {
@@ -169,6 +184,10 @@ top:0;
 @include span-columns(12 omega, 6);
 @include rem(height, 374px);
 }
+
+
+
+
 
 } //Close Class
 } //Close Mixin

@@ -1,0 +1,125 @@
+// ===============================================
+// pager: Layout
+// ===============================================
+
+@mixin layouts-pager-layout($element: '.layouts-pager-layouts') {
+/* ***************************************** */
+/*  Layouts: pager: 
+Displays Content as a symmeterical slideshow*/
+/* ***************************************** */	
+
+
+
+
+	
+}
+
+
+// ===============================================
+// pager: Grid
+// ===============================================
+
+@mixin layouts-pager-grid($element: '.layouts-pager-grid') {
+
+#{$element}	{
+/* Basic Layout */
+clear:both;
+@include span-columns(12 omega, 12);
+@include border-box-sizing;
+
+ul {
+	@include span-columns(12 omega, 12);
+	@include border-box-sizing;
+}
+
+li {
+width: 33.33%;
+float:left;
+display:inline;
+min-width:1%;
+}
+
+
+.pager-central {
+	 text-align:center;
+}
+
+.pager-next {
+ text-align:right;
+ float:right;
+}
+
+} //Close element
+} //Close Mixin
+
+
+
+@mixin layouts-pager-grid-mob-p($element: '.layouts-pager-grid-mob-p') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+@mixin layouts-pager-grid-mob-l($element: '.layouts-pager-grid-mob-l') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+@mixin layouts-pager-grid-fab($element: '.layouts-pager-grid-fab') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+@mixin layouts-pager-grid-tab($element: '.layouts-pager-grid-tab') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+@mixin layouts-pager-grid-desk($element: '.layouts-pager-grid-desk') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+@mixin layouts-pager-grid-r($element: '.layouts-pager-grid') {
+	@include layouts-pager-grid($element:$element);
+}
+
+
+// ===============================================
+// pager: Style
+// ===============================================
+
+@mixin layouts-pager-style($element: '.layouts-pager-grid-style') {
+#{$element}	{
+
+@extend %t-ui-navigation;
+
+.pager-next .label {
+@include typeface-bold;	
+}
+
+} //Close element
+
+
+@include media($fabplus...){ 
+#{$element} .pager-next a:after {
+@include icon($icon-caret-right);	
+}
+
+#{$element} .pager-previous .label:before {
+@include icon($icon-caret-left);	
+}
+}
+
+
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-pager-combo($element: '.layouts-pager-combo') {
+	@include layouts-pager-layout($element: $element);
+	@include layouts-pager-grid-r($element: $element);
+	@include layouts-pager-style($element: $element);
+}

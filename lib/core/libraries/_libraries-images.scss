@@ -1,0 +1,139 @@
+/* ***************************************** */
+/*  Responsive Image Support */
+/* ***************************************** */
+
+.img {
+	overflow: hidden;
+    position: relative;	
+	display:block;
+	width:100%;
+}
+
+
+.img img {	
+	display:none;
+}
+
+
+.img .auto {	
+	height: auto;    
+    width: auto;
+    min-width: 100%;
+    position: absolute;
+    max-height: 100%;
+	display:none;
+
+}
+
+.img img[data-imgtype="all"] {
+	display:block;
+}
+
+
+@include media($mob-p...){ 
+.img img[data-imgtype="mob-p"] {
+	display:block;
+}
+
+.img img[data-imgtype="mob"] {
+	display:block;
+}
+
+.img img[data-imgtype="portables"] {
+	display:block;
+}
+
+
+.img img[data-imgtype="devices"] {
+	display:block;
+}
+}
+
+
+@include media($mob-l...){ 
+.img img[data-imgtype="mob-l"] {
+	display:block;
+}
+
+
+.img img[data-imgtype="mob"] {
+	display:block;
+}
+
+.img img[data-imgtype="portables"] {
+	display:block;
+}
+
+
+.img img[data-imgtype="devices"] {
+	display:block;
+}
+}
+
+
+@include media($fab...){ 
+.img img[data-imgtype="fab"] {
+	display:block;
+}
+
+.img img[data-imgtype="portables"] {
+	display:block;
+}
+
+
+.img img[data-imgtype="devices"] {
+	display:block;
+}
+
+.img img[data-imgtype="pads"] {
+	display:block;
+}
+
+.img img[data-imgtype="fabplus"] {
+	display:block;
+}
+
+}
+
+
+@include media($tab...){ 
+.img img[data-imgtype="tab"] {
+	display:block;
+}
+
+
+
+
+.img img[data-imgtype="devices"] {
+	display:block;
+}
+
+.img img[data-imgtype="pads"] {
+	display:block;
+}
+
+.img img[data-imgtype="fabplus"] {
+	display:block;
+}
+
+.img img[data-imgtype="tabplus"] {
+	display:block;
+}
+
+}
+
+
+@include media($desk...){ 
+.img img[data-imgtype="desk"] {
+	display:block;
+}
+
+.img img[data-imgtype="fabplus"] {
+	display:block;
+}
+
+.img img[data-imgtype="tabplus"] {
+	display:block;
+}
+
+}

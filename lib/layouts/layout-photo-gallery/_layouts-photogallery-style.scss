@@ -1,0 +1,5 @@
+@import "0-layouts-photogallery-helpers";
+
+
+	@include layouts-photogallery-layout('.layouts-photogallery-style');
+	@include layouts-photogallery-style;

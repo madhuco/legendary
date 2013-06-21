@@ -8,51 +8,96 @@ Main is overlayed on top of Aside  */
 		@include span-columns(12 omega, 12);
 	position:relative;		
 	
-	.content-main {
-	@include span-columns(6, 12);	
-	position:absolute;
-	top:0;
-	right:0;	
-		
-	}
-	
-	.content-aside {
-	@include span-columns(6, 12);	
-	}
-	
 	.content-footer {
 		@include span-columns(12 omega, 12);	
 	}
+	
+	.unit-row {
+	position:relative;
+	}
 
-	} //Close Class
-
+} //Close Class
 } //Close Mixin
 
 
 
 
 @mixin aside-main-overlay-50-mob-p($element: '.aside-main-overlay-50-mob-p' ) {
-	@include aside-main-overlay-50($element: $element);
+	#{$element} {
+		.content-main {
+	@include span-columns(12 omega, 12);	
+
 }
+	
+	.content-aside {
+display:none; 
+	}
+	
+} //Close Class
+} //Close Mixin
 
 @mixin aside-main-overlay-50-mob-l($element: '.aside-main-overlay-50-mob-l' ) {
 	@include aside-main-overlay-50($element: $element);
 }
 
 @mixin aside-main-overlay-50-fab($element: '.aside-main-overlay-50-fab' ) {
-	@include aside-main-overlay-50($element: $element);
-}
+
+#{$element}	{
+	
+	.content-aside {
+	@include span-columns(6, 12);	
+	}
+	
+	.content-main {
+	@include span-columns(6 omega, 12);	
+	}
+	
+	
+} //Close $element
+} // Close Mixin
 
 @mixin aside-main-overlay-50-tab($element: '.aside-main-overlay-50-tab' ) {
-	@include aside-main-overlay-50($element: $element);
+	@include aside-main-overlay-50-fab($element: $element);
 }
 
 @mixin aside-main-overlay-50-desk($element: '.aside-main-overlay-50-desk' ) {
-	@include aside-main-overlay-50($element: $element);
-}
+	
+#{$element}	{
+	
+	.content-main {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+	}
+	
+	.content-aside {
+	@include span-columns(6, 12);	
+	}
+	
+} //Close $element
+} // Close Mixin
 
 @mixin aside-main-overlay-50-r($element: '.aside-main-overlay-50') {
 @include aside-main-overlay-50($element: $element);
+
+@include media($mob...){ 
+@include aside-main-overlay-50-mob-p($element: $element);
+}
+
+@include media($fabplus...){ 
+@include aside-main-overlay-50-fab($element: $element);
 }
 
 
+@include media($desk...){ 
+#{$element}	{
+.content-main {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+	}
+} //Close Element
+} //Close Mq
+} //Close Mixin

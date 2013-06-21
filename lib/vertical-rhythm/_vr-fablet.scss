@@ -23,6 +23,10 @@
 
 }
 
+%vr-section-inside {
+	@include vr-section-inside-fab;
+	}
+
 %vr-section-inside-top {
 	@include vr-section-inside-top-fab;
 	}

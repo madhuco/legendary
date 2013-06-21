@@ -2,7 +2,7 @@
 // Footer: Layout
 // ===============================================
 
-@mixin layouts-footer-layout($element: '.layout-footer') {
+@mixin layouts-footer-layout($element: '.layout-footer', $extra: false) {
 	
 /* ***************************************** */
 /* Layouts Footer: Grid */
@@ -12,6 +12,43 @@
 #{$element} {
 @include border-top-radius(10px);
 }
+
+
+@include media($pads...){ 
+ #{$element}.collapsed {
+	
+	padding-bottom:25px;
+	
+	.unit-txt{
+	display:none;
+	}
+	
+	.unit-footer {
+	display:none;	
+	}	
+	
+} //Close Element
+
+
+ #{$element} .logo.unit{
+	display:none;	
+	}
+
+} //Close MQ
+
+
+
+@if $extra == true {
+@include media($desk){ 
+#{$element} {
+	.unit.extra {
+display:none;
+	}
+}  //Close Element
+}  //Close MQ
+} //Close If
+
+
 
 } //Close Mixin
 
@@ -75,9 +112,34 @@ display:block;
 }
 
 
-@mixin layouts-footer-grid-fab($element: '.layouts-footer-grid-fab') {
-	@include layouts-footer-grid($element:$element);
-}
+@mixin layouts-footer-grid-fab($element: '.layouts-footer-grid-fab', $extra: false) {
+
+@if $extra == false {
+#{$element} {
+	.unit {
+@include span-columns(6, 12);
+	}
+} //Close Element
+} //Close If
+
+
+
+
+ #{$element} {
+	
+	@include span-columns(12, 12);
+	
+	.unit {
+	@include rem(padding, 10px);
+	@include box-sizing(border-box);
+	}
+	
+	.unit-last {
+	@include omega;
+	}
+	 	
+} //Close $Element
+} //Close Mixin
 
 
 @mixin layouts-footer-grid-tab($element: '.layouts-footer-grid-tab') {
@@ -90,8 +152,18 @@ display:block;
 }
 
 
-@mixin layouts-footer-grid-r($element: '.layouts-footer-grid') {
-	@include layouts-footer-grid($element:$element);
+@mixin layouts-footer-grid-r($element: '.layouts-footer-grid', $extra: false) {
+		@include layouts-footer-grid($element:$element);
+	
+	@include media($pads...){ 
+	@include layouts-footer-grid-fab($element:$element, $extra: $extra);
+	}
+		
+	@include media($mob...){ 
+#{$element} {
+display:none;
+}
+}
 }
 
 
@@ -137,8 +209,29 @@ display:block;
 	@include ui-social-media;	
 	}
 	
-
 } //Close Class
+
+	@include media($pads...){ 
+	
+	#{$element} {
+		.unit-heading:after {
+		@include rem(margin-left, 5px);
+		@include icon($icon-minus-sign);	
+		}
+		
+	} //Close Element
+
+
+	#{$element}.collapsed {
+		.unit-heading:after {
+		@include icon($icon-plus-sign);	
+		}
+		
+	} //Close Element
+	} //Close MQ
+	
+
+
 } //Close Mixin
 
 
@@ -147,8 +240,8 @@ display:block;
 // ===============================================
 
 
-@mixin layouts-footer-combo($element: '.layouts-footer-combo') {
-@include layouts-footer-layout($element: $element);
-	@include layouts-footer-grid($element: $element);
+@mixin layouts-footer-combo($element: '.layouts-footer-combo', $extra: false) {
+@include layouts-footer-layout($element: $element, $extra: $extra);
+	@include layouts-footer-grid-r($element: $element, $extra: $extra);
 	@include layouts-footer-style($element: $element);
 }

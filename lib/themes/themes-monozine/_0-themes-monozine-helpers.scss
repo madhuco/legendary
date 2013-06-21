@@ -1,4 +1,4 @@
-@mixin themes-monozine($root: '.themes-monozine') {
+@mixin themes-monozine($root: '.themes-monozine', $black: false) {
 
 
 
@@ -10,9 +10,8 @@
 /* *****   MAIN PAGE LAYOUTS:  - Slideshow: Global Styles  ***** */
 
 
-#{$root} {
+
 	@include layouts-slideshow-50-combo($element: '.layouts-slideshow');
-}
 
 
 
@@ -20,19 +19,15 @@
 /* Displays content as 'tiles' of information  */
 
 
-#{$root}  {
+
 	@include layouts-tiles-combo($element: '.layouts-tiles');
-}	
 
 
 
 /* *****  MAIN PAGE LAYOUTS:  - Showcase: Global Styles   ***** */  
 /* Displays content in a row  with text under each photo*/
 
-#{$root}  {
-	@include layouts-showcase-combo($element: '.layouts-showcase');
-
-}	
+@include layouts-showcase-combo($element: '.layouts-showcase');
 
 
 
@@ -40,18 +35,10 @@
 /* ***** MAIN PAGE LAYOUTS:  -  icards: Global Styles ***** */
 /* Displays content as icards (information cards). Used to present bite sized bits of informaiton */
 
-#{$root}  {
-	@include layouts-icards-combo($element: '.layouts-icards');
-}	
+@include layouts-icards-combo($element: '.layouts-icards');
 
 
 
-/* ***** MAIN PAGE LAYOUTS:  -  Footer: Global Styles ***** */
-/* Displays the footer at the bottom of every page */
-
-#{$root}  {
-	@include layouts-footer-combo($element: '.layouts-footer');
-}	
 
 
 
@@ -59,9 +46,8 @@
 /* *****  MAIN PAGE LAYOUTS:   pager-h: Global Styles  ***** */
 /*Breaks up content into seperate pages that are tabbed horizontally */
 
-#{$root}  {
+
 	@include layouts-pager-h-combo($element: '.layouts-pager-h');
-}	
 
 
 /* ***************************************** */
@@ -80,11 +66,25 @@ text-align:center;
 
 #{$root} .title {
 	@include typeface-light;
-@extend %t-title-2;
-@extend %vr-title-2;
+@extend %t-title-1;
+@extend %vr-title-1;
 @include txtcolor-darkest;
 
 }
+
+
+#{$root} .lead-header {
+text-align:center;
+}
+
+#{$root} .lead-header .intro {
+@extend %t-intro-1; 
+@extend %vr-intro-1; 
+@include txtcolor-lighter;
+}
+
+
+
 
 #{$root} {
 	@include ui-solo-quote-outside($element: '.lead-quote') {
@@ -108,22 +108,44 @@ text-align:center;
 /*  page: Desktop Specific Styles */
 /* ***************************************** */
 
-#{$root} .aside-main-article,
-#{$root} .main-aside-article {
+.aside-main-article,
+.main-aside-article {
 @include span-columns(12 omega, 12);
 }
 
-#{$root} .aside-main-article .content-aside,
-#{$root} .main-aside-article .content-main {
+.aside-main-article .content-aside,
+.main-aside-article .content-main {
 @include span-columns(7, 12);
 }
 
-#{$root}  .main-aside-article .content-aside,
-#{$root}  .aside-main-article .content-main {
+.main-aside-article .content-aside,
+.aside-main-article .content-main {
 @include span-columns(5 omega, 12);
 }
 
 } //Close Media Query
+
+
+
+  @if $black == true {
+.black {
+	background:black;
+}
+
+.black .title, 
+.black .unit-title {
+@include txtcolor-lightest;	
+}
+
+.black .intro, 
+.black .unit-intro {
+	@include txtcolor-lighter;	
+}
+
+
+
+  }
+
 
 
 } //Close Main Mixin

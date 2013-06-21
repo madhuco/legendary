@@ -1,0 +1,4 @@
+@import "0-layouts-flexinavi-helpers";
+
+@include layouts-flexinavi-layout($element: '.layouts-flexinavi-grid');
+@include layouts-flexinavi-grid-r($element: '.layouts-flexinavi-grid');

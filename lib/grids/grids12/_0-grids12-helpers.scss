@@ -1,7 +1,7 @@
 @import "../../../plugins/susy/susy";
 
 $base-font-size: 10px;
-$show-grid-backgrounds: false;
+$show-grid-backgrounds: true;
 
 html, body {
   font-size: 10px;
@@ -9,30 +9,30 @@ html, body {
 
 @include media($mob-p...) {
 $total-columns       : 12;
-$column-width        : 1.4em;
-$gutter-width        : 1.0em;
-$grid-padding        : 2em;
+$column-width        : 5.85%;
+$gutter-width        : 1.6%;
+$grid-padding        : 6.25%;
 }
 
 @include media($mob-l...) {
 $total-columns       : 12;
-$column-width        : 2.725em;
-$gutter-width        : 1em;
-$grid-padding        : 2em;
+$column-width        : 5.7%;
+$gutter-width        : 2.096%;
+$grid-padding        : 4.19%;
 }
 
  @include media($fab...) {
-$total-columns       : 6;
-$column-width        : 3.500em;
-$gutter-width        : 1em;
-$grid-padding        : 2em;
+$total-columns       : 12;
+$column-width        : 6.1%;
+$gutter-width        : 1.69%;
+$grid-padding        : 3.389%;
 }
 
  @include media($tab...) {
 $total-columns       : 12;
-$column-width        : 3.8em;
-$gutter-width        : 2em;
-$grid-padding        : 4em;
+$column-width        : 3.837%;
+$gutter-width        : 3.947%;
+$grid-padding        : 5.287%;
 }
 
  @include media($desk) {

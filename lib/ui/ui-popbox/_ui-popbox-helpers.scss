@@ -1,4 +1,7 @@
 
+
+@mixin popbox {
+
 %popbox {
 @include scheme-purity;	
 display:none;
@@ -17,7 +20,7 @@ width: 0;
 } //Close After
 
 } //Close Popbox
-
+} //Close Mixin
 
 
 @mixin ui-popbox($element:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {

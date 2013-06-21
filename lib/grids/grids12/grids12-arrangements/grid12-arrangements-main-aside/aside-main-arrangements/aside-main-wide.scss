@@ -1,0 +1,92 @@
+
+@mixin aside-main-wide($element: '.aside-main-wide')  {
+/* ***************************************** */
+/*  Layotus: Aside-Main-Narrow 
+Displays Aside then Main with aside taking up a smaller column size (e.g. two column layout)  
+Aside is on the left */
+/* ***************************************** */
+		
+	#{$element} {
+
+	@include span-columns(12 omega, 12);		
+	
+	> .content-aside {
+		@include span-columns(5 , 12);	
+	}
+	
+	> .content-main {
+		@include span-columns(7 omega, 12);		
+	}
+	
+	> .content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	} //Close Class
+	} //Close Mixin
+
+
+@mixin aside-main-wide-mob-p($element: '.aside-main-wide-p' )  {
+
+	#{$element} {
+@include  span-columns(12 omega, 12);	
+
+> .content-aside {
+	@include  span-columns(12 omega, 12);
+}
+
+> .content-main {
+@include  span-columns(12 omega, 12);
+}
+
+	} //Close Class
+	} //Close Mixin
+
+
+@mixin aside-main-wide-mob-l($element: '.aside-main-wide-mob-l' ) {
+	@include aside-main-wide-mob-p($element: $element);
+}
+
+
+
+@mixin aside-main-wide-fab($element: '.aside-main-wide-fab' ) {
+	#{$element} {
+@include  span-columns(12 omega, 12);	
+
+> .content-aside {
+	@include  span-columns(4, 12);
+}
+
+> .content-main {
+display:none;
+@include  span-columns(8 omega, 12);
+}
+
+	
+	} //Close Class
+	} //Close Mixin
+
+
+
+@mixin aside-main-wide-tab($element: '.aside-main-wide-tab' ) {
+@include aside-main-wide-fab($element: $element);
+}
+
+@mixin aside-main-wide-desk($element: '.aside-main-wide-desk' ) {
+	@include aside-main-wide($element: $element);
+}
+
+
+@mixin aside-main-wide-r($element: '.aside-main-wide') {
+@include media($mob...){ 
+@include aside-main-wide-mob-p($element: $element);
+}
+
+@include media($pads...){ 
+	@include aside-main-wide-fab($element: $element);
+}
+
+@include media($desk){ 
+@include aside-main-wide-desk($element: $element);
+}
+}

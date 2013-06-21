@@ -40,6 +40,11 @@
 	@mixin vr-section-inside-bottom-tab {
 	@include rem('padding-bottom', 20px);
 		}
+		
+			@mixin vr-section-inside-tab {
+	@include rem('padding-top', 20px);
+	@include rem('padding-bottom', 20px);
+		}
 
 
 @mixin vr-section-box-top-tab {
@@ -130,8 +135,7 @@
 }
 
 @mixin vr-intro-2-tab {
-		@include rem('margin-top', -3px);
-		@include rem('margin-bottom', 5px);
+		@include rem('margin-bottom', 10px);
 }
 
 @mixin vr-intro-3-tab {

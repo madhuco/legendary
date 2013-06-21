@@ -10,17 +10,10 @@
 }
 
 @mixin t-title-2-fab {
- @include rem('font-size', 25px);
- @include rem('line-height', 27px);
+ @include rem('font-size', 28px);
+ @include rem('line-height', 30px);
 }
 
-
-
-
-@mixin t-title-2-fab {
- @include rem('font-size', 25px);
- @include rem('line-height', 27px);
-}
 
 @mixin t-title-3-fab {
  @include rem('font-size', 18px);
@@ -140,17 +133,25 @@
 // ***************************************** 
 
 @mixin t-footer-heading-fab {
-
+ @include rem('font-size', 14px);
+ @include rem('line-height', 20px)
 }
 
 @mixin t-footer-text-fab {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 20px)
+
 }
 
 @mixin t-footer-link-fab {
+ @include rem('font-size', 12px);
+ @include rem('line-height', 20px)
 }
 
 
 @mixin t-footer-small-fab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 20px)
 }
 
 
@@ -199,8 +200,8 @@ display:none;
 }
 
 @mixin t-ui-navigation-fab {
-@include rem('font-size', 16px);
- @include rem('line-height', 20px);
+@include rem('font-size', 14px);
+ @include rem('line-height', 17px);
 }
 
 @mixin t-ui-navigation-secondary-fab {

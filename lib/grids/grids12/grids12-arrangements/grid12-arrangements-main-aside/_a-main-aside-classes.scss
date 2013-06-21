@@ -1,9 +1,5 @@
 @import "0-a-main-aside-helpers";
 
-.spirirt {
-	alpha:karone;
-}
-
 @include  main-aside-50-r();
 @include  aside-main-50-r();
 
@@ -18,3 +14,6 @@
 
 @include  main-aside-slim-r();
 @include  aside-main-slim-r();
+
+@include  main-aside-wide-r();
+@include  aside-main-wide-r();

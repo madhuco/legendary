@@ -11,6 +11,10 @@
 
 /* ***** Mobile Portrait Grid  ***** */
  .grids12 {
+$total-columns       : 12;
+$column-width        : 5.85%;
+$gutter-width        : 1.6%;
+$grid-padding        : 6.25%;
  @include container;
  @include susy-grid-background;
 }
@@ -18,9 +22,12 @@
 }
 
 @include media($mob-l...) {
-
 /* ***** Mobile Portrait Grid  ***** */
  .grids12 {
+$total-columns       : 12;
+$column-width        : 5.7%;
+$gutter-width        : 2.096%;
+$grid-padding        : 4.19%;
  @include container;
  @include susy-grid-background;
 }
@@ -29,8 +36,15 @@
 
 
  @include media($fab...) {
+
+
 /* ***** Fablet Grid  ***** */
  .grids12 {
+$total-columns       : 12;
+$column-width        : 6.1%;
+$gutter-width        : 1.69%;
+$grid-padding        : 3.389%;
+
  @include container;
  @include susy-grid-background;
 }
@@ -39,8 +53,14 @@
 }
 
  @include media($tab...) {
+
+
 /* ***** Tablet Grid  ***** */
  .grids12 {
+ $total-columns       : 12;
+$column-width        : 3.837%;
+$gutter-width        : 3.947%;
+$grid-padding        : 5.287%;
  @include container;
  @include susy-grid-background;
 }
@@ -52,6 +72,10 @@
 
 	/* ***** Desktop Grid  ***** */ 
  .grids12 {
+$total-columns       : 12;
+$column-width        : 4.5em;
+$gutter-width        : 3em;
+$grid-padding      	 : 4em;	 
  @include container;
  @include susy-grid-background;
 }

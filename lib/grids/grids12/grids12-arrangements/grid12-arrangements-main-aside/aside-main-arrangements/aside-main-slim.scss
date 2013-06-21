@@ -10,16 +10,16 @@ Aside is on the left */
 
 	@include span-columns(12 omega, 12);		
 	
-	.content-aside {
+	> .content-aside {
 		@include span-columns(3, 12);	
 	}
 	
-	.content-main {
+	> .content-main {
 		@include span-columns(9 omega, 12);		
 	}
 	
 
-	.content-footer {
+	> .content-footer {
 		@include span-columns(12 omega, 12);	
 	}
 
@@ -32,11 +32,11 @@ Aside is on the left */
 	#{$element} {
 @include  span-columns(12 omega, 12);	
 
-.content-aside {
+> .content-aside {
 	@include  span-columns(12 omega, 12);
 }
 
-.content-main {
+> .content-main {
 @include  span-columns(12 omega, 12);
 }
 
@@ -54,11 +54,11 @@ Aside is on the left */
 	#{$element} {
 @include  span-columns(12 omega, 12);	
 
-.content-aside {
+> .content-aside {
 	@include  span-columns(4, 12);
 }
 
-.content-main {
+> .content-main {
 display:none;
 @include  span-columns(8 omega, 12);
 }

@@ -1,0 +1,4 @@
+@import "0-layouts-pager-arrow-helpers";
+
+@include layouts-pager-arrow-layout($element: '.layouts-pager-arrow-grid');
+@include layouts-pager-arrow-grid-r($element: '.layouts-pager-arrow-grid');
