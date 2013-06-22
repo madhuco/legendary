@@ -10,6 +10,7 @@ Breaks up pages into smaller pages which can be displayed horizontally. */
 /* ***************************************** */
 	
 #{$element}	{
+	clear:both;
 	
 .page {
 	display:none;

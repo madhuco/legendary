@@ -1,0 +1,40 @@
+
+
+@mixin follower-leader-layered($element: '.follower-leader-layered' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-layered 
+Main Takes up the full width of the page.
+Aside is layered underneath it. */
+/* ***************************************** */
+
+	#{$element}, #{$element} > .content-leader, #{$element} > .content-follower, #{$element} > .content-footer  {
+		@include span-columns(12 omega, 12);
+
+	}
+
+}
+
+
+@mixin follower-leader-layered-mob-p($element: '.follower-leader-layered-mob-p' ) {
+	@include follower-leader-layered($element: $element);
+}
+
+@mixin follower-leader-layered-mob-l($element: '.follower-leader-layered-mob-l' ) {
+	@include follower-leader-layered($element: $element);
+}
+
+@mixin follower-leader-layered-fab($element: '.follower-leader-layered-fab' ) {
+	@include follower-leader-layered($element: $element);
+}
+
+@mixin follower-leader-layered-tab($element: '.follower-leader-layered-tab' ) {
+	@include follower-leader-layered($element: $element);
+}
+
+@mixin follower-leader-layered-desk($element: '.follower-leader-layered-desk' ) {
+	@include follower-leader-layered($element: $element);
+}
+
+@mixin follower-leader-layered-r($element: '.follower-leader-layered') {
+@include follower-leader-layered($element: $element);
+}

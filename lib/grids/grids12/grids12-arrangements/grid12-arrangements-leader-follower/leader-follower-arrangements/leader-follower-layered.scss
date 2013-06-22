@@ -1,0 +1,43 @@
+
+
+@mixin leader-follower-layered($element: '.leader-follower-layered' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-layered 
+Main Takes up the full width of the page.
+Aside is layered underneath it. */
+/* ***************************************** */
+
+	#{$element}, #{$element} > .content-leader, #{$element} > .content-follower, #{$element} > .content-footer  {
+		@include span-columns(12 omega, 12);
+
+	}
+
+}
+
+
+
+
+
+@mixin leader-follower-layered-mob-p($element: '.leader-follower-layered-mob-p' ) {
+	@include leader-follower-layered($element: $element);
+}
+
+@mixin leader-follower-layered-mob-l($element: '.leader-follower-layered-mob-l' ) {
+	@include leader-follower-layered($element: $element);
+}
+
+@mixin leader-follower-layered-fab($element: '.leader-follower-layered-fab' ) {
+	@include leader-follower-layered($element: $element);
+}
+
+@mixin leader-follower-layered-tab($element: '.leader-follower-layered-tab' ) {
+	@include leader-follower-layered($element: $element);
+}
+
+@mixin leader-follower-layered-desk($element: '.leader-follower-layered-desk' ) {
+	@include leader-follower-layered($element: $element);
+}
+
+@mixin leader-follower-layered-r($element: '.leader-follower-layered') {
+@include leader-follower-layered($element: $element);
+}

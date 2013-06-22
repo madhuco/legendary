@@ -7,89 +7,98 @@
     position: relative;	
 	display:block;
 	width:100%;
-}
+	}
 
-
+/*
 .img img {	
 	display:none;
 }
-
+*/
 
 .img .auto {	
-	height: auto;    
-    width: auto;
-    min-width: 100%;
-    position: absolute;
-    max-height: 100%;
-	display:none;
-
+	margin: auto;
+	width:100%;
+	height:100%;
 }
 
-.img img[data-imgtype="all"] {
+[data-device] {
+	display:none;
+}
+
+
+[data-device="all"] {
 	display:block;
 }
 
 
 @include media($mob-p...){ 
-.img img[data-imgtype="mob-p"] {
+[data-device="mob-p"] {
 	display:block;
 }
 
-.img img[data-imgtype="mob"] {
+[data-device="mob"] {
 	display:block;
 }
 
-.img img[data-imgtype="portables"] {
+[data-device="portables"] {
 	display:block;
 }
 
 
-.img img[data-imgtype="devices"] {
+[data-device="devices"] {
 	display:block;
 }
 }
 
 
 @include media($mob-l...){ 
-.img img[data-imgtype="mob-l"] {
+[data-device="mob-l"] {
+	display:block;
+}
+
+[data-device="mob-lplus"] {
 	display:block;
 }
 
 
-.img img[data-imgtype="mob"] {
+[data-device="mob"] {
 	display:block;
 }
 
-.img img[data-imgtype="portables"] {
+[data-device="portables"] {
 	display:block;
 }
 
 
-.img img[data-imgtype="devices"] {
+[data-device="devices"] {
 	display:block;
 }
 }
 
 
 @include media($fab...){ 
-.img img[data-imgtype="fab"] {
+[data-device="fab"] {
 	display:block;
 }
 
-.img img[data-imgtype="portables"] {
+[data-device="portables"] {
 	display:block;
 }
 
 
-.img img[data-imgtype="devices"] {
+[data-device="devices"] {
 	display:block;
 }
 
-.img img[data-imgtype="pads"] {
+[data-device="pads"] {
 	display:block;
 }
 
-.img img[data-imgtype="fabplus"] {
+[data-device="fabplus"] {
+	display:block;
+}
+
+[data-device="mob-lplus"] {
 	display:block;
 }
 
@@ -97,26 +106,27 @@
 
 
 @include media($tab...){ 
-.img img[data-imgtype="tab"] {
+[data-device="tab"] {
 	display:block;
 }
 
-
-
-
-.img img[data-imgtype="devices"] {
+[data-device="devices"] {
 	display:block;
 }
 
-.img img[data-imgtype="pads"] {
+[data-device="pads"] {
 	display:block;
 }
 
-.img img[data-imgtype="fabplus"] {
+[data-device="fabplus"] {
 	display:block;
 }
 
-.img img[data-imgtype="tabplus"] {
+[data-device="tabplus"] {
+	display:block;
+}
+
+[data-device="mob-lplus"] {
 	display:block;
 }
 
@@ -124,15 +134,19 @@
 
 
 @include media($desk...){ 
-.img img[data-imgtype="desk"] {
+[data-device="desk"] {
 	display:block;
 }
 
-.img img[data-imgtype="fabplus"] {
+[data-device="fabplus"] {
 	display:block;
 }
 
-.img img[data-imgtype="tabplus"] {
+[data-device="tabplus"] {
+	display:block;
+}
+
+[data-device="mob-lplus"] {
 	display:block;
 }
 

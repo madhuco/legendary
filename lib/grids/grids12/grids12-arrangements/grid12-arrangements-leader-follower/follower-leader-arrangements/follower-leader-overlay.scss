@@ -1,0 +1,103 @@
+@mixin follower-leader-overlay-50($element: '.follower-leader-overlay-50' ) {
+/* ***************************************** */
+/*  Layotus: Main-Aside-overlay 
+Aside and Main are split into equal columns 
+Main is overlayed on top of Aside  */
+/* ***************************************** */
+	#{$element} {
+		@include span-columns(12 omega, 12);
+	position:relative;		
+	
+	.content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+	
+	.unit-row {
+	position:relative;
+	}
+
+} //Close Class
+} //Close Mixin
+
+
+
+
+@mixin follower-leader-overlay-50-mob-p($element: '.follower-leader-overlay-50-mob-p' ) {
+	#{$element} {
+		.content-leader {
+	@include span-columns(12 omega, 12);	
+
+}
+	
+	.content-follower {
+display:none; 
+	}
+	
+} //Close Class
+} //Close Mixin
+
+@mixin follower-leader-overlay-50-mob-l($element: '.follower-leader-overlay-50-mob-l' ) {
+	@include follower-leader-overlay-50($element: $element);
+}
+
+@mixin follower-leader-overlay-50-fab($element: '.follower-leader-overlay-50-fab' ) {
+
+#{$element}	{
+	
+	.content-follower {
+	@include span-columns(6, 12);	
+	}
+	
+	.content-leader {
+	@include span-columns(6 omega, 12);	
+	}
+	
+	
+} //Close $element
+} // Close Mixin
+
+@mixin follower-leader-overlay-50-tab($element: '.follower-leader-overlay-50-tab' ) {
+	@include follower-leader-overlay-50-fab($element: $element);
+}
+
+@mixin follower-leader-overlay-50-desk($element: '.follower-leader-overlay-50-desk' ) {
+	
+#{$element}	{
+	
+	.content-leader {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+	}
+	
+	.content-follower {
+	@include span-columns(6, 12);	
+	}
+	
+} //Close $element
+} // Close Mixin
+
+@mixin follower-leader-overlay-50-r($element: '.follower-leader-overlay-50') {
+@include follower-leader-overlay-50($element: $element);
+
+@include media($mob...){ 
+@include follower-leader-overlay-50-mob-p($element: $element);
+}
+
+@include media($fabplus...){ 
+@include follower-leader-overlay-50-fab($element: $element);
+}
+
+
+@include media($desk...){ 
+#{$element}	{
+.content-leader {
+	@include span-columns(6, 12);	
+	position:absolute;
+	top:0;
+	right:0;	
+	}
+} //Close Element
+} //Close Mq
+} //Close Mixin
