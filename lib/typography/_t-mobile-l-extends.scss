@@ -11,16 +11,12 @@
 
 
 %t-cta-primary {
- @include rem('font-size', 18px);	
- @include rem('line-height', 21px);	
- @include rem('letter-spacing', -1px);
+@include t-cta-primary-mob-l;
 }
 
 
 %t-cta-secondary  {
- @include rem('font-size', 22px);	
- @include rem('line-height', 26px);	
- @include rem('letter-spacing', -1px);
+@include t-cta-secondary-mob-l;
 }
 
 }

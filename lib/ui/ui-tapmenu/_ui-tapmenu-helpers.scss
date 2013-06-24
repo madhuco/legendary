@@ -1,4 +1,4 @@
-@mixin ui-tapmenu($element: '.ui-tapmenu', $direction: right) {
+@mixin ui-tapmenu($element: '.ui-tapmenu', $direction: right, $style: true) {
 
 /* ***************************************** */
 /*  Tap Menu Lets you create Menus (with Javascript)*/
@@ -8,19 +8,38 @@
 #{$element} {
 position:absolute;	
 display:none;
-} //Close $element
-
-@include media($portables...) { 
-#{$element} {
-position:fixed;
 width:100%;	
 bottom:0;
+left:0;
+right:0;
+@if $style == true {
+@extend %t-ui-navigation; 	
+background:#FFF;
+
+.title {
+margin:0;	
+overflow:auto;
+@include rem(padding, 15px 0);
+width:100%;
+text-align:center;
+}
+
+.tap-btn-close {
+float:right;	
+position:relative;
 }
 
 
-} //Close Mixin
+.tap-btn-close:after{
+			@include rem(font-size, 30px);
+			@include rem(margin-left, 10px);
+			@include icon($icon-remove-circle);	
+			position:absolute;
+}
 
+} //Close If
 
+} //Close Element
 
 /* ***************************************** */
 /*  Hide tapmenu-anchor for no jquery enabled situations*/

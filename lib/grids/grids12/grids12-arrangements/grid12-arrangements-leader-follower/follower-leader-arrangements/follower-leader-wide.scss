@@ -1,21 +1,20 @@
-
-@mixin follower-leader-wide($element: '.follower-leader-wide')  {
+@mixin follower-leader-wide($element: '.follower-leader-wide' ) {
 /* ***************************************** */
-/*  Layotus: Aside-Main-Narrow 
-Displays Aside then Main with follower taking up a smaller column size (e.g. two column layout)  
-Aside is on the left */
+/*  Layotus: Main-Aside-Narrow 
+Displays Main then Aside with follower taking up a smaller column size (e.g. two column layout)  
+Aside is on the right */
 /* ***************************************** */
-		
-	#{$element} {
 
-	@include span-columns(12 omega, 12);		
 	
-	> .content-follower {
-		@include span-columns(5 , 12);	
-	}
+	#{$element} {
+		@include span-columns(12 omega, 12);		
 	
 	> .content-leader {
-		@include span-columns(7 omega, 12);		
+		@include span-columns(10 omega, 12);		
+	}
+	
+	> .content-follower {
+		@include span-columns(2, 12);	
 	}
 	
 	> .content-footer {
@@ -23,70 +22,62 @@ Aside is on the left */
 	}
 
 	} //Close Class
-	} //Close Mixin
+
+} //Close Mixin
 
 
-@mixin follower-leader-wide-mob-p($element: '.follower-leader-wide-p' )  {
 
-	#{$element} {
-@include  span-columns(12 omega, 12);	
-
-> .content-follower {
-	@include  span-columns(12 omega, 12);
-}
-
-> .content-leader {
-@include  span-columns(12 omega, 12);
-}
-
-	} //Close Class
-	} //Close Mixin
-
+@mixin follower-leader-wide-mob-p($element: '.follower-leader-wide-mob-p' ) {
+		#{$element} {
+	
+	> .content-leader {
+		@include span-columns(12 omega, 12);		
+	}
+	
+	> .content-follower {
+		@include span-columns(12 omega, 12);	
+	}
+	
+} //Close Class
+} //Close Mixin
 
 @mixin follower-leader-wide-mob-l($element: '.follower-leader-wide-mob-l' ) {
 	@include follower-leader-wide-mob-p($element: $element);
 }
 
-
-
 @mixin follower-leader-wide-fab($element: '.follower-leader-wide-fab' ) {
-	#{$element} {
-@include  span-columns(12 omega, 12);	
-
-> .content-follower {
-	@include  span-columns(4, 12);
+	@include follower-leader-wide-mob-p($element: $element);
 }
-
-> .content-leader {
-display:none;
-@include  span-columns(8 omega, 12);
-}
-
-	
-	} //Close Class
-	} //Close Mixin
-
-
 
 @mixin follower-leader-wide-tab($element: '.follower-leader-wide-tab' ) {
-@include follower-leader-wide-fab($element: $element);
-}
+	#{$element} {
+	
+	> .content-leader {
+		@include span-columns(9 omega, 12);		
+	}
+	
+	> .content-follower {
+		@include span-columns(3, 12);	
+	}
+	
+} //Close Class
+} //Close Mixin
 
 @mixin follower-leader-wide-desk($element: '.follower-leader-wide-desk' ) {
 	@include follower-leader-wide($element: $element);
 }
 
-
 @mixin follower-leader-wide-r($element: '.follower-leader-wide') {
-@include media($mob...){ 
+@include follower-leader-wide($element: $element);
+
+@include media($portables...){ 
 @include follower-leader-wide-mob-p($element: $element);
 }
 
-@include media($pads...){ 
-	@include follower-leader-wide-fab($element: $element);
+@include media($tab...){ 
+@include follower-leader-wide-tab($element: $element);
 }
 
-@include media($desk){ 
-@include follower-leader-wide-desk($element: $element);
 }
-}
+
+

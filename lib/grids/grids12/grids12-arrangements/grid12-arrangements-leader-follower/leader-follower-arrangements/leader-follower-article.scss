@@ -1,0 +1,142 @@
+
+@mixin leader-follower-article($element: '.leader-follower-article' ) {
+
+#{$element} {
+/* ***************************************** */
+/*  page: Desktop Specific Styles */
+/* ***************************************** */
+
+@include span-columns(12 omega, 12);
+
+> .content-leader {
+@include span-columns(7, 12);
+}
+
+
+> .content-follower {
+@include span-columns(5 omega, 12);
+}
+
+> .content-footer {
+	@include span-columns(5 omega, 12);
+}
+
+} //Close $element
+
+#{$element}.bleed {
+
+> .content-leader {
+@include span-columns(7, 12);
+margin-left: - gutter(9);
+}
+
+}
+
+} //Close Mixin
+
+
+@mixin leader-follower-article-mob-p($element: '.leader-follower-article-mob-p' ) {
+
+/* ***************************************** */
+/*  page: Mobile Specific Styles */
+/* ***************************************** */
+
+#{$element} {
+
+
+@include span-columns(12 omega, 12);
+position:relative;
+
+
+ > .content-leader {
+@include span-columns(4, 12);
+}
+
+ > .content-follower {
+@include span-columns(8 omega, 12);
+}
+
+} //Close $element
+} //Close Mixin
+
+
+@mixin leader-follower-article-mob-l($element: '.leader-follower-article-mob-l' ) {
+	@include leader-follower-article-mob-p($element: $element);
+}
+
+@mixin leader-follower-article-tab($element: '.leader-follower-article-tab' ) {
+	@include leader-follower-article-tab($element: $element);
+}
+
+@mixin leader-follower-article-fab($element: '.leader-follower-article-fab' ) {
+#{$element} {
+/* ***************************************** */
+/*  page: Desktop Specific Styles */
+/* ***************************************** */
+
+@include span-columns(12 omega, 12);
+
+> .content-leader {
+@include span-columns(6, 12);
+}
+
+
+> .content-follower {
+@include span-columns(6 omega, 12);
+}
+
+> .content-footer {
+	@include span-columns(6 omega, 12);
+}
+
+} //Close $element
+}
+
+@mixin leader-follower-article-desk($element: '.leader-follower-article-desk' ) {
+	@include leader-follower-article($element: $element);
+}
+
+@mixin leader-follower-article-r($element: '.leader-follower-article') {
+@include media($mob...){ 
+@include leader-follower-article-mob-p($element: $element);
+}
+
+@include media($fabplus){ 
+@include leader-follower-article-fab($element: $element);
+}
+
+@include media($desk){ 
+@include leader-follower-article($element: $element);
+}
+
+@include media($portables...){ 
+
+
+#{$element}.reading {
+/* ***************************************** */
+/*  page: Desktop Specific Styles */
+/* ***************************************** */
+
+
+
+
+> .content-leader {
+@include span-columns(12 omega, 12);
+}
+
+
+> .content-follower {
+@include span-columns(12, 12);
+}
+
+> .content-footer {
+	@include span-columns(12 omega, 12);
+} 
+
+} //Close Element
+} //Close MQ
+
+
+} //Close Mixin
+
+

@@ -7,12 +7,11 @@
 @mixin t-cta-primary-mob-l {
  @include rem('font-size', 18px);	
  @include rem('line-height', 21px);	
- @include rem('letter-spacing', -1px);
+
 }
 
 
 @mixin t-cta-secondary-mob-l {
  @include rem('font-size', 22px);	
  @include rem('line-height', 26px);	
- @include rem('letter-spacing', -1px);
 }

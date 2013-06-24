@@ -19,19 +19,19 @@ $jq-top: 100px !default;
 
 @include media($mob...) {
 html body .mobshow {
- display:block !important;
+ display:block;
 }
- html body .mobhide {
- display:none !important;
+ html body #wrapper  .mobhide {
+ display:none ;
 }
- html body .mob-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .mob-widthexpand {
+ width:100%;
+ float:left;
 }
 
 
 html body .mob-widthexpand.panel-region-logo  {
-	width:ignore ;
+	width:ignore;
 }
 
 .tap-btn {
@@ -47,14 +47,14 @@ html body .taptabs-mob-expanded {
 
  @include media($mob-p...) {
 html body .mobpshow {
- display:block !important;
+ display:block ;
 }
- html body .mobphide {
- display:none !important;
+ html body #wrapper  .mobphide {
+ display:none ;
 }
- html body .mobp-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .mobp-widthexpand {
+ width:100% ;
+ float:left ;
 }
 
 html body .taptabs-mob-p-expanded {
@@ -65,14 +65,14 @@ html body .taptabs-mob-p-expanded {
 
  @include media($mob-l...) {
 html body .moblshow {
- display:block !important;
+ display:block ;
 }
- html body .moblhide {
- display:none !important;
+ html body #wrapper  .moblhide {
+ display:none ;
 }
- html body .mobl-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .mobl-widthexpand {
+ width:100% ;
+ float:left ;
 }
 html body .taptabs-mob-l-expanded {
 	@include expanded;
@@ -80,30 +80,30 @@ html body .taptabs-mob-l-expanded {
 }
 
  @include media($fab...) {
- html body .fabshow {
- display:block !important;
+ html body #wrapper  .fabshow {
+ display:block ;
 }
- html body .fabhide {
- display:none !important;
+ html body #wrapper  .fabhide {
+ display:none;
 }
- html body .fab-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .fab-widthexpand {
+ width:100% ;
+ float:left ;
 }
 html body .taptabs-fab-expanded {
 	@include expanded;
 }
 }
  @include media($tab...) {
- html body .tabshow {
- display:block !important;
+ html body #wrapper  .tabshow {
+ display:block ;
 }
- html body .tabhide {
- display:none !important;
+ html body #wrapper  .tabhide {
+ display:none ;
 }
- html body .tab-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .tab-widthexpand {
+ width:100% ;
+ float:left ;
 }
 html body .taptabs-tab-expanded {
 	@include expanded;
@@ -111,15 +111,15 @@ html body .taptabs-tab-expanded {
 }
 
 @include media($desk) {
- html body .deskshow {
- display:block !important;
+ html body #wrapper  .deskshow {
+ display:block ;
 }
- html body .deskhide {
- display:none !important;
+ html body #wrapper  .deskhide {
+ display:none ;
 }
- html body .desk-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .desk-widthexpand {
+ width:100% ;
+ float:left ;
 }
 html body .taptabs-desk-expanded {
 	@include expanded;
@@ -128,15 +128,15 @@ html body .taptabs-desk-expanded {
 
 
  @include media($portables...) {
- html body .portablesshow {
- display:inline-block !important;
+ html body #wrapper  .portablesshow {
+ display:inline-block ;
 }
- html body .portableshide {
- display:none !important;
+ html body #wrapper  .portableshide {
+ display:none ;
 }
- html body .portables-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .portables-widthexpand {
+ width:100% ;
+ float:left ;
 }
 html body .taptabs-portables-expanded {
 	@include expanded;
@@ -144,18 +144,18 @@ html body .taptabs-portables-expanded {
 }
 
  @include media($devices...) {
- html body .devicesshow {
- display:block !important;
+ html body #wrapper  .devicesshow {
+ display:block ;
 }
- html body .deviceshide {
- display:none !important;
+ html body #wrapper  .deviceshide {
+ display:none ;
 }
- html body .devices-widthexpand {
- width:100% !important;
- float:left !important;
+ html body #wrapper  .devices-widthexpand {
+ width:100% ;
+ float:left ;
 }
 
- html body .devices-maximise {
+ html body #wrapper  .devices-maximise {
 position:absolute;
 top:0;
 left:0;
@@ -170,16 +170,16 @@ html body .taptabs-devices-expanded {
 }
 
 html body .show {
-	display: block !important;
+	display: block ;
 }
 
 html body .hide {
-	display: none !important;
+	display: none ;
 }
 
 html body .widthexpand {
-	width: 100% !important;
-	float: left !important;
+	width: 100% ;
+	float: left ;
 }
 
 .z-index-top {

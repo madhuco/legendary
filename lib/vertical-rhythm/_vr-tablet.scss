@@ -160,6 +160,11 @@
 }
 
 
+
+%vr-footer-heading {
+		@include vr-footer-heading-tab;
+}
+
 %vr-footerbumper {
 	@include vr-footerbumper-tab;
 }

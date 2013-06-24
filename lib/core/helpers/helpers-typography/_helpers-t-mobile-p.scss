@@ -39,7 +39,7 @@
 
 @mixin t-intro-1-mob {
  @include rem('font-size', 18px);
- @include rem('line-height', 26px);
+ @include rem('line-height', 28px);
 }
 
 @mixin t-intro-2-mob {
@@ -70,16 +70,16 @@
 
 @mixin t-body-text-mob {
  @include rem('font-size', 14px);
- @include rem('line-height', 20px);
+ @include rem('line-height', 22px);
 }
 
 @mixin t-body-small-mob {
- @include rem('font-size', 14px);
- @include rem('line-height', 16px);
+ @include rem('font-size', 12px);
+ @include rem('line-height', 22px);
 }
 
 @mixin t-body-label-mob {
- @include rem('font-size', 16px);
+ @include rem('font-size', 14px);
  @include rem('line-height', 18px);
 }
 
@@ -248,7 +248,7 @@ display:none;
 // ***************************************** 
 
 @mixin t-cta-primary-mob {
- @include rem('font-size', 20px);	
+ @include rem('font-size', 18px);	
  @include rem('line-height', 16px);	
 }
 

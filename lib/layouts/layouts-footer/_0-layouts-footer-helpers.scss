@@ -179,9 +179,14 @@ display:none;
 	#{$element} {
 	@extend %vr-section-box-top;
 	@include bgcolor-footer-mono-primary-3d;
+
+.unit {
+		@extend %vr-breather;
+}
 	
 	.unit-heading {
 	@extend %t-footer-heading;	
+	@extend %vr-footer-heading;	
 	}
 	
 	p {
@@ -190,8 +195,11 @@ display:none;
 	}
 	
 	a {
+	clear:both;
 	@include txtcolor-darker;
+	@extend %vr-spacer;
 	display:block;
+	@extend %t-footer-link;
 	}
 	
 	.unit-footer {
@@ -214,6 +222,9 @@ display:none;
 	@include media($pads...){ 
 	
 	#{$element} {
+
+	
+	
 		.unit-heading:after {
 		@include rem(margin-left, 5px);
 		@include icon($icon-minus-sign);	
@@ -223,8 +234,21 @@ display:none;
 
 
 	#{$element}.collapsed {
+		margin-bottom:0;
+		padding:0;
+	
+			.unit {
+		border-right:1px solid $scratch;	
+			}	
+	
+		
 		.unit-heading:after {
 		@include icon($icon-plus-sign);	
+		}
+		
+		
+		.extra {
+		@include box-sizing(border-box);
 		}
 		
 	} //Close Element

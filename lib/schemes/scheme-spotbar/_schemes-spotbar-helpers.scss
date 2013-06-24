@@ -1,10 +1,11 @@
 @mixin scheme-spotbar {
 
-@include bgcolor-offwhite-flat;
+@include bgcolor-offwhite;
 @include border-radius(5px);
 @include rem(padding, 10px 0);
 	@include box-sizing(border-box);
 	clear:both;
+	@content;
 
  .content-footer {
 	@include bgcolor-ribbon;

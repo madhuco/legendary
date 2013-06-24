@@ -64,6 +64,7 @@ text-align:center;
 }
 
 
+
 #{$root} .title {
 	@include typeface-light;
 @extend %t-title-1;
@@ -102,64 +103,6 @@ text-align:center;
 }
 
 
-.aside-main-article,
-.main-aside-article {
-@include span-columns(12 omega, 12);
-}
-
-
-@include media($tabplus){ 
-
-/* ***************************************** */
-/*  page: Desktop Specific Styles */
-/* ***************************************** */
-
-.aside-main-article > .content-aside, .aside-main-article > .content-body > .content-aside,
-.main-aside-article > .content-main, .aside-main-article > .content-body > .content-aside {
-@include span-columns(7, 12);
-}
-
-.main-aside-article > .content-footer, .main-aside-article > .content-body > .content-footer   {
-@include span-columns(7 omega, 12);
-}
-
-.main-aside-article > .content-aside, .main-aside-article > .content-body >  .content-aside,
-.aside-main-article > .content-main, .aside-main-article  > .content-body >  .content-main  {
-@include span-columns(5 omega, 12);
-}
-
-.aside-main-article > .content-footer,
-.aside-main-article > .content-body > .content-footer {
-	@include span-columns(5 omega, 12);
-}
-
-} //Close Media Query
-
-
-
-@include media($portables...){ 
-
-/* ***************************************** */
-/*  page: Mobile Specific Styles */
-/* ***************************************** */
-
-.aside-main-article, .aside-main-article > .content-body,
-.main-aside-article, .main-aside-article > .content-body  {
-@include span-columns(12 omega, 12);
-position:relative;
-}
-
-.aside-main-article > .content-aside, .aside-main-article > .content-body > .content-aside,
-.main-aside-article > .content-main, .main-aside-article > .content-body > .content-main {
-@include span-columns(4, 12);
-}
-
-.main-aside-article > .content-aside, .main-aside-article > .content-body > .content-aside,
-.aside-main-article > .content-main,  .aside-main-article > .content-body > .content-main{
-@include span-columns(8 omega, 12);
-}
-
-} //Close Media Query
 
 
 

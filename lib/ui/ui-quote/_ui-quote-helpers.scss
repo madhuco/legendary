@@ -1,33 +1,47 @@
 
-@mixin ui-solo-quote($element: '.ui-solo-quote') {
+@mixin ui-solo-quote($element: '.ui-solo-quote', $bottom: 0px) {
 
 #{$element} {
 
 	display: block;
+	position:relative;
 	
-	&:before {
+	&:after {
 		content: '\201C';
-@include rem(font-size, 240px);
-font-family:"Times New Roman", Times, serif;
-@include rem(margin-top, 70px);
-@include rem(margin-bottom, -30px);
+@include rem(font-size, 205px);
+font-family:Georgia, "Times New Roman", Times, serif;
 @include rem(line-height, 0px);
 display: block;
 float: left;
 @include rem(margin-right, 10px);
-color:#bebebe;
+color:$scratch;
+bottom:$bottom;
+position:absolute;
 	}
 	
 @content;
-	
 } //Close $element
+
+@include media($portables...){ 
+#{$element}:after {
+	@include rem(font-size, 150px);
+	}
+}
+
+@include media($mob...){ 
+#{$element}:after {
+	bottom: ($bottom + 16px)
+	}
+}
+
+
 } //Close Mixin
 
 
-@mixin ui-solo-quote-bars($element: 'ui-solo-quote-bars', $extend: false) {
+@mixin ui-solo-quote-bars($element: 'ui-solo-quote-bars', $extend: false,  $bottom: 0px) {
 #{$element} {
 @if $extend == false {
-@include ui-solo-quote;	
+@include ui-solo-quote($element: $element, $bottom: $bottom);	
 } 
 
 border-top: 0.5em solid #bebebe;	
@@ -42,17 +56,14 @@ display:block;
 } //Close Mixin
 
 
-@mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false) {
+@mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false, $bottom: 0px) {
 
 
 @if $extend == false {
-@include ui-solo-quote($element: $element) {
-	
-position:relative;
+@include ui-solo-quote($element: $element, $bottom: $bottom) {
 
-&:before {
-position:absolute;
-left:-0.55em;	
+&:after {
+	left:-0.45em;	
 }
 	@content;
 

@@ -41,12 +41,12 @@
 
 @mixin t-intro-1-tab {
  @include rem('font-size', 18px);
- @include rem('line-height', 20px);
+ @include rem('line-height', 28px);
 }
 
 @mixin t-intro-2-tab {
  @include rem('font-size', 18px);
- @include rem('line-height', 20px);
+ @include rem('line-height', 28px);
 }
 
 @mixin t-intro-3-tab {
@@ -78,13 +78,13 @@
 
 @mixin t-body-small-tab {
  @include rem('font-size', 13px);
- @include rem('line-height', 15px);
+ @include rem('line-height', 20px);
 letter-spacing:0;
 }
 
 @mixin t-body-label-tab {
- @include rem('font-size', 19px);
- @include rem('line-height', 22px);
+ @include rem('font-size', 14px);
+ @include rem('line-height', 16px);
 letter-spacing:0;
 }
 
@@ -135,8 +135,8 @@ letter-spacing:0;
 }
 
 @mixin t-footer-text-tab {
- @include rem('font-size', 14px);
- @include rem('line-height', 16px);
+ @include rem('font-size', 12px);
+ @include rem('line-height', 20px);
 }
 
 @mixin t-footer-link-tab {

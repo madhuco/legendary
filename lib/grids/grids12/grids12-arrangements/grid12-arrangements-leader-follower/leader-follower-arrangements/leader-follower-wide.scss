@@ -10,113 +10,74 @@ Aside is on the right */
 		@include span-columns(12 omega, 12);		
 	
 	> .content-leader {
-		@include span-columns(7, 12);		
+		@include span-columns(10, 12);		
 	}
 	
 	> .content-follower {
-		@include span-columns(5 omega, 12);	
+		@include span-columns(2 omega, 12);	
 	}
 	
 	> .content-footer {
 		@include span-columns(12 omega, 12);	
 	}
 
-	}
+	} //Close Class
 
-}
-
-@mixin leader-follower-wide($element: '.leader-follower-wide' ) {
-/* ***************************************** */
-/*  Layotus: Main-Aside-Narrow 
-Displays Main then Aside with follower taking up a smaller column size (e.g. two column layout)  
-Aside is on the right */
-/* ***************************************** */
-
-	
-	#{$element} {
-		@include span-columns(12 omega, 12);		
-	
-	> .content-leader {
-		@include span-columns(7, 12);		
-	}
-	
-	> .content-follower {
-		@include span-columns(5 omega, 12);	
-	}
-	
-	> .content-footer {
-		@include span-columns(12 omega, 12);	
-	}
-
-	}
-
-}
-
-
-
-
+} //Close Mixin
 
 
 
 @mixin leader-follower-wide-mob-p($element: '.leader-follower-wide-mob-p' ) {
-#{$element} {
-@include  span-columns(12 omega, 12);	
-
-> .content-follower {
-	@include  span-columns(12 omega, 12);
-}
-
-> .content-leader {
-@include  span-columns(12 omega, 12);
-}
-
+		#{$element} {
+	
+	> .content-leader {
+		@include span-columns(12 omega, 12);		
+	}
+	
+	> .content-follower {
+		@include span-columns(12 omega, 12);	
+	}
+	
 } //Close Class
 } //Close Mixin
 
-
-
-
 @mixin leader-follower-wide-mob-l($element: '.leader-follower-wide-mob-l' ) {
-	@include leader-follower-wide-mob-p;
+	@include leader-follower-wide-mob-p($element: $element);
 }
 
 @mixin leader-follower-wide-fab($element: '.leader-follower-wide-fab' ) {
-	#{$element} {
-@include  span-columns(12 omega, 12);	
-
-> .content-follower {
-	@include  span-columns(4 omega, 12);
+	@include leader-follower-wide-mob-p($element: $element);
 }
-
-> .content-leader {
-@include  span-columns(8, 12);
-}
-
-} //Close Class
-} //Close Mixin
-
-
 
 @mixin leader-follower-wide-tab($element: '.leader-follower-wide-tab' ) {
-@include leader-follower-wide-fab($element: $element);
-}
+	#{$element} {
+	
+	> .content-leader {
+		@include span-columns(9, 12);		
+	}
+	
+	> .content-follower {
+		@include span-columns(3 omega, 12);	
+	}
+	
+} //Close Class
+} //Close Mixin
 
 @mixin leader-follower-wide-desk($element: '.leader-follower-wide-desk' ) {
 	@include leader-follower-wide($element: $element);
 }
 
-
 @mixin leader-follower-wide-r($element: '.leader-follower-wide') {
+@include leader-follower-wide($element: $element);
 
-@include media($mob...){ 
-	@include leader-follower-wide-mob-p($element: $element);
-}
-
-@include media($pads...){ 
-	@include leader-follower-wide-fab($element: $element);
+@include media($portables...){ 
+@include leader-follower-wide-mob-p($element: $element);
 }
 
-@include media($desk){ 
-@include leader-follower-wide-desk($element: $element);
+@include media($tab...){ 
+@include leader-follower-wide-tab($element: $element);
 }
+
 }
+
+

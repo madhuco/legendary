@@ -5,7 +5,7 @@
 // ===============================================
 
 @mixin layouts-pager-arrow-layout($element: '.layouts-pager-arrow-layout') {
-@include layouts-pager-layout;
+@include layouts-pager-layout($element: $element);
 }
 
 

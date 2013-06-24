@@ -48,7 +48,7 @@
 
 @mixin t-intro-1-desk {
  @include rem('font-size', 20px);
- @include rem('line-height', 26px);
+ @include rem('line-height', 28px);
 }
 
 @mixin t-intro-2-desk {
@@ -86,13 +86,13 @@
 
 @mixin t-body-small-desk {
  @include rem('font-size', 12px);
- @include rem('line-height', 16px);
+ @include rem('line-height', 20px);
 letter-spacing:0;
 }
 
 @mixin t-body-label-desk {
  @include rem('font-size', 16px);
- @include rem('line-height', 22px);
+ @include rem('line-height', 20px);
 letter-spacing:0;
 }
 
@@ -146,8 +146,8 @@ letter-spacing:0;
 }
 
 @mixin t-footer-text-desk {
- @include rem('font-size', 14px);
- @include rem('line-height', 24px);
+ @include rem('font-size', 12px);
+ @include rem('line-height', 20px);
 
 }
 

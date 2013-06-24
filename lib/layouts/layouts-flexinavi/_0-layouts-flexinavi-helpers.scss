@@ -3,7 +3,7 @@
 // Tiles: Layout
 // ===============================================
 
-@mixin layouts-flexinavi-layout($element: '.layouts-flexinavi-layout', $display: 3, $top: 0, $top-tab:100px, $tapmode: false){
+@mixin layouts-flexinavi-layout($element: '.layouts-flexinavi-layout', $display: 3, $top: 0, $top-tab:100px, $barmode: false){
 /* ***************************************** */
 /*  FlexiNavi: Responsive Flexbile Navigation Bar*/
 /* ***************************************** */
@@ -16,57 +16,95 @@
 	  .main li {
 	   @include box-flex(1);	
 	  }
-		  
-	
 } //Close $element
 
-  #{$element}-menu#menu-main-menu{
+#{$element}-menu{
 	  display:none;	
+	  left:0;
+	  right:0;
 		  }
 	
 	
-	  #{$element}-menu#menu-main-menu .title  {
-width:100%;
-text-align:center;
-	  }
-	
-	  #{$element}-menu#menu-main-menu .title a {
-float:right;
-	  }
-	
 
+	  
+	  
+	  @include media($mob...){ 
 
+  .ui-tapmenu  {
+padding:0 20px;
+ }
+	 
+ 
+
+}
+
+	  
+
+	
 @include media($portables...){ 
 .primary-nav .main  {
 	display:none;
 }
 
-
-  #{$element}-menu#menu-main-menu {
+  .ui-tapmenu {
 	  top:$top;
+	  @include box-sizing(border-box);
 	  }
+
+.masthead .cta {
+display:none;	
+}
+
+.page-content.sub-page .masthead .cta {
+display:block;	
+}
+
+.page-content.sub-page .masthead .tap-btn-menu {
+display:none;	
+}
+
+
+
+}
+
+
+@include media($fab...){ 
+
+#{$element} .anchor {
+width: 100%;
+padding-right: inherit;
+}
+
+  .ui-tapmenu {
+padding:0 40px;
+
+ }
+	  
 
 }
 
 
 
 @include media($desk){ 
-	  #{$element}-menu #menu-main-menu, #{$element}  .ui-tapmenu-anchor  {
+	  #{$element}-menu, #{$element}  .anchor  {
 	  display:none;	
 	  }
 	  
-	  html body .show#{$element}-menu#menu-main-menu {
+	  html body .show#{$element}-menu {
 	  display:none !Important;	
 		  }
+		  
+		  
 }
 
 
 $main-none: ($display + 1);
+$menu-none: ($display - 1);
 
 
 @include media($tab...){ 
 
-#{$element}-menu#menu-main-menu .title {
+#{$element}-menu .title {
 display:none;	
 }
 
@@ -76,7 +114,7 @@ display:none;
 }
 
 
-#{$element}-menu#menu-main-menu li:nth-child(-n+#{$display}) {
+#{$element}-menu li:nth-child(-n+#{$menu-none}) {
 	display:none;
 }
 
@@ -90,21 +128,18 @@ display:none;
 #{$element} .main {
     float:left;
     height:100%;
-    padding-top: 100%;
-    margin-top: -100%;
-    padding-bottom: 100%;
-    margin-bottom: -100%;
-	width: 83%;
+	width: 78%;
 }
 
 #{$element} .main li {
-padding:2.6% 0;
+	overflow:auto;
 }
 
-#{$element} #main-menu {
+#{$element}-menu {
     float: right;	
 	width:16%;
 	@include box-sizing(border-box);
+	right:20px;
 }
 }
 
@@ -112,7 +147,15 @@ padding:2.6% 0;
 
 
 
-@if $tapmode == true {
+@if $barmode == true {
+	
+	
+@include media($fabplus...){ 
+#{$element}-bar {
+display:none;
+}
+}
+
 	
 	@include media($mob...){ 
 	
@@ -150,6 +193,9 @@ a {
 
 
 } //Close MQ
+
+
+
 } //Close if
 
 
@@ -171,10 +217,10 @@ a {
 
 
 
-@mixin layouts-flexinavi-grid-mob-p($element: '.layouts-flexinavi-grid-mob-p', $tapmode: false) {
+@mixin layouts-flexinavi-grid-mob-p($element: '.layouts-flexinavi-grid-mob-p', $barmode: false) {
 
 
-@if $tapmode == true {
+@if $barmode == true {
 	
 
 	
@@ -196,7 +242,7 @@ float:left;
 display:block;
 	}
 	
-	.ui-tapmenu-anchor {
+	.anchor {
 
 	}
 	
@@ -231,12 +277,12 @@ display:block;
 }
 
 
-@mixin layouts-flexinavi-grid-r($element: '.layouts-flexinavi-grid', $tapmode: false) {
+@mixin layouts-flexinavi-grid-r($element: '.layouts-flexinavi-grid', $barmode: false) {
 
 
-@if $tapmode == true {
+@if $barmode == true {
 @include media($mob...){ 
-@include layouts-flexinavi-grid-mob-p($element: $element, $tapmode: true);
+@include layouts-flexinavi-grid-mob-p($element: $element, $barmode: true);
 }
 }
 
@@ -254,7 +300,7 @@ display:block;
 // Tiles: Style
 // ===============================================
 
-@mixin layouts-flexinavi-style($element: '.layouts-flexinavi-grid-mob-p', $top:0, $top-tab:100px, $tapmode: false) {
+@mixin layouts-flexinavi-style($element: '.layouts-flexinavi-grid-mob-p', $top:0, $top-tab:100px, $barmode: false) {
 
 	
 	.tap-btn {
@@ -267,36 +313,27 @@ display:block;
  	text-align:center;
 	@include typeface-regular;	
 	color: $lighter;			
-	}
-
-
-#{$element}-menu {
-
-.tap-btn {
-@include rem(margin, 0 20px);
+	@include rem(margin, 0 20px);
 @include rem(padding-right, 50px);
 position:relative;
 	@extend %t-ui-navigation; 
 	border:1px solid $scratch;
+	
+	}
 
-&:after{
-			@include rem(font-size, 30px);
-			@include rem(margin-left, 10px);
-			@include icon($icon-remove-circle);	
-			position:absolute;
+
+
+
+.ui-tapmenu {
+top: $top;
+}
+
+#{$element} {
+.tap-btn {
+margin-right:0;
 }
 }
 
-
-.title {
-margin:0;	
-overflow:auto;
-@include rem(padding, 15px 0);
-}
-
-
-
-} //Close $element-menu
 
 
 
@@ -307,35 +344,45 @@ overflow:auto;
 	ul {
 	display:inline;	
 	}
-	
-	.ui-tapmenu-anchor {
-		 border:1px solid $scratch;	
-	}
 		
-	.ui-tapmenu-anchor:after {
+	.tap-btn-menu:after {
 		@include icon($icon-reorder);	
 	}
 	
+	a {
+@extend %t-ui-navigation;
+@extend %vr-spacer-box;	
+text-align:center;
+display:block;
+}
+	
 			
 } // Close $element
-@include ui-taplist($element: '#menu-main-menu ul');
 
-#{$element}-menu#menu-main-menu {
-@extend %t-ui-navigation; 	
+
+@include media($mob...){ 
+
+
+#{$element}-menu {
 width:100%;
-background:#FFF;
 left:0;
 right:0;
 }
 
+}
+
+@include media($devices...){ 
+@include ui-taplist($element: ' #{$element}-menu ul');
+}
+
+
 
 @include media($tab...){ 
-#{$element}-menu#menu-main-menu {
+#{$element}-menu {
 @include scheme-purity;
 left:inherit;
 width:30%;
-top: $top-tab;
-
+bottom:inherit;
 
 &:after, &:before {
 	bottom: 100%;
@@ -363,10 +410,15 @@ top: $top-tab;
 	margin-left: -23px;
 }
 } //Close element
+
+.ui-tapmenu {
+top: $top-tab;
+	}
+
 } //Close MQ
 
 
-@if $tapmode == true {
+@if $barmode == true {
 @include media($mob...){ 
 
 #{$element}-bar {
@@ -378,7 +430,7 @@ top: $top-tab;
 	@include t-ui-navibar-mob;
 	}
 	
-	.ui-tapmenu-anchor:after	{
+	.anchor:after	{
 		@include icon($icon-reorder);	
 	}
 	
@@ -419,8 +471,8 @@ li a.active:nth-child(n):after  {
 // Combo
 // ===============================================
 
-@mixin layouts-flexinavi-combo($element: '.layouts-flexinavi-combo', $top: 0, $top-tab:100px, $tapmode: false) {
-	@include layouts-flexinavi-layout($element: $element, $top: $top, $top-tab: $top-tab, $tapmode: $tapmode);
-	@include layouts-flexinavi-grid-r($element: $element, $tapmode: $tapmode);
-	@include layouts-flexinavi-style($element: $element, $top: $top,  $top-tab: $top-tab, $tapmode: $tapmode);
+@mixin layouts-flexinavi-combo($element: '.layouts-flexinavi-combo', $top: 0, $top-tab:100px, $display: 3, $barmode: false) {
+	@include layouts-flexinavi-layout($element: $element, $top: $top, $top-tab: $top-tab, $display: $display, $barmode: $barmode);
+	@include layouts-flexinavi-grid-r($element: $element, $barmode: $barmode);
+	@include layouts-flexinavi-style($element: $element, $top: $top,  $top-tab: $top-tab, $barmode: $barmode);
 }

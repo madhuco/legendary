@@ -28,24 +28,24 @@
 /*  COLORS: Mono Backgrounds */
 /* ***************************************** */
 
-.bgcolor-offwhite-flat {
-	@include bgcolor-offwhite-flat;
+.bgcolor-offwhite {
+	@include bgcolor-offwhite;
 }
 
-.bgcolor-lighter-flat {
-	@include bgcolor-lighter-flat;
+.bgcolor-lighter {
+	@include bgcolor-lighter;
 }
 
-.bgcolor-lightest-flat {
-	@include bgcolor-lightest-flat;
+.bgcolor-lightest {
+	@include bgcolor-lightest;
 }
 
-.bgcolor-darker-flat {
-	@include bgcolor-darker-flat;
+.bgcolor-darker {
+	@include bgcolor-darker;
 }
 
-.bgcolor-darkest-flat {
-	@include bgcolor-darkest-flat;
+.bgcolor-darkest {
+	@include bgcolor-darkest;
 }
 
 .bgcolor-offwhite-3d {
@@ -106,16 +106,16 @@
 	@include txtcolor-footer-link;
 }
 
-.bgcolor-footer-mono-primary-flat {
-	@include bgcolor-footer-mono-primary-flat;
+.bgcolor-footer-mono-primary {
+	@include bgcolor-footer-mono-primary;
 }
 
 .bgcolor-footer-mono-primary-3d {
 	@include bgcolor-footer-mono-primary-3d;
 }
 
-.bgcolor-footer-mono-secondary-flat {
-	@include bgcolor-footer-mono-secondary-flat;
+.bgcolor-footer-mono-secondary {
+	@include bgcolor-footer-mono-secondary;
 }
 
 .bgcolor-footer-mono-secondary-3d {

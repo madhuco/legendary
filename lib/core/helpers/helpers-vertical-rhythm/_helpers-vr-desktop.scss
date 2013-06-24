@@ -177,6 +177,10 @@
 }
 
 
+@mixin vr-footer-heading-desk {
+		@include rem('margin-bottom', 10px);
+}
+
 @mixin vr-footerbumper-desk {
 	@include rem('margin-top', 40px);
 }

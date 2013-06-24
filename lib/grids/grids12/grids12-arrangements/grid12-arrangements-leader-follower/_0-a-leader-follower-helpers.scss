@@ -4,6 +4,7 @@
 @import "follower-leader-overlay";
 @import "follower-leader-slim";
 @import "follower-leader-wide";
+@import "follower-leader-article";
 
 @import "leader-follower-50";
 @import "leader-follower-layered";
@@ -11,6 +12,7 @@
 @import "leader-follower-overlay";
 @import "leader-follower-slim";
 @import "leader-follower-wide";
+@import "leader-follower-article";
 
 .unit-footer {
 @include span-columns(12 omega, 12);	

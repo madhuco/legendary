@@ -150,6 +150,11 @@
 }
 
 
+%vr-footer-heading {
+		@include vr-footer-heading-mob;
+}
+
+
 %vr-footerbumper {
 	@include vr-footerbumper-mob;
 }

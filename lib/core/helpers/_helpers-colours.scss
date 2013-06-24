@@ -68,23 +68,23 @@ $default: #757575;
 // Mono Backgrounds //
 // ***************************************** //
 
-@mixin bgcolor-offwhite-flat {
+@mixin bgcolor-offwhite {
 	background-color: #f3f3f3;
 }
 
-@mixin bgcolor-lighter-flat {
+@mixin bgcolor-lighter {
 	background-color: #888888;
 }
 
-@mixin bgcolor-lightest-flat {
+@mixin bgcolor-lightest {
 	background-color: #bebebe;
 }
 
-@mixin bgcolor-darker-flat {
+@mixin bgcolor-darker {
 	background-color: #323232;
 }
 
-@mixin bgcolor-darkest-flat {
+@mixin bgcolor-darkest {
 	background-color: #000001;
 }
 
@@ -162,7 +162,7 @@ $default: #757575;
 	color: #828282;
 }
 
-@mixin bgcolor-footer-mono-primary-flat {
+@mixin bgcolor-footer-mono-primary {
 	background-color: #f9f9f9;
 }
 
@@ -171,7 +171,7 @@ $default: #757575;
 	border: 1px solid #dedede;
 }
 
-@mixin bgcolor-footer-mono-secondary-flat {
+@mixin bgcolor-footer-mono-secondary {
 	background-color: #dedede;
 }
 

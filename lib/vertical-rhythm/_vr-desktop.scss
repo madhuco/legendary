@@ -158,6 +158,10 @@
 }
 
 
+%vr-footer-heading {
+		@include vr-footer-heading-desk;
+}
+
 %vr-footerbumper {
 	@include vr-footerbumper-desk;
 }

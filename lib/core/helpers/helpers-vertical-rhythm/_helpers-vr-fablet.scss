@@ -154,6 +154,11 @@
 }
 
 
+@mixin vr-footer-heading-fab {
+		@include rem('margin-bottom', 10px);
+}
+
+
 @mixin vr-footerbumper-fab {
 	@include rem('margin-top', 25px);
 }

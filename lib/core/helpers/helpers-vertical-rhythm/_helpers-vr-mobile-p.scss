@@ -171,6 +171,11 @@
 		@include rem('margin-top', 10px);
 }
 
+@mixin vr-footer-heading-mob {
+		@include rem('margin-bottom', 10px);
+}
+
+
 
 @mixin vr-footerbumper-mob {
 	@include rem('margin-top', 30px);

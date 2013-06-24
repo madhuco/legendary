@@ -155,6 +155,10 @@
 }
 
 
+%vr-footer-heading {
+		@include vr-footer-heading-fab;
+}
+
 %vr-footerbumper {
 	@include vr-footerbumper-fab;
 }
