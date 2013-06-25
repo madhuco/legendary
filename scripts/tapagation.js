@@ -12,7 +12,7 @@
 
 		$(".taptabs li a").click(function()
 		{
-			$(".taptabs").removeClass("overview-enabled"); //Add support to display overview before navigation
+			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
 			$(this).addClass("highlighted").addClass("animated").addClass("flipInX");

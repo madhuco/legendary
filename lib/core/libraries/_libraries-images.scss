@@ -9,17 +9,19 @@
 	width:100%;
 	}
 
-/*
-.img img {	
-	display:none;
-}
-*/
+
+/* Set an Image to Auto and the browser will calculate the size.
+Width and Height of the Image must be set to Zero in the HTML */
+
 
 .img .auto, .auto img {	
 	margin: auto;
 	width:100%;
 	height:100%;
 }
+
+
+/* Show hide elements (Works on non-images as well) */
 
 [data-device] {
 	display:none;
@@ -35,19 +37,6 @@
 [data-device="mob-p"] {
 	display:block;
 }
-
-[data-device="mob"] {
-	display:block;
-}
-
-[data-device="portables"] {
-	display:block;
-}
-
-
-[data-device="devices"] {
-	display:block;
-}
 }
 
 
@@ -55,22 +44,26 @@
 [data-device="mob-l"] {
 	display:block;
 }
-
-[data-device="mob-lplus"] {
-	display:block;
 }
 
 
+
+@include media($mob...){ 
 [data-device="mob"] {
 	display:block;
 }
-
-[data-device="portables"] {
-	display:block;
 }
 
 
-[data-device="devices"] {
+@include media($mob-lplus...){ 
+[data-device="mob-lplus"] {
+	display:block;
+}
+}
+
+
+@include media($mobwide...){ 
+[data-device="mobwide"] {
 	display:block;
 }
 }
@@ -80,74 +73,41 @@
 [data-device="fab"] {
 	display:block;
 }
-
-[data-device="portables"] {
-	display:block;
 }
 
 
-[data-device="devices"] {
-	display:block;
-}
-
-[data-device="pads"] {
-	display:block;
-}
-
+@include media($fabplus){ 
 [data-device="fabplus"] {
 	display:block;
 }
+}
 
-[data-device="mob-lplus"] {
+@include media($portables...){ 
+[data-device="portables"] {
 	display:block;
 }
-
 }
 
+@include media($devices...){ 
+[data-device="devices"] {
+	display:block;
+}
+}
 
 @include media($tab...){ 
 [data-device="tab"] {
 	display:block;
 }
-
-[data-device="devices"] {
-	display:block;
 }
 
-[data-device="pads"] {
-	display:block;
-}
-
-[data-device="fabplus"] {
-	display:block;
-}
-
+@include media($tabplus){ 
 [data-device="tabplus"] {
 	display:block;
 }
-
-[data-device="mob-lplus"] {
-	display:block;
 }
 
-}
-
-
-@include media($desk...){ 
+@include media($desk){ 
 [data-device="desk"] {
 	display:block;
 }
-
-[data-device="fabplus"] {
-	display:block;
-}
-
-[data-device="tabplus"] {
-	display:block;
-}
-
-[data-device="mob-lplus"] {
-	display:block;
-}
-
 }

@@ -11,44 +11,6 @@
 
 
 
-	@include layouts-slideshow-50-combo($element: '.layouts-slideshow');
-
-
-
-/* *****   MAIN PAGE LAYOUTS:  -  Tiles: Global Styles ***** */
-/* Displays content as 'tiles' of information  */
-
-
-
-	@include layouts-tiles-combo($element: '.layouts-tiles');
-
-
-
-/* *****  MAIN PAGE LAYOUTS:  - Showcase: Global Styles   ***** */  
-/* Displays content in a row  with text under each photo*/
-
-@include layouts-showcase-combo($element: '.layouts-showcase');
-
-
-
-
-/* ***** MAIN PAGE LAYOUTS:  -  icards: Global Styles ***** */
-/* Displays content as icards (information cards). Used to present bite sized bits of informaiton */
-
-
-
-
-
-
-
-
-
-/* *****  MAIN PAGE LAYOUTS:   pager-h: Global Styles  ***** */
-/*Breaks up content into seperate pages that are tabbed horizontally */
-
-
-	@include layouts-pager-h-combo($element: '.layouts-pager-h');
-
 
 /* ***************************************** */
 /*  Font-styles: Global Styles */

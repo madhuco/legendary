@@ -25,7 +25,7 @@ position:relative;
 } //Close Element
 
 
-#{$element}.overview-enabled {
+.overview-enabled #{$element} {
 
 	.tapnav {
 	position:absolute;

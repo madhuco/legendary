@@ -194,15 +194,7 @@ width:100%;
 } //Close element
 
 
-@include media($fabplus...){ 
-#{$element} .pager-arrow-next a:after {
-@include icon($icon-caret-right);	
-}
 
-#{$element} .pager-arrow-previous .label:before {
-@include icon($icon-caret-left);	
-}
-} //Close Element
 
 
 .black #{$element} .pager {
@@ -235,11 +227,13 @@ width:100%;
 	border-color: $darkest;
 	}
 
+#{$element} .pager {
+
+}
+
+
 
 @include media($mob...){ 
-#{$element} .pager {
-min-height: 5.8em;
-}
 
 #{$element} .pager:after {
 	border-width: 2.8em;

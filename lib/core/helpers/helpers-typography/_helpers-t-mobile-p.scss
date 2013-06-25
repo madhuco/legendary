@@ -70,7 +70,7 @@
 
 @mixin t-body-text-mob {
  @include rem('font-size', 14px);
- @include rem('line-height', 22px);
+ @include rem('line-height', 18px);
 }
 
 @mixin t-body-small-mob {

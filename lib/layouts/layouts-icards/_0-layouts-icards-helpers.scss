@@ -136,6 +136,14 @@ b {
 @include media($mob-p...){ 
 #{$element} {	
 text-align:left;
+
+.unit {
+border-left-width:0;
+border-right-width:0;
+border-radius:0;	
+}
+
+
 }
 }
 

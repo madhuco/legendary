@@ -99,11 +99,13 @@ float:none;
 position: relative;
 background: #ffffff;
 border: 1px solid $scratch;
+min-width:60px;
+@include border-left-radius(0);
 }
 
 @include media($portables...){ 
 html body #wrapper .tap-btn-back.mobshow {
-display:inline;	
+display:inline-block;	
 }
 }
 
