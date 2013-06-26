@@ -111,3 +111,10 @@ Width and Height of the Image must be set to Zero in the HTML */
 	display:block;
 }
 }
+
+
+@include media($pads...){ 
+[data-device="pads"] {
+	display:block;
+}
+}

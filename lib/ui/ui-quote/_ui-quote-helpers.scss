@@ -56,14 +56,14 @@ display:block;
 } //Close Mixin
 
 
-@mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false, $bottom: 0px) {
+@mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false, $bottom: 0px, $left: -0.45em) {
 
 
 @if $extend == false {
 @include ui-solo-quote($element: $element, $bottom: $bottom) {
 
 &:after {
-	left:-0.45em;	
+	left: $left;	
 }
 	@content;
 

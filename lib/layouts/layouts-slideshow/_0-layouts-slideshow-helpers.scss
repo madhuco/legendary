@@ -48,6 +48,19 @@ height:auto;
 } //Close Mixin
 
 
+@mixin layouts-slideshow-50-grid-portables($element: '.layouts-slideshow-50-grid-mob-p') {
+
+ .secondary {
+position:relative;
+}
+
+.secondary  img {
+position:absolute;
+z-index:-1;	
+right:0;
+}
+}
+
 
 @mixin layouts-slideshow-50-grid-mob-p($element: '.layouts-slideshow-50-grid-mob-p') {
 	#{$element} {
@@ -57,16 +70,20 @@ height:auto;
 		text-align:center;
 	}
 	
-.content-aside {
-	display:none;	
-	}
-	
+.content-leader {
+display:none;	
+}
+
+.content-follower {
+	@include span-columns(12 omega, 12);
+}
+
 	.unit-row {
 	@include span-columns(12 omega, 12);
 }
 	
 	.unit-txt {
-	@include span-columns(8, 12);
+	@include span-columns(12, 12);
 	}
 	
 	.primary {
@@ -90,6 +107,12 @@ height:auto;
 		text-align:center;
 	}
 	
+	.unit-txt {
+	@include span-columns(8, 12);
+	}
+	
+	
+	
 } //Close element
 } //Close Mixin
 
@@ -107,13 +130,14 @@ height:auto;
 
  .secondary {
 @include span-columns(2 omega, 6);	
-
 }
+
+
 } //Close element
 } //Close Mixin
 
 @mixin layouts-slideshow-50-grid-tab($element: '.layouts-slideshow-50-grid-tab') {
-	@include layouts-slideshow-50-grid-fab($element:$element);
+@include layouts-slideshow-50-grid-fab($element:$element);
 }
 
 
@@ -141,13 +165,28 @@ height:auto;
 		text-align:center;
 	}
 	
+	.unit-txt {
+	@include span-columns(8, 12);
+	}
+	
+	
 	} //Close Element
 	} //Close MQ
 
 
-	@include media($fabplus...){ 
+	@include media($portables...){ 
+	@include layouts-slideshow-50-grid-portables($element:$element);
+	}
+
+	@include media($fab...){ 
 	@include layouts-slideshow-50-grid-fab($element:$element);
 	}
+	
+	
+	@include media($tabplus...){ 
+	@include layouts-slideshow-50-grid-tab($element:$element);
+	}
+	
 	
 	@include media($desk...){ 
 	.img {
@@ -165,45 +204,66 @@ height:auto;
 #{$element}	{
 		@extend %vr-section;	
 
+.cta-primary {
+display:inline-block;	
+}
+
 
 .unit-row {
 
 }
 
-.content-aside {
+.content-leader {
 }
 
-.content-main {
+.content-follower {
 		@extend %vr-section-inside;	
 }
 
 .title {
 @extend %t-title-2; 
+@extend %vr-title-2; 
 @include txtcolor-darkest; 
 @include typeface-light; 
-margin-bottom:0;
 }
+
 
 
 q {
 @extend %t-intro-3; 
 @include txtcolor-lighter;	
+@include typeface-light; 
 }
+
+
+
+
 
 cite {
 @extend %vr-spacer;	
 }
 
+h3 {
+@extend %t-intro-3; 	
+}
+
+@include media($portables...){ 
+	br {
+	display:none;	
+		goesi:green;
+	}
+	
+}
+
 
 @include media($mob...){ 
 
-.content-main {
+.content-follower {
 	padding-top:0;
 	padding-bottom:0;
 	}
 
 }
-
 
 
 
@@ -218,6 +278,18 @@ cite {
 
 
 } //Close element
+
+
+@include media($desk){ 
+#{$element} .title {
+margin-bottom:0;
+
+@include ui-solo-quote-outside(q, $bottom: -29px, $left: -88px);
+
+} //Close $element
+} //Close MQ
+
+
 } //Close Mixin
 
 

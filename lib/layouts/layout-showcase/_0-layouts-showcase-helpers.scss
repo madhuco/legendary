@@ -121,40 +121,27 @@ height:100%;
 		display:none;
 	}
 	
-
-} //Close $element
-} //Close MQ
-
-
-
-
-@include media($fab...){ 
-#{$element} {
-
+	.unit-row img {
+	margin:auto;	
+	}
 	
 
 } //Close $element
 } //Close MQ
 
 
-@include media($tab...){ 
-#{$element} {
-	
-} //Close $element
-} //Close MQ
 
 
 
 @include media($desk){ 
 #{$element} {
 .unit-row {
-		width: columns(1.8, 12) + gutter(12);
-		display:inline;
-		float:left;
+	@include span-columns(2,12);
 	}
 
 .unit-last {
 		@include omega;
+			goesi:green;
 }
 
 } //Close $element
@@ -189,7 +176,7 @@ height:100%;
 .unit-txt {
 @extend %t-shop-thumbs; 
 @extend %vr-thumbs-title;
-@include txtcolor-lighter
+@include txtcolor-lighter;
 }
 
 p {

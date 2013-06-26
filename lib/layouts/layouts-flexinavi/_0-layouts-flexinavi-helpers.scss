@@ -3,11 +3,10 @@
 // Tiles: Layout
 // ===============================================
 
-@mixin layouts-flexinavi-layout($element: '.layouts-flexinavi-layout', $display: 3, $top: 0, $top-tab:100px, $barmode: false){
+@mixin layouts-flexinavi-layout($element: '.layouts-flexinavi-layout', $display: 3, $barmode: false, $bar-height: 54px, $cta: true, $masthead: true, $tap-btn: true, $menu: true){
 /* ***************************************** */
 /*  FlexiNavi: Responsive Flexbile Navigation Bar*/
 /* ***************************************** */
-
 
 #{$element} {
 	  .main {
@@ -21,89 +20,13 @@
 	  
 } //Close $element
 
-#{$element}-menu{
-	  display:none;	
-	  left:0;
-	  right:0;
-		  }
-	
-	
-
-	  
-	  
-	  @include media($mob...){ 
-
-  .ui-tapmenu  {
-padding:0 20px;
- }
-	
-	  
-.page-content .masthead .cta {
-display:block;
-}
- 
- 
-.page-content .masthead .slogan {
-	display:none;
-}
-
- 
-
-}
-
-	  
-
-	  
-.masthead .cta {
-float:right;	
-}
-
-
-.cta-options {
-display:none;	
-}
-
-.cta-options {
-position:absolute; 
-
-
-}
+		 
 
 	
 @include media($portables...){ 
 #{$element} .main  {
 	display:none;
 }
-
-
-.sub-page .masthead .slogan {
-	display:none;
-}
-
-  .ui-tapmenu {
-	  top:$top;
-	  @include box-sizing(border-box);
-	  }
-
-.masthead .cta {
-display:none;	
-}
-
-.page-content .masthead .cta {
-display:block;	
-}
-
-
-.page-content .masthead .tap-btn-menu {
-display:none;	
-}
-
-
-.masthead .cta-options.show {
-display:block;	
-}
-
-
 }
 
 
@@ -118,43 +41,13 @@ padding-right: inherit;
 padding:0 40px;
 
  }
- 
- .masthead .cta {
-	display:none;
-}
 
-.sub-page .masthead .cta {
-	display:block;
-}
-
-.page-content .tap-btn-menu  {
-	display:none;
-}
-
-.page-content.overview-enabled .masthead .cta {
-display:none;	
-}
-  
-  .page-content.overview-enabled .tap-btn-menu {
-display:block;	
-}
 
 
 }
 
 
 
-@include media($desk){ 
-	  #{$element}-menu, #{$element}  .anchor  {
-	  display:none;	
-	  }
-	  
-	  html body .show#{$element}-menu {
-	  display:none !Important;	
-		  }
-		  
-		  
-}
 
 
 $main-none: ($display + 1);
@@ -203,17 +96,12 @@ display:none;
 }
 
 
-@include media($tabplus){
-	.masthead .cta {
-display:none;	
-}
-	 }
 
+	
 
 
 @if $barmode == true {
-	
-	
+		
 @include media($fabplus...){ 
 #{$element}-bar {
 display:none;
@@ -223,15 +111,19 @@ display:none;
 	
 	@include media($mob...){ 
 	
+	#wrapper {
+	padding-bottom:	 (20 + $bar-height);
+	}
 		
 #{$element}-bar {
 display:block;
 top:inherit;
 bottom:0;
-@include rem(height, 53px);
+@include rem(height, $bar-height);
 left:0;
 right:0;
 position:fixed !Important;
+z-index:500;
 
 
 ul {
@@ -264,7 +156,27 @@ a {
 
 
 
+@if $cta == true {
+	@include cta-helpers;
+} //Close If
+
+
+@if $tap-btn == true {
+	@include tap-btn-helpers;
+} //Close If
+
+@if $masthead == true {
+	@include masthead-helpers;
+} //Close If
+
+
+@if $menu == true {
+	@include menu-helpers;
+} //Close If
+
+
 } // Close $Mixin
+
 
 
 // ===============================================
@@ -364,34 +276,11 @@ display:block;
 // Tiles: Style
 // ===============================================
 
-@mixin layouts-flexinavi-style($element: '.layouts-flexinavi-grid-mob-p', $top:0, $top-tab:100px, $barmode: false) {
+@mixin layouts-flexinavi-style($element: '.layouts-flexinavi-grid-mob-p',  $barmode: false, $bar-height: 54px,  $cta: true, $tap-btn: true ) {
 
 	
-	.tap-btn {
-	float:right;	
-     box-sizing: border-box;
-     text-align: center;
-	 padding:2%;
-	 @include border-radius(5px);
-	 @include box-sizing(border-box);
- 	text-align:center;
-	@include typeface-regular;	
-	color: $lighter;			
-	@include rem(margin, 0 20px);
-@include rem(padding-right, 50px);
-position:relative;
-	@extend %t-ui-navigation; 
-	border:1px solid $scratch;
-	@extend %t-ui-navigation;
-	@extend %vr-spacer-box;	
-	}
 
 
-
-
-.ui-tapmenu {
-top: $top;
-}
 
 #{$element} {
 .tap-btn {
@@ -425,59 +314,9 @@ display:block;
 } // Close $element
 
 
-@include media($mob...){ 
-
-
-#{$element}-menu {
-width:100%;
-left:0;
-right:0;
-}
-
-}
 
 @include media($devices...){ 
 @include ui-taplist($element: ' #{$element}-menu ul');
-}
-
-
-.cta-options {
-@include scheme-purity;
-left:inherit;
-width:60%;
-bottom:inherit;
-top: ($top-tab);
-right:20px;
-
-&:after, &:before {
-	bottom: 100%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-
-&:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #ffffff;
-	border-width: 20px;
-	left: 80%;
-	margin-left: -20px;
-}
-
-&:before {
-	border-color: rgba(225, 225, 225, 0);
-	border-bottom-color: $scratch;
-	border-width: 23px;
-	left: 80%;
-	margin-left: -23px;
-}
-
-.close:after {
-	content: none;
-}
 }
 
 
@@ -516,11 +355,14 @@ bottom:inherit;
 }
 } //Close element
 
-.ui-tapmenu {
-top: $top-tab;
-	}
 
 } //Close MQ
+
+@include media($mob...){ 
+#{$element}-menu {
+	overflow:auto;
+}
+}
 
 
 @if $barmode == true {
@@ -567,6 +409,19 @@ li a.active:nth-child(n):after  {
 } //Close If
 
 
+@if $cta == true {
+	@include cta-styles;
+} //Close If
+
+
+@if $tap-btn == true {
+	@include tap-btn-styles;
+} //Close If
+
+
+
+
+
 } // Close $Mixin
 	
 	
@@ -576,8 +431,8 @@ li a.active:nth-child(n):after  {
 // Combo
 // ===============================================
 
-@mixin layouts-flexinavi-combo($element: '.layouts-flexinavi-combo', $top: 0, $top-tab:100px, $display: 3, $barmode: false) {
-	@include layouts-flexinavi-layout($element: $element, $top: $top, $top-tab: $top-tab, $display: $display, $barmode: $barmode);
+@mixin layouts-flexinavi-combo($element: '.layouts-flexinavi-combo', $display: 3, $barmode: false, $bar-height: 54px,  $cta: true, $masthead: true, $tap-btn: true, $menu: true) {
+	@include layouts-flexinavi-layout($element: $element, $display: $display, $barmode: $barmode, $bar-height: $bar-height,  $cta: $cta, $masthead: $masthead, $tap-btn: $tap-btn, $menu: $menu);
 	@include layouts-flexinavi-grid-r($element: $element, $barmode: $barmode);
-	@include layouts-flexinavi-style($element: $element, $top: $top,  $top-tab: $top-tab, $barmode: $barmode);
+	@include layouts-flexinavi-style($element: $element, $barmode: $barmode, $bar-height: $bar-height,  $cta: $cta, $tap-btn: $tap-btn);
 }

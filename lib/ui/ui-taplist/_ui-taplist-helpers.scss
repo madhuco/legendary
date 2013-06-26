@@ -1,7 +1,23 @@
-@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest) {
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false) {
 
 
-#{$element} li {
+#{$element} {
+
+@if $border == true {
+ul {	
+@include box-sizing(border-box);
+border:1px solid $scratch;
+@include border-radius(10px);
+}
+
+li:last-child {
+border-bottom:0;	
+}
+
+}
+
+
+li {
 border-bottom: 1px solid $line;
 
 
@@ -32,5 +48,6 @@ top:1.2em;
  border-bottom: 0;
 }
 
+} //Close li
 } //Close $element
 } //Close Mixin

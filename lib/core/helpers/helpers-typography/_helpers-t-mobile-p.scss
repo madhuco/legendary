@@ -23,7 +23,7 @@
 
 @mixin t-title-4-mob {
  @include rem('font-size', 15px);
- @include rem('line-height', 17px);
+ @include rem('line-height', 22px);
 
 }
 
@@ -213,7 +213,7 @@ display:none;
 // ***************************************** 
 
 @mixin t-shop-thumbs-mob {
- @include rem('font-size', 17px);
+ @include rem('font-size', 16px);
  @include rem('line-height', 20px);
 
 }

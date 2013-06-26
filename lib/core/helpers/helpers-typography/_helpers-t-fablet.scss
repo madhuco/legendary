@@ -49,8 +49,8 @@
 }
 
 @mixin t-intro-3-fab {
- @include rem('font-size', 16px);
- @include rem('line-height', 19px);
+ @include rem('font-size', 18px);
+ @include rem('line-height', 26px);
 }
 
 @mixin t-intro-4-fab {
@@ -219,7 +219,7 @@ display:none;
 // ***************************************** 
 
 @mixin t-shop-thumbs-fab {
- @include rem('font-size', 17px);
+ @include rem('font-size', 14px);
  @include rem('line-height', 20px);
 
 }

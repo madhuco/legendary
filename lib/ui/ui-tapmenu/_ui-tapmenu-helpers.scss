@@ -12,21 +12,26 @@ width:100%;
 bottom:0;
 left:0;
 right:0;
+
+
+.title {
+display:block;	
+}
+
 @if $style == true {
 @extend %t-ui-navigation; 	
 background:#FFF;
-
+ @include box-sizing(border-box);
 .title {
-margin:0;	
 overflow:auto;
-@include rem(padding, 15px 0);
-width:100%;
+@include rem(padding, 15px 0 0);
 text-align:center;
 }
 
 .tap-btn-close {
 float:right;	
 position:relative;
+margin-right:0;
 }
 
 
@@ -37,9 +42,38 @@ position:relative;
 			position:absolute;
 }
 
+
+
 } //Close If
 
 } //Close Element
+
+
+@include media($mob...){ 
+#{$element} {
+padding:20px 20px 0;
+width:100%;
+left:0;
+right:0;
+position:absolute;
+}
+}
+
+@include media($desk...){ 
+
+
+@include media($desk){ 
+	  #{$element}, .anchor  {
+	  display:none;	
+	  }
+	  
+	  html body .show#{$element} {
+	  display:none !Important;	
+		  }  
+
+}
+}
+
 
 /* ***************************************** */
 /*  Hide tapmenu-anchor for no jquery enabled situations*/

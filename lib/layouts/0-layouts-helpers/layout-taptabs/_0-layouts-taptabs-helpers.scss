@@ -136,6 +136,14 @@ display:inline-block;
 }
 
 
+@include media($mob...){ 
+
+.tap-btn-back:after, .tap-btn-back:before {
+	right: 96%;
+}
+	
+}
+
 
 } //Close Mixin
 

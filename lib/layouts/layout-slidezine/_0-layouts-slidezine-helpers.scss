@@ -9,7 +9,7 @@
 
 
 @include media($portables...){ 
-@include ui-taplist($element: '#{$element} > .tapnav ');
+@include ui-taplist($element: '#{$element} > .tapnav ', $border: true);
 
 
 #{$element} {

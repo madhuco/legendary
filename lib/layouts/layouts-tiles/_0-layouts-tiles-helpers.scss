@@ -88,7 +88,7 @@ width: columns(2, 4) + gutter(4);
 
 .unit-row {
 @include span-columns(12 omega, 12);	
-@include rem(height, 84px);
+@include rem(min-height, 84px);
 }
 
 
