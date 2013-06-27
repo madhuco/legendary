@@ -2,9 +2,9 @@
 
 @mixin follower-leader-layered($element: '.follower-leader-layered' ) {
 /* ***************************************** */
-/*  Layotus: Main-Aside-layered 
-Main Takes up the full width of the page.
-Aside is layered underneath it. */
+/*  Layotus: Follower-Leader-layered 
+Leader Takes up the full width of the page.
+Follower is layered underneath it. */
 /* ***************************************** */
 
 	#{$element}, #{$element} > .content-leader, #{$element} > .content-follower, #{$element} > .content-footer  {

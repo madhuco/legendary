@@ -158,10 +158,28 @@ text-align:left;
 	@include layouts-tiles-grid($element:$element);
 	}
 	
-@include media($desk){ 
+	@include media($fab...){ 
+	#{$element} {
+.unit-row {
+@include rem(height, 160px);
+}
+	}
+	}
+	
+	@include media($tabplus){ 
+	
 #{$element} {
 .unit-row {
 @include rem(height, 130px);
+}
+}
+	
+	}
+	
+@include media($desk){ 
+#{$element} {
+.unit-row {
+
 }
 
 .unit-img {

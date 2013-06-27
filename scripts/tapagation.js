@@ -1,3 +1,4 @@
+//Collapse content for mobile
 (function($)
 {
 	$(document).ready(function()

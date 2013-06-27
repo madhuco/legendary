@@ -1,4 +1,4 @@
-//Enable Support of tap menu 
+//Enable Support of menus 
 (function($)
 {
 
@@ -10,14 +10,13 @@
 
 		$(document).ready(function()
 		{
-	
-		$('.close').live('click',  function()
+
+			$('.close').live('click', function()
 			{
-					$('.ui-tapmenu').removeClass("animated bounceInDown show");
-				
+				$('.ui-tapmenu').removeClass("animated bounceInDown show");
 			});
 
-	
+
 			$('.anchor').live('click', function()
 			{
 				$(this).addClass('close');
@@ -28,21 +27,34 @@
 				$(menuName).removeClass("hide");
 				$(menuName).removeClass("animated bounceInDown show");
 				$(menuName).addClass("animated bounceInDown show");
-		
+
 			});
 
-	
-	
-	
+
+
 		});
-
-
-
 
 	});
 
+
+if(typeof window.orientation !== 'undefined'){
 	
-	
+		$('.anchor').live('click', function()
+		{
+			$('.wrapper').hide();
+		});
+
+		$('.cta.anchor').live('click', function()
+		{
+			$('.wrapper').show();
+		});
+
+		$('.close').live('click', function()
+		{
+			$('.wrapper').show();
+		});
+
+	}
 
 
 })(jQuery);

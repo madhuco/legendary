@@ -1,7 +1,7 @@
 @mixin follower-leader-50($element: '.follower-leader-50' ) {
 /* ***************************************** */
-/*  Layotus: Aside-leader-50 
-Displays follower then Main with equal widths (e.g. two column layout)  */
+/*  Layotus: Follower-Leader-50 
+Displays follower then leader with equal widths (e.g. two column layout)  */
 /* ***************************************** */
 
 	#{$element} {

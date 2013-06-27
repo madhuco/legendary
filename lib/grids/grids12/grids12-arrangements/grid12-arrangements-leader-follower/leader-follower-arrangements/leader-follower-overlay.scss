@@ -1,8 +1,8 @@
 @mixin leader-follower-overlay-50($element: '.leader-follower-overlay-50' ) {
 /* ***************************************** */
-/*  Layotus: Main-Aside-overlay 
-Aside and Main are split into equal columns 
-Main is overlayed on top of Aside  */
+/*  Layotus: Follower-Leader-overlay 
+Follower and Leader are split into equal columns 
+Follower is overlayed on top of Leader  */
 /* ***************************************** */
 	#{$element} {
 		@include span-columns(12 omega, 12);

@@ -1,4 +1,4 @@
-// JavaScript Document
+// Provide horizontal slider for content
 
 (function($) {
 	$(document).ready(function() {

@@ -1,6 +1,8 @@
 
 @mixin ui-solo-quote($element: '.ui-solo-quote', $bottom: 0px) {
 
+/* Solo Quotes: A single, large Quote mark is displayed to the left of content */
+
 #{$element} {
 
 	display: block;
@@ -39,6 +41,8 @@ position:absolute;
 
 
 @mixin ui-solo-quote-bars($element: 'ui-solo-quote-bars', $extend: false,  $bottom: 0px) {
+/* Solo Quote Bars: Bars are added above and below the quoted text for extra emphasis */
+
 #{$element} {
 @if $extend == false {
 @include ui-solo-quote($element: $element, $bottom: $bottom);	
@@ -57,7 +61,7 @@ display:block;
 
 
 @mixin ui-solo-quote-outside($element: '.ui-solo-quote-outside', $extend: false, $bottom: 0px, $left: -0.45em) {
-
+/* Solo Quote Outside: Quote extends outside to the left of the quoted text */
 
 @if $extend == false {
 @include ui-solo-quote($element: $element, $bottom: $bottom) {

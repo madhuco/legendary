@@ -9,16 +9,12 @@ z-index:9999;
 }
 
 .z-index-top {
-height:100%;
-position:fixed;
-bottom:0;	
 }
 
 @include media($portables...){ 
 .z-index-tab {
-height:100%;
-position:fixed;
-bottom:0;	
+
+
 }
 
 

@@ -20,6 +20,7 @@
 
 	li {
 	width:50%;
+		min-height:110px;
 	}
 	
 	.pager-central {
@@ -37,6 +38,7 @@
 	li {
 	margin-right:0;
 	width:33.33%;	
+	
 	}
 	
 		.pager-central {
@@ -136,15 +138,15 @@
 
 .pager:after {
 	border-color: rgba(255, 255, 255, 0);
-	border-width: 1.4em;
+	border-width: 2.4em;
 	top: 50%;
-	margin-top: -1.4em;
+	margin-top: -2.4em;
 }
 .pager:before {
 	border-color: rgba(202, 202, 202, 0);
-	border-width: 1.46em;
+	border-width: 2.47em;
 	top: 50%;
-	margin-top: -1.46em;
+	margin-top: -2.47em;
 }
 
 .pager-previous:after, .pager-previous:before {
@@ -236,14 +238,13 @@ width:100%;
 @include media($mob...){ 
 
 #{$element} .pager:after {
-	border-width: 2.8em;
-	margin-top: -2.8em;
+	border-width: 3.8em;
+	margin-top: -3.8em;
 }
 #{$element} .pager:before {
-	border-width: 2.9em;
-	margin-top: -2.9em;
+	border-width: 3.85em;
+	margin-top: -3.85em;
 }
-
 
 }
 

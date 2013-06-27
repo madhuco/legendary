@@ -1,9 +1,11 @@
 @mixin leader-follower-wide($element: '.leader-follower-wide' ) {
 /* ***************************************** */
-/*  Layotus: Main-Aside-Narrow 
-Displays Main then Aside with follower taking up a smaller column size (e.g. two column layout)  
-Aside is on the right */
+/*  Layotus: Leder-Follower-Wide 
+Displays Leader then Follower with follower taking up a smaller column size (e.g. two column layout)  
+Follower is on the right */
+
 /* ***************************************** */
+
 
 	
 	#{$element} {

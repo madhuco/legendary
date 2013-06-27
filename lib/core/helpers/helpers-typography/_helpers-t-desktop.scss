@@ -225,6 +225,13 @@ letter-spacing:0;
  @include rem('line-height', 16px);
 }
 
+@mixin t-ui-navigation-title-desk {
+	@include rem('font-size', 24px);
+ @include rem('line-height', 30px);
+}
+
+
+
 @mixin t-ui-navigation-secondary-title-desk {
 	@include rem('font-size', 14px);
  @include rem('line-height', 16px);

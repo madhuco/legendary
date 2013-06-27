@@ -14,22 +14,40 @@ left:0;
 right:0;
 
 
+header {
+	@include span-columns(12 omega, 12);
+	@extend %vr-spacer-box-bottom; 
+}
+
 .title {
 display:block;	
+@include span-columns(8, 12);
 }
+
+.tap-btn-close {
+@include span-columns(4 omega, 12);
+margin-left:0;
+@include box-sizing(border-box);
+}
+
+ul {
+clear:both;	
+}
+
 
 @if $style == true {
 @extend %t-ui-navigation; 	
 background:#FFF;
  @include box-sizing(border-box);
+
 .title {
-overflow:auto;
+@extend %t-ui-navigation-title; 
+@include typeface-regular;
 @include rem(padding, 15px 0 0);
 text-align:center;
 }
 
 .tap-btn-close {
-float:right;	
 position:relative;
 margin-right:0;
 }

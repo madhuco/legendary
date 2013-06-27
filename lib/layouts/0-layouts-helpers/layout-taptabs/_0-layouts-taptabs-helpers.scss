@@ -111,7 +111,7 @@ display:inline-block;
 
 
 .tap-btn-back:after, .tap-btn-back:before {
-	right: 100%;
+	right: 96%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -123,26 +123,18 @@ display:inline-block;
 .tap-btn-back:after {
 	border-color: rgba(255, 255, 255, 0);
 	border-right-color: #ffffff;
-	border-width: 16px;
+	border-width: 1.7em;
 	top: 50%;
-	margin-top: -16px;
+	margin-top: -1.7em;
 }
 .tap-btn-back:before {
 	border-color: rgba(161, 161, 161, 0);
 	border-right-color: #a1a1a1;
-	border-width: 17px;
+	border-width: 1.75em;
 	top: 50%;
-	margin-top: -17px;
+	margin-top: -1.75em;
 }
 
-
-@include media($mob...){ 
-
-.tap-btn-back:after, .tap-btn-back:before {
-	right: 96%;
-}
-	
-}
 
 
 } //Close Mixin

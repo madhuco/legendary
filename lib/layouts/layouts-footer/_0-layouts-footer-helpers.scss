@@ -15,9 +15,13 @@
 
 
 @include media($pads...){ 
+
+.wrapper {
+padding-bottom:50px;	
+}
+
+
  #{$element}.collapsed {
-	
-	padding-bottom:25px;
 	
 	.unit-txt{
 	display:none;
@@ -35,6 +39,20 @@
 	}
 
 } //Close MQ
+
+
+
+@include media($pads...){ 
+ #{$element} {
+	position:fixed;
+	left:3px;
+	right:0;
+	bottom:0px; 
+	z-index:9999;
+ }
+
+
+}
 
 
 
@@ -127,7 +145,8 @@ display:block;
 
  #{$element} {
 	
-	@include span-columns(12, 12);
+	@include span-columns(12 omega, 12);
+	width:99%;
 	
 	.unit {
 	@include rem(padding, 10px);

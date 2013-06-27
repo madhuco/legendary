@@ -28,19 +28,20 @@ display:block;
 	
 	.tap-btn {
 	float:right;	
-     box-sizing: border-box;
-     text-align: center;
-	 padding:2%;
+      text-align: left;
 	 @include border-radius(5px);
 	 @include box-sizing(border-box);
- 	text-align:center;
 	@include typeface-regular;	
 	@include rem(margin, 0 20px);
 @include rem(padding-right, 50px);
 position:relative;
-	@extend %t-ui-navigation; 
-	@extend %t-ui-navigation;
-	@extend %vr-spacer-box;	
+	
 	}
+
+
+.btn, .cta.btn	{
+padding:15px;
+@extend %t-ui-navigation; 
+}
 
 }

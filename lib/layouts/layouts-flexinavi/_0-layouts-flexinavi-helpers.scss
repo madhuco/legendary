@@ -10,11 +10,12 @@
 
 #{$element} {
 	  .main {
-		@include display-box;	
+	/*	@include display-box;	*/
 	  }
 	  
 	  .main li {
-	   @include box-flex(1);	
+	/* @include box-flex(1);	*/
+	float:left;
 	  }
 	  
 	  
@@ -56,7 +57,7 @@ $menu-none: ($display - 1);
 
 @include media($tab...){ 
 
-#{$element}-menu .title {
+#{$element}-menu header {
 display:none;	
 }
 
@@ -93,7 +94,16 @@ display:none;
 	@include box-sizing(border-box);
 	right:20px;
 }
+
+
+#{$element}-menu .tap-btn-close.close {
+display:none;
 }
+
+
+}
+
+
 
 
 
@@ -117,13 +127,14 @@ display:none;
 		
 #{$element}-bar {
 display:block;
-top:inherit;
-bottom:0;
 @include rem(height, $bar-height);
 left:0;
 right:0;
-position:fixed !Important;
+bottom:0;
 z-index:500;
+top:inherit;
+position:static;
+
 
 
 ul {
@@ -142,10 +153,20 @@ a {
 	right:0;
 }
 
+.ui-spot-badges {
+position:absolute;
+right:0;
+top:0;
+}
 
 
 } //Close $element
 
+
+
+.fixed-supported #{$element}-bar {
+position:fixed !Important;	
+}
 
 
 } //Close MQ
@@ -305,8 +326,6 @@ margin-right:0;
 	
 	a {
 @extend %t-ui-navigation;
-@extend %vr-spacer-box;	
-text-align:center;
 display:block;
 }
 	

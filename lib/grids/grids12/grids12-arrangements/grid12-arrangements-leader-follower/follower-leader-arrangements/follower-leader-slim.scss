@@ -1,9 +1,10 @@
 
 @mixin follower-leader-slim($element: '.follower-leader-slim')  {
 /* ***************************************** */
-/*  Layotus: Aside-Main-Narrow 
-Displays Aside then Main with follower taking up a smaller column size (e.g. two column layout)  
+/*  Layotus: Follower-Leader-Narrow 
+Displays Follower then Leader with follower taking up a smaller column size (e.g. two column layout)  
 Aside is on the left */
+/* TO BE DELTED (Not used for Penwizard)
 /* ***************************************** */
 		
 	#{$element} {

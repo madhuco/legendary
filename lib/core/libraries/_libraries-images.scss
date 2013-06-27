@@ -2,6 +2,8 @@
 /*  Responsive Image Support */
 /* ***************************************** */
 
+/* Image Wrapper Class */
+
 .img {
 	overflow: hidden;
     position: relative;	
@@ -10,18 +12,51 @@
 	}
 
 
-/* Set an Image to Auto and the browser will calculate the size.
-Width and Height of the Image must be set to Zero in the HTML */
+/* Stretch Image: Make an image fill a space.
+Parent wrapper must have a height in CSS.
+Image will distort */
 
 
-.img .auto, .auto img {	
+
+.img .stretch, .stretch img {	
 	margin: auto;
 	width:100%;
 	height:100%;
+	
 }
 
 
-/* Show hide elements (Works on non-images as well) */
+
+/* Contain Image: Make an image to fit  a space without distorting it. 
+Parent wrapper must have a height in CSS.
+Empty space will  surround the image to prevent distortion.
+Image will always be vertical and horizontally centered */
+
+
+.img .contain, .contain img {	
+	margin: auto;
+	max-width:100%;
+	max-height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	
+}
+
+/* Scale Image: Scale an image to fit a space without distorting it. 
+Parent wrapper must have a height in CSS.
+Empty space will  surround the image to prevent distortion.
+Image will always be vertical aligned to the top (e.g. not centered) */
+
+.img .scale, .scale img {	
+	margin: auto;
+	max-width:100%;
+	height:auto;	
+}
+
+/* Show hide elements (Works on non-images as well. However, avoid using these for non-images) */
 
 [data-device] {
 	display:none;

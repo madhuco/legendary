@@ -1,5 +1,9 @@
 @mixin scheme-spotbar {
 
+/* ***************************************** */
+/*  Spotbar Scheme: used to highlight information with a light grey box*/
+/* ***************************************** */
+
 @include bgcolor-offwhite;
 @include border-radius(5px);
 @include rem(padding, 10px 0);

@@ -3,7 +3,8 @@
 
 #{$element} {
 /* ***************************************** */
-/*  page: Desktop Specific Styles */
+/*  Follower-Leader-Article
+Displays follower and leader with a magazine article style  layout */
 /* ***************************************** */
 
 @include span-columns(12 omega, 12);
@@ -28,7 +29,7 @@
 @mixin follower-leader-article-mob-p($element: '.leader-follower-article-mob-l' ) {
 
 /* ***************************************** */
-/*  page: Mobile Specific Styles */
+/*  Follower-Leader-Article: Mobile Version*/
 /* ***************************************** */
 
 #{$element} {
@@ -57,9 +58,7 @@ position:relative;
 @mixin follower-leader-article-fab($element: '.follower-leader-article-fab' ) {
 	
 	#{$element} {
-/* ***************************************** */
-/*  page: Desktop Specific Styles */
-/* ***************************************** */
+
 
 @include span-columns(12 omega, 12);
 
@@ -109,7 +108,8 @@ position:relative;
 
 #{$element}.reading {
 /* ***************************************** */
-/*  page: Desktop Specific Styles */
+/*  Follower-Leader-Article: Mobile Version - Reading Mode
+Reading mode make follower and leader have 100% width for a better reading experience on mobile */
 /* ***************************************** */
 
 

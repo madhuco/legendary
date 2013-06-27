@@ -1,6 +1,10 @@
 @import "0-grids12-helpers";
 @import "grids12-base";
 
+.grids12 {
+position:relative;	
+}
+
 @include media($mob-p...) {
  .grids12 {
  @include container;

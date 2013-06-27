@@ -209,6 +209,11 @@ display:none;
  @include rem('line-height', 22px);
 }
 
+@mixin t-ui-navigation-title-fab {
+@include rem('font-size', 24px);
+ @include rem('line-height', 30px);
+}
+
 @mixin t-ui-navigation-secondary-title-fab {
 @include rem('font-size', 19px);
  @include rem('line-height', 22px);

@@ -189,7 +189,7 @@ display:none;
 	
 	
 	@include media($desk...){ 
-	.img {
+#{$element}		.img {
 	overflow:visible;	
 	}
 	}
