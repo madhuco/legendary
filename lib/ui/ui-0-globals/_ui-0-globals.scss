@@ -1,0 +1,8 @@
+	%legend {
+	@include bgcolor-default;
+	@extend %t-body-text;	
+	@include typeface-bold;
+	color:#FFF; 
+	text-align:left;
+	@extend %vr-breather;
+	}

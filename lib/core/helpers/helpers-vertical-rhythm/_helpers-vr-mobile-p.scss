@@ -74,6 +74,13 @@
 	
 }
 
+@mixin vr-spacer-inside-mob {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+	
+}
+
+
 @mixin vr-spacer-top-mob {
 	@include rem('margin-top', 10px);
 	

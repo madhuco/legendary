@@ -70,6 +70,12 @@
 	@include rem('margin-bottom', 10px);
 	}
 
+@mixin vr-spacer-inside-desk {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+	}
+
+
 @mixin vr-spacer-top-desk {
 	@include rem('margin-top', 10px);
 	}

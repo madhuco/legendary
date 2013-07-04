@@ -56,33 +56,39 @@
 
 
 @mixin vr-spacer-fab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
 }
 
 @mixin vr-spacer-top-fab {
-	@include rem('margin-top', 15px);
+	@include rem('margin-top', 10px);
 }
 
 @mixin vr-spacer-bottom-fab {
-	@include rem('margin-bottom', 15px);
+	@include rem('margin-bottom', 10px);
 	}
 
 @mixin vr-spacer-box-fab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
 }
 
 @mixin vr-spacer-box-top-fab {
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
 }
 
+@mixin vr-spacer-inside-fab {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
+
 @mixin vr-spacer-box-bottom-fab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
 }
 
 

@@ -65,38 +65,44 @@
 // ***************************************** //
 
 @mixin vr-spacer-tab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
 	}
+	
+@mixin vr-spacer-inside-tab {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+	}
+	
 
 @mixin vr-spacer-top-tab {
-	@include rem('margin-top', 15px);
+	@include rem('margin-top', 10px);
 	
 }
 
 
 @mixin vr-spacer-bottom-tab {
-	@include rem('margin-bottom', 15px);
+	@include rem('margin-bottom', 10px);
 	
 }
 
 
 @mixin vr-spacer-box-tab {
-	@include rem('margin-top', 15px);
-	@include rem('margin-bottom', 15px);
-	@include rem('padding-top', 15px);
-	@include rem('padding-bottom', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
 }
 
 @mixin vr-spacer-box-top-tab {
-	@include rem('margin-top', 15px);
-	@include rem('padding-top', 15px);
+	@include rem('margin-top', 10px);
+	@include rem('padding-top', 10px);
 }
 
 
 @mixin vr-spacer-box-bottom-tab {
-	@include rem('margin-bottom', 15px);
-	@include rem('padding-bottom', 15px);
+	@include rem('margin-bottom', 10px);
+	@include rem('padding-bottom', 10px);
 }
 
 

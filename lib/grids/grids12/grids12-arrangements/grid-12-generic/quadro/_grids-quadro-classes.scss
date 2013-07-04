@@ -1,0 +1,20 @@
+
+@charset "UTF-8";
+/* CSS Document */
+
+.grids-quadro {
+@include span-columns(12 omega, 12);
+}
+
+.grids-quadro .unit-heading {
+	@include span-columns(12 omega, 12);
+}
+
+.grids-quadro .unit-row {
+@include span-columns(3, 12)		
+}
+
+
+.grids-quadro .unit-row:last-child {
+@include omega;		
+}

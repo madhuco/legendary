@@ -24,12 +24,12 @@ $media-query-free-breakpoint: 960px;
 $mob-p: 0px, 479px; 
 $mob-l: 480px, 598px; 
 $mob: 0px, 598px; 
-$fab: 599px, 767px; 
-$tab: 768px, 959px;  
+$fab: 599px, 759px; 
+$tab: 760px, 959px;  
 $desk: 960px;  
 
 // ====== Fablets and Phones 
-$portables: 0, 767px; 
+$portables: 0, 759px; 
 
 // ====== Fablets, Phones and Tablets (Devices)
 $devices: 0px, 959px; 
@@ -38,6 +38,6 @@ $devices: 0px, 959px;
 $pads: 599px, 959px;
 
 $fabplus: 599px; 
-$tabplus: 768px; 
+$tabplus: 760px; 
 $mob-lplus: 480px; 
-$mobwide: 480px, 767px;
+$mobwide: 480px, 759px;

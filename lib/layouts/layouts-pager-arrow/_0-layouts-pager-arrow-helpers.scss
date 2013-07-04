@@ -16,6 +16,8 @@
 @mixin layouts-pager-arrow-grid($element: '.layouts-pager-arrow-grid') {
 @include layouts-pager-grid($element:$element);
 
+@include media($portables...){
+
 #{$element}	{
 
 	li {
@@ -27,7 +29,9 @@
 	display:none;	
 	}
 	
-}
+} //Close Element
+} // Close MQ
+
 
 @include media($tabplus){
 
@@ -38,7 +42,7 @@
 	li {
 	margin-right:0;
 	width:33.33%;	
-	
+	min-height:69px;
 	}
 	
 		.pager-central {
@@ -48,8 +52,7 @@
 	
 	
 } //Close Element
-
-} // Close Tab Query
+} // Close MQ
 
 } //Close Mixin
 

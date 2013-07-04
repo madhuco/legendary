@@ -1,0 +1,30 @@
+	@import "ui-0-globals";
+
+@mixin ui-table($element: '.ui-table', $direction: right, $style: true) {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+#{$element} {
+	@extend %t-body-text;	
+
+	.legend {
+	@extend %legend;
+	text-align:center;
+	}
+			
+	.unit-row {
+	background:#FFF;	
+	@extend %vr-spacer-inside;	
+	@extend %vr-breather;
+	}
+	
+	.unit-row:nth-child(odd) {
+	@include bgcolor-offwhite;
+	}
+
+
+
+
+} //Close Element
+} //Close Mixin

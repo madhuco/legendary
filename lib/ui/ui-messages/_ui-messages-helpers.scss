@@ -1,0 +1,25 @@
+@mixin ui-messages($element: '.ui-messages') {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+%ui-messages {
+@include border-radius(5px);
+@extend t-body-text;	
+@extend %vr-spacer-box;
+@extend %vr-breather;
+}
+
+}
+
+
+@mixin ui-messages-error($element: '.ui-messages-error') {
+#{$element} {
+	@extend %ui-messages;
+background-color: #ffbaba;
+color: #ff4242;
+border: 1px solid #ff4242;
+@content;
+}
+} //Close Mixin

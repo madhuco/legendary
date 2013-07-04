@@ -1,0 +1,227 @@
+// ===============================================
+// stages: Layout
+// ===============================================
+
+@mixin layouts-stages-layout($element: '.layouts-stages-layout'){
+/* ***************************************** */
+/*  Layouts stages: Displays content in small 'tile' shapes */
+/* ***************************************** */
+#{$element} {
+
+li {
+float:left;	
+}
+
+clear:both;
+		
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// stages: Grid
+// ===============================================
+
+@mixin layouts-stages-grid($element: '.layouts-stages-grid') {
+
+#{$element} {
+
+/* Basic Layout */
+
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-stages-grid-mob-p($element: '.layouts-stages-grid-mob-p') {
+
+#{$element} {
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-stages-grid-mob-l($element: '.layouts-stages-grid-mob-l') {
+@include layouts-stages-mob-p($element:$element);
+}
+@mixin layouts-stages-grid-fab($element: '.layouts-stages-grid-fab') {
+	@include layouts-stages-grid($element:$element);
+}
+
+@mixin layouts-stages-grid-tab($element: '.layouts-stages-grid-tab') {
+@include layouts-stages-mob-p($element:$element);
+}
+
+
+@mixin layouts-stages-grid-desk($element: '.layouts-stages-grid-desk') {
+	@include layouts-stages-grid($element:$element);
+}
+
+
+@mixin layouts-stages-grid-r($element: '.layouts-stages-grid') {
+@include layouts-stages-grid($element);
+
+@include media($mob...){ 
+
+#{$element} {display:none;
+
+}
+
+
+}
+
+} //Close Mixin
+
+
+
+
+
+
+// ===============================================
+// stages: Style
+// ===============================================
+
+
+
+@mixin layouts-stages-style($element: '.layouts-stages-style', $arrow: false, $color: $lightest, $bg: #fff, $active: $scratch,  $past: $line, $hover: $ribbon) {
+
+#{$element} {
+		@extend %vr-section-box;	
+	@extend %t-ui-stages;
+	
+	li {
+	@if $arrow == false {
+	@extend %vr-breather;		
+	}
+
+	}
+
+
+@if $arrow == true {
+
+li {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 1px 0 0;
+    position: relative;
+	width:19.5%;
+	text-align:center;
+	@include box-sizing(border-box);
+	opacity:0.8;
+}
+
+li:before {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 2%;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent $bg;
+    z-index: 0;
+}
+
+li:first-child:before,
+li:last-child a:after {
+    border-color: transparent;
+}
+
+li:first-child a {
+		@include border-left-radius(10px);
+}
+
+li:last-child a {
+		@include border-right-radius(10px);
+}
+
+li a:after {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -9%;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent $color;
+    z-index: 10;
+}
+
+li.active a {
+    background: $active;
+    z-index: -1;
+}
+
+li.active, li:hover {
+	opacity:1;
+}
+
+li.past {
+		opacity:0.9;
+}
+
+
+li.active a:after {
+    border-left-color: $active;
+}
+
+li.past a {
+    background: $past;
+    z-index: -1;
+}
+
+li.past a:after {
+    border-left-color: $past;
+}
+
+
+
+
+li a {
+    display: block;
+    background: $color;
+}
+
+li a:hover {
+    background: $hover;
+	
+}
+
+li a:hover:after {
+    border-color: transparent transparent transparent $ribbon; 
+}
+
+li:last-child a:hover:after {
+   border-color: transparent; 
+}
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+		
+} // Close $element
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-stages-combo($element: '.layouts-stages', $arrow: false, $color: $offwhite, $bg: #fff, $active: $offwhite-alt, $past: $offwhite-alt, $hover: $ribbon) {
+	@include layouts-stages-layout($element: $element);
+	@include layouts-stages-style($element: $element, $arrow: $arrow, $color: $color, $bg: $bg, $active: $active, $past: $past, $hover: $hover);
+		@include layouts-stages-grid-r($element: $element);
+}

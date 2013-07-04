@@ -3,8 +3,8 @@
 @include  leader-follower-50-r();
 @include  follower-leader-50-r();
 
-@include  leader-follower-narrow-r();
-@include  follower-leader-narrow-r();
+@include  leader-follower-sidebar-r();
+@include  follower-leader-sidebar-r();
 
 @include  leader-follower-overlay-50-r();
 @include  follower-leader-overlay-50-r();
@@ -12,8 +12,8 @@
 @include  leader-follower-layered-r();
 @include  follower-leader-layered-r();
 
-@include  leader-follower-slim-r();
-@include  follower-leader-slim-r();
+@include  leader-follower-navbar-r();
+@include  follower-leader-navbar-r();
 
 @include  leader-follower-wide-r();
 @include  follower-leader-wide-r();

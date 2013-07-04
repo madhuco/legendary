@@ -1,0 +1,305 @@
+// ===============================================
+// checkout: Layout
+// ===============================================
+
+@mixin layouts-checkout-layout($element: '.layouts-checkout-layout'){
+/* ***************************************** */
+/*  Layouts checkout: Displays content in small 'tile' shapes */
+/* ***************************************** */
+#{$element} {
+
+.error .ui-messages-error {
+display:block;	
+}
+
+
+		
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// checkout: Grid
+// ===============================================
+
+@mixin layouts-checkout-grid($element: '.layouts-checkout-grid') {
+
+#{$element} {
+
+@include span-columns(8,12);
+@include squish(2,12);
+
+label {
+display:block;
+}
+
+input {
+width: 100%;	
+}
+
+.address-book {
+@include span-columns(12 omega,12);
+}
+
+.address-book label {
+@include span-columns(6, 12);
+}
+
+.address-book select {
+@include span-columns(6 omega,12);
+}
+
+
+} //Close Element
+} // Close $Mixin
+
+
+
+
+@mixin layouts-checkout-grid-mob($element: '.layouts-checkout-grid-mob') {
+
+#{$element} {
+@include span-columns(12 omega,12);
+
+.password-tips {
+	clear:both;
+	width:100%;
+}
+
+.checkout-passwords {
+width:100%;	
+}
+
+
+} //Close Element
+
+.checkout-cancel {
+@include span-columns(12 omega,12);
+}
+}
+
+@mixin layouts-checkout-grid-mob-l($element: '.layouts-checkout-grid-mob-l') {
+@include layouts-checkout-grid($element:$element);
+}
+
+
+@mixin layouts-checkout-grid-fab($element: '.layouts-checkout-grid-fab') {
+@include layouts-checkout-grid($element:$element);
+}
+
+@mixin layouts-checkout-grid-fabplus($element: '.layouts-checkout-grid-fabplus') {
+
+.checkout-cancel {
+@include span-columns(8,12);
+@include squish(2,12);
+}
+
+#{$element} {
+@include span-columns(8,12);
+@include squish(2,12);
+}
+
+}
+
+
+@mixin layouts-checkout-grid-tab($element: '.layouts-checkout-grid-tab') {
+@include layouts-checkout-mob-p($element:$element);
+}
+
+
+@mixin layouts-checkout-grid-desk($element: '.layouts-checkout-grid-desk') {
+	@include layouts-checkout-grid($element:$element);
+}
+
+
+@mixin layouts-checkout-grid-r($element: '.layouts-checkout-grid') {
+@include layouts-checkout-grid($element:$element);
+
+@include media($mob...){ 
+@include layouts-checkout-grid-mob($element:$element);
+}
+
+@include media($fabplus...){ 
+@include layouts-checkout-grid-fabplus($element:$element);
+}
+
+
+
+} //Close Mixin
+
+
+
+
+
+
+
+
+// ===============================================
+// checkout: Style
+// ===============================================
+
+
+
+@mixin layouts-checkout-style($element: '.layouts-checkout-style') {
+
+#{$element} {
+
+.main-content {	
+@include border-radius(10px);	
+border:1px solid $scratch;
+		@extend %vr-section;
+		@extend %vr-section-box-bottom;
+		overflow:auto;
+}
+
+.ui-messages-error {
+		@extend %t-body-text;
+		@extend %vr-section;
+}
+
+.cta {
+	text-align:center;
+	@extend %t-cta-secondary;
+	display:inline;
+	width:auto;
+	float:right;
+}
+
+	.lead-header {
+	@include bgcolor-ribbon;
+	@extend %t-title-3;	
+	@include typeface-light;
+	color:#FFF; 	
+	width: 100%;
+	@extend %vr-breather;
+	overflow:hidden;
+	@include border-top-radius(10px);	
+	
+		 .checkout-title {
+		  float:left;
+		  display:inline;
+		  @extend %vr-spacer;
+		  }			  
+					  
+    } //Close lead-header
+
+	 
+	 label {
+		@extend %t-body-label; 
+	 }
+	 
+	 input {
+		@include border-radius(5px);
+		min-height:38px;
+		@include box-sizing(border-box); 
+	 }
+
+	.unit-row {
+	@extend %vr-section;		
+	}
+
+
+	form {
+		@extend %vr-breather;	
+	}
+
+
+
+.unit-heading {
+	@extend %t-title-4;	
+	@extend %vr-spacer;
+}
+
+.password-tips {
+			@include box-sizing(border-box);
+			@include bgcolor-footer-mono-primary-3d;
+			@include border-radius(10px);
+			@extend %vr-breather;
+			margin-top:5px;	
+}
+
+
+.password-tips li {
+		@extend %t-body-text;	
+		@extend %vr-spacer;	
+}
+
+
+.special {
+	@include bgcolor-ribbon;	
+}
+
+
+.address-book {
+@extend %vr-section-box;	
+margin-top:0;
+}
+
+.address-book .label {
+	text-align:center;
+}
+
+
+
+
+} // Close $element
+
+	
+	.checkout-cancel {
+		@extend %vr-section;		
+	}
+
+
+
+
+@include media($mob...){ 
+#{$element} .checkout-email {
+	margin-bottom:0;
+}
+
+#{$element}	 input {
+min-height:44px;
+	 }
+
+}
+
+
+	
+.checkout-basket#{$element} .unit-row {
+	margin-top:0;
+	margin-bottom:0;	
+}
+
+.payment-options {
+text-align:center;	
+}
+
+.payment-options a img {
+	opacity: 0.8;
+}
+
+.payment-options a:hover img {
+	opacity: 1;
+}
+
+
+.account-options {
+	@include icon($icon-chevron-sign-down);
+}
+
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-checkout-combo($element: '.layouts-checkout') {
+	@include layouts-checkout-layout($element: $element);
+	@include layouts-checkout-grid-r($element: $element);
+	@include layouts-checkout-style($element: $element);
+}

@@ -1,4 +1,6 @@
 
+$link: #1a74bf;
+
 $line: #dadada;
 $scratch: #e1e1e1;
 
@@ -11,9 +13,12 @@ $crumbs: #bebebe;
 $darkest: #323232;	
 
 $offwhite: #f3f3f3;
+$offwhite-alt: #e5e5e5;
 
 $default: #757575;
 
+
+$ribbon: #dedede;
 
 // ***************************************** //
 //  Text Colours //
@@ -67,6 +72,11 @@ $default: #757575;
 // ***************************************** //
 // Mono Backgrounds //
 // ***************************************** //
+
+@mixin bgcolor-default {
+	background-color: $default;
+}
+
 
 @mixin bgcolor-offwhite {
 	background-color: #f3f3f3;

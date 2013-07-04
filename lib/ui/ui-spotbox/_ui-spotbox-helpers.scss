@@ -1,0 +1,104 @@
+@import "ui-0-globals";
+
+@mixin ui-spotbox($element: '.ui-spotbox') {
+
+/* ***************************************** */
+/*  Ui Spot Box - Highlight key pieces of informaiton */
+/* ***************************************** */
+
+%ui-spotbox {
+		@extend %vr-spacer-box;	
+	@extend %vr-breather;	
+	@include border-radius(5px);
+	display:block;
+	clear:both;
+	overflow:hidden;
+
+.special {
+@include typeface-bold;
+text-align:center;
+padding-top: 0.2em;
+padding-bottom:0.2em;
+}
+
+.cta {
+text-align:center;	
+}
+
+}
+
+
+#{$element} {
+@include box-sizing(border-box);
+@extend %vr-spacer-bottom;	
+@include bgcolor-offwhite-3d;
+	overflow:hidden;
+	@include border-radius(5px);
+}
+
+#{$element}-muted {
+@extend %ui-spotbox;	
+	@include bgcolor-offwhite;
+}
+
+
+#{$element}-strong {
+@extend %ui-spotbox;	
+@include  bgcolor-ribbon;
+}
+
+
+#{$element} {
+
+		@extend %t-body-text;	
+
+	.legend {
+	@extend %legend;
+	text-align:center;
+	}
+	
+	
+.special {
+		@include typeface-bold;
+		@include txtcolor-darkest;
+		text-align:center;
+		@include  bgcolor-ribbon;
+		margin-right:0;
+	}
+
+
+
+	li {
+	text-align:left;	
+	width:100%;
+	@extend %vr-breather;
+	clear:both;
+	@extend %vr-spacer-inside;	
+	}
+	
+	li span {
+	float:right;	
+	}
+	
+	
+	.cta {
+	text-align:center;
+	@extend %t-cta-secondary;
+	margin-left:auto;	
+	margin-right:auto;	
+	@extend %vr-section;	
+	}
+	
+} //Close Element
+
+
+@include media($mob...){ 
+#wrapper #{$element} .cta {
+margin-top:0;	
+margin-bottom:0;	
+@include  bgcolor-ribbon;
+}
+}
+
+
+} //Close Mixin

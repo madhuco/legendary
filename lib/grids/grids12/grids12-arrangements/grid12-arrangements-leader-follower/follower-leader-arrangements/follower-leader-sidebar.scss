@@ -1,0 +1,69 @@
+
+@mixin follower-leader-sidebar($element: '.follower-leader-sidebar')  {
+/* ***************************************** */
+/*  Layotus: Follower-Leader-Sidebar 
+A two column layout often used to display a sidebar
+Follower is on the left */
+/* ***************************************** */
+		
+	#{$element} {
+
+	@include span-columns(12 omega, 12);		
+	
+	> .content-follower {
+		@include span-columns(4 , 12);	
+	}
+	
+	> .content-leader {
+		@include span-columns(8 omega, 12);		
+	}
+	
+	> .content-footer {
+		@include span-columns(12 omega, 12);	
+	}
+
+	} //Close Class
+	} //Close Mixin
+
+
+@mixin follower-leader-sidebar-mob-p($element: '.follower-leader-sidebar-p' )  {
+
+	#{$element} {
+@include  span-columns(12 omega, 12);	
+
+> .content-follower {
+	@include  span-columns(12 omega, 12);
+}
+
+> .content-leader {
+@include  span-columns(12 omega, 12);
+}
+
+	} //Close Class
+	} //Close Mixin
+
+
+@mixin follower-leader-sidebar-mob-l($element: '.follower-leader-sidebar-mob-l' ) {
+	@include follower-leader-sidebar-mob-p($element: $element);
+}
+
+
+
+@mixin follower-leader-sidebar-fab($element: '.follower-leader-sidebar-fab' ) {
+	@include follower-leader-sidebar($element: $element);
+	} //Close Mixin
+
+
+
+@mixin follower-leader-sidebar-tab($element: '.follower-leader-sidebar-tab' ) {
+@include follower-leader-sidebar-fab($element: $element);
+}
+
+@mixin follower-leader-sidebar-desk($element: '.follower-leader-sidebar-desk' ) {
+	@include follower-leader-sidebar($element: $element);
+}
+
+
+@mixin follower-leader-sidebar-r($element: '.follower-leader-sidebar') {
+@include follower-leader-sidebar-desk($element: $element);
+}

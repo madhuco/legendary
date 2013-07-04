@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@mixin grids-quadro($element: '.grids-quadro') {
+
+#{$element} {
+@include span-columns(12 omega, 12);
+
+
+.unit-heading {
+	@include span-columns(12 omega, 12);
+}
+
+.unit-row {
+@include span-columns(3, 12)		
+}
+
+
+.unit-row:last-child {
+@include omega;		
+}
+
+}
+}

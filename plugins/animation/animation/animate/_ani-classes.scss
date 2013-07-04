@@ -6,7 +6,7 @@
   @include animation(2s ease both); }
 
 // Animations list
-$animations: fadeInLeft, bounceInDown, bounceOutLeft;
+$animations: fadeInLeft, bounceInDown, bounceOutLeft, flipInX;
 
 // Animations that require backface-visibility
 $backface: flip, flipInX, flipOutX, flipInY, flipOutY;

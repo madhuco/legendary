@@ -24,7 +24,7 @@ display:block;
 
 
 
-#{$element} > .content-aside {
+#{$element} > .content-follower {
 	height:100%;
 	position:absolute;
 }
@@ -45,7 +45,7 @@ height:100%;
 // ===============================================
 @mixin layouts-tapazine-grid($element: '.layouts-tapazine-grid'){
 
-#{$element} > .content-main  {
+#{$element} > .content-leader  {
 padding-right:4%;
 
 
@@ -93,12 +93,14 @@ padding-right:4%;
 
 #{$element}  {	
 
-> .content-main {	
+@include ui-taplist('> .content-follower');
+
+> .content-leader {	
 @extend %vr-section;
 @extend %vr-breather;
 }
 
-> .content-aside ul {	
+> .content-follower ul {	
 @extend %vr-section-inside-top;
 }
 
@@ -134,7 +136,7 @@ border-bottom: 1px solid $darkest;
 @include media($mob...){ 
 
 
-#{$element}  > .content-aside ul {
+#{$element}  > .content-follower ul {
 	padding-top:0;
 	background:#FFF;
 	@include border-radius(10px);

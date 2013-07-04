@@ -1,0 +1,43 @@
+@mixin ui-instruct($element: '.ui-instruct', $color: $link ) {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+%ui-instruct {
+color: $color;
+padding-left: 10px;
+padding-right: 10px;
+@extend %t-body-text;
+}
+
+#{$element}-left {
+@extend %ui-instruct;
+
+&:before {
+@include icon($icon-chevron-left);
+}
+
+} //Close Element
+
+
+#{$element}-right {
+@extend %ui-instruct;	
+
+&:after {
+@include icon($icon-chevron-right);
+padding-right:2px;
+}
+
+} //Close Element
+
+
+#{$element} {
+@extend %t-body-text;
+@include typeface-bold;
+text-transform:uppercase;
+color: $darkest;
+} //Close Element
+
+
+} //Close Mixin

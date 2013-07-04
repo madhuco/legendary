@@ -1,0 +1,246 @@
+// ===============================================
+// basket: Layout
+// ===============================================
+
+@mixin layouts-basket-layout($element: '.layouts-basket-layout'){
+/* ***************************************** */
+/*  Layouts basket: Displays content in small 'tile' shapes */
+/* ***************************************** */
+#{$element} {
+
+
+.error .ui-messages-error {
+display:block;	
+}
+
+		
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// basket: Grid
+// ===============================================
+
+@mixin layouts-basket-grid($element: '.layouts-basket-grid') {
+
+#{$element} {
+
+/* Basic Layout */
+
+
+
+	
+.legend {
+	@include span-columns(9 , 9);
+	}
+
+.unit-row {
+	@include span-columns(9, 9);
+	
+	}
+
+.a {
+	@include span-columns(2, 9);
+}
+
+.b {
+	@include span-columns(5, 9);
+}
+
+.b .unit-title {
+	@include span-columns(3 omega, 5);
+}
+
+.b .img {
+	@include span-columns(2, 5);
+}
+
+.c {
+	@include span-columns(2, 9);
+	@include omega;
+}
+
+.options {
+display:block;	
+}
+
+
+.options a {
+display:block;	
+}
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-basket-grid-mob-p($element: '.layouts-basket-grid-mob-p') {
+
+#{$element} {
+.summary {
+
+@include span-columns(12 omega,12);
+
+ul {
+	@include span-columns(12,12);
+}
+
+
+.special {
+	width: space(6,12);
+	display:inline;
+	float:left;
+}
+
+.cta {
+	@include span-columns(6 omega,12);
+	clear:none;
+}
+
+} //Close Summary
+} //Close Element
+} // Close $Mixin
+
+
+
+@mixin layouts-basket-grid-mob-l($element: '.layouts-basket-grid-mob-l') {
+@include layouts-basket-grid($element:$element);
+}
+
+
+@mixin layouts-basket-grid-fab($element: '.layouts-basket-grid-fab') {
+@include layouts-basket-grid($element:$element);
+}
+
+@mixin layouts-basket-grid-tab($element: '.layouts-basket-grid-tab') {
+@include layouts-basket-mob-p($element:$element);
+
+#{$element} {
+
+}
+}
+
+
+@mixin layouts-basket-grid-desk($element: '.layouts-basket-grid-desk') {
+	@include layouts-basket-grid($element:$element);
+}
+
+
+@mixin layouts-basket-grid-r($element: '.layouts-basket-grid') {
+@include layouts-basket-grid($element:$element);
+
+@include media($mob...){ 
+@include layouts-basket-grid-mob-p($element:$element);
+}
+
+@include media($fabplus...){ 
+#{$element} .content-header {
+display:none;
+}
+}
+
+
+} //Close Mixin
+
+
+
+
+
+
+
+
+// ===============================================
+// basket: Style
+// ===============================================
+
+
+
+@mixin layouts-basket-style($element: '.layouts-basket-style') {
+
+
+.voucher {
+border: 1px solid $scratch;
+border-left:0;	
+border-right:0;	
+}
+
+.shield-active .voucher {
+border-bottom:0;
+background: $offwhite-alt;	
+}
+
+.shield-active .voucher-input {
+border-bottom:1px;	
+background: $offwhite-alt;
+}
+
+.voucher span:after {
+	@include icon($icon-plus-sign);
+}
+
+.shield-active .voucher span:after {
+	display:none;
+}
+
+.voucher-input-active  .voucher {
+	display:none;
+}
+
+.voucher-input-active  .voucher-input {
+	display:none !important;
+}
+
+
+.voucher-input {
+@extend %vr-spacer;
+margin-top:0;
+display: block;
+overflow: hidden;
+}
+
+.voucher-input input {
+float: left;
+display: inline;
+width: 50%;
+margin-right: 10%;	
+@include rem(padding, 5px);
+}
+
+.voucher-input .shield-trigger {
+@include border-radius(5px);
+background: $crumbs;
+color:#fff;
+display:block;
+float:left;
+@include rem(padding, 5px);
+}
+
+.discounted-price {
+display:none;	
+}
+
+.ui-messages-error {
+margin-top:0;	
+}
+
+@include ui-messages-error('.error .voucher-input') {
+display:block !important;	
+};
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-basket-combo($element: '.layouts-basket') {
+	@include layouts-basket-layout($element: $element);
+	@include layouts-basket-grid-r($element: $element);
+	@include layouts-basket-style($element: $element);
+}

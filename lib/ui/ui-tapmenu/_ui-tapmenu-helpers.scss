@@ -77,19 +77,17 @@ position:absolute;
 }
 }
 
-@include media($desk...){ 
 
 
 @include media($desk){ 
-	  #{$element}, .anchor  {
+.tap {
 	  display:none;	
 	  }
 	  
-	  html body .show#{$element} {
+	  html body .show .tap {
 	  display:none !Important;	
 		  }  
 
-}
 }
 
 
