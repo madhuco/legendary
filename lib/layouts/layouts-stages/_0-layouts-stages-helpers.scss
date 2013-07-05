@@ -87,7 +87,7 @@ clear:both;
 
 
 
-@mixin layouts-stages-style($element: '.layouts-stages-style', $arrow: false, $color: $lightest, $bg: #fff, $active: $scratch,  $past: $line, $hover: $ribbon) {
+@mixin layouts-stages-style($element: '.layouts-stages-style', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $scratch, $active: $scratch,  $past: $line, $hover: $ribbon) {
 
 #{$element} {
 		@extend %vr-section-box;	
@@ -103,34 +103,97 @@ clear:both;
 
 @if $arrow == true {
 
-li {
+
+ 
+
+ li {
     display: inline-block;
     height: 30px;
     line-height: 30px;
+    width: 19.5%;
     margin: 5px 1px 0 0;
+    text-indent: 35px;
     position: relative;
-	width:19.5%;
-	text-align:center;
-	@include box-sizing(border-box);
-	opacity:0.8;
 }
 
-li:before {
+ li:before {
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
-    left: 2%;
+    left: 1%;
     border-style: solid;
-    border-width: 15px 0 15px 15px;
-    border-color: transparent transparent transparent $bg;
+    border-width: 18px 0 18px 18px;
+    border-color: transparent transparent transparent $page-bg;
     z-index: 0;
+	top:-3px;
 }
 
-li:first-child:before,
-li:last-child a:after {
+ li:first-child:before {
     border-color: transparent;
 }
+
+ li a:after {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+        right: -10%;
+    border-style: solid;
+    border-width: 18px 0 18px 18px;
+    border-color: transparent transparent transparent $arrow-color;
+    z-index: 10;
+	top:-3px;
+}
+
+ li.active a {
+    background: $active;
+    z-index: 100;
+}
+
+ li.active a:after {
+    border-left-color: $active;
+}
+
+ li a {
+    display: block;
+    background: $arrow-color;
+}
+
+ li a:hover {
+    background: $hover;
+}
+
+ li a:hover:after {
+    border-color: transparent transparent transparent $hover; 
+}
+
+
+
+ li.past a {
+    background: $past;
+}
+
+ li.past a:after {
+    border-color: transparent transparent transparent $past;
+}
+
+li:last-child a {
+	 border-color: transparent;
+}
+
+li:last-child a:after {
+	 border-color: transparent;
+}
+
+li:last-child a:hover {
+	 border-color: transparent;
+}
+
+li:last-child a:hover:after {
+	 border-color: transparent;
+}
+
 
 li:first-child a {
 		@include border-left-radius(10px);
@@ -139,72 +202,6 @@ li:first-child a {
 li:last-child a {
 		@include border-right-radius(10px);
 }
-
-li a:after {
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    right: -9%;
-    border-style: solid;
-    border-width: 15px 0 15px 15px;
-    border-color: transparent transparent transparent $color;
-    z-index: 10;
-}
-
-li.active a {
-    background: $active;
-    z-index: -1;
-}
-
-li.active, li:hover {
-	opacity:1;
-}
-
-li.past {
-		opacity:0.9;
-}
-
-
-li.active a:after {
-    border-left-color: $active;
-}
-
-li.past a {
-    background: $past;
-    z-index: -1;
-}
-
-li.past a:after {
-    border-left-color: $past;
-}
-
-
-
-
-li a {
-    display: block;
-    background: $color;
-}
-
-li a:hover {
-    background: $hover;
-	
-}
-
-li a:hover:after {
-    border-color: transparent transparent transparent $ribbon; 
-}
-
-li:last-child a:hover:after {
-   border-color: transparent; 
-}
-	
-	
-	
-	
-	
-	
 	
 }
 
@@ -220,8 +217,8 @@ li:last-child a:hover:after {
 // Combo
 // ===============================================
 
-@mixin layouts-stages-combo($element: '.layouts-stages', $arrow: false, $color: $offwhite, $bg: #fff, $active: $offwhite-alt, $past: $offwhite-alt, $hover: $ribbon) {
+@mixin layouts-stages-combo($element: '.layouts-stages', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $offwhite, $active: $scratch,  $past: $scratch, $hover: $crumbs) {
 	@include layouts-stages-layout($element: $element);
-	@include layouts-stages-style($element: $element, $arrow: $arrow, $color: $color, $bg: $bg, $active: $active, $past: $past, $hover: $hover);
+	@include layouts-stages-style($element: $element, $arrow: $arrow, $color: $color, $page-bg: $page-bg, $arrow-color: $arrow-color, $active: $active, $past: $past, $hover: $hover);
 		@include layouts-stages-grid-r($element: $element);
 }

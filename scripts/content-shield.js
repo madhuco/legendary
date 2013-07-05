@@ -24,10 +24,10 @@
 			{
 				$(this).addClass('close');
 				$('#wrapper').addClass('shield-active');
+				$(this).parent().toggleClass('shield-active');
 				var shieldTargetName = $(this).data('shield-target');
 				var shieldTarget = '.' + shieldTargetName;
-				$(shieldTarget).addClass("animated bounceInDown");
-				$(shieldTarget).toggle();
+				$(shieldTarget).slideToggle();
 				var shieldTriggerName = $(this).data('shield-trigger');
 				var shieldTrigger = shieldTriggerName + '-active';
 				$('.wrapper').addClass(shieldTrigger);

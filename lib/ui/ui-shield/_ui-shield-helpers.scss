@@ -1,0 +1,31 @@
+@mixin ui-shield($element: 'a.shield-trigger') {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+
+#{$element} {
+display:inline-block;
+
+&:after {
+@include icon($icon-expand-alt);
+float:right;
+}
+
+}
+
+
+
+.shield-active > #{$element} {
+
+&:after {
+@include icon($icon-collapse-alt);
+
+}
+
+}
+
+
+
+} //Close Mixin

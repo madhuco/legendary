@@ -1,47 +1,38 @@
 // JavaScript Document
-(function($)
-{
+(function ($) {
 
-	$(function()
-	{
-		"use strict";
+    $(function () {
+        "use strict";
 
 
 
-		$(document).ready(function()
-		{
+        $(document).ready(function () {
 
-			// Animate the element's value from x to y:
-			$('.voucher-input .shield-trigger').live('click', function()
-			{
-				var originalprice = $('#price').text();
-				var discount = $('.discounted-price').text();
+            // Animate the element's value from x to y:
+    if($('.discount-active').length > 0) {
+                var originalprice = $('#price').text();
+                var discount = $('.discounted-price').text();
 
-
-
-				$(
-				{
-					someValue: originalprice
-				}).animate(
-				{
-					someValue: discount
-				}, {
-					duration: 3000,
-					easing: 'swing',
-					// can be anything
-					step: function()
-					{ // called on every step
-						// Update the element's text with rounded-up value:
-						$('#price').text(((this.someValue)));
-					}
-				});
+                $({
+                    someValue: originalprice
+                }).animate({
+                    someValue: discount
+                }, {
+                    duration: 3000,
+                    easing: 'swing',
+                    // can be anything
+                    step: function () { // called on every step
+                        // Update the element's text with rounded-up value:
+                        $('#price').text(parseFloat(this.someValue).toFixed(2));
+                    }
+                });
 
 
+	}
+            });
+		
 
-			});
-		});
-
-	});
+    });
 
 
 

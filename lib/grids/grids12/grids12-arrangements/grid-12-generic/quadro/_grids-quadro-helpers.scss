@@ -16,9 +16,24 @@
 }
 
 
-.unit-row:last-child {
+.unit-row:last-child, .unit-row-last {
 @include omega;		
 }
 
 }
+
+
+@include media($portables...){ 
+#{$element} .unit-row {
+@include span-columns(6, 12)		
+}
+
+#{$element} .unit-row:nth-child(2) {
+@include omega;			
+}
+
+
+
+}
+
 }

@@ -4,6 +4,7 @@
 /*  Tap Menu Lets you create Menus (with Javascript)*/
 /* ***************************************** */
 
+
 %ui-messages {
 @include border-radius(5px);
 @extend t-body-text;	
@@ -22,4 +23,31 @@ color: #ff4242;
 border: 1px solid #ff4242;
 @content;
 }
+
+
+
+
+@include keyframes(error) {
+  0% {
+  @include box-shadow( 0 0 9px rgba(255, 0, 0, 0.1)) 
+  }
+
+ 
+  50% {
+  @include box-shadow( 0 0 18px rgba(255, 0, 0, 1)) 
+  }
+ 
+ 
+   100% {
+  @include box-shadow( 0 0 9px rgba(255, 0, 0, 0.1)) 
+  }
+    
+}
+
+
+.error {
+	border: 2px solid #ff4242;
+ @include animation(error 3s infinite);
+}
+
 } //Close Mixin

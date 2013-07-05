@@ -15,6 +15,18 @@
 }
 
 
-.grids-quadro .unit-row:last-child {
+.grids-quadro .unit-row:last-child, .grids-quadro .unit-row-last  {
 @include omega;		
 }
+
+@include media($portables...){
+	.grids-quadro .unit-row {
+@include span-columns(6, 12);		
+}
+
+.grids-quadro .unit-row:nth-child(2) {
+@include omega;		
+}
+
+	
+	 }

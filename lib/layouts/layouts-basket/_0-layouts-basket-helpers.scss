@@ -70,6 +70,15 @@ display:block;
 display:block;	
 }
 
+.lead-header {
+	@include span-columns(12 omega, 12);
+}
+
+
+.account {
+	@include span-columns(2 omega, 12);
+}
+
 
 } // Close $element
 } // Close $Mixin
@@ -99,7 +108,14 @@ ul {
 	clear:none;
 }
 
+
+
 } //Close Summary
+.account {
+	@include span-columns(6 omega, 12);
+}
+
+
 } //Close Element
 } // Close $Mixin
 
@@ -158,12 +174,47 @@ display:none;
 
 
 @mixin layouts-basket-style($element: '.layouts-basket-style') {
+#{$element} {
 
+
+.lead-header {
+	@include bgcolor-default;
+	@extend %t-title-3;	
+	@include typeface-light;
+	color:#FFF; 	
+	width: 100%;
+	@extend %vr-breather;
+	@include border-top-radius(10px);	
+	@extend %vr-spacer-inside;
+	@extend %vr-section-bottom;
+	
+		 .checkout-title {
+		  float:left;
+		  display:inline;
+				  }			  
+					  
+    } //Close lead-header
+
+
+
+
+
+/* Voucher */
 
 .voucher {
 border: 1px solid $scratch;
 border-left:0;	
 border-right:0;	
+}
+
+.voucher .shield-trigger {
+width:100%;
+}
+
+@include media($fabplus...){ 
+.voucher .shield-trigger {
+text-align:center;	
+}
 }
 
 .shield-active .voucher {
@@ -176,9 +227,6 @@ border-bottom:1px;
 background: $offwhite-alt;
 }
 
-.voucher span:after {
-	@include icon($icon-plus-sign);
-}
 
 .shield-active .voucher span:after {
 	display:none;
@@ -221,6 +269,9 @@ float:left;
 display:none;	
 }
 
+
+/* Error Messages */
+
 .ui-messages-error {
 margin-top:0;	
 }
@@ -228,6 +279,21 @@ margin-top:0;
 @include ui-messages-error('.error .voucher-input') {
 display:block !important;	
 };
+
+
+.account {
+	@extend %t-body-text;
+}
+
+.account i {
+	display:block;	
+}
+
+.account i:after {
+	@include icon($icon-chevron-sign-down);
+	margin-left:5px;
+}
+}
 
 
 } // Close $Mixin

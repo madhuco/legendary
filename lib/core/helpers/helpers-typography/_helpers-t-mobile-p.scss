@@ -75,7 +75,7 @@
 
 @mixin t-body-small-mob {
  @include rem('font-size', 12px);
- @include rem('line-height', 22px);
+ @include rem('line-height', 16px);
 }
 
 @mixin t-body-label-mob {

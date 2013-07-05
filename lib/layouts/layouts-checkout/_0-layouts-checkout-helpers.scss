@@ -8,12 +8,70 @@
 /* ***************************************** */
 #{$element} {
 
-.error .ui-messages-error {
-display:block;	
+
+
+/* Account */
+
+.account {
+	text-align:right;
+}
+
+.account nav  {
+right:10px;	
+}
+
+.account .anchor  {
+padding-right:10px;
+}
+
+/* Address */
+
+.address-option input {
+float: left;
+margin-right: 10px;	
 }
 
 
-		
+.address-delivery .unit-heading {
+display:none;	
+}
+
+
+.address-billing .unit-heading {
+display:none;	
+}
+
+.address-billing {
+display:none;	
+}
+
+
+
+	
+} // Close $element
+
+
+
+/* Address Extended */
+
+.extend #{$element} {
+
+.address-delivery .unit-heading {
+display:block;	
+}
+
+.address-delivery .content {
+display:none;	
+}
+
+.address-billing .unit-heading {
+display:block;	
+}
+
+.address-billing {
+display:block;	
+}
+
 } // Close $element
 } // Close $Mixin
 
@@ -33,11 +91,20 @@ label {
 display:block;
 }
 
-input {
+input[type="password"], input[type="text"]   {
 width: 100%;	
 }
 
-.address-book {
+.lead-header {
+	@include span-columns(6, 12);
+}
+
+.account {
+	@include span-columns(6 omega, 12);
+}
+
+
+.special-bar {
 @include span-columns(12 omega,12);
 }
 
@@ -48,6 +115,11 @@ width: 100%;
 .address-book select {
 @include span-columns(6 omega,12);
 }
+
+.unit-row {
+clear:both;	
+}
+
 
 
 } //Close Element
@@ -152,6 +224,11 @@ border:1px solid $scratch;
 		overflow:auto;
 }
 
+.info {
+			@extend %t-body-text;
+}
+
+
 .ui-messages-error {
 		@extend %t-body-text;
 		@extend %vr-section;
@@ -159,27 +236,33 @@ border:1px solid $scratch;
 
 .cta {
 	text-align:center;
-	@extend %t-cta-secondary;
+	@extend %t-cta-prompt;
 	display:inline;
 	width:auto;
 	float:right;
+	margin-top:0;
+	@include appearance(none);
+}
+
+input.cta {
+		@include appearance(none);
 }
 
 	.lead-header {
-	@include bgcolor-ribbon;
+	@include bgcolor-default;
 	@extend %t-title-3;	
 	@include typeface-light;
 	color:#FFF; 	
 	width: 100%;
 	@extend %vr-breather;
-	overflow:hidden;
 	@include border-top-radius(10px);	
+	@extend %vr-spacer-inside;
+	@extend %vr-spacer-bottom;
 	
-		 .checkout-title {
+			 .checkout-title {
 		  float:left;
 		  display:inline;
-		  @extend %vr-spacer;
-		  }			  
+				  }			  
 					  
     } //Close lead-header
 
@@ -188,10 +271,11 @@ border:1px solid $scratch;
 		@extend %t-body-label; 
 	 }
 	 
-	 input {
+	 input[type="text"], input[type="password"],  input[type="email"]  {
 		@include border-radius(5px);
 		min-height:38px;
 		@include box-sizing(border-box); 
+		width:100%;
 	 }
 
 	.unit-row {
@@ -230,14 +314,22 @@ border:1px solid $scratch;
 }
 
 
+.special-bar {
+	@include bgcolor-ribbon;		
+@extend %vr-spacer-box;	
+margin-bottom:20px;
+}
+
 .address-book {
-@extend %vr-section-box;	
-margin-top:0;
+margin-top:0;	
 }
 
 .address-book .label {
 	text-align:center;
 }
+
+
+
 
 
 
@@ -250,21 +342,6 @@ margin-top:0;
 	}
 
 
-
-
-@include media($mob...){ 
-#{$element} .checkout-email {
-	margin-bottom:0;
-}
-
-#{$element}	 input {
-min-height:44px;
-	 }
-
-}
-
-
-	
 .checkout-basket#{$element} .unit-row {
 	margin-top:0;
 	margin-bottom:0;	
@@ -283,9 +360,60 @@ text-align:center;
 }
 
 
-.account-options {
-	@include icon($icon-chevron-sign-down);
+.account i {
+	display:block;	
 }
+
+.account i:after {
+	@include icon($icon-chevron-sign-down);
+	margin-left:5px;
+}
+
+
+.account {
+	@extend %t-body-text;
+}
+
+
+.account i {
+color: $lightest;	
+}
+
+
+
+.address .unit-heading {
+@extend %t-title-3;
+display:block;	
+@include rem('padding', 15px);
+@include rem('padding-right', 30px);
+text-align: left;
+position:relative;
+color: $default;
+}
+
+
+
+.checkout-complete .ui-spotbox {
+@extend %vr-section;	
+float:left;
+width:100%;
+text-align:center;
+}
+
+
+@include media($mob...){ 
+#{$element} .checkout-email {
+	margin-bottom:0;
+}
+
+#{$element}	input[type="text"], 
+#{$element}	input[type="password"],  
+#{$element}	input[type="email"] {
+min-height:44px;
+	 }
+
+}
+
 
 
 

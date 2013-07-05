@@ -1,0 +1,30 @@
+@mixin ui-inlinemenu($element: '.ui-inlinemenu', $direction: right, $style: true) {
+
+/* ***************************************** */
+/*  Tap Menu Lets you create Menus (with Javascript)*/
+/* ***************************************** */
+
+
+#{$element} {
+position: relative;
+display: inline-block;	
+
+.anchor {
+	display: inline-block;	
+}
+
+nav {
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 1000;
+display: none;
+float: left;
+min-width: 160px;
+padding: 5px 0;
+margin: 2px 0 0;
+@include scheme-purity();
+}
+
+} //Close $element
+} //Close Mixin

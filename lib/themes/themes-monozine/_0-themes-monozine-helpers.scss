@@ -49,14 +49,12 @@ text-align:center;
 
 
 
-#{$root} {
-	@include ui-solo-quote-outside($element: '.lead-quote') {
+	@include ui-solo-quote-outside($element: '#{$root} .lead-quote') {
 		
 	@extend %t-intro-1; 
 	@extend %vr-spacer; 
 		
 	}	
-}
 
 
 #{$root} .lead-quote cite {
