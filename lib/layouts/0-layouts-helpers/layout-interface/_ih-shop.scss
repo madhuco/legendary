@@ -1,0 +1,32 @@
+@mixin ih-shop {
+.checkout-cancel {
+		@extend %vr-section;		
+	}
+
+
+.checkout-basket .unit-row {
+	margin-top:0;
+	margin-bottom:0;	
+}
+
+
+.account i {
+	display:block;	
+}
+
+.account i:after {
+	@include icon($icon-chevron-sign-down);
+	margin-left:5px;
+}
+
+
+.account {
+	@extend %t-body-text;
+}
+
+
+.account i {
+color: $lightest;	
+}
+
+}

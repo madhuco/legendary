@@ -4,15 +4,9 @@
 
 @mixin layouts-basket-layout($element: '.layouts-basket-layout'){
 /* ***************************************** */
-/*  Layouts basket: Displays content in small 'tile' shapes */
+/*  Layouts basket: Basket Display*/
 /* ***************************************** */
 #{$element} {
-
-
-.error .ui-messages-error {
-display:block;	
-}
-
 		
 } // Close $element
 } // Close $Mixin
@@ -26,18 +20,14 @@ display:block;
 
 #{$element} {
 
-/* Basic Layout */
+/* Basket: Basic Layout */
 
-
-
-	
 .legend {
 	@include span-columns(9 , 9);
 	}
 
 .unit-row {
 	@include span-columns(9, 9);
-	
 	}
 
 .a {
@@ -132,10 +122,6 @@ ul {
 
 @mixin layouts-basket-grid-tab($element: '.layouts-basket-grid-tab') {
 @include layouts-basket-mob-p($element:$element);
-
-#{$element} {
-
-}
 }
 
 
@@ -159,12 +145,6 @@ display:none;
 
 
 } //Close Mixin
-
-
-
-
-
-
 
 
 // ===============================================

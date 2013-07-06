@@ -71,7 +71,8 @@ $grid-padding        : 5.287%;
  @include media($desk) {
 
 	/* ***** Desktop Grid  ***** */ 
-#wrapper.grids12 {
+#wrapper.grids12,
+.grids12 {
 $total-columns       : 12;
 $column-width        : 4.5em;
 $gutter-width        : 3em;

@@ -8,6 +8,10 @@
 @include vr-breather-fab;
 }
 
+%vr-bounding {
+@include vr-bounding-fab;
+}
+
 
 %vr-section {
 @include vr-section-fab;

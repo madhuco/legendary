@@ -4,11 +4,9 @@
 
 @mixin layouts-checkout-layout($element: '.layouts-checkout-layout'){
 /* ***************************************** */
-/*  Layouts checkout: Displays content in small 'tile' shapes */
+/*  Layouts checkout */
 /* ***************************************** */
 #{$element} {
-
-
 
 /* Account */
 
@@ -45,14 +43,12 @@ display:none;
 display:none;	
 }
 
-
-
 	
 } // Close $element
 
 
 
-/* Address Extended */
+/* Address Extended - Address information that displays when the user clicks on expanded*/
 
 .extend #{$element} {
 
@@ -119,8 +115,6 @@ width: 100%;
 .unit-row {
 clear:both;	
 }
-
-
 
 } //Close Element
 } // Close $Mixin
@@ -329,23 +323,10 @@ margin-top:0;
 }
 
 
-
-
-
-
-
-} // Close $element
-
-	
-	.checkout-cancel {
-		@extend %vr-section;		
-	}
-
-
-.checkout-basket#{$element} .unit-row {
-	margin-top:0;
-	margin-bottom:0;	
+.address-billing {
+background: $offwhite;	
 }
+
 
 .payment-options {
 text-align:center;	
@@ -360,30 +341,9 @@ text-align:center;
 }
 
 
-.account i {
-	display:block;	
-}
-
-.account i:after {
-	@include icon($icon-chevron-sign-down);
-	margin-left:5px;
-}
-
-
-.account {
-	@extend %t-body-text;
-}
-
-
-.account i {
-color: $lightest;	
-}
-
-
-
 .address .unit-heading {
 @extend %t-title-3;
-display:block;	
+
 @include rem('padding', 15px);
 @include rem('padding-right', 30px);
 text-align: left;
@@ -391,14 +351,15 @@ position:relative;
 color: $default;
 }
 
-
-
 .checkout-complete .ui-spotbox {
 @extend %vr-section;	
 float:left;
 width:100%;
 text-align:center;
 }
+
+} // Close $element
+
 
 
 @include media($mob...){ 

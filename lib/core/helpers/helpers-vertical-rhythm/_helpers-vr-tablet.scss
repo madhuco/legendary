@@ -9,6 +9,13 @@
 @include box-sizing(border-box);
 }
 
+@mixin vr-bounding-tab {
+@include rem(padding-left, 30px);	
+@include rem(padding-right, 30px);	
+@include box-sizing(border-box);
+}
+
+
 
 @mixin vr-section-tab {
 	@include rem('margin-top', 20px);

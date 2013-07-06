@@ -8,6 +8,13 @@
 }
 
 
+@mixin vr-bounding-mob {
+@include rem(padding-left, 15px);	
+@include rem(padding-right, 15px);	
+@include box-sizing(border-box);
+}
+
+
 @mixin vr-section-mob {
 	@include rem('margin-top', 30px);
 	@include rem('margin-bottom', 30px);

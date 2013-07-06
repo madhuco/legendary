@@ -1,0 +1,5 @@
+@import "0-layouts-addtocart-helpers";
+
+
+	@include layouts-addtocart-layout('.layouts-addtocart-style');
+	@include layouts-addtocart-style;

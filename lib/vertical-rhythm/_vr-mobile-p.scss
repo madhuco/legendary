@@ -7,6 +7,10 @@
 @include vr-breather-mob;
 }
 
+%vr-bounding {
+@include vr-bounding-mob;
+}
+
 
 %vr-section {
 @include vr-section-mob;

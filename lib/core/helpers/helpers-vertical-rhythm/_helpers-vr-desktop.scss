@@ -9,6 +9,13 @@
 @include box-sizing(border-box);
 }
 
+@mixin vr-bounding-desk {
+@include rem(padding-left, 40px);	
+@include rem(padding-right, 40px);	
+@include box-sizing(border-box);
+}
+
+
 
 @mixin vr-section-desk {
 	@include rem('margin-top', 25px);

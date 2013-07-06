@@ -1,0 +1,4 @@
+@import "0-layouts-addtocart-helpers";
+
+@include layouts-addtocart-layout($element: '.layouts-addtocart-grid');
+@include layouts-addtocart-grid-r($element: '.layouts-addtocart-grid');
