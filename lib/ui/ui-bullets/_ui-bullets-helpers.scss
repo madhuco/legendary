@@ -1,0 +1,27 @@
+@mixin ui-bullets($element: '.ui-bullets', $style: true) {
+
+#{$element} {
+
+li {
+padding-left:1em;
+@include rem(margin-bottom, 5px);	
+margin-left:-1em;
+}
+
+
+li:before {
+@include icon($icon-circle);
+margin-left: -1.5em;
+color: #bebebe;
+line-height: 4.2em;
+font-size: 0.7em;
+display:block;
+@if $style == true {
+color: $lightest;
+
+}
+
+}
+
+} // $Close Element
+} // Mixin

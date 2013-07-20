@@ -1,4 +1,4 @@
-@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false) {
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false) {
 
 
 #{$element} {
@@ -41,8 +41,43 @@ color: $arrow-color;
 font-size:1em;
 top:1.2em;
 }
-
 } //Close a
+
+
+@if $tick == true {
+	
+a {	
+	@include rem(padding-left, 25px);
+}
+	
+a:before {
+@include icon($icon-check-empty);
+float:right;
+position:absolute;
+left:0;
+bottom:0;
+line-height:1em;
+color: $arrow-color;
+font-size:1em;
+top:1.2em;
+}
+
+.visited:before {
+	@include icon($icon-check);
+}
+
+} //Close If
+
+
+
+
+
+
+
+
+
+
+
 
 &:last-child  {
  border-bottom: 0;

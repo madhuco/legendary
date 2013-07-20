@@ -3,19 +3,7 @@
 // ===============================================
 @mixin layouts-cards-layout($element: '.cards') { //This Mixin should always be called last (ie. after all the platforms). 
 
-/* ***************************************** */
-/*   Cards: Inital Display for Jquery  */
-/* ***************************************** */
-
-.jq #{$element} .unit {
-	display: none;
-}
-
-.jq #{$element} .unit:first-of-type {
-	display: block;
-}
-
-
+#{$element} {
 
 /* ***************************************** */
 /*   Cards: Display of Text Boxes  */
@@ -25,6 +13,7 @@
 position:relative;	
 @include box-sizing(border-box); 
 display:block;
+height:100%;
 }
 
 .cards-front .unit-txt {
@@ -32,7 +21,7 @@ position:absolute;
 bottom:0;
 @include rem(padding, 10px);
 background: #FFF; 
-background: rgba(255, 255, 255, 0.8); 
+background: rgba(255, 255, 255, 0.94); 
 }
 
 /* ***************************************** */
@@ -40,8 +29,6 @@ background: rgba(255, 255, 255, 0.8);
 /* ***************************************** */
 
 .cards-back {
-	width:100%;
-	height:100%;
 	background:#FFF;
     @include box-sizing(border-box); 
 	@include rem(padding, 10px);	
@@ -58,18 +45,24 @@ background: rgba(255, 255, 255, 0.8);
 cursor:pointer;
 }
 
-
-
-
-
-#{$element} .content-main .cards-expand .cards-back  {
-	display: block;
-	border:1px solid $scratch;
+.cards-back {
+display:none;	
 }
 
 .cards-expand .cards-front {
-display:none;	
+display:none;
 }
+
+.cards-expand .cards-back  {
+	display: block;
+	}
+	
+
+	.cards-back .unit-footer {
+	@include rem(bottom, 10px);
+position:absolute;
+	}
+
 
 
 /* ***************************************** */
@@ -80,8 +73,9 @@ font-size:50px;
 @include icon($icon-remove-circle);
 color: $lightest;
 top:-0.5em;
-right:-0.5em;
+left:-0.5em;
 position:absolute;
+z-index:999;
 }
 
 .cards-back .close:hover:after {
@@ -99,32 +93,28 @@ cursor:hand;
 /* ***************************************** */
 
 
-#{$element} .img {
+.img {
 	width: 100%;
 	height: 100%;
 }
 
-#{$element} .unit-row .cards-back {
-	display: none;
-}
-
-.jq #{$element} .heading {
-	display: none;
-}
-
-#{$element} .unit-row {
+.unit-row {
 position:relative;	
 }
-
 
 .cards-expand .cards-back{
 position:absolute;
 z-index:999;
 }
 
-
-
 @content;
+}
+
+.jq #{$element} .heading {
+	display: none;
+}
+
+
 
 }
 
@@ -144,11 +134,15 @@ z-index:999;
 .unit-row {
 @include span-columns(12, 12);
 @inlcude omega;
-@include rem(height, 278px);
+@include rem(height, 140px);
 }
 
 .cards-back{
-@include rem(height, 475px);
+@include rem(height, 300px);
+}
+
+.cards-back .unit-img {
+@include rem(height, 80px);
 }
 
 } //Close Class
@@ -182,9 +176,20 @@ top:0;
 
 .cards-back{
 @include span-columns(12 omega, 6);
-@include rem(height, 374px);
+@include rem(height, 420px);
 }
 
+.cards-back .unit-img, 
+.cards-back .unit-txt, 
+.cards-back .unit-footer {
+@include span-columns(6, 12);
+}
+
+
+.cards-back .unit-txt, 
+.cards-back .unit-footer {
+@include omega;
+}
 
 
 
@@ -199,7 +204,7 @@ top:0;
 /* ***************************************** */
 /*   Cards Front */
 /* ***************************************** */
-.unit {
+.page {
 @include span-columns(8, 8);
 }
 
@@ -213,7 +218,6 @@ top:0;
 .unit-row:nth-of-type(3n + 1)  {
 @include span-columns(8, 8);
 @include omega;
-
 }
 
 /* Floats for right sides */
@@ -228,15 +232,17 @@ top:0;
 
 /*Generic card Set Up */
 
-.cards-back {
+
+.cards-expand .cards-back {
 @include span-columns(8, 4);
 @include omega();
 bottom:0;
+
 }
 
 
 /*Large Card size Set Up */
-.cards-expanded .unit-row:nth-of-type(3n + 1) .cards-back {
+.cards-expand.unit-row:nth-of-type(3n + 1) .cards-back {
 @include span-columns(8, 8);
 top:0;
 bottom:inherit;
@@ -309,7 +315,7 @@ right:0;
 /*    Cards:Set Up */
 /* ***************************************** */
 
-.unit {
+.page {
 position:relative;
 @include span-columns(9, 9);
 @include omega;
@@ -424,8 +430,6 @@ bottom:0;
 
 .cards-back .unit-footer {
 @include span-columns(3 omega, 9);
-@include rem(bottom, 10px);
-position:absolute;
 @include rem(right, 10px);
 }
 
@@ -437,9 +441,26 @@ position:absolute;
 
 /* Basic Card - Layout */
 
-#{$element} .cards-back .unit-img {
+#{$element} .cards-front .photo-gallery .unit-title {
+text-align:center;
+}
+
+#{$element} .cards-back .unit-img,
+#{$element} .cards-back .photo-gallery  {
 @include span-columns(6, 9);
 }
+
+
+#{$element} .cards-back figure {
+@include span-columns(3, 6);
+@include rem(height, 130px);
+@include rem(margin-bottom, 20px);
+}
+
+#{$element} .cards-back figure:nth-child(2n) {
+@include omega;
+} 
+
 
 #{$element} .cards-back .unit-txt {
 @include span-columns(3, 9);
@@ -491,13 +512,89 @@ position:absolute;
 
 @mixin layouts-cards-style($element: '.layouts-cards-style') {
 
+#{$element} { 
+
+.cards-front .unit-title {
+	@extend %t-title-5; 
+	color: $default; 
+	@include typeface-medium;
+}
+
+.cards-front .unit-intro {
+@extend %t-intro-5; 
+color: $darker;	
+}
+
+.cards-back .unit-title {
+@extend %t-title-5; 
+color: $darker; 
+@include typeface-medium; 
+@extend %vr-title-5;
+}
+
+.cards-back .unit-intro {
+@extend %t-intro-5; 
+color: $darkest; 
+@extend %vr-intro-5;	
+@include typeface-medium; 
+}
+
+}
+
+
+@include media($devices...){ 
+#{$element} .unit-img { 
+margin-bottom:20px;
+}
+}
+
+
+
+@include media($fabplus...){
+#{$element} {
+.cards-front, .cards-front .unit-img {
+	@include border-radius(5px);
+}
+.cards-back {
+	border: 1px solid $scratch;
+	@include border-radius(5px);
+}
+} // Close $Element
+} //Close MQ
+
+
+
+@include media($pads...){
+#{$element} {
+
+.unit-row:nth-of-type(3n + 1) .unit-txt {
+@include border-top-right-radius(5px);
+}
+
+} // Close $Element
+} //Close MQ
+
+
+
+@include media($desk...){
+#{$element} {
+.unit-row-1 .unit-txt,
+.unit-row-8 .unit-txt,
+.unit-row-13 .unit-txt {
+@include border-top-right-radius(5px);
+}
+} // Close $Element
+} //Close MQ
+
+
 }
 
 // ===============================================
 // Combo
 // ===============================================
 
-@mixin layouts-cards-combo($element: '.layouts-cards-combo') {
+@mixin layouts-cards-combo($element: '.layouts-cards') {
+@include layouts-cards-style($element: $element);
 @include layouts-cards-grid-r($element: $element);
 @include layouts-cards-layout($element: $element);
 }

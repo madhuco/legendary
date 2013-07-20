@@ -16,7 +16,7 @@ padding-top: 1em;
       
 	  
 	  .overlay-bg {
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 right: 0;
@@ -27,8 +27,26 @@ height: 100%;
 z-index: 500;
 background-color:#000;
 background-color: rgba(0, 0, 0, 0.6);
+ filter: alpha(opacity=75); /* IE 7 and Earlier */
+    /* Next 2 lines IE8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
 }
 
 #overlay {
 	
+}
+
+
+.tap-btn-close {
+position:relative;
+margin-right:0;
+}
+
+
+.tap-btn-close:after{
+			@include rem(font-size, 30px);
+			@include rem(margin-left, 10px);
+			@include icon($icon-remove-circle);	
+			position:absolute;
 }

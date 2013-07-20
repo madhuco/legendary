@@ -4,13 +4,12 @@
 	$(document).ready(function()
 	{
 
-
 		"use strict";
-
+		
+	
 		$(".taptabs li:first a").addClass("highlighted");
-
-
-
+		$('.pages .page-first').show();
+	
 		$(".taptabs li a").click(function()
 		{
 			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
@@ -19,34 +18,33 @@
 			$(this).addClass("highlighted").addClass("animated").addClass("flipInX");
 			$(this).addClass("visited");
 			$(".tap-btn-back").remove();
-			$(".masthead *").removeClass("mobhide fabhide");
-			$(".masthead").children().not('.cta').addClass("mobhide fabhide");
-			$(".taptabs > .tapnav").addClass("mobhide fabhide");
-			$(".masthead").prepend('<a href="#" data-device="portables" class="tap-btn tap-btn-back btn mobshow">Back </a>');
+			$("body").addClass("tap-btn-active");
+			$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
 		}).eq(0).addClass('selected');
 	});
 
-	$(".taptabs li").click(function()
+	$(".taptabs li").live('click', function()
 	{
-		var mode = $(".wrapper").attr('data-role') + '-expanded';
-		$("body .taptabs .pages .page").hide().eq($(this).index()).show().addClass("animated").addClass(mode).addClass("fadeInLeft");
+		$(this).parent().parent().parent().$('.pages .page').hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
 
 	});
+	
+	
 
+	
 
 	$(".tap-btn-back").live('click', function()
 	{
 		"use strict";
 
-		$(".taptabs .pages .page").addClass("animated").addClass("bounceOutLeft");
+		$(".taptabs .page").addClass("animated").addClass("bounceOutLeft");
 		setTimeout(function()
 		{
-			$(".taptabs .pages .page").hide();
+			$(".taptabs .page").hide();
 			$(".tap-btn-back").remove();
-			$(".taptabs .pages .page").removeClass("animated").removeClass("bounceOutLeft");
+			$(".taptabs .page").removeClass("animated").removeClass("bounceOutLeft");
 			$("body").removeClass('sub-page');
-			$(".masthead *").removeClass("mobhide fabhide");
-			$(".taptabs > .tapnav").removeClass("mobhide fabhide");
+			$("body").removeClass("tap-btn-active");
 		}, 500);
 
 	});

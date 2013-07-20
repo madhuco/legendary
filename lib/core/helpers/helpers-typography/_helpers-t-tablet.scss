@@ -61,7 +61,7 @@
 }
 
 @mixin t-intro-5-tab {
- @include rem('font-size', 15px);
+ @include rem('font-size', 13px);
  @include rem('line-height', 18px);
 
 }
@@ -210,6 +210,12 @@ letter-spacing:0;
 
 @mixin t-ui-navigation-secondary-title-tab { 
 	@include t-ui-navigation-secondary-tab;
+}
+
+
+@mixin t-ui-stages-tab {
+	@include rem('font-size', 10px);
+ @include rem('line-height', 12px);
 }
 
 

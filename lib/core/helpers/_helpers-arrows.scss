@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CSS Document */
+@import "compass/css3";
+@import "compass/support";
+$experimental-support-for-svg: true;
+
+@mixin arrow ($element: '.tap-btn-back', $theme: none){
+#{$element} {
+  $button-color-bottom: #41618d;
+  $button-color-top: #99aac2;
+  $button-border-color-bottom: lighten($button-color-bottom, 20%);
+  $button-text-shadow: 0 -1px 0 #474747;
+  $button-text-color: #fff;
+  
+  @if $theme == 'white' {
+    $button-color-bottom: #cccccc;
+    $button-color-top: #d4d7d4;
+    $button-border-color-bottom: darken($button-color-bottom, 5%);
+    $button-text-shadow: 0 1px 0 #fff;
+    $button-text-color: #474747;
+  }
+   @else if $theme == 'black' {
+    $button-color-bottom: #111;
+    $button-color-top: #444;
+    $button-border-color-bottom: lighten($button-color-bottom, 60%);
+    $button-text-shadow: 0 -1px 0 #000;
+    $button-text-color: #fff;
+  }
+  @include inline-block;
+  @include appearance(none);
+  background: none;
+  position: relative;
+//  margin: 0;
+//  padding: 0;
+//  border: 0;
+//  height: 26px;
+//  min-width: 20px;
+  cursor: pointer;
+  overflow: visible;
+      &:before {
+      @include box-shadow(1px 2px 1px -2px rgba(0,0,0,0.4) inset, -1px 4px 2px -4px rgba(0,0,0,0.4) inset);
+      @include box-sizing( border-box);
+      @include background-image(linear-gradient(top right, $button-color-top, $button-color-bottom));
+      @include background-size( 20px 18px);
+      @include transform(rotate(-45deg) scale(0.86) skew(-9deg, -9deg));
+      @include transform-origin(50%);
+      position: relative;
+      @include inline-block;
+      top: 0;
+      left: 1em;
+      width: 1.4em;
+      height: 1.4em;
+      border: 1px solid #f00;
+      border-width: 1px;
+      border-width: 0 0 1px 1px;
+      border-color: $button-border-color-bottom transparent transparent $button-border-color-bottom;
+      background-position: -2px 0;
+      background-repeat: no-repeat;
+      content: "";
+      @include border-radius(0 6px 0 6px);
+      @include border-top-right-radius(8px 5px);
+      @include border-bottom-left-radius(5px 8px);
+    }
+    &:after {
+      @include box-sizing(border-box);
+      @include border-radius(4px 4px 4px 4px);
+      @include background-image(linear-gradient(top, $button-color-top, $button-color-bottom));
+      @include background-size(26px 26px);
+      @include box-shadow(0 2px 2px -2px rgba(0,0,0,0.4) inset, -1px 1px 1px -1px rgba(0,0,0,0.4) inset);
+      @include text-shadow($button-text-shadow);
+      position: relative;
+      top: 0;
+      left: 0.2em;
+      @include inline-block;
+      padding: 5px 10px 5px 5px;
+      margin: 0;
+      width: auto;
+      height: 1.8em;
+      border: 1px solid $button-border-color-bottom;
+      border-width: 0 0 1px 0;
+      content: attr(data-title);
+      text-decoration: none;
+      white-space: nowrap;
+      color: $button-text-color;
+    }
+  
+  &:hover:after {
+    @include background-image(linear-gradient(top, darken($button-color-bottom, 20%), darken($button-color-top, 5%)));
+    @include background-size(26px 26px);
+  }
+  &:hover:before {
+    @include background-image(linear-gradient(top right, darken($button-color-bottom, 20%), darken($button-color-top, 5%)));
+    @include background-size( 20px 18px);
+  }
+
+} //$close Element
+} //$close Mixin

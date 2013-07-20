@@ -69,7 +69,7 @@
 }
 
 @mixin t-intro-5-desk {
- @include rem('font-size', 15px);
+ @include rem('font-size', 12px);
  @include rem('line-height', 18px);
 
 }
@@ -86,7 +86,7 @@
 
 @mixin t-body-small-desk {
  @include rem('font-size', 12px);
- @include rem('line-height', 20px);
+ @include rem('line-height', 17px);
 letter-spacing:0;
 }
 
@@ -231,11 +231,16 @@ letter-spacing:0;
 }
 
 
-
 @mixin t-ui-navigation-secondary-title-desk {
 	@include rem('font-size', 14px);
  @include rem('line-height', 16px);
 }
+
+@mixin t-ui-stages-desk {
+	@include rem('font-size', 10px);
+ @include rem('line-height', 12px);
+}
+
 
 
 // ***************************************** 

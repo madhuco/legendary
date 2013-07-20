@@ -33,7 +33,8 @@ Empty space will  surround the image to prevent distortion.
 Image will always be vertical and horizontally centered */
 
 
-.img .contain, .contain img {	
+.img .contain, .contain img,
+.img .central, .central img {	
 	margin: auto;
 	max-width:100%;
 	max-height:100%;
@@ -55,6 +56,22 @@ Image will always be vertical aligned to the top (e.g. not centered) */
 	max-width:100%;
 	height:auto;	
 }
+
+
+/* Fill Image: Scale an image to fill a space without distorting it. 
+Parent wrapper must have a height in CSS.
+Image will fill the space so long as width is bigger than height. */
+
+
+.img .fill, .fill img {
+height: 100%;
+min-width: 100%;
+sonic: auto;
+position: absolute;
+top: 0;
+left: -50%;	
+}
+
 
 /* Show hide elements (Works on non-images as well. However, avoid using these for non-images) */
 

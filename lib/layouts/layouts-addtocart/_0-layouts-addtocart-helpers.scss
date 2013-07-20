@@ -4,26 +4,47 @@
 
 @mixin layouts-addtocart-layout($element: '.layouts-addtocart-layout'){
 
-#content-overlay {
-left: 50%;
-top: 10%;
+#{$element} {
 position: absolute;
 z-index: 1000;
-margin-left:-43%;
+width:90%;
 }
+
+@include media($mob...){ 
+#{$element} {
+padding:20px 20px 0;
+left:5%;
+right:0;
+bottom:20px;
+}
+}
+
+
 
 @include media($desk...){ 
-#content-overlay {
-	margin-left: -43em;
+#{$element} {
+	width:70em;
+	margin-left: 9em;
+	top:90px;
 }
 }
 
-#content-overlay {
+
+
+
+@include media($devices...){ 
+#{$element} {
+overflow-y:scroll;
+top:10px;
+}
+}
+
+
+#{$element} {
 
 	&::-webkit-scrollbar {
 -webkit-appearance:none !important;
 width:11px !important;
-	goesi:green;
 }
 &::-webkit-scrollbar {
 border-radius:8px !important;
@@ -36,16 +57,24 @@ border:2px solid white !important;
 background-color:rgba(0,0,0,.5) !important;
 }
 
+
+.close {
+width: 30px;
+height: 30px;
+z-index: 99999999;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+
 } // Close $element
 
 
 
-@include media($portables...){ 
-#content-overlay {
-overflow-y:scroll;
-top:10px;
-}
-}
+
 
 
 } // Close $Mixin
@@ -58,7 +87,6 @@ top:10px;
 @mixin layouts-addtocart-grid($element: '.layouts-addtocart-grid') {
 
 #{$element} {
-@include span-columns(12 omega,12);
 
 .content-header {
 	@include span-columns(12 omega,12);
@@ -170,6 +198,7 @@ em {
 @extend %t-intro-3;	
 color: $default;
 text-align:left;	
+clear:both;
 }
 
 .cta {
@@ -194,6 +223,8 @@ text-align:left;
 	@extend %vr-breather;
 }
 
+
+
 	
 	} //Close Element
 	
@@ -201,9 +232,32 @@ text-align:left;
 @include media($mob-p...){ 
 	
 #{$element} .main-title	{
-	font-size:25px;
+	font-size:18px;
 	@include typeface-bold;
+	margin:5px auto;
 }
+
+#{$element} .unit-row	{
+	margin:5px auto;
+}
+
+#{$element} .cta	{
+	margin:10px auto;
+}
+
+#{$element}#content-overlay .intro	{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+
+#{$element}#content-overlay .title	{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+
+
 }
 
 
@@ -212,7 +266,6 @@ text-align:left;
 /* Arrow Styles */
 
 #{$element} + .arrow, #{$element} {
-	position: relative;
 	background: #ffffff;
 	border: 4px solid #e6e6e6;
 
@@ -261,8 +314,8 @@ text-align:left;
 
 @include media($devices...){ 
 
-#content-overlay {
-top:inherit;
+#{$element} {
+top:10px;
 }
 
 #{$element}  + .arrow {
@@ -270,6 +323,7 @@ top:inherit;
 &:after, &:before {
 	top: 100%;
 	left:10%;
+	margin-top:-30px;
 	
 }
 
@@ -291,8 +345,8 @@ top:inherit;
 
 @include media($devices...){ 
 
-#content-overlay {
-bottom:90px;	
+#{$element} {
+bottom:55px;	
 }
 
 }
@@ -300,9 +354,6 @@ bottom:90px;
 
 @include media($mob...){ 
 
-#content-overlay {
-top:0px;	
-}
 
 
 #{$element} + .arrow {
@@ -318,7 +369,16 @@ left: 30%;
 @include media($devices...){ 
 #{$element} + .arrow {
 position: absolute;
-bottom: 87px;
+bottom: 25px;
+z-index: 5600;
+}
+}
+
+
+@include media($mob-p...){ 
+#{$element} + .arrow {
+position: absolute;
+bottom: -11px;
 z-index: 5600;
 }
 }
@@ -341,7 +401,7 @@ left:19%;
 // ===============================================
 
 @mixin layouts-addtocart-combo($element: '.layouts-addtocart-combo') {
-	@include layouts-addtocart-layout($element: $element);
 	@include layouts-addtocart-grid-r($element: $element);
+	@include layouts-addtocart-layout($element: $element);
 	@include layouts-addtocart-style($element: $element);
 }

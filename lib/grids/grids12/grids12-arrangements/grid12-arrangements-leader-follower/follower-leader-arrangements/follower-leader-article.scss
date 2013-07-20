@@ -21,8 +21,16 @@ Displays follower and leader with a magazine article style  layout */
 > .content-footer {
 	@include span-columns(5 omega, 12);
 }
-
 } //Close $element
+
+
+#{$element}.bleed {
+> .content-leader {
+@include span-columns(7, 12);
+margin-left: - gutter(9);
+}
+}
+
 } //Close Mixin
 
 

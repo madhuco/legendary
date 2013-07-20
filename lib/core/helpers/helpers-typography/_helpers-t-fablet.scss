@@ -61,7 +61,7 @@
 
 
 @mixin t-intro-5-fab {
- @include rem('font-size', 15px);
+ @include rem('font-size', 12px);
  @include rem('line-height', 18px);
 
 }
@@ -258,6 +258,10 @@ display:none;
 }
 
 
+@mixin t-ui-stages-fab {
+	@include rem('font-size', 10px);
+ @include rem('line-height', 12px);
+}
 
 // ***************************************** 
 // CTA Main 

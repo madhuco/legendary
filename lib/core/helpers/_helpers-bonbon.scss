@@ -1,8 +1,6 @@
-/* ***************************************** */
-/* BonBon 3D Buttons Classes  */
-/* ***************************************** */
+@import "compass";
 
-/* -------------- Bon Bon Basic button -------------- */
+// -------------- Bon Bon Basic button -------------- 
 %bonbon {
 
 /* text */
@@ -44,7 +42,7 @@ radial-gradient(color_stops((rgba(255,255,255,0.1)), (rgba(255,255,255,0))), top
 	);
 						
 	
-/* -------------- States -------------- */
+// -------------- States -------------- 
 
 &:hover {
 	background-color: 	hsl(0, 0%, 83%);
@@ -80,7 +78,7 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 }
 
 
-/* -------------- Materials -------------- */
+// -------------- Materials -------------- 
 
 %bonbon-materials:after {
 	content: 	"";
@@ -102,7 +100,7 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 
 
 
-/* -------------- Glass + Transparent -------------- */
+// -------------- Glass + Transparent -------------- 
 %bonbon-glass {
 	text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,0.18) 0 .18em .15em;
 }
@@ -113,6 +111,9 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 
 
 @mixin bonbon($colour: #FFA600, $materials: false) {
+
+
+	
 @extend %bonbon;
 color:	darken($colour, 25%);
 background-color: $colour;
@@ -140,8 +141,9 @@ background-color: lighten($colour, 10%);
 		
 } //Close Glass
 
+
+
 }  //Close mixin
 
 	
-/* Code adapted from simurai.com */
 	

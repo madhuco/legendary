@@ -7,7 +7,7 @@
 
 %ui-messages {
 @include border-radius(5px);
-@extend t-body-text;	
+@extend %t-body-text;	
 @extend %vr-spacer-box;
 @extend %vr-breather;
 }
@@ -47,7 +47,39 @@ border: 1px solid #ff4242;
 
 .error {
 	border: 2px solid #ff4242;
+	background-color: #ffbaba;
  @include animation(error 3s infinite);
+ @include border-radius(5px);
 }
+
+li.error {
+border-radius: 0;	
+border-width:0;
+color: #ff4242;
+}
+
+li.error a {
+	color: #ff4242;
+}
+
+li.error a:after,
+li.error a:before,
+li.error:after,
+li.error:before {
+	color: #ff4242;
+}
+
+
+
+.error + .error {
+@include rem(margin-top, 20px);	
+}
+
+li.error + li.error {
+@include rem(margin-top, 20px);	
+}
+
+
+
 
 } //Close Mixin

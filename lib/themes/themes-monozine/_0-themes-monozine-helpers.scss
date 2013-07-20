@@ -11,7 +11,6 @@
 
 
 
-
 /* ***************************************** */
 /*  Font-styles: Global Styles */
 /* Bundles of properties for displaying text */
@@ -33,6 +32,11 @@ text-align:center;
 @extend %vr-title-1;
 @include txtcolor-darkest;
 
+}
+
+#{$root} .page .title {
+@extend %t-title-2;
+@extend %vr-title-2;
 }
 
 

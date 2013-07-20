@@ -28,8 +28,8 @@
 }
 
 @mixin t-title-5-mob {
- @include rem('font-size', 12px);
- @include rem('line-height', 14px);
+ @include rem('font-size', 14px);
+ @include rem('line-height', 18px);
 
 }
 
@@ -60,7 +60,7 @@
 
 @mixin t-intro-5-mob {
  @include rem('font-size', 12px);
- @include rem('line-height', 14px);
+ @include rem('line-height', 15px);
 
 }
 
@@ -213,6 +213,12 @@ display:none;
  @include rem('line-height', 22px);
 }
 
+
+
+@mixin t-ui-stages-mob {
+	@include rem('font-size', 10px);
+ @include rem('line-height', 12px);
+}
 
 // ***************************************** 
 // Shop Ui 

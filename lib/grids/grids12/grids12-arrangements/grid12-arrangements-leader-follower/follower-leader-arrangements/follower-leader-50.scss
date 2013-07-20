@@ -19,9 +19,17 @@ Displays follower then leader with equal widths (e.g. two column layout)  */
 		@include span-columns(12 omega, 12);
 	}
 
+	} //$Close Element
+
+
+	#{$element}.bleed {
+		> .content-leader {
+		@include span-columns(7, 12);
+		margin-left: - gutter(9);
+		}
 	}
 
-}
+} //$Close MQ
 
 
 @mixin follower-leader-50-mob-p($element: '.follower-leader-50-mob-p' ) {

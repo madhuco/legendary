@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/tapagation.js"></script>
+
+
+
+
+<style type="text/css">
+
+.taptabs > .tapnav {
+    position:relative;
+    z-index:999;
+}
+#wrapper .taptabs .page {
+    display: none;
+}
+#wrapper .taptabs .page-first, #wrapper .taptabs .page:first-of-type {
+    display: block;
+}
+
+</style>
+</head>
+
+<body>
+
+<!doctype html>
+<!--[if lt IE 9]>     <html class="ie8 ie"> <![endif]-->
+<!--[if gte IE 9]>  <html class="ie"> <![endif]-->
+<!--[if !IE]><!--> <html xmlns="http://www.w3.org/1999/xhtml">             <!--<![endif]-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+<title>Penwizard - CHANGING ROOM</title>
+
+
+
+<script type="text/javascript" src="pw_frontend/scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="pw_frontend/scripts/scripts-ck.js"></script>
+<script type="text/javascript" src="pw_frontend/scripts/changingroom.js"></script>
+
+ 
+
+<!--[if lt IE 9]>
+	<link href="pw_frontend/stylesheets/ie8.css" rel="stylesheet" type="text/css" />
+     <link href="pw_frontend/stylesheets/branding/brand-penwizard/brand-penwizard-ie8.css" rel="stylesheet" type="text/css" />
+     <script type="text/javascript" src="pw_frontend/scripts/html5shiv.js"></script> 
+<![endif]-->
+
+
+
+</head>
+
+<body class="no-jq page-content changing-room">
+
+<div id="wrapper" class="haircolour1 boy skincolour1 hairstyle1 eyecolour1 no-glasses wrapper layout-primary grids12 theme-monozine purchase-stop">
+    <form name="htmlform" method="post">
+<div class="taptabs">
+<div class="pages">
+        <nav class="content-follower tapnav ui-ticklist cr-nav">
+            <ul>
+                <li><a href="#unit-row-1">Hairstyle &amp; Gender</a>
+
+                    <div class="selection"><i>Current:</i>  <span class="gender"><b>boy</b></span>  <span class="hair"></span> 
+                    </div>
+                </li>
+                <li><a href="#unit-row-2">Skin, Eyes, Glasses</a>
+
+                    <div class="selection"><i>Current:</i> Skin Colour: <span class="colour skin"></span> Eye Colour:<span class="colour eye"></span>  <span class="glasses"></span>
+
+                    </div>
+                </li>
+                <li><a href="#unit-row-3">Child's Name</a>
+
+                    <div class="selection"><span class="text firstname"><i>Firstname:</i><b class="newname"></b></span>
+ <span class="text surname"><i>Surname:</i><b></b></span>
+
+                    </div>
+                </li>
+                <li><a href="#unit-row-4">Personal Message</a>
+
+                    <div class="selection"> <span class="text personalmessage"><i>Message:</i><b></b></span>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="content-leader cr-options">
+            <section class="unit-row unit unit-row-1 page page-first">
+                 <h2 class="title">Create Book: <span>Hairstyle &amp; Gender</span></h2>
+
+                <ul class="">
+                    <li class="highlighted">
+                        <input name="gender" type="radio" class="boy" id="boy" value="boy" checked="checked" />
+                        <label for="boy" onclick="">Boy</label>
+                    </li>
+                    <li>
+                        <input name="gender" type="radio" class="girl" id="girl" value="girl" />
+                        <label for="girl" onclick="">Girl</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="unit-row unit unit-row-2 page">
+                 <h2 class="title">Create Book: <span>Skin, Eyes, Glasses</span></h2> 
+                <div class="skincolour colour option">
+                     <h3 class="instruction">Select Skin Colour</h3>
+
+                    <p class="options">
+                        <input name="skincolour" id="skincolour1" type="radio" value="skincolour1" checked="checked" />
+                        <label for="skincolour1" onclick=""></label>
+                        <input name="skincolour" id="skincolour2" type="radio" value="skincolour2" />
+                        <label for="skincolour2" onclick=""></label>
+                        <input name="skincolour" id="skincolour3" type="radio" value="skincolour3" />
+                        <label for="skincolour3" onclick=""></label>
+                        <input name="skincolour" id="skincolour4" type="radio" value="skincolour4" />
+                        <label for="skincolour4" onclick=""></label>
+                    </p>
+                </div>
+                <div class="eyecolour colour option">
+                     <h3 class="instruction">Select Eye Colour</h3>
+
+                    <p class="options">
+                        <input name="eyecolour" id="eyecolour1" type="radio" value="eyecolour1" checked="checked" />
+                        <label for="eyecolour1" onclick=""></label>
+                        <input name="eyecolour" id="eyecolour2" type="radio" value="eyecolour2" />
+                        <label for="eyecolour2" onclick=""></label>
+                        <input name="eyecolour" id="eyecolour3" type="radio" value="eyecolour3" />
+                        <label for="eyecolour3" onclick=""></label>
+                        <input name="eyecolour" id="eyecolour4" type="radio" value="eyecolour4" />
+                        <label for="eyecolour4" onclick=""></label>
+                    </p>
+                </div>
+                <div class="glasses option">
+                     <h3 class="instruction">Add/Remove Glasses</h3>
+
+                    <p class="options">
+                        <input name="glasses" class="noglasses" id="noglasses" type="radio" value="noglasses" checked="checked" />
+                        <label for="noglasses" onclick=""></label>
+                        <input name="glasses" class="yesglasses" id="yesglasses" type="radio" value="yesglasses" />
+                        <label for="yesglasses" onclick=""></label>
+                    </p>
+                </div>
+            </section>
+            <section class="unit-row unit unit-row-2 page option-text">
+                 <h2 class="title">Create Book: <span>Child's Name</span></h2>
+
+                <p class="name firstname"> <span class="instruction"><b>First Name</b><i>Max 12 Characters </i></span>
+
+                    <input id="firstname" class="required" type="text" value="" />
+                </p>
+                <p class="name surname"> <span class="instruction"><b>Surname</b><i>Max 12 Characters </i></span>
+
+                    <input id="surname" class="required" type="text" value="" />
+                </p>
+            </section>
+            <section class="unit-row unit unit-row-2 page option-text">
+                 <h2 class="title">Create Book: <span>Personal Message</span></h2>
+
+                <p class="personalmessage"> <span class="instruction">Personal Message Appears on First Page</span>
+
+                    <input id="personalmesage" type="text" value="" />
+                </p>
+            </section>
+        </div> <span class="submit"><input class="cta cta-primary t-cta-primary content-follower" role="button" id="submit" type="submit"  onclick="" /> </span> 
+    </form>
+    </div>
+    </div>
+    </div>
+<!--Close WRAPPER-->
+
+ 
+
+</body>
+</html>
+
+
+
+</body>
+</html>

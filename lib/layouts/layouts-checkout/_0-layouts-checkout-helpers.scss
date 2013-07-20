@@ -2,7 +2,7 @@
 // checkout: Layout
 // ===============================================
 
-@mixin layouts-checkout-layout($element: '.layouts-checkout-layout'){
+@mixin layouts-checkout-layout($element: '.layouts-checkout-layout', $reverse: false){
 /* ***************************************** */
 /*  Layouts checkout */
 /* ***************************************** */
@@ -29,7 +29,7 @@ float: left;
 margin-right: 10px;	
 }
 
-
+@if $reverse == false {
 .address-delivery .unit-heading {
 display:none;	
 }
@@ -41,6 +41,23 @@ display:none;
 
 .address-billing {
 display:none;	
+}
+}
+
+
+@if $reverse == true {
+.address-billing .unit-heading {
+display:none;	
+}
+
+
+.address-delivery .unit-heading {
+display:none;	
+}
+
+.address-delivery {
+display:none;	
+}	
 }
 
 	
@@ -52,8 +69,11 @@ display:none;
 
 .extend #{$element} {
 
+
+@if $reverse == false {
 .address-delivery .unit-heading {
 display:block;	
+clear:both;
 }
 
 .address-delivery .content {
@@ -62,11 +82,36 @@ display:none;
 
 .address-billing .unit-heading {
 display:block;	
+clear:both;
 }
 
 .address-billing {
 display:block;	
 }
+}
+
+
+@if $reverse == true {
+.address-billing .unit-heading {
+display:block;	
+clear:both;
+}
+
+.address-billing .content {
+display:none;	
+}
+
+.address-delivery .unit-heading {
+display:block;	
+clear:both;
+}
+
+.address-delivery {
+display:block;	
+}
+}
+
+
 
 } // Close $element
 } // Close $Mixin
@@ -358,6 +403,11 @@ width:100%;
 text-align:center;
 }
 
+.alter {
+@extend %t-body-small;
+
+}
+
 } // Close $element
 
 
@@ -387,8 +437,8 @@ min-height:44px;
 // Combo
 // ===============================================
 
-@mixin layouts-checkout-combo($element: '.layouts-checkout') {
-	@include layouts-checkout-layout($element: $element);
+@mixin layouts-checkout-combo($element: '.layouts-checkout', $reverse: false) {
+	@include layouts-checkout-layout($element: $element, $reverse: $reverse);
 	@include layouts-checkout-grid-r($element: $element);
 	@include layouts-checkout-style($element: $element);
 }

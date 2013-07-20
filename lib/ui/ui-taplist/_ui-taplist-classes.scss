@@ -4,3 +4,4 @@
 
 
 @include ui-taplist;
+@include ui-taplist($element:'.ui-ticklist', $tick: true);

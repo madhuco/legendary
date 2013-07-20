@@ -12,14 +12,6 @@ Breaks up pages into smaller pages which can be displayed horizontally. */
 #{$element}	{
 	clear:both;
 	
-.page {
-	display:none;
-	clear:both;
-}
-
-.page-first {
-	display:block;
-}
 
 } //Close Element
 } //Close Mixin

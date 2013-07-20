@@ -18,6 +18,7 @@
 				$(this).addClass('close');
 				$('.ui-tapmenu').removeClass("animated bounceInDown");
 				$('.ui-tapmenu').hide();
+				$('.overlay').hide();
 				var menuId = $(this).data('menu');
 				var menuName = '.' + menuId;
 				$(".loading").delay(1000).show(0);
@@ -32,12 +33,14 @@
 				$(this).removeClass('close');
 				$('.ui-tapmenu').removeClass("animated bounceInDown");
 				$('.ui-tapmenu').hide();
+				$('.overlay').hide();
 			});
 			
 			$('.close').on('click', function()
 			{
 				$('.ui-tapmenu').removeClass("animated bounceInDown");
 				$('.ui-tapmenu').hide();
+				$('.overlay').hide();
 			});
 
 

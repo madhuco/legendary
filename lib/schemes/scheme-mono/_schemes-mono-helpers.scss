@@ -1,9 +1,20 @@
-@mixin scheme-mono($line: $scratch) {
+@mixin scheme-mono($line: $scratch, $padding: true, $hover: false) {
 border:1px $line solid;
-@include rem(padding, 10px);
 @include box-sizing(border-box);
 @include border-radius(5px);
 
+@if $padding == true {
+@include rem(padding, 10px);	
+}  //End If
+
+
+@if $hover == true {
+
+&:hover {
+	background-color: $offwhite;
+border: 1px $default solid;
+} //Close Hover
+} //End If
 
 
 }

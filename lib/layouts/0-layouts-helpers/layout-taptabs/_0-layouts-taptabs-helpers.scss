@@ -1,95 +1,118 @@
 @import "_ui-taplist-helpers.scss";
 
+@mixin taptabactive {
+body.tap-btn-active {
+	
+	.masthead * {
+	display:none;	
+	}
+	
+	.masthead .cta {
+	display:inherit;	
+	}
+	
+	.masthead .cta * {
+	display:inline;	
+	}
+	
+	.tap-btn-back {
+		display:inline-block;
+	}
+	.taptabs > .tapnav  {
+		display:none;
+	}
+	
+	.masthead .tap-btn-back b {
+		display:inline;
+	}
+	
+}
+
+}
+
+
 // ===============================================
 // Layouts
 // ===============================================
 
-@mixin layouts-taptabs-layout($element: '.layouts-taptabs-layout') { 
+@mixin layouts-taptabs-layout($element: '.taptabs', $device: 'portables') { 
 
 @include ui-taplist($element: '#{$element} > .content-aside ');
 
-
-#{$element} {
-
-
+#{$element} > .tapnav {
+position:relative;
+z-index:999;	
 }
+
+#wrapper #{$element} .page {
+	display: none;
+}
+
+.ie #wrapper #{$element} .page.page-first,
+#wrapper #{$element} .page-first,
+#wrapper #{$element} .page:first-of-type {
+	display: block;
+}
+
+.ie #{$element} .page.page-first,
+.ie #{$element} .page-first {
+		display: block;
+}
+
+
 
 @include media($mob...){ 
-.jq #{$element} .content-main .unit {
-	display:none;	
+#wrapper #{$element} .page-first,
+#wrapper #{$element} .page:first-of-type  {
+display:none;
 }
+
+.overview-enabled #wrapper #{$element} .page-first,
+.overview-enabled #wrapper #{$element} .page:first-of-type {
+display:block;
+}
+
 	
-.no-jq .content-aside {
+.no-jq .content-follower {
 display:none;	
 }
+} //Close Mob
 
+.tap-btn-back {
+		display:none;
+	}
+
+@if $device == 'mob' {
+	@include media($mob...){ 
+	@include taptabactive;
+	}
 }
+
+
+@if $device == 'portables' {
+	@include media($portables...){ 
+	@include taptabactive;
+	}
+}
+
 } //Close Mixin
-
-// ===============================================
-// Grid
-// ===============================================
-
-
-@mixin layouts-taptabs-grid($element: '.layouts-taptabs-grid') {
-
-	
-} //Close Mixin
-
-
-
-
-@mixin layouts-taptabs-grid-mob-p($element: '.layouts-taptabs-grid-mob-p') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-@mixin layouts-taptabs-grid-mob-l($element: '.layouts-taptabs-grid-mob-l') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-@mixin layouts-taptabs-grid-fab($element: '.layouts-taptabs-grid-fab') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-@mixin layouts-taptabs-grid-tab($element: '.layouts-taptabs-grid-tab') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-@mixin layouts-taptabs-grid-desk($element: '.layouts-taptabs-grid-desk') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-@mixin layouts-taptabs-grid-r($element: '.layouts-taptabs-grid') {
-	@include layouts-taptabs-grid($element:$element);
-}
-
-
-
-
-
-
 
 // ===============================================
 // Style
 // ===============================================
 
-@mixin layouts-taptabs-style($element: '.layouts-taptabs-style') {
+@mixin layouts-taptabs-style($element: '.taptabs') {
 	#{$element} > .content-follower a {
 @extend %t-ui-navigation; 
 } //Close Class
 
 
-@include media($mob...){ 
-#{$element} >  .content-follower {
-border:1px solid $line;
-@include border-radius(10px);
-} 
-}
+// @include media($mob...){ 
+// #{$element} >  .content-follower {
+// border:1px solid $line;
+// @include border-radius(10px);
+// } 
+// }
 
 
 
@@ -102,6 +125,7 @@ border: 1px solid $scratch;
 min-width:60px;
 @include border-left-radius(0);
 }
+
 
 @include media($portables...){ 
 html body #wrapper .tap-btn-back.mobshow {
@@ -145,8 +169,7 @@ display:inline-block;
 // ===============================================
 
 
-@mixin layouts-taptabs-combo($element: '.layouts-taptabs-combo') {
-@include layouts-taptabs-layout($element: $element);
-	@include layouts-taptabs-grid($element: $element);
-	@include layouts-taptabs-style($element: $element);
+@mixin layouts-taptabs-combo($element: '.taptabs', $device: 'portables') {
+@include layouts-taptabs-layout($element: $element, $device: $device);
+@include layouts-taptabs-style($element: $element);
 }

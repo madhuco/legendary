@@ -1,11 +1,9 @@
-@import "0-layouts-taptabs-helpers";
 
 // ===============================================
 // Layout
 // ===============================================
 
 @mixin layouts-tapazine-layout($element: '.layouts-tapazine'){
-@include layouts-taptabs-layout($element: #{$element});
 
 
 #{$element} {
@@ -89,7 +87,6 @@ padding-right:4%;
 // ===============================================
 
 @mixin layouts-tapazine-style($element: '.layouts-tapazine-style') {
-@include layouts-taptabs-style($element: $element);
 
 #{$element}  {	
 

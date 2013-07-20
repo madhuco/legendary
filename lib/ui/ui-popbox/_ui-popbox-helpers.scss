@@ -1,9 +1,7 @@
-
-
-@mixin popbox {
+@mixin ui-popbox($element:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
 
 %popbox {
-@include scheme-purity;	
+@include scheme-purity($hover: false);	
 display:none;
 position:absolute;
 @include rem(padding, 10px);
@@ -20,10 +18,8 @@ width: 0;
 } //Close After
 
 } //Close Popbox
-} //Close Mixin
 
 
-@mixin ui-popbox($element:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
 #{$element} {
 
 a {

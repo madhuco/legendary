@@ -78,6 +78,7 @@ $column-width        : 4.5em;
 $gutter-width        : 3em;
 $grid-padding      	 : 4em;	 
  @include container;
+ @include susy-grid-background;
 }
 
 
