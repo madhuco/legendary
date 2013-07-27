@@ -25,7 +25,7 @@ Displays follower then leader with equal widths (e.g. two column layout)  */
 	#{$element}.bleed {
 		> .content-leader {
 		@include span-columns(7, 12);
-		margin-left: - gutter(9);
+		margin-right: -8.65116%;
 		}
 	}
 

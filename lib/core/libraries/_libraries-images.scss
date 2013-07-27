@@ -46,6 +46,13 @@ Image will always be vertical and horizontally centered */
 	
 }
 
+.bleed .img .contain, .bleed .contain img,
+.bleed .img .central, .bleed .central img {	
+	min-height:100%;
+	margin:inherit;
+}
+
+
 /* Scale Image: Scale an image to fit a space without distorting it. 
 Parent wrapper must have a height in CSS.
 Empty space will  surround the image to prevent distortion.

@@ -282,7 +282,7 @@ width:100%;
 // Combo
 // ===============================================
 
-@mixin layouts-pager-arrow-combo($element: '.layouts-pager-arrow-combo') {
+@mixin layouts-pager-arrow-combo($element: '.layouts-pager-arrow') {
 	@include layouts-pager-arrow-layout($element: $element);
 	@include layouts-pager-arrow-grid-r($element: $element);
 	@include layouts-pager-arrow-style($element: $element);

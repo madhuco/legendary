@@ -5,11 +5,11 @@
 	{
 
 		"use strict";
-		
-	
+
+
 		$(".taptabs li:first a").addClass("highlighted");
 		$('.pages .page-first').show();
-	
+
 		$(".taptabs li a").click(function()
 		{
 			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
@@ -25,13 +25,12 @@
 
 	$(".taptabs li").live('click', function()
 	{
-		$(this).parent().parent().parent().$('.pages .page').hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
+		$(this).addClass("highlighted").siblings().removeClass("highlighted");
+		$(".page").hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
+	}).eq(0).addClass('selected');
 
-	});
-	
-	
 
-	
+
 
 	$(".tap-btn-back").live('click', function()
 	{

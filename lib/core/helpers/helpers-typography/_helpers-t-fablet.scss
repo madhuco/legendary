@@ -39,8 +39,8 @@
 // ***************************************** 
 
 @mixin t-intro-1-fab {
- @include rem('font-size', 16px);
- @include rem('line-height', 18px);
+ @include rem('font-size', 18px);
+ @include rem('line-height', 28px);
 }
 
 @mixin t-intro-2-fab {

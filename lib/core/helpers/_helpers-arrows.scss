@@ -12,6 +12,8 @@ $experimental-support-for-svg: true;
   $button-text-shadow: 0 -1px 0 #474747;
   $button-text-color: #fff;
   
+
+  
   @if $theme == 'white' {
     $button-color-bottom: #cccccc;
     $button-color-top: #d4d7d4;
@@ -94,4 +96,9 @@ $experimental-support-for-svg: true;
   }
 
 } //$close Element
+
+body.tap-btn-active .masthead #{$element} b {
+	display:none;  
+  }
+
 } //$close Mixin

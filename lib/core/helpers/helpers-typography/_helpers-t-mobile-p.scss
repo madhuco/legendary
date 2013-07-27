@@ -225,7 +225,7 @@ display:none;
 // ***************************************** 
 
 @mixin t-shop-thumbs-mob {
- @include rem('font-size', 16px);
+ @include rem('font-size', 14px);
  @include rem('line-height', 20px);
 
 }
@@ -237,7 +237,7 @@ display:none;
 }
 
 @mixin t-shop-stock-mob {
- @include rem('font-size', 16px);
+ @include rem('font-size', 14px);
  @include rem('line-height', 22px);
 
 }

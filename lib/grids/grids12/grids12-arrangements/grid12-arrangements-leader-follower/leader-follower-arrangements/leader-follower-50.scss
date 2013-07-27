@@ -32,9 +32,9 @@ Displays Leader then Follower with equal widths (e.g. two column layout)  */
 		
 		.view-content-display #{$element}.bleed {
 		> .content-leader {
-		@include span-columns(7, 12);
+		@include span-columns(6.5, 12);
 		margin-right:0;
-		margin-left:-6.62069%;
+		margin-left:-6.6%;
 
 		}
 		}  //$Close Element
