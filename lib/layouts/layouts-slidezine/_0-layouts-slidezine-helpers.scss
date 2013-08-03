@@ -1,0 +1,147 @@
+
+// ===============================================
+// Layout
+// ===============================================
+
+@mixin layouts-slidezine-layout($element: '.layouts-slidezine', $gap-nav: 445px, $gap-content: 890px){
+@include layouts-pager-h-layout($element: $element);
+
+
+@include media($portables...){ 
+@include ui-taplist($element: '#{$element} > .tapnav ', $border: true);
+
+
+#{$element} {
+
+position:relative;
+
+> .tapnav .special {
+	display:none;
+}
+
+
+
+} //Close Element
+
+
+.overview-enabled #{$element} {
+
+	> .tapnav {
+	position:absolute;
+	margin-top: $gap-nav;	
+	}
+	
+	.pages {
+		margin-bottom: $gap-content;
+	}
+	
+	.nav-overview {
+	display:none;	
+	}
+	
+}
+
+
+
+} //Close Element
+
+
+
+@include media($tabplus...){ 
+
+@include ui-tabs-h('#{$element} > .tapnav ul'); 
+
+}
+
+} //Close Mixin
+
+
+
+// ===============================================
+// Grid 
+// ===============================================
+@mixin layouts-slidezine-grid($element: '.layouts-slidezine-grid'){
+
+@include layouts-pager-h-grid($element: $element);
+
+} //Close Mixin
+
+
+@mixin layouts-slidezine-grid-mob-p($element: '.layouts-slidezine-grid-mob-p') {
+	@include layouts-slidezine-grid($element:$element);
+	
+}
+
+
+@mixin layouts-slidezine-grid-mob-l($element: '.layouts-slidezine-grid-mob-l') {
+	@include layouts-slidezine-grid($element:$element);
+}
+
+
+@mixin layouts-slidezine-grid-fab($element: '.layouts-slidezine-grid-fab') {
+	@include layouts-slidezine-grid($element:$element);
+}
+
+
+@mixin layouts-slidezine-grid-tab($element: '.layouts-slidezine-grid-tab') {
+	@include layouts-slidezine-grid($element:$element);
+}
+
+
+@mixin layouts-slidezine-grid-desk($element: '.layouts-slidezine-grid-desk') {
+	@include layouts-slidezine-grid($element:$element);
+}
+
+
+@mixin layouts-slidezine-grid-r($element: '.layouts-slidezine-grid') {
+	@include media($portables...){ 
+	#{$element} {
+	
+	> .tapnav {
+	@include span-columns(12 omega, 12);
+	@include ui-taplist($element: $element)
+	}
+		
+	}
+	}
+	
+	
+	@include media($tabplus){ 
+	@include layouts-slidezine-grid($element:$element);
+	}
+}
+
+
+
+// ===============================================
+// Style
+// ===============================================
+
+@mixin layouts-slidezine-style($element: '.layouts-slidezine-style') {
+@include layouts-pager-h-style($element: $element);
+@include layouts-taptabs-style($element: $element);
+
+#{$element}  {	
+
+> .tapnav {
+
+@extend %t-ui-navigation; 
+@extend %vr-section;
+	
+}
+
+
+} //Close Class
+
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-slidezine-combo($element: '.layouts-slidezine', $gap-nav: 455px, $gap-content: 890px) {
+	@include layouts-slidezine-layout($element: $element, $gap-nav: $gap-nav, $gap-content: $gap-content);
+	@include layouts-slidezine-grid-r($element: $element);
+	@include layouts-slidezine-style($element: $element);
+}

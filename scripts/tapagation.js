@@ -10,7 +10,7 @@
 		$(".taptabs li:first a").addClass("highlighted");
 		$('.pages .page-first').show();
 
-		$(".taptabs li a").click(function()
+		$(".taptabs  .tapnav li a").click(function()
 		{
 			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
@@ -23,7 +23,7 @@
 		}).eq(0).addClass('selected');
 	});
 
-	$(".taptabs li").live('click', function()
+	$(".taptabs  .tapnav li").live('click', function()
 	{
 		$(this).addClass("highlighted").siblings().removeClass("highlighted");
 		$(".page").hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");

@@ -1,0 +1,87 @@
+// ===============================================
+// Layout
+// ===============================================
+
+@mixin layouts-photogallery-layout($element: '.layouts-photogallery-layout'){
+#{$element}	 {
+
+	}
+	
+}
+
+
+
+// ===============================================
+// Grid 
+// ===============================================
+@mixin layouts-photogallery-grid($element: '.layouts-photogallery-grid'){
+
+#{$element} {
+		@include span-columns(12 omega, 12);
+		
+	figure {
+		@include span-columns(3, 12);
+		@extend %vr-grid;
+	}
+	
+	figure:nth-child(4n) {
+		@include omega;
+	}
+	
+		
+} //Close Class
+} //Close Mixin
+
+
+@mixin layouts-photogallery-grid-mob-p($element: '.layouts-photogallery-grid-mob-p') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+@mixin layouts-photogallery-grid-mob-l($element: '.layouts-photogallery-grid-mob-l') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+@mixin layouts-photogallery-grid-fab($element: '.layouts-photogallery-grid-fab') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+@mixin layouts-photogallery-grid-tab($element: '.layouts-photogallery-grid-tab') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+@mixin layouts-photogallery-grid-desk($element: '.layouts-photogallery-grid-desk') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+@mixin layouts-photogallery-grid-r($element: '.layouts-photogallery-grid') {
+	@include layouts-photogallery-grid($element:$element);
+}
+
+
+
+// ===============================================
+// Style
+// ===============================================
+
+@mixin layouts-photogallery-style($element: '.layouts-photogallery-style') {
+
+#{$element} {	
+	
+} //Close Class
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-photogallery-combo($element: '.layouts-photogallery') {
+	@include layouts-photogallery-layout($element: $element);
+	@include layouts-photogallery-grid-r($element: $element);
+	@include layouts-photogallery-style($element: $element);
+}

@@ -27,17 +27,12 @@ padding-right: 10px;
 &:after {
 @include icon($icon-chevron-right);
 padding-right:2px;
+
 }
 
 } //Close Element
 
 
-#{$element} {
-@extend %t-body-text;
-@include typeface-bold;
-text-transform:uppercase;
-color: $darkest;
-} //Close Element
 
 
 } //Close Mixin
