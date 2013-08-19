@@ -87,7 +87,7 @@ clear:both;
 
 
 
-@mixin layouts-stages-style($element: '.layouts-stages-style', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $scratch, $active: $scratch,  $past: $line, $hover: $ribbon) {
+@mixin layouts-stages-style($element: '.layouts-stages-style', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $scratch, $active: $scratch,  $past: $line, $hover: $ribbon, $clickable: true) {
 
 #{$element} {
 		@extend %vr-section-box;	
@@ -160,14 +160,6 @@ clear:both;
     background: $arrow-color;
 }
 
- li a:hover {
-    background: $hover;
-}
-
- li a:hover:after {
-    border-color: transparent transparent transparent $hover; 
-}
-
 
 
  li.past a {
@@ -186,12 +178,39 @@ li:last-child a:after {
 	 border-color: transparent;
 }
 
+@if $clickable == true {
+
+ li.past a:hover {
+    background: $hover;
+}
+
+ li a:hover:after {
+    border-color: transparent transparent transparent $hover; 
+}
+
+
+
 li:last-child a:hover {
 	 border-color: transparent;
 }
 
 li:last-child a:hover:after {
 	 border-color: transparent;
+}
+
+} // Close Clikcable True
+
+
+
+@if $clickable == false {
+	li a {
+	cursor:arrow;	
+	}
+	
+	li a:hover {
+	color:inherit;
+	}
+	
 }
 
 
@@ -206,6 +225,8 @@ li:last-child a {
 }
 
 
+
+
 		
 } // Close $element
 } // Close $Mixin
@@ -217,8 +238,8 @@ li:last-child a {
 // Combo
 // ===============================================
 
-@mixin layouts-stages-combo($element: '.layouts-stages', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $offwhite, $active: $scratch,  $past: $scratch, $hover: $crumbs) {
+@mixin layouts-stages-combo($element: '.layouts-stages', $arrow: false, $color: $lightest, $page-bg: #fff, $arrow-color: $offwhite, $active: $scratch,  $past: $scratch, $hover: $crumbs, $clickable: true) {
 	@include layouts-stages-layout($element: $element);
-	@include layouts-stages-style($element: $element, $arrow: $arrow, $color: $color, $page-bg: $page-bg, $arrow-color: $arrow-color, $active: $active, $past: $past, $hover: $hover);
+	@include layouts-stages-style($element: $element, $arrow: $arrow, $color: $color, $page-bg: $page-bg, $arrow-color: $arrow-color, $active: $active, $past: $past, $hover: $hover, $clickable: $clickable);
 		@include layouts-stages-grid-r($element: $element);
 }

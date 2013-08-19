@@ -189,3 +189,12 @@ $ribbon: #dedede;
 	background-color: #dedede;
 	border: 1px solid #f9f9f9;
 }
+
+
+@mixin bggrad-softwhite {
+     @include background(linear-gradient(top left, #FBFBFB, #ECECEC));	
+}
+
+@mixin bggrad-softwhite-inv {
+     @include background(linear-gradient(top left, #ECECEC, #FBFBFB));	
+}

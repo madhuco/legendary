@@ -1,0 +1,47 @@
+@mixin ui-tooltips($element: '.ui-tooltip', $color: #0090ff, $qmark: true) {
+
+/* ***************************************** */
+/*  Display Tool Tips */
+/* ***************************************** */
+#{$element} {
+float:left;
+padding-left:10px;	
+}
+
+#{$element}-content {
+display:none;
+@include scheme-purity($hover: false);
+padding:10px;
+position:absolute;
+width:200px;
+z-index:999;
+}
+
+#{$element}-content .tap-btn-close {
+left:-25px;
+top:-5px;	
+position:absolute;
+}
+
+#{$element}-content .tap-btn-close:after {
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
+}
+
+@if $qmark == true {
+#{$element} .qmark:after	{
+	@include icon($icon-question-sign);	
+	visibility:visible;
+	font-size:1.5em;
+	margin-left:-5px;
+	}	
+	
+#{$element} .qmark:hover:after	{
+	color: $darkest;
+	cursor:pointer;
+	}	
+
+} //Close If 
+
+
+} //Close Mixin

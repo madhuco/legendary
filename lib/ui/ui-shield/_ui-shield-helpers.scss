@@ -27,5 +27,9 @@ float:right;
 }
 
 
+.shield-collapsed > .shield-target {
+display:none;	
+}
+
 
 } //Close Mixin

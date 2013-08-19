@@ -310,12 +310,7 @@ input.cta {
 		@extend %t-body-label; 
 	 }
 	 
-	 input[type="text"], input[type="password"],  input[type="email"]  {
-		@include border-radius(5px);
-		min-height:38px;
-		@include box-sizing(border-box); 
-		width:100%;
-	 }
+
 
 	.unit-row {
 	@extend %vr-section;		
@@ -326,6 +321,7 @@ input.cta {
 		@extend %vr-breather;	
 	}
 
+@include ui-forms();
 
 
 .unit-heading {
@@ -409,6 +405,8 @@ text-align:center;
 }
 
 } // Close $element
+
+
 
 
 

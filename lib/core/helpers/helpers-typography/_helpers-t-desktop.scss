@@ -181,7 +181,7 @@ letter-spacing:0;
 }
 
 @mixin t-tap-small-desk {
- @include rem('font-size', 14px);
+ @include rem('font-size', 12px);
  @include rem('line-height', 16px);
 
 }

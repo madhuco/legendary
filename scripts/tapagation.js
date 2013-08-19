@@ -14,8 +14,9 @@
 		{
 			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
+			$(".taptabs  .tapnav li").removeClass("highlighted");
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
-			$(this).addClass("highlighted").addClass("animated").addClass("flipInX");
+			$(this).parent().addClass("highlighted").addClass("animated").addClass("flipInX");
 			$(this).addClass("visited");
 			$(".tap-btn-back").remove();
 			$("body").addClass("tap-btn-active");
@@ -23,12 +24,19 @@
 		}).eq(0).addClass('selected');
 	});
 
-	$(".taptabs  .tapnav li").live('click', function()
-	{
-		$(this).addClass("highlighted").siblings().removeClass("highlighted");
-		$(".page").hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
-	}).eq(0).addClass('selected');
 
+
+			$(".taptabs  .tapnav li a").click(function()
+		{
+					$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
+		});
+
+		$(".taptabs .tapnav li").live('click', function()
+		{
+            var taptab = $(this).parents(".taptabs").get(0);
+            
+			$(".page",taptab).hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
+		}).eq(0).addClass('selected');
 
 
 

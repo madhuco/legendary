@@ -1,27 +1,22 @@
 //Enable Support of menus 
-(function($)
-{
+(function($) {
 
-	$(function()
-	{
+	$(function() {
 		"use strict";
 
 
 
-		$(document).ready(function()
-		{
+		$(document).ready(function() {
 
-			$('.shield-target').hide();
-
-			$('.close').on('click', function()
-			{
-			$(this).parent().removeClass('shield-active');
-			$(this).removeClass('close');
+			
+	
+			$('.close').on('click', function() {
+				$(this).parent().removeClass('shield-active');
+				$(this).removeClass('close');
 			});
 
 
-			$('.shield-trigger').on('click', function()
-			{
+			$('.shield-trigger').on('click', function() {
 				$(this).addClass('close');
 				$('#wrapper').addClass('shield-active');
 				$(this).parent().toggleClass('shield-active');

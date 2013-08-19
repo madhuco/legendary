@@ -230,6 +230,7 @@ display:none;
 	.unit-footer a {
 	@include txtcolor-darkest;
 	display:inline;
+	@extend %t-footer-small;
 	}
 	
 	.social-media {

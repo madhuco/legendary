@@ -38,8 +38,12 @@
 	@include span-columns(5, 9);
 }
 
-.b .unit-title {
+.b .unit-title, .b .unit-footer, .b .unit-txt {
 	@include span-columns(3 omega, 5);
+}
+
+.b .unit-txt .unit-title, .b .unit-txt .unit-footer {
+	@include span-columns(5 omega, 5);
 }
 
 .b .img {
@@ -176,7 +180,11 @@ display:none;
     } //Close lead-header
 
 
-
+.unit-title .prefix {
+@extend %t-body-small;
+display:block;
+color: $lighter;
+}
 
 
 /* Voucher */

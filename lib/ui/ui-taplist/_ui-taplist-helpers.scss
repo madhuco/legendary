@@ -1,4 +1,21 @@
-@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false) {
+@mixin taplist-icon($arrow-color: $lightest) {
+	
+a:before {
+float:right;
+position:absolute;
+left:0;
+bottom:0;
+line-height:1em;
+color: $arrow-color;
+font-size:1em;
+top:1.2em;
+}
+
+
+	
+}
+
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false, $num: false) {
 
 
 #{$element} {
@@ -45,21 +62,12 @@ top:1.2em;
 
 
 @if $tick == true {
+@if $num == false {	
 	
-a {	
-	@include rem(padding-left, 25px);
-}
-	
+@include taplist-icon;
+
 a:before {
 @include icon($icon-check-empty);
-float:right;
-position:absolute;
-left:0;
-bottom:0;
-line-height:1em;
-color: $arrow-color;
-font-size:1em;
-top:1.2em;
 }
 
 .visited:before {
@@ -67,8 +75,57 @@ top:1.2em;
 }
 
 } //Close If
+} //Close If
 
 
+@if $num == true {
+	
+@include taplist-icon($arrow-color: $arrow-color);
+
+&:nth-child(1) a:before {
+content: "1";
+}
+
+&:nth-child(2) a:before {
+content: "2";
+}
+
+&:nth-child(3) a:before {
+content: "3";
+}
+
+&:nth-child(4) a:before {
+content: "4";
+}
+
+
+&:nth-child(5) a:before {
+content: "5";
+}
+
+&:nth-child(6) a:before {
+content: "6";
+}
+
+&:nth-child(7) a:before {
+content: "7";
+}
+
+&:nth-child(8) a:before {
+content: "8";
+}
+
+&:nth-child(9) a:before {
+content: "9";
+}
+
+@if $tick == true {
+&:nth-child(n).visited a:before {
+	@include icon($icon-check);
+}
+
+} //Close tick true
+} //Close If
 
 
 

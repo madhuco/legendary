@@ -23,6 +23,12 @@ margin-left:0;
 @include box-sizing(border-box);
 }
 
+@include media($mob-lplus...){ 
+.tap-btn-close {
+@include span-columns(2.5 omega, 12);
+}
+}
+
 ul {
 clear:both;	
 }
@@ -50,18 +56,25 @@ text-align:center;
 
 nav#{$element} .title {
 display:block;	
-@include span-columns(8, 12);
+@include span-columns(7, 12);
+}
+
+@include media($mob-lplus...){ 
+nav#{$element} .title {
+@include span-columns(5.5, 12);
+}
 }
 
 
 
-@include media($mob...){ 
+@include media($portables...){ 
 #{$element} {
 padding:20px 20px 0;
 width:100%;
 left:0;
 right:0;
 position:absolute;
+bottom:0;
 }
 }
 

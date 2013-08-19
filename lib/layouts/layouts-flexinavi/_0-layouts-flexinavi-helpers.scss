@@ -34,8 +34,8 @@
 @include media($fab...){ 
 
 #{$element} .anchor {
-width: 100%;
-padding-right: inherit;
+width: auto;
+padding-right: 10px;
 }
 
   .ui-tapmenu {
@@ -81,7 +81,7 @@ display:none;
 #{$element} .main {
     float:left;
     height:100%;
-	width: 78%;
+	width: 75%;
 }
 
 #{$element} .main li {
@@ -90,7 +90,7 @@ display:none;
 
 #{$element}-menu {
     float: right;	
-	width:16%;
+	width:17%;
 	@include box-sizing(border-box);
 	right:20px;
 }
@@ -320,9 +320,28 @@ margin-right:0;
 	display:inline;	
 	}
 		
-	.tap-btn-menu:after {
-		@include icon($icon-reorder);	
+	
+	.tap-btn-menu.close:after {
+		@include icon($icon-remove-circle);	
+		font-size: 13px;
+		content: "Close \f05c";
+		width:4em;
+
 	}
+	
+	
+	.tap-btn-menu.close {
+	font-size:0;	
+	}
+
+
+	
+	
+	.tap-btn-menu:after  {
+		@include icon($icon-reorder);	
+		margin-left: 5px;
+	}
+	
 	
 	a {
 @extend %t-ui-navigation;

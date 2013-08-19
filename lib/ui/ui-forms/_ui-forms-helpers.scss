@@ -1,0 +1,11 @@
+@mixin ui-forms($element: 'input[type="text"], input[type="password"], input[type="email"]') {
+
+#{$element} {
+	@include border-radius(5px);
+		min-height:38px;
+		@include box-sizing(border-box); 
+		width:100%;
+
+
+} // $Close Element
+} // Mixin
