@@ -18,16 +18,12 @@ header {
 
 
 .tap-btn-close {
-@include span-columns(4 omega, 12);
-margin-left:0;
+width:auto;
+padding-right:40px;
 @include box-sizing(border-box);
+margin:0;
 }
 
-@include media($mob-lplus...){ 
-.tap-btn-close {
-@include span-columns(2.5 omega, 12);
-}
-}
 
 ul {
 clear:both;	
@@ -59,6 +55,9 @@ display:block;
 @include span-columns(7, 12);
 }
 
+
+
+
 @include media($mob-lplus...){ 
 nav#{$element} .title {
 @include span-columns(5.5, 12);
@@ -77,6 +76,8 @@ position:absolute;
 bottom:0;
 }
 }
+
+
 
 
 

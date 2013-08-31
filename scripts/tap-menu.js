@@ -88,19 +88,28 @@ $('.anchor').removeClass('close');        }
 	if (typeof window.orientation !== 'undefined')
 	{
 
-		$('.anchor').live('click', function()
+		$('.anchor').on('click', function()
 		{
 			$('.wrapper').hide();
 		});
 
-		$('.cta.anchor').live('click', function()
+	
+		$(document).on('click', '.cta.anchor', function()
 		{
 			$('.wrapper').show();
 		});
 
-		$('.close').live('click', function()
+
+		$(document).on('click', '.close', function()
 		{
 			$('.wrapper').show();
+		});
+
+	
+	
+		$('.close').live('click', function()
+		{
+	
 		});
 
 	}

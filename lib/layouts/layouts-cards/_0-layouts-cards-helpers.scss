@@ -128,6 +128,21 @@ z-index:999;
 // Grid
 // ===============================================
 
+@mixin layouts-cards-grid($element: '.layouts-cards-grid') {
+
+#{$element} .cards-back figure {
+@include span-columns(3, 6);
+@include rem(height, 130px);
+@include rem(margin-bottom, 20px);
+}
+
+#{$element} .cards-back figure:nth-child(2n) {
+@include omega;
+} 
+	
+}
+
+
 @mixin layouts-cards-grid-mob-p($element: '.layouts-cards-grid-mob-p') {
 #{$element} {
 
@@ -148,6 +163,11 @@ z-index:999;
 
 .cards-back .unit-img {
 @include rem(height, 80px);
+}
+
+.cards-back figure {
+@include rem(height, 80px);
+	goesi:green;
 }
 
 } //Close Class
@@ -343,6 +363,11 @@ right:0;
 @include rem(height, 297px);
 }
 
+.cards-back .img .img {
+height:100%;
+}
+
+
 
 
 } //Close Class
@@ -522,17 +547,6 @@ text-align:center;
 }
 
 
-#{$element} .cards-back figure {
-@include span-columns(3, 6);
-@include rem(height, 130px);
-@include rem(margin-bottom, 20px);
-}
-
-#{$element} .cards-back figure:nth-child(2n) {
-@include omega;
-} 
-
-
 #{$element} .cards-back .unit-txt {
 @include span-columns(3, 9);
 @include omega;
@@ -543,6 +557,12 @@ text-align:center;
 
 
 @mixin layouts-cards-grid-r($element: '.layouts-cards-grid', $spotlight: $spotlight) {
+
+
+@include layouts-cards-grid($element: $element);
+
+
+
 
 @include media($mob-p...){ 
 @include layouts-cards-grid-mob-p($element: $element);

@@ -283,7 +283,7 @@ h3 {
 #{$element} .title {
 margin-bottom:0;
 
-@include ui-solo-quote-outside(q, $bottom: -29px, $left: -88px);
+@include ui-solo-quote-outside(q, $left: -88px);
 
 } //Close $element
 } //Close MQ
