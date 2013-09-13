@@ -174,9 +174,11 @@ color: $lighter;
 }
 
 .unit-heading {
-	color: $darker;
+	color: $default;
 	@include typeface-regular;
 	@include rem(margin-bottom, 5px);
+	@include rem(font-size, 13px);
+	@include rem(line-height, 18px);
 }
 
 

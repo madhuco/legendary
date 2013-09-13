@@ -7,7 +7,7 @@
 		"use strict";
 
 
-		$(".taptabs li:first a").addClass("highlighted");
+		$(".taptabs li:first").addClass("highlighted");
 		$('.pages .page-first').show();
 
 		$(".taptabs  .tapnav li a").click(function()

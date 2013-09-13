@@ -1,13 +1,13 @@
 @include media($tab...){ 
 
 
-/*  ***************************************** */
-/*   Tablet:  Global Typography Styles */
-/*  ***************************************** */
+//  ***************************************** */
+//   Tablet:  Global Typography Styles */
+//  ***************************************** */
 
 
 
-/* Tablet: Titles */
+// Tablet: Titles */
 
 
 %t-title-1 {
@@ -31,7 +31,7 @@
 }
 
 
-/* Tablet: Intro */
+// Tablet: Intro */
 
 
 %t-intro-1 {
@@ -56,7 +56,7 @@
 
 
 
-/* Tablet: Body Text */
+// Tablet: Body Text */
 
 
 %t-body-text {
@@ -82,7 +82,7 @@
 
 
 
-/* Tablet: Panes */
+// Tablet: Panes */
 
 
 %t-pane-heading {
@@ -103,7 +103,7 @@
 
 
 
-/* Tablet: Footer */
+// Tablet: Footer */
 
 
 %t-footer-heading {
@@ -125,7 +125,7 @@
 
 
 
-/* Tablet: Tapagation */
+// Tablet: Tapagation */
 
 
 %t-tap-heading {
@@ -146,7 +146,7 @@
 
 
 
-/* Tablet: General Ui */
+// Tablet: General Ui */
 
 
 %t-ui-breadcrumbs {
@@ -175,7 +175,7 @@
 
 
 
-/* Tablet: Shop Ui */
+// Tablet: Shop Ui */
 
 
 %t-shop-thumbs {
@@ -207,7 +207,7 @@
 
 
 
-/* Tablet: CTA Main */
+// Tablet: CTA Main */
 
 
 %t-cta-primary {
@@ -232,7 +232,7 @@
 
 
 
-/* Tablet: Sidebar */
+// Tablet: Sidebar */
 
 %t-sidebar {
  @include t-sidebar-tab;

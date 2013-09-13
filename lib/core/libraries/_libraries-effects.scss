@@ -50,3 +50,17 @@ margin-right:0;
 			@include icon($icon-remove-circle);	
 			position:absolute;
 }
+
+
+/* Photoswipe enhancements */
+
+body div.ps-document-overlay {
+	background:#FFF;
+	opacity:0.8;
+}
+
+
+body.black div.ps-document-overlay {
+	background:#000;
+	opacity:0.8;
+}

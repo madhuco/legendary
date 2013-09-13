@@ -139,6 +139,11 @@ z-index:999;
 #{$element} .cards-back figure:nth-child(2n) {
 @include omega;
 } 
+
+.ltie8 .cards-back figure:first-child + figure, .ltie8 .cards-back figure:first-child + figure + figure + figure {
+	@include omega;
+}
+
 	
 }
 
@@ -158,16 +163,19 @@ z-index:999;
 }
 
 .cards-back{
-@include rem(height, 300px);
+@include rem(height, 460px);
 }
 
 .cards-back .unit-img {
 @include rem(height, 80px);
 }
 
-.cards-back figure {
+.cards-back .field_photo_gallery img {
 @include rem(height, 80px);
-	goesi:green;
+}
+
+.cards-back figure {
+	@include rem(height, 80px);
 }
 
 } //Close Class
@@ -333,7 +341,7 @@ right:0;
 @include rem(height, 568px);
 }
 
-.cards-back .img {
+.cards-back .unit-img {
 @include rem(height, 212px);
 }
 
@@ -359,11 +367,11 @@ right:0;
 @include rem(height, 610px);
 }
 
-.cards-back .img {
+.cards-back .unit-img {
 @include rem(height, 297px);
 }
 
-.cards-back .img .img {
+.cards-back .unit-img .img {
 height:100%;
 }
 

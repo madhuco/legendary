@@ -1,11 +1,11 @@
 @include media($desk){ 
 
-/*  ***************************************** */
-/*   Desktop:  Global Typography Styles */
-/*  ***************************************** */
+//  ***************************************** */
+//   Desktop:  Global Typography Styles */
+//  ***************************************** */
 
 
-/*  Desktop:  Titles */
+//  Desktop:  Titles */
 
 
 %t-title-1 {
@@ -29,7 +29,7 @@
 }
 
 
-/*  Desktop:  Intro */
+//  Desktop:  Intro */
 
 
 %t-intro-1 {
@@ -54,7 +54,7 @@
 
 
 
-/*  Desktop:  Body Text */
+//  Desktop:  Body Text */
 
 
 %t-body-text {
@@ -79,7 +79,7 @@
 }
 
 
-/*  Desktop:  Panes */
+//  Desktop:  Panes */
 
 
 %t-pane-heading {
@@ -100,7 +100,7 @@
 
 
 
-/*  Desktop:  Footer */
+//  Desktop:  Footer */
 
 
 %t-footer-heading {
@@ -121,7 +121,7 @@
 
 
 
-/*  Desktop:  Tapagation */
+//  Desktop:  Tapagation */
 
 
 %t-tap-heading {
@@ -142,7 +142,7 @@
 
 
 
-/*  Desktop:  General Ui */
+//  Desktop:  General Ui */
 
 
 %t-ui-breadcrumbs {
@@ -176,7 +176,7 @@
 
 
 
-/*  Desktop:  Shop Ui */
+//  Desktop:  Shop Ui */
 
 
 %t-shop-thumbs {
@@ -202,7 +202,7 @@
 
 
 
-/*  Desktop:  CTA Main */
+//  Desktop:  CTA Main */
 
 
 %t-cta-primary {
@@ -222,7 +222,7 @@
 
 
 
-/*  Desktop:  Sidebar */
+//  Desktop:  Sidebar */
 
 %t-sidebar {
  @include t-sidebar-desk;

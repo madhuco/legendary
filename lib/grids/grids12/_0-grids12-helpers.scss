@@ -1,7 +1,8 @@
 @import "../../../plugins/susy/susy";
 
 $base-font-size: 10px;
-$show-grid-backgrounds: false;
+$show-grid-backgrounds: false !default;
+$grid-colors: false !default;
 
 html, body {
   font-size: 10px;
@@ -12,6 +13,13 @@ $total-columns       : 12;
 $column-width        : 5.85%;
 $gutter-width        : 1.6%;
 $grid-padding        : 6.25%;
+
+@if $grid-colors == true {
+body {
+background: pink;	
+}
+}
+
 }
 
 @include media($mob-l...) {
@@ -19,6 +27,13 @@ $total-columns       : 12;
 $column-width        : 5.7%;
 $gutter-width        : 2.096%;
 $grid-padding        : 4.19%;
+
+@if $grid-colors == true {
+body {
+background: yellow;	
+}
+}
+
 }
 
  @include media($fab...) {
@@ -26,6 +41,13 @@ $total-columns       : 12;
 $column-width        : 6.1%;
 $gutter-width        : 1.69%;
 $grid-padding        : 3.389%;
+
+@if $grid-colors == true {
+body {
+background: blue;	
+}
+}
+
 }
 
  @include media($tab...) {
@@ -33,6 +55,14 @@ $total-columns       : 12;
 $column-width        : 3.837%;
 $gutter-width        : 3.947%;
 $grid-padding        : 5.287%;
+
+
+@if $grid-colors == true {
+body {
+background: green;	
+}
+}
+
 }
 
  @include media($desk) {
@@ -40,4 +70,12 @@ $total-columns       : 12;
 $column-width        : 4.5em;
 $gutter-width        : 3em;
 $grid-padding      	 : 4em;
+
+
+@if $grid-colors == true {
+body {
+background: red;	
+}
+}
+
 }
