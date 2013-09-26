@@ -13,6 +13,10 @@
 @include vr-section-desk;
 }
 
+%vr-section-rule {
+@include vr-section-rule-desk;
+}
+
 
 %vr-bounding {
 @include vr-bounding-desk;
@@ -67,6 +71,10 @@
 
 %vr-spacer {
 	@include vr-spacer-desk;
+}
+
+%vr-spacer-rule {
+@include vr-spacer-rule-desk;
 }
 
 %vr-spacer-top {

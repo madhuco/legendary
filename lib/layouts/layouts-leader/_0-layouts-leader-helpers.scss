@@ -1,0 +1,147 @@
+// ===============================================
+// leader: Layout
+// ===============================================
+
+@mixin layouts-leader-layout($element: '.layouts-leader-layout'){
+/* ***************************************** */
+/*  Layouts leader: Displays content in small 'tile' shapes */
+/* ***************************************** */
+#{$element} {
+.unit-heading {
+
+}
+		
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// leader: Grid
+// ===============================================
+
+@mixin layouts-leader-grid($element: '.layouts-leader-grid') {
+
+#{$element} {
+
+position:relative;
+@extend %vr-section-box;
+
+
+.unit-txt {
+position:absolute;
+bottom:40px;
+}
+
+.unit-cta {
+	position:absolute;
+bottom:40px;
+right:30px;
+}
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-leader-grid-mob-p($element: '.layouts-leader-grid-mob-p') {
+
+} // Close $Mixin
+
+
+
+@mixin layouts-leader-grid-mob-l($element: '.layouts-leader-grid-mob-l') {
+@include layouts-leader-mob-p($element:$element);
+}
+
+
+@mixin layouts-leader-grid-fab($element: '.layouts-leader-grid-fab', $r: false) {
+	
+	@if $r == false {
+	@include layouts-leader-grid($element:$element);
+	}
+	
+	
+	.unit-text {
+	left:0;	
+	}
+	
+	.unit-row {
+position:relative;	
+}
+	
+}
+
+
+@mixin layouts-leader-grid-tab($element: '.layouts-leader-grid-tab') {
+@include layouts-leader-grid($element:$element);
+
+}
+
+
+@mixin layouts-leader-grid-desk($element: '.layouts-leader-grid-desk') {
+	@include layouts-leader-grid($element:$element);
+}
+
+
+@mixin layouts-leader-grid-r($element: '.layouts-leader-grid') {
+	
+	@include media($fabplus...){ 
+		@include layouts-leader-grid($element:$element);
+			}
+	
+	
+	@include media($fab...){ 
+			@include layouts-leader-grid-fab($element:$element, $r: true);
+	
+	
+	} // Close Fab MQ
+	
+	
+	} //Close Mixin
+
+
+
+
+
+
+
+
+// ===============================================
+// leader: Style
+// ===============================================
+
+
+
+@mixin layouts-leader-style($element: '.layouts-leader-style') {
+
+@include media($tabplus...){ 
+
+#{$element} {
+	
+	.unit-txt {
+@include border-right-radius(10px);	
+	}
+	
+	
+			
+}//Close Element
+} // Close $tabplus
+
+	
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-leader-combo($element: '.layouts-leader-combo') {
+	@include layouts-leader-layout($element: $element);
+	@include layouts-leader-grid-r($element: $element);
+	@include layouts-leader-style($element: $element);
+}

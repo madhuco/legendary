@@ -1,0 +1,154 @@
+// ===============================================
+// magdex: Layout
+// ===============================================
+
+@mixin layouts-magdex-layout($element: '.layouts-magdex-layout'){
+/* ***************************************** */
+/*  Layouts magdex: Displays content in small 'tile' shapes */
+/* ***************************************** */
+#{$element} {
+
+		
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// magdex: Grid
+// ===============================================
+
+@mixin layouts-magdex-grid($element: '.layouts-magdex-grid') {
+
+#{$element} {
+
+.unit-row {
+@include span-columns(6, 12);	
+}
+
+
+.unit-img {
+@include span-columns(2, 6);	
+}
+
+
+.unit-txt {
+@include span-columns(4 omega, 6);	
+}
+
+
+.unit-row:nth-child(2n) {
+@include omega;	
+}
+
+
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-magdex-grid-mob-p($element: '.layouts-magdex-grid-mob-p') {
+@include layouts-mobindex-layout($element: $element);
+} // Close $Mixin
+
+
+
+@mixin layouts-magdex-grid-mob-l($element: '.layouts-magdex-grid-mob-l') {
+@include layouts-mobindex-layout($element: $element);
+}
+
+
+@mixin layouts-magdex-grid-fab($element: '.layouts-magdex-grid-fab', $r: false) {
+
+#{$element} {
+
+.unit-row {
+@include span-columns(12 omega, 12);	
+}
+
+
+.unit-img {
+@include span-columns(4, 12);	
+}
+
+
+.unit-txt {
+@include span-columns(8 omega, 12);	
+}
+
+
+@if $r == false {
+.unit-row:nth-child(2n) {
+@include omega;	
+}
+}
+
+} // Close $element
+
+
+}
+
+
+@mixin layouts-magdex-grid-tab($element: '.layouts-magdex-grid-tab') {
+@include layouts-magdex-grid($element: $element);
+}
+
+
+@mixin layouts-magdex-grid-desk($element: '.layouts-magdex-grid-desk') {
+@include layouts-magdex-grid($element: $element);
+}
+
+
+@mixin layouts-magdex-grid-r($element: '.layouts-magdex-grid', $r: true) {
+	
+	@include media($mob...){ 
+@include layouts-mobindex-layout($element: $element);
+	}
+	
+	@include media($fab...){ 
+	@include layouts-magdex-grid-fab($element: $element, $r: $r);
+	
+	}
+	
+	
+	@include media($tabplus...){ 
+	@include layouts-magdex-grid($element: $element);
+	}
+	
+	
+	} //Close Mixin
+
+
+
+
+
+
+
+
+// ===============================================
+// magdex: Style
+// ===============================================
+
+
+
+@mixin layouts-magdex-style($element: '.layouts-magdex-style') {
+
+#{$element} {
+		
+	} //Close Element
+	
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-magdex-combo($element: '.layouts-magdex-combo') {
+	@include layouts-magdex-layout($element: $element);
+	@include layouts-magdex-grid-r($element: $element);
+	@include layouts-magdex-style($element: $element);
+}

@@ -16,6 +16,11 @@
 @include vr-section-mob;
 }
 
+
+%vr-section-rule {
+@include vr-section-rule-mob;
+}
+
 %vr-section-top {
 	@include vr-section-top-mob;
 
@@ -58,10 +63,14 @@
 	@include vr-spacer-mob;
 }
 
+
+%vr-spacer-rule {
+@include vr-spacer-rule-mob;
+}
+
 %vr-spacer-top {
 	@include vr-spacer-top-mob;
 }
-
 
 
 %vr-spacer-bottom {

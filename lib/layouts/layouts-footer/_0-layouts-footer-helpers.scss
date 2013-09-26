@@ -2,7 +2,7 @@
 // Footer: Layout
 // ===============================================
 
-@mixin layouts-footer-layout($element: '.layout-footer', $extra: false) {
+@mixin layouts-footer-layout($element: '.layout-footer', $extra: false, $padsticky: true) {
 	
 /* ***************************************** */
 /* Layouts Footer: Grid */
@@ -43,6 +43,7 @@ padding-bottom:50px;
 
 
 @include media($pads...){ 
+@if $padsticky == true {
  #{$element} {
 	position:fixed;
 	left:3px;
@@ -50,7 +51,7 @@ padding-bottom:50px;
 	bottom:0px; 
 	z-index:900;
  }
-
+}
 
 }
 
@@ -171,18 +172,21 @@ display:block;
 }
 
 
-@mixin layouts-footer-grid-r($element: '.layouts-footer-grid', $extra: false) {
+@mixin layouts-footer-grid-r($element: '.layouts-footer-grid', $extra: false, $mobhide:true) {
 		@include layouts-footer-grid($element:$element);
 	
 	@include media($pads...){ 
 	@include layouts-footer-grid-fab($element:$element, $extra: $extra);
 	}
-		
+
+@if $mobhide == true {		
 	@include media($mob...){ 
 #{$element} {
 display:none;
 }
 }
+}
+
 }
 
 
@@ -284,8 +288,8 @@ display:none;
 // ===============================================
 
 
-@mixin layouts-footer-combo($element: '.layouts-footer-combo', $extra: false) {
-@include layouts-footer-layout($element: $element, $extra: $extra);
-	@include layouts-footer-grid-r($element: $element, $extra: $extra);
+@mixin layouts-footer-combo($element: '.layouts-footer-combo', $extra: false, $padsticky: true, $mobhide: true) {
+@include layouts-footer-layout($element: $element, $extra: $extra, $padsticky: $padsticky);
+	@include layouts-footer-grid-r($element: $element, $extra: $extra, $mobhide: $mobhide);
 	@include layouts-footer-style($element: $element);
 }

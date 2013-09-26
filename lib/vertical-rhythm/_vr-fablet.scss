@@ -17,6 +17,11 @@
 @include vr-section-fab;
 }
 
+
+%vr-section-rule {
+@include vr-section-rule-fab;
+}
+
 %vr-section-top {
 	@include vr-section-top-fab;
 
@@ -62,6 +67,11 @@
 
 %vr-spacer {
 	@include vr-spacer-fab;
+}
+
+
+%vr-spacer-rule {
+	@include vr-spacer-rule-fab;
 }
 
 %vr-spacer-top {

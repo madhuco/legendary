@@ -1,5 +1,6 @@
 .thumb-rating.ui-ratings-duo-plus:before {
 	@include icon($icon-thumbs-up);
+	gosei:green;
 	
 }
 

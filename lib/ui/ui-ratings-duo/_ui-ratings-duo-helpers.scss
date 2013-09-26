@@ -1,0 +1,18 @@
+@import "_helpers-fontawesome";
+
+@mixin ui-ratings-duo($element:'.ui-ratings-duo') {
+
+
+.thumb-rating#{$element}-plus:before {
+	@include icon($icon-thumbs-up);
+		goesi:green;
+	}
+
+.thumb-rating#{$element}-minus:before {
+	@include icon($icon-thumbs-down);
+}
+
+
+
+
+} //Close Mixin

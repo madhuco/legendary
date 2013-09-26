@@ -1,0 +1,4 @@
+@import "0-layouts-magdex-helpers";
+
+@include layouts-magdex-layout($element: '.layouts-magdex-grid');
+@include layouts-magdex-grid-r($element: '.layouts-magdex-grid');

@@ -1,0 +1,17 @@
+@mixin scheme-cards($hover: false) {
+background: #FFF;	
+@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+@include border-radius(5px);
+@include rem(padding, 10px);
+@include box-sizing(border-box);
+
+@if $hover == true {
+	
+	&:hover {
+	@include box-shadow(0 2px 8px rgba(0,0,0,0.2));
+	background: $offwhite;
+	}
+	
+}
+
+} //Close Mixin

@@ -21,6 +21,12 @@
 }
 
 
+@mixin vr-section-rule-mob {
+	@include rem('padding-top', 30px);
+	@include rem('padding-bottom', 30px);
+}
+
+
 @mixin vr-section-box-mob {
 	@include rem('margin-top', 30px);
 	@include rem('margin-bottom', 30px);
@@ -78,8 +84,13 @@
 @mixin vr-spacer-mob {
 	@include rem('margin-top', 10px);
 	@include rem('margin-bottom', 10px);
-	
 }
+
+@mixin vr-spacer-rule-mob {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+}
+
 
 @mixin vr-spacer-inside-mob {
 	@include rem('padding-top', 10px);

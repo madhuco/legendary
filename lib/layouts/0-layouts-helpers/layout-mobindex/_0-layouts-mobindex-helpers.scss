@@ -1,0 +1,63 @@
+@import "_ui-taplist-helpers.scss";
+
+@mixin taptabactive {
+
+}
+
+
+// ===============================================
+// Layouts
+// ===============================================
+
+@mixin layouts-mobindex-layout($element: '.mobindex', $height: 84px) { 
+
+#{$element} {
+
+.unit-row {
+@include span-columns(12 omega, 12);	
+@include rem(min-height, $height);
+}
+
+
+.unit-img {
+
+@include span-columns(3, 12);
+@include rem(height, $height);
+@include rem(margin-top, -10px);
+@include rem(margin-left, -10px);
+}
+
+.unit-img .img {
+height:100%;	
+}
+
+.unit-txt {
+@include span-columns(9 omega, 12);	
+}
+
+}
+
+} //Close Mixin
+
+// ===============================================
+// Style
+// ===============================================
+
+@mixin layouts-mobindex-style($element: '.mobindex') {
+	
+	
+	
+		
+	
+} //Close Mixin
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+
+@mixin layouts-mobindex-combo($element: '.mobindex', $device: 'portables') {
+@include layouts-mobindex-layout($element: $element, $device: $device);
+@include layouts-mobindex-style($element: $element);
+}

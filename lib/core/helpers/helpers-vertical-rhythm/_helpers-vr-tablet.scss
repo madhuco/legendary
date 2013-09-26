@@ -22,6 +22,13 @@
 	@include rem('margin-bottom', 20px);
 }
 
+
+@mixin vr-section-rule-tab {
+	@include rem('padding-top', 20px);
+	@include rem('padding-bottom', 20px);
+}
+
+
 @mixin vr-section-box-tab {
 	@include rem('margin-top', 20px);
 	@include rem('margin-bottom', 20px);
@@ -75,6 +82,12 @@
 	@include rem('margin-top', 10px);
 	@include rem('margin-bottom', 10px);
 	}
+	
+	@mixin vr-spacer-rule-tab {
+	@include rem('padding-top', 10px);
+	@include rem('padding-bottom', 10px);
+	}
+	
 	
 @mixin vr-spacer-inside-tab {
 	@include rem('padding-top', 10px);
