@@ -1,8 +1,10 @@
 @import "_ui-taplist-helpers.scss";
 
-@mixin taptabactive {
-body.tap-btn-active {
+@mixin fang {
+
 	
+body.tap-btn-active {
+
 	.masthead * {
 	display:none;	
 	}
@@ -26,8 +28,8 @@ body.tap-btn-active {
 		display:inline;
 	}
 	
+	
 }
-
 
 
 
@@ -93,14 +95,15 @@ display:none;
 
 @if $device == 'mob' {
 	@include media($mob...){ 
-	@include taptabactive;
+	@include fang;
 	}
 }
 
 
 @if $device == 'portables' {
 	@include media($portables...){ 
-	@include taptabactive;
+	@include fang;
+	
 	}
 }
 
@@ -179,6 +182,7 @@ display:inline-block;
 
 
 @mixin layouts-taptabs-combo($element: '.taptabs', $device: 'portables') {
+.zeo{zeo:zeo;}
 @include layouts-taptabs-layout($element: $element, $device: $device);
 @include layouts-taptabs-style($element: $element);
 }

@@ -1,0 +1,4 @@
+@import "0-layouts-thumbs-helpers";
+
+@include layouts-thumbs-layout($element: '.layouts-thumbs-grid');
+@include layouts-thumbs-grid-r($element: '.layouts-thumbs-grid');

@@ -1,3 +1,5 @@
+//Display tool tips.
+
 (function($)
 {
 	$(document).ready(function()

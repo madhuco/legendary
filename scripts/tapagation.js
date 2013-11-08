@@ -12,7 +12,9 @@
 
 		$(".taptabs  .tapnav li a").click(function()
 		{
-			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
+	
+	
+				$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
 			$(".taptabs  .tapnav li").removeClass("highlighted");
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
@@ -22,8 +24,8 @@
 			$("body").addClass("tap-btn-active");
 			$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
 		}).eq(0).addClass('selected');
-	});
 
+	});
 
 
 			$(".taptabs  .tapnav li a").click(function()

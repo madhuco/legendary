@@ -5,7 +5,6 @@
 
 .thumb-rating#{$element}-plus:before {
 	@include icon($icon-thumbs-up);
-		goesi:green;
 	}
 
 .thumb-rating#{$element}-minus:before {

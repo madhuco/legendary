@@ -1,4 +1,4 @@
-// Footer Script
+// Footer Script: Hide/show the footer when clicked. Works via CSS class collapse to target the effect responsively. 
 (function($) {
 
 	$(function() {

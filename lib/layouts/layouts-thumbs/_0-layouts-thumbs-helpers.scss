@@ -1,0 +1,185 @@
+// ===============================================
+// thumbs: Layout
+// ===============================================
+
+@mixin layouts-thumbs-layout($element: '.layouts-thumbs-layout'){
+#{$element} {	
+} // Close $element
+} // Close $Mixin
+
+
+// ===============================================
+// thumbs: Grid
+// ===============================================
+
+@mixin layouts-thumbs-grid($element: '.layouts-thumbs-grid') {
+#{$element} {
+	
+	@include span-columns(12 omega,12);	
+	
+	.unit {
+	@include span-columns(4, 12);	
+	}
+	
+	.unit:nth-child(3n) {
+		@include omega;
+	}
+	
+} // Close $element
+} // Close $Mixin
+
+
+
+@mixin layouts-thumbs-grid-mob-p($element: '.layouts-thumbs-grid-mob-p') {
+@include layouts-mobindex-layout($element: $element);
+} // Close $Mixin
+
+
+
+@mixin layouts-thumbs-grid-mob-l($element: '.layouts-thumbs-grid-mob-l') {
+@include layouts-mobindex-layout($element: $element);
+}
+
+
+@mixin layouts-thumbs-grid-fab($element: '.layouts-thumbs-grid-fab', $r:false) {
+@if $r == false {
+	@include layouts-thumbs-grid($element:$element);
+	}
+
+#{$element} {
+	.unit {
+	@include rem(height, 190px);		
+	}
+	
+	.unit-img  {
+	@include rem(height, 70px);
+	overflow:hidden;		
+	}
+	
+	} // Close Element
+	} //Close Mixin
+
+
+@mixin layouts-thumbs-grid-tab($element: '.layouts-thumbs-grid-tab', $r:false) {
+@if $r == false {
+	@include layouts-thumbs-grid($element:$element);
+	}
+		
+	#{$element} {
+	
+	.unit{
+	@include rem(height, 230px);
+	}
+	
+	.unit-img {
+	@include rem(height, 120px);
+	overflow:hidden;	
+	}
+		
+	} //Close Element
+	} //Close Mixin
+
+@mixin layouts-thumbs-grid-desk($element: '.layouts-thumbs-grid-desk', $r:false) {
+	@if $r == false {
+	@include layouts-thumbs-grid-tab($element:$element, $r:$r);
+	}
+	
+	#{$element} {
+
+	.unit{
+	@include rem(height, 210px);
+	}
+
+	} //Close Element
+	} //Close Mixin
+
+
+@mixin layouts-thumbs-grid-r($element: '.layouts-thumbs-grid', $r: true) {
+	@include layouts-thumbs-grid($element:$element);
+	
+	@include media($mob...){ 
+	@include layouts-mobindex-layout($element: $element);
+	}
+	
+	@include media($fab...){ 
+	@include layouts-thumbs-grid-fab($element:$element, $r:$r);
+	}
+	
+	@include media($tabplus...){ 
+	@include layouts-thumbs-grid-tab($element:$element, $r:$r);
+	}
+	
+	@include media($desk...){ 
+	@include layouts-thumbs-grid-desk($element:$element, $r:$r);
+	}
+	
+	} //Close Mixin
+
+
+
+
+
+
+
+
+// ===============================================
+// thumbs: Style
+// ===============================================
+
+
+
+@mixin layouts-thumbs-style($element: '.layouts-thumbs-style') {
+
+@include media($fabplus...){ 
+#{$element} {
+.unit {
+@include scheme-purity($padding:false);
+@extend %vr-section;
+text-align:center;
+}
+
+.unit-img img {
+@include border-top-radius(10px);
+}
+
+.unit-intro, .unit-title {
+	@extend %vr-breather;
+}
+} // Close MQ-Fablet
+} // Close $element
+
+
+#{$element} {
+.unit {
+@extend %vr-section;	
+}
+	
+.unit-title {
+@extend %t-pane-heading;
+@extend %vr-pane-heading;
+color: $darker;	
+}
+
+.unit-intro {
+@extend %t-pane-text;
+@extend %vr-pane-text;	
+color: $default;
+}
+} // Close $element
+
+
+
+} // Close $Mixin
+	
+	
+	
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-thumbs-combo($element: '.layouts-thumbs-combo') {
+	@include layouts-thumbs-layout($element: $element);
+	@include layouts-thumbs-grid-r($element: $element);
+	@include layouts-thumbs-style($element: $element);
+}

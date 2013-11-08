@@ -25,6 +25,15 @@ text-align:center;
 }
 
 
+#{$root} .main-intro {
+@extend %t-intro-1;
+@extend %vr-into-1;
+text-align:center;
+color: $lighter;
+}
+
+
+
 
 #{$root} .title {
 	@include typeface-light;

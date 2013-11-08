@@ -81,7 +81,7 @@
 
 @mixin t-body-text-desk {
  @include rem('font-size', 14px);
- @include rem('line-height', 18px);
+ @include rem('line-height', 22px);
 }
 
 @mixin t-body-small-desk {

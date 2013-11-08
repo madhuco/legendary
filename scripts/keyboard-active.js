@@ -1,5 +1,5 @@
 (function($) {
-
+//Detect if keyboard is active and add a class. Use for responsive designs to hide unwatned elements when user is typing.
 
 		$(document).ready(function() {
 

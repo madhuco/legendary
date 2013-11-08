@@ -1,4 +1,4 @@
-// JavaScript Document
+// Price animation for discounts
 (function ($) {
 
     $(function () {
@@ -20,7 +20,7 @@
                 }, {
                     duration: 3000,
                     easing: 'swing',
-                    // can be anything
+
                     step: function () { // called on every step
                         // Update the element's text with rounded-up value:
                         $('#price').text(parseFloat(this.someValue).toFixed(2));

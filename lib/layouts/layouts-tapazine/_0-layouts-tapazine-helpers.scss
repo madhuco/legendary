@@ -1,3 +1,5 @@
+$role: false !default;
+
 
 // ===============================================
 // Layout
@@ -92,7 +94,7 @@ padding-right:4%;
 // Style
 // ===============================================
 
-@mixin layouts-tapazine-style($element: '.layouts-tapazine-style') {
+@mixin layouts-tapazine-style($element: '.layouts-tapazine-style', $role: $role) {
 
 #{$element}  {	
 
@@ -107,6 +109,7 @@ padding-right:4%;
 @extend %vr-section-inside-top;
 }
 
+@if $role == false {
 .unit-title {
 @extend %t-title-2;
 @extend %vr-title-2;
@@ -130,6 +133,7 @@ text-align:center;
 	@extend %t-ui-navigation;
 }
 
+}
 
 } //Close Class
 
@@ -201,12 +205,12 @@ border-right: 1px solid $darkest;
 // Combo
 // ===============================================
 
-@mixin layouts-tapazine-combo($element: '.layouts-tapazine-combo') {
+@mixin layouts-tapazine-combo($element: '.layouts-tapazine-combo', $role: $role) {
 #{$element} {
 
 }
 	@include layouts-tapazine-layout($element: $element);
 	@include layouts-tapazine-grid-r($element: $element);
-	@include layouts-tapazine-style($element: $element);
+	@include layouts-tapazine-style($element: $element, $role: $role);
 	
 }

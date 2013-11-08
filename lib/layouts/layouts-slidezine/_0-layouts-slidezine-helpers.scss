@@ -140,7 +140,7 @@ position:relative;
 // Combo
 // ===============================================
 
-@mixin layouts-slidezine-combo($element: '.layouts-slidezine', $gap-nav: 455px, $gap-content: 890px) {
+@mixin layouts-slidezine-combo($element: '.layouts-slidezine-combo', $gap-nav: 455px, $gap-content: 890px) {
 	@include layouts-slidezine-layout($element: $element, $gap-nav: $gap-nav, $gap-content: $gap-content);
 	@include layouts-slidezine-grid-r($element: $element);
 	@include layouts-slidezine-style($element: $element);

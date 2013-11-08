@@ -1,11 +1,9 @@
 $(window).scroll(function()
 {
 
-	// sticky nav css NON mobile way
+//Make the primar-nav-bar sticky for Ios 4 and below (as these devices do not support position fixed).
 
 
-	// sticky nav iPhone android mobile way
-	// iOS 4 and below
 if (/OS [2-4]_\d(_\d)? like Mac OS X/i.test(navigator.userAgent))
 	{
 		$(window).scroll(function()

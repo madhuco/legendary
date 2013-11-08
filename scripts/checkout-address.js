@@ -1,4 +1,4 @@
-//Enable Support of menus 
+//Hide Class for check out 
 (function($)
 {
 

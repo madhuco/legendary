@@ -1,0 +1,58 @@
+@mixin themes-legendary($root: '.themes-legendary', $black: false) {
+ 
+ .role-content {
+ 
+ .unit-title {
+   @extend %t-title-2;
+   @extend %vr-title-2;
+   @extend %txtcolor-darkest;
+   @extend %typeface-light;
+   text-align:center;
+}
+ 
+ .unit-intro {
+   @extend %t-intro-2;
+   @extend %vr-intro-2;
+   @extend %typeface-light;
+   @extend %txtcolor-lighter;
+   text-align:center;
+}
+ 
+ .unit-txt {
+   @extend %t-body-text;
+   @extend %txtcolor-darkest;
+   @extend %vr-body-text;
+}
+
+} //Close .role-content
+
+
+
+
+ .role-page-intro {
+ 
+ .unit-title {
+ @extend %t-title-1;
+ @extend %vr-title-1;
+ @extend %txtcolor-darkest;
+ @extend %typeface-light;
+ text-align:center;
+}
+ 
+ .unit-intro {
+ @extend %t-intro-1;
+ @extend %vr-intro-1;
+ @extend %typeface-light;
+ @extend %txtcolor-lighter;
+ text-align:center;
+}
+
+
+} //Close .role-content
+
+
+
+
+
+
+} //Close Main Mixin

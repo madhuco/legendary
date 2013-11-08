@@ -1,4 +1,5 @@
 //Check if a browser supports position:fixed and add a class to HTML tag.
+//Necessary for Ios and below 
 /*! Fixedfixed: a CSS position:fixed qualifier. (c)2012 @scottjehl, Filament Group, Inc. Dual license: MIT and/or GPLv2 */
 (function(w, undefined)
 {

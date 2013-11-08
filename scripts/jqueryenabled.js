@@ -1,4 +1,4 @@
-//Check if Jquery is enabled and provide a class for fall back styles
+//Check if Jquery is enabled. If so remove the no-jq class. If not, the no-jq class is left intact, allowing fallback CSS to be implemented.
 (function($) {
 
 	$(function() {

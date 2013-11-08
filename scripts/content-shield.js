@@ -1,4 +1,6 @@
-//Enable Support of menus 
+// Hide/Show Content when a trigger is clicked.
+// The wrapper is alos updated with the shield-active class allowing for more complex css technqiues.
+ 
 (function($) {
 
 	$(function() {

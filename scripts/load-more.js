@@ -1,4 +1,4 @@
-// Load More COntent
+// Load More Content
 (function($) {
 	$(document).ready(function() {
 

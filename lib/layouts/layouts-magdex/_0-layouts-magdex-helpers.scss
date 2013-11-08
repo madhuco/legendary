@@ -133,11 +133,24 @@
 @mixin layouts-magdex-style($element: '.layouts-magdex-style') {
 
 #{$element} {
-		
-	} //Close Element
+
+.unit {
+@extend %vr-section;	
+}
 	
+.unit-title {
+@extend %t-pane-heading;
+@extend %vr-pane-heading;
+color: $darker;	
+}
 
+.unit-intro {
+@extend %t-pane-text;
+@extend %vr-pane-text;	
+color: $default;
+}
 
+} // Close $element
 } // Close $Mixin
 	
 	
