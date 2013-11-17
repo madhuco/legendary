@@ -139,7 +139,7 @@ height:100%;
 	@include span-columns(2,12);
 	}
 
-.unit-last {
+.unit-last, .unit-row:nth-child(n+6) {
 		@include omega;
 }
 

@@ -2,11 +2,21 @@
 
 @mixin fang {
 
-	
-body.tap-btn-active {
+/* Masthead Display */
 
+.tap-btn-active .wrapper {
+
+	.masthead {
+	visibility:visible;	
+	}
+	
 	.masthead * {
-	display:none;	
+	visibility:visible;	
+	display:none;
+	}
+	
+	.masthead * > div {
+	display:none;
 	}
 	
 	.masthead .cta {
@@ -18,22 +28,55 @@ body.tap-btn-active {
 	}
 	
 	.tap-btn-back {
-		display:inline-block;
+	display:inline-block;
+	float:left;
 	}
+	
 	.taptabs > .tapnav  {
-		display:none;
+	display:none;
 	}
 	
 	.masthead .tap-btn-back b {
-		display:inline;
+	display:inline;
+	}
+
+} // Close .tap-btn-active .wrapper 
+
+/* Content Display */
+	
+.tap-btn-active {
+
+	.wrapper {
+	visibility:hidden;	
 	}
 	
+	.wrapper > * {
+	display:none;	
+	}
 	
-}
-
-
-
-}
+	.wrapper .inner-wrapper {
+	display:block;	
+	}
+	
+	.wrapper .masthead {
+	display:block;	
+	}
+	
+	.multi-page {
+	visibility:visible;
+	display:block;
+	}
+	
+	.multi-page > * {
+	display:none;
+	}
+	
+	.multi-page >.pages {
+	display:block;
+	}
+	
+} //Close .tap-btn-active
+} // Close Mixin
 
 
 // ===============================================
@@ -53,6 +96,10 @@ z-index:400;
 	display: none;
 }
 
+#wrapper #{$element} .page .page {
+	display: block;
+}
+
 .ie #wrapper #{$element} .page.page-first,
 #wrapper #{$element} .page-first,
 #wrapper #{$element} .page:first-of-type,
@@ -67,11 +114,26 @@ z-index:400;
 
 
 
-@include media($mob...){ 
+@include media($portables...){ 
 #wrapper #{$element} .page-first,
 #wrapper #{$element} .page:first-of-type  {
-display:none;
+// display:none;
 }
+
+
+#wrapper #{$element} .content-leader {
+	display:none;
+}
+
+
+.sub-page #wrapper #{$element} .content-leader {
+	display:block;
+}
+
+.sub-page #wrapper #{$element} .content-leader .page .page {
+	display:block !Important;
+}
+
 
 .sub-page .lead-header {
 display:none;	
@@ -107,13 +169,18 @@ display:none;
 	}
 }
 
+
+.jq .unit-row-title {
+display:none;	
+}
+
 } //Close Mixin
 
 // ===============================================
 // Style
 // ===============================================
 
-@mixin layouts-taptabs-style($element: '.taptabs') {
+@mixin layouts-taptabs-style($element: '.taptabs', $stripes: true ) {
 	#{$element} > .content-follower a {
 @extend %t-ui-navigation; 
 } //Close Class
@@ -125,6 +192,30 @@ display:none;
 // @include border-radius(10px);
 // } 
 // }
+
+
+.page .page .unit-title {
+position:relative;
+padding-right:1em;
+color: $default;
+cursor: pointer;
+}
+
+.page .page .unit-title:after {
+position:absolute;
+top:0;
+right:0;
+@include icon($icon-chevron-down);
+}
+
+body .page .page .unit-title:hover {
+color: $darkest;
+}
+
+.page .page .unit-title.open:after {
+@include icon($icon-chevron-up);
+}
+
 
 
 
@@ -172,6 +263,23 @@ display:inline-block;
 }
 
 
+@if $stripes == true {
+
+.page .page {
+@include box-sizing(border-box);
+padding:20px 10px;	
+}
+
+.page .page:nth-child(even) {
+	background: rgba($c-primary-light, 0.2);
+}
+
+.page .page:nth-child(odd) {
+@extend %vr-section-top;
+}
+
+}
+
 
 } //Close Mixin
 
@@ -182,7 +290,6 @@ display:inline-block;
 
 
 @mixin layouts-taptabs-combo($element: '.taptabs', $device: 'portables') {
-.zeo{zeo:zeo;}
 @include layouts-taptabs-layout($element: $element, $device: $device);
 @include layouts-taptabs-style($element: $element);
 }

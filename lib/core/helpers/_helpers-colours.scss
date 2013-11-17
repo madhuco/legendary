@@ -1,24 +1,28 @@
+// ***************************************** //
+//  Main Colours //
+// ***************************************** //
 
-$link: #1a74bf;
+$link: #1a74bf !default;
 
-$line: #dadada;
-$scratch: #e1e1e1;
+$line: #dadada !default;
+$scratch: #e1e1e1 !default;
 
-$lightest : #bebebe;
-$lighter : #888888;
-$darker: #5b5b5b;
+$lightest : #bebebe !default;
+$lighter : #888888 !default;
+$darker: #5b5b5b !default;
 
-$crumbs: #bebebe;
+$crumbs: #bebebe !default;
 
-$darkest: #323232;	
+$darkest: #323232 !default;	
 
-$offwhite: #f3f3f3;
-$offwhite-alt: #e5e5e5;
+$offwhite: #f3f3f3 !default;
+$offwhite-alt: #e5e5e5 !default;
+$default: #757575  !default;
 
-$default: #757575;
+$ribbon: #dedede !default;
 
 
-$ribbon: #dedede;
+
 
 // ***************************************** //
 //  Text Colours //

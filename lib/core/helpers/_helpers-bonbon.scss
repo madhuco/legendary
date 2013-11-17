@@ -27,9 +27,9 @@ radial-gradient(color_stops((rgba(255,255,255,0.1)), (rgba(255,255,255,0))), top
 
 
 
-  @include transition-property(background);
-  @include transition-duration(.2s);
-  @include transition-timing-function(ease-in-out); 
+@include transition-property(background);
+@include transition-duration(.2s);
+@include transition-timing-function(ease-in-out); 
 
 		
 /* color */
@@ -65,7 +65,7 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 						hasla(0,0,0,0.2) 0 .2em 56x /* drop shadow */
 	);
 
-@include transform(translateY(.2em));
+//@include transform(translateY(.2em));
 }
 
 &:focus {
@@ -81,13 +81,13 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 
 // -------------- Materials -------------- 
 
-%bonbon-materials:after {
+%bonbon-materials:before {
 	content: 	"";
 	position: 	absolute; 
     width: 		99%;
     height: 	60%;
     top: 		0;
-    left: 		5%;    
+    left: 		1%;    
 	
 	
     @include border-radius(.5em .5em 1em 1em / .5em .5em 2em 2em);   
@@ -111,33 +111,44 @@ radial-gradient(color_stops((rgba(255,255,255,0)), (rgba(255,255,255,0))), top)
 
 
 
-@mixin bonbon($colour: #FFA600, $materials: false) {
+@mixin bonbon($color: #FFA600, $fx: false, $switch: true) {
 
 
 	
 @extend %bonbon;
-color:	darken($colour, 25%);
-background-color: $colour;
-	@include box-shadow(inset hsla(300,1,100,0.1) 0 0.3em .3em, inset hsla(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
-							darken($colour, 12%) 0 .1em 3px, darken($colour, 18%) 0 .3em 1px, /* color border */
-							hsla(0,0,0,0.2) 0 .5em 5px /* drop shadow */);					
 
-&:hover {
-background-color: lighten($colour, 10%);	
+@if $switch == true {
+color:	darken($color, 25%);
+}
+
+@if $switch == false {
+color:	lighten($color, 25%);
 }
 
 
-@if $materials != false {
+
+
+background-color: $color;
+	@include box-shadow(inset hsla(300,1,100,0.1) 0 0.3em .3em, inset hsla(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							darken($color, 12%) 0 .1em 3px, darken($color, 18%) 0 .3em 1px, /* color border */
+							hsla(0,0,0,0.2) 0 .5em 5px /* drop shadow */);					
+
+&:hover {
+background-color: lighten($color, 10%);	
+}
+
+
+@if $fx != false {
 @extend %bonbon-materials;
 } //Close Materials if;
 
 
-@if $materials == gloss {
+@if $fx == gloss {
 @extend %bonbon-gloss;
  
 } //  Close glass
 
-@if $materials == glass {
+@if $fx == glass {
 @extend %bonbon-glass;
 		
 } //Close Glass

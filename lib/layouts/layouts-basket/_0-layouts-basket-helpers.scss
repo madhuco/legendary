@@ -73,6 +73,10 @@ display:block;
 	@include span-columns(2 omega, 12);
 }
 
+.qty input {
+width:20px;	
+}
+
 
 } // Close $element
 } // Close $Mixin
@@ -160,6 +164,100 @@ display:none;
 @mixin layouts-basket-style($element: '.layouts-basket-style') {
 #{$element} {
 
+/* Qty Buttons */
+
+.a {
+	text-align:center;
+}
+
+.qty .label {
+	display:block;
+	color: $lightest;
+	margin-bottom:5px;
+}
+
+[class*="qty-"] {
+	color: $lightest;
+}
+
+[class*="qty-"]:hover {
+	color: $darker;
+}
+
+[class*="qty-"]:before {
+font-size:120%;
+}
+
+.qty-plus:before {
+	@include icon($icon-plus-sign);		
+	padding-right:10px;
+}
+
+.qty-minus:before {
+	@include icon($icon-minus-sign);		
+	padding-left:10px;
+}
+
+.qty1 .qty-minus {
+	visibility:hidden;
+}
+
+.unit-price-total {
+color:$darker;	
+}
+
+[class*="unit-price-"] .label{
+color: $lightest;
+font-size:80%;
+}
+ 
+[class*="unit-price-"] .label, .unit-price-total {
+	display:none;
+	}
+
+
+/* Price Buttons */
+
+[class*="price-func-"] {
+	border: 1px solid $scratch;
+	@include border-radius(5px);
+	display:block;
+	margin-top:10px;
+	color: $lightest;
+	padding:5px;
+	background: white;
+}
+
+[class*="price-func-"]:hover {
+color:$darker;	
+}
+
+[class*="price-func-"]:before {
+		font-size: 120%;
+		padding:0 10px;
+}
+
+.price-func-edit:before {
+	@include icon($icon-edit);	
+}
+
+.price-func-delete:before {
+	@include icon($icon-remove-circle);	
+}
+
+
+/* Display Price for total/Each */
+ .total-active {
+	
+	[class*="unit-price-"] .label, .unit-price-total {
+display:inline;
+	}
+	
+	.unit-price-each {
+	color: $lightest;	
+	}
+ }
+
 
 .lead-header {
 	@include bgcolor-default;
@@ -184,6 +282,11 @@ display:none;
 @extend %t-body-small;
 display:block;
 color: $lighter;
+}
+
+.unit-title {
+@extend %t-title-5;
+@extend %vr-title-5;	
 }
 
 
@@ -282,6 +385,40 @@ display:block !important;
 	margin-left:5px;
 }
 }
+
+
+
+@include media($devices...){ 
+ #{$element}  {
+	 
+	 [class*="price-func-"] {
+	text-align:center;	 
+	 }
+	 
+	 
+  } //Close Element
+}//Close MQ
+
+ 
+
+
+
+
+@include media($portables...){ 
+ #{$element}  {
+		 [class*="qty-"] {
+		display:block;
+		text-align:center; 
+	 }
+	 
+	 	 [class*="qty-"]:before {
+	padding-left:0;
+	padding-right:0;
+	 }
+	 
+	 
+ } //Close Element
+}//Close MQ
 
 
 } // Close $Mixin

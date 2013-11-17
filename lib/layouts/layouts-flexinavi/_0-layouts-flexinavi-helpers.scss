@@ -9,46 +9,40 @@
 /* ***************************************** */
 
 #{$element} {
+	
 	  .main {
-	/*	@include display-box;	*/
+	display:table;
+	width:100%;
 	  }
 	  
 	  .main li {
-	/* @include box-flex(1);	*/
-	float:left;
+//float:left;
+display:table-cell;
 	  }
-	  
-	  
+
 } //Close $element
 
 		 
 
 	
 @include media($portables...){ 
-#{$element} .main  {
-	display:none;
-}
+	#{$element} .main  {
+		display:none;
+	}
 }
 
 
 @include media($fab...){ 
 
-#{$element} .anchor {
-width: auto;
-padding-right: 10px;
+	#{$element} .anchor {
+	width: auto;
+	padding-right: 10px;
+	}
+	
+	  .ui-tapmenu {
+	padding:0 40px;
+	 }
 }
-
-  .ui-tapmenu {
-padding:0 40px;
-
- }
-
-
-
-}
-
-
-
 
 
 $main-none: ($display + 1);
@@ -81,7 +75,7 @@ display:none;
 #{$element} .main {
     float:left;
     height:100%;
-	width: 75%;
+	width: 70%;
 }
 
 #{$element} .main li {
@@ -306,6 +300,7 @@ display:block;
 #{$element} {
 .tap-btn {
 margin-right:0;
+margin-left:0;
 }
 }
 

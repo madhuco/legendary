@@ -1,20 +1,26 @@
 //Collapse content for mobile
-(function($)
-{
-	$(document).ready(function()
-	{
+(function($) {
+	$(document).ready(function() {
 
 		"use strict";
 
+			$(".page .page .unit-content").hide();
 
+	
+	$(".page .page .unit-title").click(function() {
+		$(".open").removeClass("open");
+		$(".page .page .unit-content").slideUp();
+		$(this).parent('.page').find('.unit-content').slideDown().addClass("open");
+	});
+
+	
+	
 		$(".taptabs li:first").addClass("highlighted");
 		$('.pages .page-first').show();
 
-		$(".taptabs  .tapnav li a").click(function()
-		{
-	
-	
-				$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
+		$(".taptabs  .tapnav li a").click(function() {
+
+			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
 			$(".taptabs  .tapnav li").removeClass("highlighted");
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
@@ -28,27 +34,30 @@
 	});
 
 
-			$(".taptabs  .tapnav li a").click(function()
-		{
-					$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
-		});
-
-		$(".taptabs .tapnav li").live('click', function()
-		{
-            var taptab = $(this).parents(".taptabs").get(0);
-            
-			$(".page",taptab).hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
-		}).eq(0).addClass('selected');
+	
 
 
 
-	$(".tap-btn-back").live('click', function()
-	{
+
+	$(".taptabs  .tapnav li a").click(function() {
+		$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
+	});
+	$(".taptabs .tapnav li").live('click', function() {
+		var taptab = $(this).parents(".taptabs").get(0);
+
+		$(".page", taptab).not(".page .page").hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
+	}).eq(0).addClass('selected');
+
+
+
+
+
+
+	$(".tap-btn-back").live('click', function() {
 		"use strict";
 
 		$(".taptabs .page").addClass("animated").addClass("bounceOutLeft");
-		setTimeout(function()
-		{
+		setTimeout(function() {
 			$(".taptabs .page").hide();
 			$(".tap-btn-back").remove();
 			$(".taptabs .page").removeClass("animated").removeClass("bounceOutLeft");

@@ -1,0 +1,87 @@
+
+@mixin shadow($size: large, $intensity: dark, $style: stand) {
+
+&:hover:after {
+content:"";
+@include box-shadow(0 62px 40px rgba(0, 0, 0, 0.9));	
+}
+
+
+// SHADOW PROJECTION LENGTH 
+
+@if $size == small {
+
+&:after{
+	width: 105%;
+	left: -2.5%;
+	-moz-border-radius: 52.5%/20px;
+	-webkit-border-radius: 52.5%/20px;
+	border-radius: 52.5%/20px;
+}
+
+} //Close Small
+
+@if $size == medium {
+
+&:after {
+	width: 110%;
+	left: -5%;	
+	-moz-border-radius: 55%/20px;
+	-webkit-border-radius: 55%/20px;
+	border-radius: 55%/20px;
+}
+}
+
+
+@if $size == large {
+&:after {
+	width: 115%;
+	left: -7.5%;	
+	-moz-border-radius: 57.5%/20px;
+	-webkit-border-radius: 57.5%/20px;
+	border-radius: 57.5%/20px;
+}
+}
+
+
+// SHADOW INTENSITY
+
+@if $intensity == light {
+&:after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+}
+}
+
+@if $intensity == normal {
+&:after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+}
+}
+
+@if $intensity == dark {
+&:after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+}
+}
+
+// SHADOW Style
+
+@if $style == stand {
+	position: relative;
+
+&:after {
+	content: '';
+	position:absolute;
+	z-index: -1;
+	@include rem(bottom, 40px);
+	@include rem(height, 40px);
+}
+}
+
+} //Close Mixin

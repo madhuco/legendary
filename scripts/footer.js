@@ -5,7 +5,7 @@
 		"use strict";
 
 		$(document).ready(function() {
-			$('footer .unit-heading').click(function() {
+		$(document).on('click', '.footer .unit-heading', function() {
 				$(this).parent().parent().toggleClass("collapsed");
 			});
 

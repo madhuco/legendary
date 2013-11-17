@@ -2,6 +2,7 @@
 (function($)
 {
 
+
 	window.addEventListener("orientationchange", function()
 	{
 		// Remove menus on orientation
@@ -10,15 +11,19 @@
 	}, false);
 
 
-$(document).ready(function () {
-    $(window).resize(function() {
-        if ($(window).width() > 960) {
-$('.ui-tapmenu').removeClass("animated bounceInDown").hide();
-$('.anchor').removeClass('close');        }
-    }).resize();
-});
+	$(document).ready(function()
+	{
+		$(window).resize(function()
+		{
+			if ($(window).width() > 960)
+			{
+				$('.ui-tapmenu').removeClass("animated bounceInDown").hide();
+				$('.anchor').removeClass('close');
+			}
+		}).resize();
+	});
 
-	
+
 
 
 	$(function()
@@ -53,7 +58,7 @@ $('.anchor').removeClass('close');        }
 		});
 
 
-		$('.tap-btn-close').click (function()
+		$('.tap-btn-close').click(function()
 		{
 			$('.close').addClass('anchor');
 			$('.close').removeClass('close');
@@ -65,13 +70,13 @@ $('.anchor').removeClass('close');        }
 
 
 
-	$(document).on('click', '.tap-btn-close', function()
+		$(document).on('click', '.tap-btn-close', function()
 		{
 			$('.anchor').removeClass('close');
-			});
+		});
 
 
-	$('.close').click (function()
+		$('.close').click(function()
 		{
 			$('.close').addClass('anchor');
 			$('.close').removeClass('close');
@@ -93,7 +98,7 @@ $('.anchor').removeClass('close');        }
 			$('.wrapper').hide();
 		});
 
-	
+
 		$(document).on('click', '.cta.anchor', function()
 		{
 			$('.wrapper').show();
@@ -105,11 +110,11 @@ $('.anchor').removeClass('close');        }
 			$('.wrapper').show();
 		});
 
-	
-	
+
+
 		$('.close').live('click', function()
 		{
-	
+
 		});
 
 	}

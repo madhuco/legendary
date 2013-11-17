@@ -1,0 +1,169 @@
+$di-scale: true !default;
+
+@mixin  ic-body-image($di-scale: $di-scale) {
+	
+	@if $di-scale == true {
+		.style-body-image {
+		overflow:hidden;	
+		}
+	}
+	
+	
+	@include media($mob-p...){ 
+		.style-body-image {
+			// width: 318px;
+			height: 232px;	
+		}
+	
+		.style-body-image-wide {
+			// width: 350px;
+			height: 245px;	
+		}
+	}
+	
+	@include media($mob-l...){ 
+		.style-body-image {
+			// width: 437px;
+			height: 138px;	
+		}
+
+		.style-body-image-wide {
+			// width: 500px;
+			height: 100px;	
+		}
+	}
+	
+	@include media($fab...){ 
+		.style-body-image {
+			// width: 399px;
+			height: 203px;	
+		}
+	
+		.style-body-image-wide {
+			// width: 405px;
+			height: 110px;	
+		}
+	}
+		
+	@include media($tab...){ 
+		.style-body-image {
+			// width: 385px;
+			height: 187px;	
+		}
+	
+		.style-body-image-wide {
+			// width: 535px;
+			height: 160px;	
+		}
+	}
+		
+	@include media($desk...){ 
+		.style-body-image {
+			// width: 326px;
+			height: 390px;			
+		}
+	
+		.style-body-image-wide {
+			// width: 600px;
+			height: 200px;	
+		}
+	}
+
+} //Close Mixin
+
+
+
+@mixin  ic-intro-image-slim($di-scale: $di-scale)  {
+	
+		@if $di-scale == true {
+		.style-intro-image-slim {
+		overflow:hidden;	
+		}
+	}
+	
+	
+	
+	
+	@include media($mob-p...){ 
+		.style-intro-image-slim {
+			// width: 320px;
+			height: 73px;	
+		}
+	}
+	
+	@include media($mob-l...){ 
+		.style-intro-image-slim {
+			// width: 547px;
+			height: 73px;	
+		}
+	}
+	
+	@include media($fab...){ 
+		.style-intro-image-slim {
+			// width: 336px;
+			height: 172px;	
+		}
+	}
+		
+	@include media($tab...){ 
+		.style-intro-image-slim {
+			// width: 165px;
+			height: 247px;	
+		}
+	}
+		
+	@include media($desk...){ 
+		.style-intro-image-slim {
+			// width: 213px;
+			height: 287px;			
+		}
+	}
+
+} //Close Mixin
+
+
+@mixin  ic-slideshow-image($di-scale: $di-scale) {
+	
+	@if $di-scale == true {
+		.style-slideshow-image img {
+		overflow:hidden;	
+		}
+	}
+	
+	
+	@include media($mob-p...){ 
+		.style-slideshow-image img {
+			// width: 320px;
+			height: 63px;	
+		}
+	}
+	
+	@include media($mob-l...){ 
+		.style-slideshow-image img {
+			// width: 115px;
+			height: 65px;	
+		}
+	}
+	
+	@include media($fab...){ 
+		.style-slideshow-image img {
+			// width: 590px;
+			height: 233px;	
+		}
+	}
+		
+	@include media($tab...){ 
+		.style-slideshow-image img {
+			// width: 760px;
+			height: 297px;	
+		}
+	}
+		
+	@include media($desk...){ 
+		.style-slideshow-image img {
+			// width: 899px;
+			height: 290px;			
+		}
+	}
+	
+}

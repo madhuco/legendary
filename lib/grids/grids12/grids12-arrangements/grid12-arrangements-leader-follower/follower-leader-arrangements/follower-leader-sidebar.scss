@@ -50,13 +50,13 @@ Follower is on the left */
 
 
 @mixin follower-leader-sidebar-fab($element: '.follower-leader-sidebar-fab' ) {
-	@include follower-leader-sidebar($element: $element);
+	@include follower-leader-sidebar-mob-p($element: $element);
 	} //Close Mixin
 
 
 
 @mixin follower-leader-sidebar-tab($element: '.follower-leader-sidebar-tab' ) {
-@include follower-leader-sidebar-fab($element: $element);
+	@include follower-leader-sidebar($element: $element);
 }
 
 @mixin follower-leader-sidebar-desk($element: '.follower-leader-sidebar-desk' ) {

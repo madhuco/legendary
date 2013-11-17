@@ -53,7 +53,7 @@
 
 @mixin t-intro-2-desk {
  @include rem('font-size', 20px);
- @include rem('line-height', 23px);
+ @include rem('line-height', 25px);
 }
 
 @mixin t-intro-3-desk {
@@ -290,7 +290,7 @@ letter-spacing:0;
 
 
 @mixin t-cta-secondary-desk {
- @include rem('font-size', 18px);	
+ @include rem('font-size', 16px);	
  @include rem('line-height', 20px);	
 }
 

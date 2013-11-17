@@ -1,0 +1,27 @@
+@mixin components-cta-extrude($element: '.cta-intro', $col: true) {
+#{$element} {
+width:100%;	
+text-align:center;
+	@include rem(margin-bottom, 40px);
+} //Close Element
+ 
+
+@include media($fabplus...){ 
+#{$element}  {
+	@if $col == true {
+	@include span-columns(6 omega, 12);
+	}
+	
+	@include rem(margin-top, -30px);
+}
+} //Close Fab
+
+
+@include media($desk){ 
+#{$element}  {
+	@include rem(margin-top, -40px);
+}
+} //Close Desk
+
+ 
+} //Close Main Mixin

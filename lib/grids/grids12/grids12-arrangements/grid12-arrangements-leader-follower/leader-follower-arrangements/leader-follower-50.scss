@@ -81,10 +81,10 @@ Displays Leader then Follower with equal widths (e.g. two column layout)  */
 }
 
 @mixin leader-follower-50-r($element: '.leader-follower-50') {
+@include leader-follower-50($element: $element);
 
 @include media($mob...){ 
 @include leader-follower-50-mob-p($element: $element);
 }
 
-@include leader-follower-50($element: $element);
 }

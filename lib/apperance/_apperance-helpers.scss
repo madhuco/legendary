@@ -19,3 +19,298 @@
 	font-family: 'EauDouceSansBold', Arial, Helvetica, sans-serif;
 }
 
+
+
+// ***************************************** //
+//  Site Specific Colours //
+// ***************************************** //
+
+$c-percent: 10% !default;
+$c-txt: #FFF !default;
+
+$c-primary: #ff9900 !default;
+$c-primary-dark: darken($c-primary, $c-percent) !default;
+$c-primary-light: lighten($c-primary, $c-percent) !default;
+
+$c-secondary: #ffde00 !default;
+$c-secondary-dark: darken($c-secondary, $c-percent) !default;
+$c-secondary-light: lighten($c-secondary, $c-percent) !default;
+
+$c-accent: #6599ff !default;
+$c-accent-dark: darken($c-accent, $c-percent) !default;
+$c-accent-light: lighten($c-accent, $c-percent) !default;
+
+$c-switch: false !default;
+$c-primary-switch: $c-switch !default;
+$c-secondary-switch: $c-switch !default;
+$c-accent-switch: $c-switch !default;
+ 
+
+/* ***************************************** */
+/* Colour Backgrounds Packages */
+/* ***************************************** */
+
+/* Primary Colour */
+
+@mixin bgcolor-flat-primary($c-primary: $c-primary) {
+	background-color: $c-primary;
+
+	& .highlighted {	
+		background-color: $c-primary-dark;
+	}
+
+}
+
+@mixin  bgcolor-gradient-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $extras: false) {
+	background-color: $c-primary; // Old browsers
+	
+	@if $c-primary-switch == false {
+	@include filter-gradient($c-primary-light, $c-primary-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-primary-light 0%, $c-primary-dark 100%));
+	}
+	
+	@if $c-primary-switch == true {
+	@include filter-gradient($c-primary-dark, $c-primary-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-primary-dark 0%, $c-primary-light 100%));
+	}
+	
+	@if $extras == true {
+		
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-primary; // Old browsers
+	
+	@if $c-primary-switch == false {	
+		@include filter-gradient($c-primary-dark, $c-primary-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-primary-dark 0%, $c-primary-light 100%)); 
+	}
+	
+	@if $c-primary-switch == true {	
+		@include filter-gradient($c-primary-light, $c-primary-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-primary-light 0%, $c-primary-dark 100%)); 
+	}
+
+	} //Close class
+	} // Close if $extras
+	
+	
+}
+
+
+@mixin bgcolor-3d-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $extras: false) {
+	background-color: $c-primary; // Old browsers
+	
+	@if $c-primary-switch == false {
+	@include filter-gradient($c-primary-light, $c-primary-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-primary-light 0%, $c-primary-dark 100%));
+	}
+	
+	@if $c-primary-switch == true {
+	@include filter-gradient($c-primary-dark, $c-primary-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-primary-dark 0%, $c-primary-light 100%));
+	}
+	
+	border: 1px solid $c-primary-dark;
+	border-top-color: darken($c-primary-dark, $c-percent);
+
+	@if $extras == true {
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-primary; // Old browsers
+	
+	@if $c-primary-switch == false {	
+		@include filter-gradient($c-primary-dark, $c-primary-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-primary-dark 0%, $c-primary-light 100%)); 
+	}
+	
+	@if $c-primary-switch == true {	
+		@include filter-gradient($c-primary-light, $c-primary-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-primary-light 0%, $c-primary-dark 100%)); 
+	}	
+	
+		border: 1px solid $c-primary-dark;
+		border-top-color: darken($c-primary-dark, $c-percent);
+	} //Close class
+	} //Close If $Extras
+}
+
+
+/* secondary Colour */
+
+@mixin bgcolor-flat-secondary($c-secondary: $c-secondary) {
+	background-color: $c-secondary;
+
+	& .highlighted {	
+		background-color: $c-secondary-dark;
+	}
+
+}
+
+@mixin  bgcolor-gradient-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $extras: false) {
+	background-color: $c-secondary; // Old browsers
+	
+	@if $c-secondary-switch == false {
+	@include filter-gradient($c-secondary-light, $c-secondary-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-secondary-light 0%, $c-secondary-dark 100%));
+	}
+	
+	@if $c-secondary-switch == true {
+	@include filter-gradient($c-secondary-dark, $c-secondary-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-secondary-dark 0%, $c-secondary-light 100%));
+	}
+	
+	@if $extras == true {
+		
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-secondary; // Old browsers
+	
+	@if $c-secondary-switch == false {	
+		@include filter-gradient($c-secondary-dark, $c-secondary-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-secondary-dark 0%, $c-secondary-light 100%)); 
+	}
+	
+	@if $c-secondary-switch == true {	
+		@include filter-gradient($c-secondary-light, $c-secondary-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-secondary-light 0%, $c-secondary-dark 100%)); 
+	}
+
+	} //Close class
+	} // Close if $extras
+	
+	
+}
+
+
+@mixin bgcolor-3d-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $extras: false) {
+	background-color: $c-secondary; // Old browsers
+	
+	@if $c-secondary-switch == false {
+	@include filter-gradient($c-secondary-light, $c-secondary-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-secondary-light 0%, $c-secondary-dark 100%));
+	}
+	
+	@if $c-secondary-switch == true {
+	@include filter-gradient($c-secondary-dark, $c-secondary-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-secondary-dark 0%, $c-secondary-light 100%));
+	}
+	
+	border: 1px solid $c-secondary-dark;
+	border-top-color: darken($c-secondary-dark, $c-percent);
+
+	@if $extras == true {
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-secondary; // Old browsers
+	
+	@if $c-secondary-switch == false {	
+		@include filter-gradient($c-secondary-dark, $c-secondary-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-secondary-dark 0%, $c-secondary-light 100%)); 
+	}
+	
+	@if $c-secondary-switch == true {	
+		@include filter-gradient($c-secondary-light, $c-secondary-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-secondary-light 0%, $c-secondary-dark 100%)); 
+	}	
+	
+		border: 1px solid $c-secondary-dark;
+		border-top-color: darken($c-secondary-dark, $c-percent);
+	} //Close class
+	} //Close If $Extras
+}
+
+
+/* accent Colour */
+
+@mixin bgcolor-flat-accent($c-accent: $c-accent) {
+	background-color: $c-accent;
+
+	& .highlighted {	
+		background-color: $c-accent-dark;
+	}
+
+}
+
+@mixin  bgcolor-gradient-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $extras: false) {
+	background-color: $c-accent; // Old browsers
+	
+	@if $c-accent-switch == false {
+	@include filter-gradient($c-accent-light, $c-accent-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-accent-light 0%, $c-accent-dark 100%));
+	}
+	
+	@if $c-accent-switch == true {
+	@include filter-gradient($c-accent-dark, $c-accent-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-accent-dark 0%, $c-accent-light 100%));
+	}
+	
+	@if $extras == true {
+		
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-accent; // Old browsers
+	
+	@if $c-accent-switch == false {	
+		@include filter-gradient($c-accent-dark, $c-accent-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-accent-dark 0%, $c-accent-light 100%)); 
+	}
+	
+	@if $c-accent-switch == true {	
+		@include filter-gradient($c-accent-light, $c-accent-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-accent-light 0%, $c-accent-dark 100%)); 
+	}
+
+	} //Close class
+	} // Close if $extras
+	
+	
+}
+
+
+@mixin bgcolor-3d-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $extras: false) {
+	background-color: $c-accent; // Old browsers
+	
+	@if $c-accent-switch == false {
+	@include filter-gradient($c-accent-light, $c-accent-dark, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-accent-light 0%, $c-accent-dark 100%));
+	}
+	
+	@if $c-accent-switch == true {
+	@include filter-gradient($c-accent-dark, $c-accent-light, vertical); // IE6-9
+	@include background-image(linear-gradient(top, $c-accent-dark 0%, $c-accent-light 100%));
+	}
+	
+	border: 1px solid $c-accent-dark;
+	border-top-color: darken($c-accent-dark, $c-percent);
+
+	@if $extras == true {
+	& .highlighted, & li.active-trail, & a.active:hover {
+		background-color: $c-accent; // Old browsers
+	
+	@if $c-accent-switch == false {	
+		@include filter-gradient($c-accent-dark, $c-accent-light, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-accent-dark 0%, $c-accent-light 100%)); 
+	}
+	
+	@if $c-accent-switch == true {	
+		@include filter-gradient($c-accent-light, $c-accent-dark, vertical); // IE6-9
+		@include background-image(linear-gradient(top, $c-accent-light 0%, $c-accent-dark 100%)); 
+	}	
+	
+		border: 1px solid $c-accent-dark;
+		border-top-color: darken($c-accent-dark, $c-percent);
+	} //Close class
+	} //Close If $Extras
+}
+
+
+
+
+
+/* ***************************************** */
+/* Full Background */
+/* ***************************************** */
+@mixin bg-full-width {
+position: relative;
+margin-left: -999em;
+padding-left: 999em;
+width: 100%;
+margin-right: -999em;
+padding-right: 999em;
+z-index: 0;	
+}

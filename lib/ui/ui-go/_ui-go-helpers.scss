@@ -1,0 +1,7 @@
+
+@mixin ui-go($element: '.ui-go') {
+#{$element}:after {
+@include icon($icon-circle-arrow-right);
+margin-left:10px;
+}
+} //Close Mixin

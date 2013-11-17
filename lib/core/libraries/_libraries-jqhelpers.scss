@@ -5,7 +5,7 @@
 
 $jq-top: 100px !default;
 
-@mixin expanded($top: $jq-top) {
+@mixin full-screen($top: $jq-top) {
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -39,7 +39,7 @@ display:	block;
 }
 
 html body .taptabs-mob-expanded {
-	@include expanded;
+	@include full-screen;
 }
 
 
@@ -58,7 +58,7 @@ html body .mobpshow {
 }
 
 html body .taptabs-mob-p-expanded {
-	@include expanded;
+	@include full-screen;
 }
 
 }
@@ -75,7 +75,7 @@ html body .moblshow {
  float:left ;
 }
 html body .taptabs-mob-l-expanded {
-	@include expanded;
+	@include full-screen;
 }
 }
 
@@ -91,7 +91,7 @@ html body .taptabs-mob-l-expanded {
  float:left ;
 }
 html body .taptabs-fab-expanded {
-	@include expanded;
+	@include full-screen;
 }
 }
  @include media($tab...) {
@@ -106,7 +106,7 @@ html body .taptabs-fab-expanded {
  float:left ;
 }
 html body .taptabs-tab-expanded {
-	@include expanded;
+	@include full-screen;
 }
 }
 
@@ -122,7 +122,7 @@ html body .taptabs-tab-expanded {
  float:left ;
 }
 html body .taptabs-desk-expanded {
-	@include expanded;
+	@include full-screen;
 }
 }
 
@@ -139,7 +139,7 @@ html body .taptabs-desk-expanded {
  float:left ;
 }
 html body .taptabs-portables-expanded {
-	@include expanded;
+	@include full-screen;
 }
 }
 
@@ -164,7 +164,7 @@ right:0;
 }
 
 html body .taptabs-devices-expanded {
-	@include expanded;
+	@include full-screen;
 }
 
 }

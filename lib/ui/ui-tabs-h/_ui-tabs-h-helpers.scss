@@ -15,7 +15,6 @@ $hover-bg: $offwhite ) {
     border-bottom: 1px solid $line;
 	@include rem(padding,  0 0 10px 10px);
 
-
 li {
   display:inline;
   @include rem(padding, 5px 10px 10px);
