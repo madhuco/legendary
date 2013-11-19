@@ -3,19 +3,19 @@
 /* ***************************************** */
 /*  Layotus: leader-follower-Sidebar 
 A two column layout often used to display a sidebar
-leader is on the left */
+Follower is on the Right */
 /* ***************************************** */
 		
 	#{$element} {
 
 	@include span-columns(12 omega, 12);		
 	
-	> .content-leader {
-		@include span-columns(4 , 12);	
+	> .content-follower {
+		@include span-columns(4 omega , 12);	
 	}
 	
-	> .content-follower {
-		@include span-columns(8 omega, 12);		
+	> .content-leader {
+		@include span-columns(8, 12);		
 	}
 	
 	> .content-footer {
@@ -31,11 +31,11 @@ leader is on the left */
 	#{$element} {
 @include  span-columns(12 omega, 12);	
 
-> .content-leader {
+> .content-follower {
 	@include  span-columns(12 omega, 12);
 }
 
-> .content-follower {
+> .content-leader {
 @include  span-columns(12 omega, 12);
 }
 
@@ -50,13 +50,13 @@ leader is on the left */
 
 
 @mixin leader-follower-sidebar-fab($element: '.leader-follower-sidebar-fab' ) {
-	@include leader-follower-sidebar-mob-p($element: $element);
+	@include leader-follower-sidebar($element: $element);
 	} //Close Mixin
 
 
 
 @mixin leader-follower-sidebar-tab($element: '.leader-follower-sidebar-tab' ) {
-	@include leader-follower-sidebar($element: $element);
+@include leader-follower-sidebar-fab($element: $element);
 }
 
 @mixin leader-follower-sidebar-desk($element: '.leader-follower-sidebar-desk' ) {

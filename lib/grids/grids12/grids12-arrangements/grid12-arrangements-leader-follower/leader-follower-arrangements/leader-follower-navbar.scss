@@ -13,11 +13,11 @@ leader is on the left */
 		}	
 		
 		> .content-leader {
-			@include span-columns(3, 12);	
+			@include span-columns(9, 12);	
 		}
 		
 		> .content-follower {
-			@include span-columns(9 omega, 12);		
+			@include span-columns(3 omega, 12);		
 		}
 		
 	
@@ -63,12 +63,12 @@ leader is on the left */
 		}
 	
 	> .content-leader {
-		@include  span-columns(4, 12);
+		@include  span-columns(8, 12);
 	}
 	
 	> .content-follower {
 	display:none;
-	@include  span-columns(8 omega, 12);
+	@include  span-columns(4 omega, 12);
 	}
 
 	} //Close Class
