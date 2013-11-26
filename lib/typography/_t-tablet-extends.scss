@@ -93,11 +93,13 @@
  @include t-pane-text-tab;
 }
 
-.sidebar-active %t-pane-heading {
+.sidebar-active %t-pane-heading,
+%t-pane-heading-sidebar {
  @include t-pane-heading-sidebar-tab;
 }
 
-.sidebar-active %t-pane-text {
+.sidebar-active %t-pane-text,
+%t-pane-text-sidebar {
  @include t-pane-text-sidebar-tab;
 }
 

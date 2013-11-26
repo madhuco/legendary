@@ -4,7 +4,7 @@
 
 /* Masthead Display */
 
-.tap-btn-active .wrapper {
+.sub-page .wrapper {
 
 	.masthead {
 	visibility:visible;	
@@ -39,12 +39,21 @@
 	.masthead .tap-btn-back b {
 	display:inline;
 	}
-
-} // Close .tap-btn-active .wrapper 
+	
+	.role-page-intro {
+	display:none;	
+	}
+		
+	.taptabs .tapnav {
+	display:none;	
+	}
+		
+		
+} // Close .sub-page .wrapper 
 
 /* Content Display */
 	
-.tap-btn-active {
+.sub-page {
 
 	.wrapper > * {
 	display:none;	
@@ -71,7 +80,21 @@
 	display:block;
 	}
 	
-} //Close .tap-btn-active
+} //Close .sub-page
+
+.sub-page.sidebaractive {
+	[class*="leader"] {
+	display:block;	
+	}
+	
+	.role-page-intro {
+	display:none;	
+	}
+	
+	.cta-intro {
+	display:none;	
+	}
+}
 } // Close Mixin
 
 

@@ -35,7 +35,7 @@ clear:both;
 background:#FFF;
  @include box-sizing(border-box);
 
-.title {
+.title, .pane-title {
 @extend %t-ui-navigation-title; 
 @include typeface-regular;
 @include rem(padding, 15px 0 0);
@@ -50,7 +50,7 @@ text-align:center;
 } //Close Element
 
 
-nav#{$element} .title {
+nav#{$element} header .title {
 display:block;	
 @include span-columns(7, 12);
 }
@@ -59,7 +59,7 @@ display:block;
 
 
 @include media($mob-lplus...){ 
-nav#{$element} .title {
+nav#{$element} header .title {
 @include span-columns(5.5, 12);
 }
 }

@@ -10,7 +10,6 @@
 
 		$(document).ready(function() {
 
-			
 	
 			$('.close').on('click', function() {
 				$(this).parent().removeClass('shield-active');

@@ -4,12 +4,17 @@
 
 @mixin layouts-showcase-layout($element: '.layouts-showcase'){
 @include media($fabplus...){ 
-
 #{$element}	.unit-row {
 	text-align:center;	
 	}
+	}
 	
+@include media($desk...){ 
+.tap-btn-sideeffects {
+display:none;
 }
+}	
+	
 
 }
 

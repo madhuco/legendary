@@ -183,7 +183,6 @@ background:#FFF;
 }
 
 
-
 #{$element} ul {	
 border-right: 1px solid $line;
 }
@@ -195,9 +194,17 @@ border-right: 1px solid $darkest;
 .black #{$element} {
 	border: 1px solid $darkest;
 }
-
-
 } // Close MQ
+
+
+@include media($fab...){ 
+.sub-page #{$element} {	
+border: 0;
+background:transparent;
+}
+}
+
+
 } //Close Mixin
 
 

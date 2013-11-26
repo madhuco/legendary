@@ -90,11 +90,13 @@
  @include t-pane-text-fab;
 }
 
-.sidebar-active %t-pane-heading {
+.sidebar-active %t-pane-heading,
+%t-pane-heading-sidebar  {
  @include t-pane-heading-sidebar-fab;
 }
 
-.sidebar-active %t-pane-text {
+.sidebar-active %t-pane-text,
+%t-pane-text-sidebar {
  @include t-pane-text-sidebar-fab;
 }
 

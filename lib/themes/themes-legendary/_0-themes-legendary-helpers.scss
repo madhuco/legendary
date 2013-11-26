@@ -1,4 +1,4 @@
-@mixin themes-legendary($root: '.themes-legendary', $black: false) {
+@mixin themes-legendary($root: '.themes-legendary', $black: false, $drupal: true) {
  
  .role-content {
  
@@ -40,7 +40,7 @@
  }
 
 
- .role-page-intro .unit-leader {
+ .role-page-intro.unit-leader {
  
  .unit-title {
   @extend %t-title-2;
@@ -118,6 +118,33 @@ margin-top:10px;
 	
 	
 }
+
+.role-edit {
+
+	.unit-title {
+	@extend %t-title-3;
+	@extend %vr-title-3;
+	color: $default;
+	}
+
+
+	@if $drupal == true {
+	color: $default;	
+		
+	label {
+		@extend %vr-spacer-bottom;
+	}
+	
+	.form-wrapper {
+	@extend %vr-section;	
+	}
+		
+	}
+
+
+
+
+} //Close .role-edit
 
 
 

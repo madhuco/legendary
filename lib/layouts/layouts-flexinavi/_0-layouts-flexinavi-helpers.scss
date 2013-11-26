@@ -316,26 +316,6 @@ margin-left:0;
 	}
 		
 	
-	.tap-btn-menu.close:after {
-		@include icon($icon-remove-circle);	
-		font-size: 13px;
-		content: "Close \f05c";
-		width:4em;
-
-	}
-	
-	
-	.tap-btn-menu.close {
-	font-size:0;	
-	}
-
-
-	
-	
-	.tap-btn-menu:after  {
-		@include icon($icon-reorder);	
-		margin-left: 5px;
-	}
 	
 	
 	a {

@@ -85,11 +85,13 @@
 // Mobile:  Panes */
 
 
-%t-pane-heading {
+%t-pane-heading,
+%t-pane-heading-sidebar {
  @include t-pane-heading-mob;
 }
 
-%t-pane-text {
+%t-pane-text,
+%t-pane-heading-sidebar {
  @include t-pane-text-mob;
 }
 

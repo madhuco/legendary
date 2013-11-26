@@ -27,8 +27,7 @@
 			$(this).parent().addClass("highlighted").addClass("animated").addClass("flipInX");
 			$(this).addClass("visited");
 			$(".tap-btn-back").remove();
-			$("body").addClass("tap-btn-active");
-			$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
+				$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
 		}).eq(0).addClass('selected');
 
 	});
@@ -62,7 +61,6 @@
 			$(".tap-btn-back").remove();
 			$(".taptabs .page").removeClass("animated").removeClass("bounceOutLeft");
 			$("body").removeClass('sub-page');
-			$("body").removeClass("tap-btn-active");
 		}, 500);
 
 	});
