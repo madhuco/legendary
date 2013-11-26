@@ -1,0 +1,76 @@
+
+@mixin tap-btn-helpers {
+
+@include media($desk...){ 
+#wrapper .tap-btn {
+display:none;	
+}
+
+}
+
+
+@include media($fab...){ 
+
+.page-content .tap-btn-menu  {
+	display:none;
+}
+  
+  .page-content.overview-enabled .tap-btn-menu {
+display:block;	
+}
+
+}
+
+	
+}
+
+@mixin tap-btn-styles {
+	
+	.tap-btn-menu {
+	float:right;	
+	}
+	
+	
+
+[class*="tap-btn"] {
+	      text-align: left;
+	 @include border-radius(5px);
+	 @include box-sizing(border-box);
+	@include typeface-regular;	
+	@include rem(margin, 0 20px);
+@include rem(padding-right, 50px);
+position:relative;
+
+}
+
+
+[class*="btn"] {
+padding:15px;
+@extend %t-ui-navigation; 
+}
+
+[class*="tap-btn"].close:after {
+		@include icon($icon-remove-circle);	
+		font-size: 13px;
+		content: "Close \f05c";
+		width:4em;
+
+	}
+	
+	
+[class*="tap-btn"].close {
+	font-size:0;	
+	}
+
+
+	
+	
+	[class*="tap-btn-menu"]:after  {
+		@include icon($icon-reorder);	
+		margin-left: 5px;
+	}
+	
+
+
+
+}

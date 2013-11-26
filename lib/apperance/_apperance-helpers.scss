@@ -307,10 +307,7 @@ $c-accent-switch: $c-switch !default;
 /* ***************************************** */
 @mixin bg-full-width {
 position: relative;
-margin-left: -999em;
-padding-left: 999em;
-width: 100%;
-margin-right: -999em;
-padding-right: 999em;
+margin:0 -9999px;
+padding:0 9999px;
 z-index: 0;	
 }

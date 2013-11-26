@@ -1,0 +1,177 @@
+// ===============================================
+// sideeffects: Layout
+// ===============================================
+
+@mixin layouts-sideeffects-layout($element: '.layouts-sideeffects-layout'){
+#{$element} {	
+position:relative;
+z-index:1;
+} // Close $element
+
+.tap-btn-menu-sideeffects {
+	float:left;
+}
+
+.tap-btn-menu-sideeffects {
+display:none;	
+}
+
+@include media($portables...){ 
+.sidebaractive .tap-btn-menu-sideeffects {
+display:block;	
+}
+
+.sidebaractive #{$element} {	
+display:none;
+}
+
+.sidebaractive.sub-page .wrapper .tap-btn-menu-sideeffects {
+display:none;	
+}
+
+
+}
+
+
+
+} // Close $Mixin
+
+
+// ===============================================
+// sideeffects: Grid
+// ===============================================
+
+@mixin layouts-sideeffects-grid($element: '.layouts-sideeffects-grid') {
+
+.sidebaractive .masthead div[class*="content-"] {
+	@include span-columns(4, 12);
+	float:none;
+	margin-right:0;
+}
+
+.sidebaractive .masthead nav[class*="content-"] {
+width:auto;
+float:right;
+}
+
+
+} // Close $Mixin
+
+
+
+@mixin layouts-sideeffects-grid-mob-p($element: '.layouts-sideeffects-grid-mob-p', $r: false) {
+
+	@if $r == false {
+		@include layouts-sideeffects-grid($element: $element);
+	}
+
+	.sidebaractive .masthead div[class*="content-"] {
+	display:none;
+	}
+
+	.sidebaractive .masthead nav[class*="content-"] {
+	display:block;
+	}
+
+} // Close $Mixin
+
+
+
+@mixin layouts-sideeffects-grid-mob-l($element: '.layouts-sideeffects-grid-mob-l') {
+@include layouts-sideeffects-layout($element: $element);
+}
+
+
+@mixin layouts-sideeffects-grid-fab($element: '.layouts-sideeffects-grid-fab', $r:false) {
+@if $r == false {
+	
+	}
+
+#{$element} {
+	
+	} // Close Element
+	} //Close Mixin
+
+
+@mixin layouts-sideeffects-grid-tab($element: '.layouts-sideeffects-grid-tab', $r:false) {
+@if $r == false {
+	
+	}
+		
+	#{$element} {
+		
+	} //Close Element
+	} //Close Mixin
+
+@mixin layouts-sideeffects-grid-desk($element: '.layouts-sideeffects-grid-desk', $r:false) {
+	@if $r == false {
+	
+	}
+	
+	#{$element} {
+
+	} //Close Element
+	} //Close Mixin
+
+
+@mixin layouts-sideeffects-grid-r($element: '.layouts-sideeffects-grid', $r: true) {
+	
+	@include media($portables...){ 
+	@include layouts-sideeffects-grid($element: $element);
+	}
+	
+	@include media($mob-p...){ 
+	@include layouts-sideeffects-grid-mob-p($element: $element);	
+	} //Close Mob-p
+	} //Close Mixin
+
+
+// ===============================================
+// sideeffects: Style
+// ===============================================
+
+@mixin layouts-sideeffects-style($element: '.layouts-sideeffects-style', $color: true) {
+
+#{$element} {
+@extend %t-pane-text-sidebar;
+
+.pane-title, .unit-title {
+@extend %t-pane-heading-sidebar;
+@include scheme-purity($hover:false);	
+@include border-bottom-radius(0);
+text-align:center;
+@extend %vr-spacer-inside;
+
+
+@if $color == true {
+@include bgcolor-gradient-primary;
+}
+
+} //Close Pane Title, Unit title
+
+ul {
+@include scheme-purity($hover:false);
+@include border-top-radius(0);	
+}
+
+} // Close $element
+
+
+@include ui-taplist($element: '#{$element} ul');
+
+
+@include media($devices...){ 
+@include ui-taplist($element: '.nav-sideeffects-menu ul');
+}
+
+} // Close $Mixin
+	
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-sideeffects-combo($element: '.layouts-sideeffects-combo', $color: true) {
+	@include layouts-sideeffects-layout($element: $element);
+	@include layouts-sideeffects-grid-r($element: $element);
+	@include layouts-sideeffects-style($element: $element, $color: $color);
+}

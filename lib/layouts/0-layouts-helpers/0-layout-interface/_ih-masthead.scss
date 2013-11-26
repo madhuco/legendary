@@ -1,0 +1,75 @@
+
+@mixin masthead-helpers {
+	
+.masthead .cta {
+float:right;	
+}
+
+	
+@include media($mob...){ 	
+.page-content .masthead .cta {
+display:block;
+}
+ 
+ 
+.page-content .masthead .slogan {
+	display:none;
+}
+
+}
+
+
+
+@include media($portables...){ 
+.sub-page .masthead .slogan {
+	display:none;
+}
+
+
+.masthead .cta {
+display:none;	
+}
+
+.page-content .masthead .cta {
+display:inline-block;	
+}
+
+
+.page-content .masthead .tap-btn-menu {
+display:none;	
+}
+
+
+.masthead .cta-options.show {
+display:block;	
+}
+
+}
+
+
+
+@include media($fab...){ 
+ .masthead .cta {
+	display:none;
+}
+
+.sub-page .masthead .cta {
+	display:block;
+}
+
+
+.page-content.overview-enabled .masthead .cta {
+display:none;	
+}
+
+}
+}
+
+
+@include media($tabplus){
+	.masthead .cta {
+display:none;	
+}
+	 }
+
+

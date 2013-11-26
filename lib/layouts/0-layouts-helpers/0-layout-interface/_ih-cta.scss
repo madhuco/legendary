@@ -1,0 +1,54 @@
+@mixin cta-helpers { 
+
+
+.cta-options {
+display:none;	
+}
+
+.cta-options {
+position:absolute; 
+}
+
+}
+
+@mixin cta-styles {
+	
+.cta-options {
+@include scheme-purity;
+left:inherit;
+width:60%;
+bottom:inherit;
+right:20px;
+
+&:after, &:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+&:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 20px;
+	left: 80%;
+	margin-left: -20px;
+}
+
+&:before {
+	border-color: rgba(225, 225, 225, 0);
+	border-bottom-color: $scratch;
+	border-width: 23px;
+	left: 80%;
+	margin-left: -23px;
+}
+
+.close:after {
+	content: none;
+}
+}
+
+}
