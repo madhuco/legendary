@@ -1,5 +1,5 @@
 @mixin scheme-purity($hover:true, $padding: true) {
-background:white;
+background-color:white;
 border-width:1px;
 border-style:solid;
 border-color:$scratch;
@@ -20,17 +20,21 @@ border-color:$scratch;
 
 @if $hover == true {
   &:hover {
-  @include transition-property(box-shadow);
-  @include transition-property(color);
-  @include transition-duration(0.4s);
-  @include transition-timing-function(ease-in);   
   @include box-shadow(#333 1px 1px 8px);
-  color:#333;
+  @include transition-timing-function(ease-in);    
+  @include transition-duration(0.4s);
+  @include transition-property(all);
+  color: $darkest;
+  background-color: $offwhite;
   
   } // Close Hover
-  
 
-  
+  &:hover  * {
+  @include transition-duration(0.4s);
+  @include transition-timing-function(ease-in); 
+  @include transition-property(all);
+  color: $darkest;
+}
   
 } // Close If
 

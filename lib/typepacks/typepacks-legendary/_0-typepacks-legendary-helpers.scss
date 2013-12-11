@@ -1,0 +1,172 @@
+@mixin typepacks-legendary($element: '.typepacks-legendary', $black: false, $drupal: true) {
+  
+ .role-content {
+ 
+ .unit-title {
+   @extend %t-title-2;
+   @extend %vr-title-2;
+   @extend %txtcolor-darkest;
+   @extend %typeface-light;
+   text-align:center;
+}
+
+.page .page .unit-title {
+	  @extend %t-title-4;
+	  @extend %vr-title-4;
+     text-align:left;
+    @include typeface-bold;
+	color: $default;
+}
+ 
+ .unit-intro {
+   @extend %t-intro-2;
+   @extend %vr-intro-2;
+   @extend %typeface-light;
+   @extend %txtcolor-lighter;
+   text-align:center;
+}
+ 
+ .unit-txt {
+   @extend %t-body-text;
+   @extend %txtcolor-darkest;
+   @extend %vr-body-text;
+}
+
+} //Close .role-content
+
+
+ .role-lead-intro {
+	clear:both; 
+ }
+
+
+ .role-lead-intro.unit-leader {
+ 
+ .unit-title {
+@extend %t-title-2;
+ @extend %txtcolor-darkest;
+ @extend %typeface-light;
+ text-align:center;
+ @extend %vr-section-top;
+}
+ 
+ .unit-intro {
+ @extend %t-intro-2;
+ @extend %vr-intro-2;
+ @extend %typeface-light;
+ @extend %txtcolor-lighter;
+ text-align:center;
+}
+
+
+} //Close .role-lead-intro
+
+
+@include media($tab...){ 
+ .role-lead-intro.unit-leader .unit-title {
+padding-top:0;
+ }
+}
+
+@include media($desk...){ 
+ .role-lead-intro.unit-leader .unit-title {
+@include vr-title-2-desk;
+ }
+}
+
+@include media($fab...){ 
+ .role-lead-intro.unit-leader .unit-title {
+@include vr-title-2-fab;
+ }
+}
+
+
+
+@include media($mob...){ 
+ .role-lead-intro .unit-title {
+margin-top:10px;
+ }
+}
+
+@include media($tab...){ 
+ .role-lead-intro .unit-title {
+@include rem(padding-top, 30px);	 
+ }
+}
+
+
+@include media($desk){ 
+ .role-lead-intro .unit-title {
+@include rem(padding-top, 40px);	 
+ }
+}
+
+
+.cta-outro {
+	text-align:center;
+	@extend %vr-section-box;
+	margin-bottom:0;
+	
+	p {
+	@extend %vr-breather;
+	@extend %t-cta-prompt;
+	display: block;
+	@extend %vr-section-bottom;
+	}
+	
+	a {
+	@extend %t-cta-secondary;	
+	display: inline-block;
+	margin-left: auto;
+	margin-right:auto;
+	}
+		
+} // ..cta-outro
+
+
+
+.role-tablist-large {
+@extend %vr-spacer;
+
+.unit-title {
+	@extend %t-title-4;
+	color: $darkest;
+	text-align:right;
+
+}
+	
+	.unit-txt {
+		@extend %t-body-text;
+		color:$default;
+	}
+	
+	
+}
+
+.role-edit {
+
+	.unit-title {
+	@extend %t-title-2;
+	margin-bottom:0;
+	color: $lighter;
+	@include typeface-light;
+	}
+	
+	.lead-title {
+	@extend %t-title-2;
+	margin-bottom:0;
+	color: $lighter;
+	@include typeface-light;
+	text-align:center;
+	@extend %vr-section-box;	
+	}
+	
+	label {
+	color: $darkest;	
+	}
+
+} //Close .role-edit
+
+
+
+} //Close Main Mixin

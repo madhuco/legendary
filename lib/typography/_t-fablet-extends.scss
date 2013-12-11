@@ -64,6 +64,16 @@
  @include t-body-small-fab;
 }
 
+
+%t-body-tiny {
+ @include t-body-tiny-fab;
+}
+
+
+%t-caption {
+ @include t-caption-fab;
+}
+
 %t-body-label, label {
  @include t-body-label-fab;
 }
@@ -76,6 +86,7 @@
 %t-quote {
 @include t-quote-fab;
 }
+
 
 
 

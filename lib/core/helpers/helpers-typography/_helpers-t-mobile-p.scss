@@ -78,6 +78,19 @@
  @include rem('line-height', 16px);
 }
 
+
+@mixin t-body-tiny-mob {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 12px);
+}
+
+@mixin t-caption-mob {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 12px);
+}
+
+
+
 @mixin t-body-label-mob {
  @include rem('font-size', 14px);
  @include rem('line-height', 18px);

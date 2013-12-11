@@ -1,0 +1,5 @@
+@import "drupal-ic-helpers";
+
+$di-scale: true !default;
+
+@include ic-slideshow($di-scale: $di-scale) 

@@ -67,6 +67,19 @@
  @include t-body-small-mob;
 }
 
+%t-body-tiny {
+ @include t-body-tiny-mob;
+}
+
+%t-caption {
+ @include t-caption-mob;
+}
+
+%t-body-small {
+ @include t-body-small-mob;
+}
+
+
 %t-body-label, label {
  @include t-body-label-mob;
 }

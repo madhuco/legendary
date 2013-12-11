@@ -1,15 +1,12 @@
-@mixin ui-tapmenu($element: '.ui-tapmenu', $direction: right, $style: true) {
+@mixin ui-tapmenu($element: '[class*="ui-tapmenu"]', $direction: right, $style: true, $number: false, $number-element: '.ui-tapmenu-numbered') {
 
 /* ***************************************** */
 /*  Tap Menu Lets you create Menus (with Javascript)*/
 /* ***************************************** */
 
-
 #{$element} {
 position:absolute;	
 display:none;
-
-
 
 header {
 	@include span-columns(12 omega, 12);
@@ -100,6 +97,36 @@ bottom:0;
 .no-jq .ui-tapmenu-anchor {
 	display:none;
 }
+
+
+
+@if $number == true {
+
+@include media($portables){ 
+
+#{$number-element} { 
+ li a:before {
+	@include icon($icon-check-empty);
+	display:inline;
+	color: $lightest;
+	font-size: 120%;
+	position:absolute;
+	left:-1em;
+	}
+	
+	li a {
+	margin-left: 1em;
+	position:relative;
+	}
+	
+	.visited a:before {
+	@include icon($icon-check);
+	}
+	
+}  // Close Element 
+
+} //Close MQ
+} //Close IF
 
 
 

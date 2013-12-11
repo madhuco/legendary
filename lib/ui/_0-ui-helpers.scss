@@ -17,6 +17,10 @@
 @import "ui-tooltips-helpers";
 @import "ui-ratings-duo-helpers";
 @import "ui-go-helpers";
+@import "ui-tapmenu-helpers";
+@import "ui-link-helpers";
+
+
 
 
 @mixin arrow($element: '.element', $left: 68%, $main-color: #ffffff,  $secondary-color: $scratch, $width: 20px) {

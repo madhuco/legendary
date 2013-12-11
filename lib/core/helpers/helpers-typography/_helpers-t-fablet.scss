@@ -81,6 +81,18 @@
  @include rem('line-height', 20px);
 }
 
+@mixin t-body-tiny-fab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 20px);
+}
+
+
+@mixin t-caption-fab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 20px);
+}
+
+
 @mixin t-body-label-fab {
  @include rem('font-size', 14px);
  @include rem('line-height', 18px);

@@ -1,0 +1,82 @@
+/* ***************************************** */
+/*  Submission Viewer */
+/* ***************************************** */
+
+.page-entityform-submissions {
+	
+@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-form: true);
+	
+
+	table {
+	width:100%;
+	@extend %vr-section-box;
+	}
+	
+	td, th {
+	padding: 5px 10px;	
+	}
+	
+	th {
+	padding-bottom: 2px;	
+	color: $darkest;
+	}
+	
+	.tabs.secondary {
+	width:100%;
+	clear:both;	
+	}
+	
+	.tabs.secondary li {
+	float:right;
+	display:inline;	
+	margin-left: 10px;}
+	
+	
+	.views-table, .views-table a  {
+	@extend %t-body-small;	
+	}
+	
+	.unit-title {
+text-align:center;
+clear:both;	
+}
+
+	
+}
+
+@include media($fabplus...){ 
+	.page-entityform-submissions .views-exposed-form {
+	clear:both;
+	@include span-columns(6, 12);	
+	margin-bottom:20px;
+	}
+	}
+	
+
+/* ***************************************** */
+/*  Submission Nodes*/
+/* ***************************************** */
+.page-entityform- {
+
+.content {
+@extend %t-body-text;	
+@extend %vr-section-box;
+clear:both;
+}
+	
+.field-label {
+color: $darkest;
+margin-top: 20px;	
+}
+
+
+
+.menu-name-menu-submission-forms {
+clear:both;
+padding-top:20px;	
+}
+
+@include ui-link($element: '.menu-name-menu-submission-forms a', $ui-link-override: true, $ui-link-back:true);
+
+		
+}

@@ -1,0 +1,41 @@
+/* ***************************************** */
+/*  Resets the unnecessary styling that the module adds*/
+/* ***************************************** */
+.qtip, .qtip-tip, .qtip-wrapper, .qtip-contentWrapper, .qtip-content  {
+	background:transparent !Important;
+	padding:0 !Important;
+	margin:0 !Important;
+}
+
+
+
+/* ***************************************** */
+/*  Tags */
+/* ***************************************** */
+
+.field-tags:after {
+content:"•";	
+}
+
+.field-tags:last-of-type:after {
+	content:none;
+}
+
+/* ***************************************** */
+/*  Messages */
+/* ***************************************** */
+.messages {
+clear:both;	
+}
+
+/* ***************************************** */
+/*  Social Media Widgets */
+/* ***************************************** */
+
+.widgets-set-horizontal > div {
+margin:0 10px;	
+}
+
+.widgets-set-horizontal > div:first-of-type {
+margin-left:0;	
+}

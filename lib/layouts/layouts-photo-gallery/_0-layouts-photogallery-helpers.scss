@@ -72,6 +72,14 @@
 
 #{$element} {	
 	
+	figure {
+	@extend %vr-grid;			
+	}
+	
+	figcaption {
+	@extend %t-caption;	
+		}
+	
 } //Close Class
 } //Close Mixin
 

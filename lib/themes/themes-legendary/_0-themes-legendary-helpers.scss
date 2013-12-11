@@ -1,150 +1,72 @@
-@mixin themes-legendary($root: '.themes-legendary', $black: false, $drupal: true) {
- 
- .role-content {
- 
- .unit-title {
-   @extend %t-title-2;
-   @extend %vr-title-2;
-   @extend %txtcolor-darkest;
-   @extend %typeface-light;
-   text-align:center;
+@mixin themes-legendary($element: '.themes-legendary', $black: false, $drupal: true) {
+
+@include typepacks-legendary($element: $element);
+@include styles-cta-extrude();
+
+.masthead {
+@include bgcolor-3d-primary;
 }
 
-.page .page .unit-title {
-	  @extend %t-title-4;
-	  @extend %vr-title-4;
-     text-align:left;
-    @include typeface-bold;
-	color: $default;
+.masthead a {
+	@include scheme-shadow;	
+	border: 1px solid transparent;
+	text-align:center;
+	@extend %vr-spacer-box;
+	
+	&:hover {
+		@include bgcolor-3d-primary($c-primary-switch:true);
+	}
+	} // Close masthead a
+
+@include styles-minimal-buttons('.masthead [class*="tap-btn"]');
+
+.role-lead-intro {
+@include bg-full-width;
+@include bgcolor-3d-secondary();
 }
- 
- .unit-intro {
-   @extend %t-intro-2;
-   @extend %vr-intro-2;
-   @extend %typeface-light;
-   @extend %txtcolor-lighter;
-   text-align:center;
-}
- 
- .unit-txt {
-   @extend %t-body-text;
-   @extend %txtcolor-darkest;
-   @extend %vr-body-text;
-}
-
-} //Close .role-content
-
-
- .role-page-intro {
-	clear:both; 
- }
-
-
- .role-page-intro.unit-leader {
- 
- .unit-title {
-  @extend %t-title-2;
- @extend %vr-title-2;
- @extend %txtcolor-darkest;
- @extend %typeface-light;
- text-align:center;
- @extend %vr-section-top;
-}
- 
- .unit-intro {
- @extend %t-intro-2;
- @extend %vr-intro-2;
- @extend %typeface-light;
- @extend %txtcolor-lighter;
- text-align:center;
-}
-
-
-} //Close .role-content
-
-
-@include media($mob...){ 
- .role-page-intro .unit-title {
-margin-top:10px;
- }
-}
-
-@include media($tab...){ 
- .role-page-intro .unit-title {
-@include rem(padding-top, 30px);	 
- }
-}
-
-
-@include media($desk){ 
- .role-page-intro .unit-title {
-@include rem(padding-top, 40px);	 
- }
-}
-
 
 .cta-outro {
-	text-align:center;
-	@extend %vr-section-box;
-	margin-bottom:0;
-	
-	p {
-	@extend %vr-breather;
-	@extend %t-cta-prompt;
-	display:inline;	
-	}
-	
-	a {
-	@extend %t-cta-secondary;	
-	}
-		
-} // ..cta-outro
-
-
-
-.role-tablist-large {
-@extend %vr-spacer;
-
-.unit-title {
-	@extend %t-title-4;
-	color: $darkest;
-	text-align:right;
-}
-	
-	.unit-txt {
-		@extend %t-body-text;
-		color:$default;
-	}
-	
-	
+	@include bgcolor-3d-primary;
 }
 
-.role-edit {
 
+[class*=tapazine] .cta-outro {
+padding-left: 6.5%;
+	padding-right: 6.5%;
+	margin-right: -6.5%;
+}
+
+.cta-outro .cta {
+	@extend %t-cta-secondary;
+	@include bonbon($c-accent); 
+}
+
+
+.cta-intro .cta {
+	@extend %t-cta-primary; 
+	@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
+	@include shadow;
+}
+
+
+.unit-link.cta {
+	@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
+}
+
+
+.rs-slider {
 	.unit-title {
-	@extend %t-title-3;
-	@extend %vr-title-3;
-	color: $default;
-	}
-
-
-	@if $drupal == true {
-	color: $default;	
-		
-	label {
-		@extend %vr-spacer-bottom;
+		@extend %t-title-3;
+		@extend %vr-title-5;
+		color:white;
 	}
 	
-	.form-wrapper {
-	@extend %vr-section;	
+	.unit-intro, .unit-link {
+		@extend %t-intro-5;
+		@extend %vr-intro-5;
 	}
-		
-	}
-
-
-
-
-} //Close .role-edit
+		 
+} //close rs-slider
 
 
 

@@ -4,6 +4,11 @@
 
 @mixin layouts-mastheadduo-layout($element: '.layouts-mastheadduo'){
 
+#{$element} {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 }
 
@@ -88,6 +93,34 @@
 @include layouts-mastheadduo-grid($element:$element);
 }
 
+@include media($mini...){ 
+
+body #wrapper #{$element} .content-leader, body #wrapper #{$element}  a,
+body.sidebaractive #wrapper #{$element} .content-leader, body.sidebaractive #wrapper #{$element} a {
+@include span-columns(12 omega, 12);	
+}
+
+body #wrapper #{$element} .content-follower, body #wrapper #{$element} a,
+body.sidebaractive #wrapper #{$element} .content-follower, body.sidebaractive #wrapper #{$element} a, {
+@include span-columns(12 omega, 12);	
+}
+
+body #wrapper #{$element} a.logo-main,
+body.sidebaractive #wrapper #{$element} a.logo-main {
+display:none;	
+}
+
+body.sub-page #wrapper #{$element} [class*="btn"] {
+	display:none;
+}
+
+body.sub-page #wrapper #{$element}  [class*="btn"].tap-btn-back {
+	display:block;
+}
+
+}
+
+
 } //Close Mixin
 
 
@@ -114,7 +147,7 @@
 // Combo
 // ===============================================
 
-@mixin layouts-mastheadduo-combo($element: '.layouts-mastheadduo-combo', $typo: false) {
+@mixin layouts-mastheadduo-combo($element: '.layouts-mastheadduo', $typo: false) {
 	@include layouts-mastheadduo-layout($element: $element);
 	@include layouts-mastheadduo-grid-r($element: $element);
 	@include layouts-mastheadduo-style($element: $element, $typo: $typo);

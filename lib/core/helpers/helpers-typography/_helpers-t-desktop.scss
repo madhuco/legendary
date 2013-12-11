@@ -90,6 +90,21 @@
 letter-spacing:0;
 }
 
+
+@mixin t-body-tiny-desk {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 17px);
+letter-spacing:0;
+}
+
+
+@mixin t-caption-desk {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 17px);
+letter-spacing:0;
+}
+
+
 @mixin t-body-label-desk {
  @include rem('font-size', 16px);
  @include rem('line-height', 20px);
@@ -183,13 +198,16 @@ letter-spacing:0;
 @mixin t-tap-small-desk {
  @include rem('font-size', 12px);
  @include rem('line-height', 16px);
+}
 
+@mixin t-tap-tiny-desk {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 14px);
 }
 
 @mixin t-tap-note-desk {
  @include rem('font-size', 13px);
  @include rem('line-height', 22px);
-
 }
 
 
@@ -275,7 +293,6 @@ letter-spacing:0;
 	 @include rem('font-size', 14px);
  @include rem('line-height', 16px);
  @include rem('letter-spacing', 0px);
-
 }
 
 

@@ -181,16 +181,6 @@ position:relative;
 overflow:hidden;
 background:#FFF;
 }
-
-
-#{$element} ul {	
-border-right: 1px solid $line;
-}
-
-.black #{$element} ul {	
-border-right: 1px solid $darkest;
-}
-
 .black #{$element} {
 	border: 1px solid $darkest;
 }
@@ -204,6 +194,17 @@ background:transparent;
 }
 }
 
+@include media($tabplus...){ 
+#{$element} ul {	
+border-right: 1px solid $line;
+}
+
+.black #{$element} ul {	
+border-right: 1px solid $darkest;
+}
+
+}
+
 
 } //Close Mixin
 
@@ -212,7 +213,7 @@ background:transparent;
 // Combo
 // ===============================================
 
-@mixin layouts-tapazine-combo($element: '.layouts-tapazine-combo', $role: $role) {
+@mixin layouts-tapazine-combo($element: '.layouts-tapazine', $role: $role) {
 #{$element} {
 
 }

@@ -1,0 +1,8 @@
+@import "drupal-ic-helpers";
+
+$di-scale: true !default;
+
+@include ic-body-image($di-scale: $di-scale);
+@include ic-intro-image-slim($di-scale: $di-scale);
+@include ic-slideshow-image($di-scale: $di-scale);
+@include ic-thumbs-image($di-scale: $di-scale);

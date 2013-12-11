@@ -1,5 +1,9 @@
 @import "_ui-taplist-helpers.scss";
 
+$tap-arrow-bg-color: #ffffff !default;
+$tap-arrow-border-color: #a1a1a1 !default;
+$tap-arrow-head: true !default;
+
 @mixin fang {
 
 /* Masthead Display */
@@ -40,7 +44,11 @@
 	display:inline;
 	}
 	
-	.role-page-intro {
+	.role-lead-intro {
+	display:none;	
+	}
+	
+	.role-lead-intro[class*="leader"] {
 	display:none;	
 	}
 		
@@ -199,7 +207,7 @@ display:none;
 // Style
 // ===============================================
 
-@mixin layouts-taptabs-style($element: '.taptabs', $stripes: true ) {
+@mixin layouts-taptabs-style($element: '.taptabs', $stripes: true, $tap-arrow-head: $tap-arrow-head, $tap-arrow-bg-color: $tap-arrow-bg-color, $tap-arrow-border-color: $tap-arrow-border-color) {
 	#{$element} > .content-follower a {
 @extend %t-ui-navigation; 
 } //Close Class
@@ -255,6 +263,7 @@ display:inline-block;
 }
 }
 
+@if $tap-arrow-head == true {
 
 .tap-btn-back:after, .tap-btn-back:before {
 	right: 96%;
@@ -268,19 +277,20 @@ display:inline-block;
 
 .tap-btn-back:after {
 	border-color: rgba(255, 255, 255, 0);
-	border-right-color: #ffffff;
+	border-right-color: $tap-arrow-bg-color;
 	border-width: 1.7em;
 	top: 50%;
 	margin-top: -1.7em;
 }
 .tap-btn-back:before {
 	border-color: rgba(161, 161, 161, 0);
-	border-right-color: #a1a1a1;
+	border-right-color: $tap-arrow-border-color;
 	border-width: 1.75em;
 	top: 50%;
 	margin-top: -1.75em;
 }
 
+}
 
 @if $stripes == true {
 
@@ -308,7 +318,7 @@ padding:20px 10px;
 // ===============================================
 
 
-@mixin layouts-taptabs-combo($element: '.taptabs', $device: 'portables') {
+@mixin layouts-taptabs-combo($element: '.taptabs', $device: 'portables', $stripes: true, $tap-arrow-bg-color: $tap-arrow-bg-color, $tap-arrow-border-color: $tap-arrow-border-color,  $tap-arrow-head: $tap-arrow-head) {
 @include layouts-taptabs-layout($element: $element, $device: $device);
-@include layouts-taptabs-style($element: $element);
+@include layouts-taptabs-style($element: $element, $stripes: $stripes, $tap-arrow-bg-color: $tap-arrow-bg-color, $tap-arrow-border-color: $tap-arrow-border-color,  $tap-arrow-head: $tap-arrow-head);
 }

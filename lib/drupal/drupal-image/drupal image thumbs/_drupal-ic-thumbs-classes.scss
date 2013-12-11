@@ -1,0 +1,6 @@
+@import "drupal-ic-helpers";
+
+$di-scale: true !default;
+
+ 
+@include ic-thumbs($di-scale: $di-scale) 

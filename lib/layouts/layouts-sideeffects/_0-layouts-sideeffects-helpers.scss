@@ -170,7 +170,7 @@ ul {
 // Combo
 // ===============================================
 
-@mixin layouts-sideeffects-combo($element: '.layouts-sideeffects-combo', $color: true) {
+@mixin layouts-sideeffects-combo($element: '.layouts-sideeffects', $color: true) {
 	@include layouts-sideeffects-layout($element: $element);
 	@include layouts-sideeffects-grid-r($element: $element);
 	@include layouts-sideeffects-style($element: $element, $color: $color);

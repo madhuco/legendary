@@ -133,7 +133,7 @@
 @include media($fabplus...){ 
 #{$element} {
 .unit {
-@include scheme-purity($padding:false);
+@include scheme-purity($padding:false, $hover: true);
 @extend %vr-section;
 text-align:center;
 }
@@ -178,7 +178,7 @@ color: $default;
 // Combo
 // ===============================================
 
-@mixin layouts-thumbs-combo($element: '.layouts-thumbs-combo') {
+@mixin layouts-thumbs-combo($element: '.layouts-thumbs') {
 	@include layouts-thumbs-layout($element: $element);
 	@include layouts-thumbs-grid-r($element: $element);
 	@include layouts-thumbs-style($element: $element);

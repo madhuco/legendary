@@ -1,3 +1,5 @@
+$footer-social: html !default;
+
 // ===============================================
 // Footer: Layout
 // ===============================================
@@ -197,7 +199,7 @@ display:none;
 // ===============================================
 // Footer: Style
 // ===============================================
-@mixin layouts-footer-style($element: '.layout-footer-style') {
+@mixin layouts-footer-style($element: '.layout-footer-style', $footer-social: $footer-social) {
 	
 	#{$element} {
 	@extend %vr-section-box-top;
@@ -237,9 +239,18 @@ display:none;
 	@extend %t-footer-small;
 	}
 	
+	@if $footer-social == html {
 	.social-media {
 	@include ui-social-media;	
 	}
+	}
+	
+	@if $footer-social == drupal-mono {
+	.widgets {
+	 @include filter(grayscale(100%))	
+	}
+	}
+	
 	
 } //Close Class
 
@@ -288,8 +299,8 @@ display:none;
 // ===============================================
 
 
-@mixin layouts-footer-combo($element: '.layouts-footer-combo', $extra: false, $padsticky: true, $mobhide: true) {
+@mixin layouts-footer-combo($element: '.layouts-footer', $extra: false, $padsticky: true, $mobhide: true, $footer-social: $footer-social) {
 @include layouts-footer-layout($element: $element, $extra: $extra, $padsticky: $padsticky);
 	@include layouts-footer-grid-r($element: $element, $extra: $extra, $mobhide: $mobhide);
-	@include layouts-footer-style($element: $element);
+	@include layouts-footer-style($element: $element, $footer-social: $footer-social);
 }

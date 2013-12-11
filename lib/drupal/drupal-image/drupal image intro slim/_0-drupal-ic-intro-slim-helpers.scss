@@ -1,0 +1,49 @@
+$di-scale: true !default;
+
+@mixin  ic-intro-slim($di-scale: $di-scale)  {
+	
+		@if $di-scale == true {
+		.style-intro-slim-image {
+		overflow:hidden;	
+		}
+	}
+	
+	
+	
+	
+	@include media($mob-p...){ 
+		.style-intro-slim-image {
+			// width: 320px;
+			height: 90px;	
+		}
+	}
+	
+	@include media($mob-l...){ 
+		.style-intro-slim-image {
+			// width: 547px;
+			height: 73px;	
+		}
+	}
+	
+	@include media($fab...){ 
+		.style-intro-slim-image {
+			// width: 336px;
+			height: 172px;	
+		}
+	}
+		
+	@include media($tab...){ 
+		.style-intro-slim-image {
+			// width: 165px;
+			height: 247px;	
+		}
+	}
+		
+	@include media($desk...){ 
+		.style-intro-slim-image {
+			// width: 213px;
+			height: 287px;			
+		}
+	}
+
+} //Close Mixin

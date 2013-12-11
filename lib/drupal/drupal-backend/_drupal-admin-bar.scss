@@ -1,0 +1,116 @@
+/* ***************************************** */
+/*  Navbar & Edit Buttons*/
+/* ***************************************** */
+
+#navbar a {
+	@include rem(font-size, 12px);
+}
+
+
+
+
+
+
+/* ***************************************** */
+/*  Admin Bar */
+/* ***************************************** */
+#adminbar {
+background: #333333;
+box-shadow: inset 0 0 5px 5px #222;
+overflow:hidden;
+border-bottom:1px sold #000;
+}
+
+.page-node-edit #adminbar {
+	.unit.editnode {
+	display:none;	
+	}
+}
+
+#adminbar {
+	.unit, #sidr-wrapper-0 {
+	float:left;
+	margin: 0 10px;	
+	display:inline;
+	padding:10px 5px;
+	}
+	
+	.unit.user {
+	float:right;
+	}	
+	
+	.unit.logout {
+float:right;
+	}
+
+	
+	a {
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:12px;
+	color:white;
+	}
+	
+	a:hover {
+	border-bottom: 1px solid white;
+	padding-bottom:5px;	
+	}
+
+	/* Icons */
+	.unit:before {
+	font-size: 24px;
+	line-height:1.5em;
+	color:white;
+	margin-right:5px;
+	}
+	
+	#sidr-wrapper-0:before {
+	@include icon($icon-reorder);	
+	@extend .unit:before; 
+	}
+		
+	.unit.editnode:before {
+	@include icon($icon-pencil);		
+	}
+	
+	.unit.user:before {
+	@include icon($icon-user);	
+	}	
+	
+	.unit.logout:before {
+	@include icon($icon-signout);		
+	}
+		
+} //Closeadmin Bar
+
+	#sidr-0 a {
+	padding:10px;	
+	}
+
+
+@include media($mob-p...){ 
+#adminbar 	.unit.logout  {
+			display:none;
+}
+}
+
+
+$edit-mq: 321px, 345px;
+@include media($edit-mq...){ 
+#adminbar .unit.user a {
+	font-size:0;
+	}	
+}
+
+@include media($mini...){ 
+#adminbar {
+padding: 0 0;	
+}
+
+#adminbar .unit {
+margin: 0 4px;	
+}
+
+#adminbar .unit a {
+	font-size:0;
+	}	
+}

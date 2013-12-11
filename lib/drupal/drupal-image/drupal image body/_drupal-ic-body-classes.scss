@@ -1,0 +1,5 @@
+@import "drupal-ic-helpers";
+
+$di-scale: true !default;
+
+@include ic-body($di-scale: $di-scale);

@@ -1,0 +1,26 @@
+/* ***************************************** */
+/*  user profile form*/
+/* ***************************************** */
+
+#user-profile-form {
+clear: both;
+@extend %vr-section-box;
+
+label {
+	color: $darkest;
+margin-top: 20px;
+}
+
+#edit-timezone {
+display:none;	
+}
+
+@include ui-link($element: '.form-type-password a');
+
+.form-type-password a {
+	display:inline-block;
+	clear:both;
+	margin-left:10px;
+}
+
+} /* user Profile */

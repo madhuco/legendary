@@ -160,7 +160,7 @@ color: $default;
 // Combo
 // ===============================================
 
-@mixin layouts-magdex-combo($element: '.layouts-magdex-combo') {
+@mixin layouts-magdex-combo($element: '.layouts-magdex') {
 	@include layouts-magdex-layout($element: $element);
 	@include layouts-magdex-grid-r($element: $element);
 	@include layouts-magdex-style($element: $element);

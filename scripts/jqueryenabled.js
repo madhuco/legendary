@@ -5,8 +5,9 @@
 		"use strict";
 		$(document).ready(function() {
 
-			$("body").addClass('jq');
+		$("body").addClass('jq');
 			$("body").removeClass('no-jq');
+
 
 		});
 	});

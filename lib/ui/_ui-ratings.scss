@@ -1,9 +1,0 @@
-.thumb-rating.ui-ratings-duo-plus:before {
-	@include icon($icon-thumbs-up);
-	gosei:green;
-	
-}
-
-.thumb-rating.ui-ratings-duo-minus:before {
-	@include icon($icon-thumbs-down);
-}

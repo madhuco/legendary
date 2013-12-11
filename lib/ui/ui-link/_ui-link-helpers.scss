@@ -1,0 +1,53 @@
+@mixin ui-link($element: '.ui-link', $color: $link, $ui-link-arrow: true, $ui-link-override: false, $ui-link-form: false, $ui-link-back: false) {
+
+#{$element} {
+/* ***************************************** */
+/*  Display Links with Arrows */
+/* ***************************************** */
+
+color: $color;
+
+&:hover {
+color: darken($color, 10%);
+border-bottom: 1px solid darken($color, 10%);	
+
+@if $ui-link-form == true {
+background: $color;
+color:#fff;	
+} //Close If
+} //Close Hover
+
+@if $ui-link-back == true {
+$ui-link-arrow: false;
+	&:before {
+	@include icon($icon-caret-left);
+	margin-right:10px;
+}
+}
+
+
+
+
+@if $ui-link-arrow == true {
+&:after {
+	@include icon($icon-caret-right);
+	margin-left:10px;
+}
+} //Close If 
+
+
+@if $ui-link-override == true {
+background:transparent;
+border:1px solid transparent;	
+}
+
+@if $ui-link-form == true {
+border: 1px solid $color;
+@include border-radius(10px);	
+}
+
+
+
+
+} //Close Element
+} //Close Mixin

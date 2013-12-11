@@ -1,0 +1,17 @@
+@mixin styles-minimal-buttons($element: '.minimal-buttons', $hover: true) {
+
+#{$element} {
+border-top-color: darken($c-primary, 10%);
+border-bottom-color: darken($c-primary, 10%);
+border:  darken($c-primary, 20%) 1px solid;	
+box-shadow: 0px 1px 1px black inset;
+@include bgcolor-gradient-primary($c-primary-switch:false);
+
+@if $hover == true {
+&:hover {
+	@include bgcolor-gradient-primary($c-primary-switch:true);
+}
+}
+
+} // Close Element 
+} //Close Main Mixin

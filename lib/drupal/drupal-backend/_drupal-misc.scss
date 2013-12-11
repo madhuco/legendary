@@ -1,0 +1,61 @@
+
+
+
+/* ***************************************** */
+/*  Admin Content Page */
+/* ***************************************** */
+
+.node-type-list {
+	@extend %vr-section-box;
+}
+
+
+/* ***************************************** */
+/*  Support for Taptabs on Admin Pages*/
+/* ***************************************** */
+
+.sub-page #wrapper > .masthead + div {
+display:block;	
+}
+
+
+.sub-page #wrapper > .masthead + br + div {
+display:block;	
+}
+
+
+/* ***************************************** */
+/*  Make Taptabs work when editing bar is active*/
+/* ***************************************** */
+
+.sub-page #wrapper .contextual-links-region {
+display:block;	
+}
+
+
+/* ***************************************** */
+/*  Admin Pages */
+/* ***************************************** */
+
+	.view.role-edit {
+	clear:both;
+	}
+	
+	
+	
+	
+/* ***************************************** */
+/*  Theme Setting */
+/* ***************************************** */
+.page-admin-appearance {
+
+#system-theme-settings {
+@extend %vr-section-box;
+}
+
+#edit-logo {
+display:none;	
+}
+
+
+}

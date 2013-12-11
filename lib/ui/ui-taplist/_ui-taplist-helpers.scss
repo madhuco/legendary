@@ -15,7 +15,7 @@ top:1.2em;
 	
 }
 
-@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false, $num: false) {
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false, $num: false, $hover: false) {
 
 
 #{$element} {
@@ -123,6 +123,13 @@ content: "9";
 &:nth-child(n).visited a:before {
 	@include icon($icon-check);
 }
+
+@if $hover == true {
+li a:hover {
+background: $offwhite;	
+}
+}
+
 
 } //Close tick true
 } //Close If

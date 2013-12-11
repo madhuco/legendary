@@ -61,7 +61,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $extras: false) {
+@mixin  bgcolor-gradient-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: false) {
 	background-color: $c-primary; // Old browsers
 	
 	@if $c-primary-switch == false {
@@ -74,7 +74,7 @@ $c-accent-switch: $c-switch !default;
 	@include background-image(linear-gradient(top, $c-primary-dark 0%, $c-primary-light 100%));
 	}
 	
-	@if $extras == true {
+	@if $highlighted == true {
 		
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-primary; // Old browsers
@@ -90,13 +90,13 @@ $c-accent-switch: $c-switch !default;
 	}
 
 	} //Close class
-	} // Close if $extras
+	} // Close if $highlighted
 	
 	
 }
 
 
-@mixin bgcolor-3d-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $extras: false) {
+@mixin bgcolor-3d-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: false) {
 	background-color: $c-primary; // Old browsers
 	
 	@if $c-primary-switch == false {
@@ -112,7 +112,7 @@ $c-accent-switch: $c-switch !default;
 	border: 1px solid $c-primary-dark;
 	border-top-color: darken($c-primary-dark, $c-percent);
 
-	@if $extras == true {
+	@if $highlighted == true {
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-primary; // Old browsers
 	
@@ -129,7 +129,7 @@ $c-accent-switch: $c-switch !default;
 		border: 1px solid $c-primary-dark;
 		border-top-color: darken($c-primary-dark, $c-percent);
 	} //Close class
-	} //Close If $Extras
+	} //Close If $highlighted
 }
 
 
@@ -144,7 +144,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $extras: false) {
+@mixin  bgcolor-gradient-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: false) {
 	background-color: $c-secondary; // Old browsers
 	
 	@if $c-secondary-switch == false {
@@ -157,7 +157,7 @@ $c-accent-switch: $c-switch !default;
 	@include background-image(linear-gradient(top, $c-secondary-dark 0%, $c-secondary-light 100%));
 	}
 	
-	@if $extras == true {
+	@if $highlighted == true {
 		
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-secondary; // Old browsers
@@ -173,13 +173,13 @@ $c-accent-switch: $c-switch !default;
 	}
 
 	} //Close class
-	} // Close if $extras
+	} // Close if $highlighted
 	
 	
 }
 
 
-@mixin bgcolor-3d-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $extras: false) {
+@mixin bgcolor-3d-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: false) {
 	background-color: $c-secondary; // Old browsers
 	
 	@if $c-secondary-switch == false {
@@ -195,7 +195,7 @@ $c-accent-switch: $c-switch !default;
 	border: 1px solid $c-secondary-dark;
 	border-top-color: darken($c-secondary-dark, $c-percent);
 
-	@if $extras == true {
+	@if $highlighted == true {
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-secondary; // Old browsers
 	
@@ -212,7 +212,7 @@ $c-accent-switch: $c-switch !default;
 		border: 1px solid $c-secondary-dark;
 		border-top-color: darken($c-secondary-dark, $c-percent);
 	} //Close class
-	} //Close If $Extras
+	} //Close If $highlighted
 }
 
 
@@ -227,7 +227,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $extras: false) {
+@mixin  bgcolor-gradient-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: false) {
 	background-color: $c-accent; // Old browsers
 	
 	@if $c-accent-switch == false {
@@ -240,7 +240,7 @@ $c-accent-switch: $c-switch !default;
 	@include background-image(linear-gradient(top, $c-accent-dark 0%, $c-accent-light 100%));
 	}
 	
-	@if $extras == true {
+	@if $highlighted == true {
 		
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-accent; // Old browsers
@@ -256,13 +256,13 @@ $c-accent-switch: $c-switch !default;
 	}
 
 	} //Close class
-	} // Close if $extras
+	} // Close if $highlighted
 	
 	
 }
 
 
-@mixin bgcolor-3d-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $extras: false) {
+@mixin bgcolor-3d-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: false) {
 	background-color: $c-accent; // Old browsers
 	
 	@if $c-accent-switch == false {
@@ -278,7 +278,7 @@ $c-accent-switch: $c-switch !default;
 	border: 1px solid $c-accent-dark;
 	border-top-color: darken($c-accent-dark, $c-percent);
 
-	@if $extras == true {
+	@if $highlighted == true {
 	& .highlighted, & li.active-trail, & a.active:hover {
 		background-color: $c-accent; // Old browsers
 	
@@ -295,7 +295,7 @@ $c-accent-switch: $c-switch !default;
 		border: 1px solid $c-accent-dark;
 		border-top-color: darken($c-accent-dark, $c-percent);
 	} //Close class
-	} //Close If $Extras
+	} //Close If $highlighted
 }
 
 

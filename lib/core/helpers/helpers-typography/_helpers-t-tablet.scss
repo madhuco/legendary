@@ -82,6 +82,18 @@
 letter-spacing:0;
 }
 
+@mixin t-body-tiny-tab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 14px);
+}
+
+
+@mixin t-caption-tab {
+ @include rem('font-size', 10px);
+ @include rem('line-height', 14px);
+}
+
+
 @mixin t-body-label-tab {
  @include rem('font-size', 14px);
  @include rem('line-height', 16px);

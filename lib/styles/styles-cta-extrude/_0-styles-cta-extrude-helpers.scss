@@ -1,0 +1,73 @@
+@mixin styles-cta-extrude($element: '.cta-intro', $col: true) {
+#{$element} {
+width:100%;	
+text-align:center;
+	@include rem(margin-bottom, 40px);
+} //Close Element
+ 
+
+@include media($fabplus...){ 
+
+.rs-wrap #{$element} {
+width: auto;
+margin-top: -51px;
+margin-bottom: -16px;
+}
+
+.intro-duo#{$element}  {
+	@include rem(margin-top, -30px);
+}
+
+.intro-mono#{$element}  {
+margin-top: -20px;
+margin-bottom: 40px;
+}
+
+@if $col == true {
+
+	#{$element}  {
+	@include span-columns(12 omega, 12);
+	text-align:center;
+	}
+
+.intro-duo#{$element}  {
+	@include span-columns(6 omega, 12);
+	}
+	
+	
+	} //Close $col
+
+} //Close Fab
+
+
+@include media($desk){ 
+#{$element}  {
+	@include rem(margin-top, -30px);
+}
+
+.intro-duo#{$element}  {
+	@include rem(margin-top, -40px);
+}
+} //Close Desk
+
+
+
+@include media($mob...){ 
+.intro-duo#{$element}  {
+	@include rem(margin-top, -20px);
+	float:left;
+}
+
+.intro-mono#{$element}  {
+margin-top: -10px;
+margin-bottom: -14px;
+padding-bottom:40px;
+}
+
+
+} //Close Mob
+
+
+
+ 
+} //Close Main Mixin

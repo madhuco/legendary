@@ -3,8 +3,8 @@
 
 #{$element} {
 /* ***************************************** */
-/*  Leader-Follower-Article
-Displays Leader and Follower with a magazine article style  layout */
+/*  leader-follower-Article
+Displays follower and leader with a magazine article style  layout */
 /* ***************************************** */
 
 @include span-columns(12 omega, 12);
@@ -19,36 +19,34 @@ Displays Leader and Follower with a magazine article style  layout */
 }
 
 > .content-footer {
-	@include span-columns(5 omega, 12);
+	@include span-columns(5, 12);
 }
-
 } //Close $element
 
-#{$element}.bleed {
 
+#{$element}.bleed {
 > .content-leader {
 @include span-columns(7, 12);
 margin-left: - gutter(9);
 }
-
 }
 
 } //Close Mixin
 
 
-@mixin leader-follower-article-mob-p($element: '.leader-follower-article-mob-p' ) {
+@mixin leader-follower-article-mob-p($element: '.leader-follower-article-mob-l', $r: false ) {
 
 /* ***************************************** */
-/*  Leader-Follower-Article: Mobile Version - Reading Mode
-Reading mode make follower and leader have 100% width for a better reading experience on mobile */
+/*  leader-follower-Article: Mobile Version*/
 /* ***************************************** */
-
+@if $r == false {
 #{$element} {
-
-
 @include span-columns(12 omega, 12);
 position:relative;
+}
+}
 
+#{$element} {
 
  > .content-leader {
 @include span-columns(4, 12);
@@ -66,37 +64,43 @@ position:relative;
 	@include leader-follower-article-mob-p($element: $element);
 }
 
-@mixin leader-follower-article-tab($element: '.leader-follower-article-tab' ) {
-	@include leader-follower-article-tab($element: $element);
+@mixin leader-follower-article-fab($element: '.leader-follower-article-fab', $r: false ) {
+
+@if $r == true {	
+#{$element} {
+@include span-columns(12 omega, 12);
+}
 }
 
-@mixin leader-follower-article-fab($element: '.leader-follower-article-fab' ) {
 #{$element} {
-
-
-@include span-columns(12 omega, 12);
-
 > .content-leader {
 @include span-columns(6, 12);
 }
-
 
 > .content-follower {
 @include span-columns(6 omega, 12);
 }
 
 > .content-footer {
-	@include span-columns(6 omega, 12);
+	@include span-columns(6, 12);
 }
-
 } //Close $element
+} //Close Mixin
+
+@mixin leader-follower-article-tab($element: '.leader-follower-article-tab' ) {
+	@include leader-follower-article-tab($element: $element);
 }
 
 @mixin leader-follower-article-desk($element: '.leader-follower-article-desk' ) {
 	@include leader-follower-article($element: $element);
 }
 
-@mixin leader-follower-article-r($element: '.leader-follower-article') {
+@mixin leader-follower-article-r($element: '.leader-follower-article', $r: true) {
+
+#{$element} {
+@include span-columns(12 omega, 12);
+}
+
 @include media($mob...){ 
 @include leader-follower-article-mob-p($element: $element);
 }
@@ -109,15 +113,13 @@ position:relative;
 @include leader-follower-article($element: $element);
 }
 
+
 @include media($portables...){ 
-
-
 #{$element}.reading {
 /* ***************************************** */
-/*  Follower-Leader-Article: Mobile Version - Reading Mode
+/*  leader-follower-Article: Mobile Version - Reading Mode
 Reading mode make follower and leader have 100% width for a better reading experience on mobile */
 /* ***************************************** */
-
 
 
 > .content-leader {
@@ -138,5 +140,3 @@ Reading mode make follower and leader have 100% width for a better reading exper
 
 
 } //Close Mixin
-
-

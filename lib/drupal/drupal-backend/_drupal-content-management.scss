@@ -1,0 +1,39 @@
+
+.page-admin-content {
+	
+	@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-form: true);
+	
+	.unit-title {
+clear:both;
+	@extend %vr-spacer-box;	
+	text-align:center;
+	}
+	
+	table {
+		width:100%;
+		@extend %vr-section-box;
+		}
+	
+		
+	td, th {
+	padding: 5px 10px;	
+	}
+	
+	th {
+	padding-bottom: 2px;	
+	color: $darkest;
+	}
+	
+		/* Content Management Pages */
+	
+	
+}
+
+@include media($fabplus...){ 
+	.view-content-management .views-exposed-form {
+	clear:both;
+	@include span-columns(6, 12);	
+	}
+	}
+
+

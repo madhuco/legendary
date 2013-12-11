@@ -4,38 +4,39 @@
 
 		"use strict";
 
-			$(".page .page .unit-content").hide();
+		$(".page .page .unit-content").hide();
 
-	
-	$(".page .page .unit-title").click(function() {
-		$(".open").removeClass("open");
-		$(".page .page .unit-content").slideUp();
-		$(this).parent('.page').find('.unit-content').slideDown().addClass("open");
-	});
+		$(".page .page .unit-title").click(function() {
+			$(".open").removeClass("open");
+			$(".page .page .unit-content").slideUp();
+			$(this).parent('.page').find('.unit-content').slideDown().addClass("open");
+		});
 
-	
-	
 		$(".taptabs li:first").addClass("highlighted");
 		$('.pages .page-first').show();
+
+
+		$(".taptabs  .tapnav li").click(function() {
+			$(this).addClass('visited');
+		});
+
 
 		$(".taptabs  .tapnav li a").click(function() {
 
 			$("body").removeClass("overview-enabled"); //Add support to display overview before navigation
 			$("body").addClass('sub-page');
 			$(".taptabs  .tapnav li").removeClass("highlighted");
+			$(".highlighted").removeClass("highlighted");
+			$(".animated").removeClass("animated");
+			$(".flipInX").removeClass("flipInX");
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
 			$(this).parent().addClass("highlighted").addClass("animated").addClass("flipInX");
 			$(this).addClass("visited");
 			$(".tap-btn-back").remove();
-				$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
+			$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
 		}).eq(0).addClass('selected');
 
 	});
-
-
-	
-
-
 
 
 	$(".taptabs  .tapnav li a").click(function() {
@@ -46,9 +47,6 @@
 
 		$(".page", taptab).not(".page .page").hide().eq($(this).index()).show().addClass("animated").addClass("fadeInLeft");
 	}).eq(0).addClass('selected');
-
-
-
 
 
 
