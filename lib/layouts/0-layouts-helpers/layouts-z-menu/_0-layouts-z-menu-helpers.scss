@@ -1,0 +1,128 @@
+$z-top: 10px !default;
+$z-tab: 65px !default;
+$z-tap: 95px !default; 
+$z-admin: 55px !default;
+
+// ===============================================
+// layouts-z-menu: Layout
+// ===============================================
+
+@mixin layouts-z-menu-layout($element: '.z-index', $z-ug: true, $z-ug-class: '.usergroup-manager, .usergroup-admin ', $z-top: $z-top, $z-tab: $z-tab, $z-tap: $z-tap) {
+	
+/* ***************************************** */
+/*  Z-Index Support For Menus */
+/* ***************************************** */
+
+#{$element}-top, #{$element}-tab {
+	top: $z-top;
+}
+
+#{$element}-tab {
+	top: $z-tab;
+}
+
+#{$element}-tap {
+	top: $z-tap;
+	left:0;
+	right:0;
+	width:100%;	
+}
+
+@if $z-ug == true  {
+#{$z-ug-class} {
+#{$element}-top, #{$element}-tab {
+	top: $z-top + $z-admin;
+}
+
+#{$element}-tab {
+	top: $z-tab + $z-admin;
+}
+
+#{$element}-tap {
+	top: $z-tap + $z-admin;
+}
+ } //Close $Z-ug-class
+  } //Close $Z-ug if
+
+
+} //Close Mixin
+		
+
+
+
+// ===============================================
+// layouts-z-menu: Grid
+// ===============================================
+
+@mixin layouts-z-menu-grid($element: '.layouts-z-menu-grid') {
+		#{$element}	{
+} //Close Element
+} //Close Mixin
+
+
+
+
+@mixin layouts-z-menu-grid-mob-p($element: '.layouts-z-menu-grid-mob-p') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+@mixin layouts-z-menu-grid-mob-l($element: '.layouts-z-menu-grid-mob-l') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+@mixin layouts-z-menu-grid-fab($element: '.layouts-z-menu-grid-fab') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+@mixin layouts-z-menu-grid-tab($element: '.layouts-z-menu-grid-tab') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+@mixin layouts-z-menu-grid-desk($element: '.layouts-z-menu-grid-desk') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+@mixin layouts-z-menu-grid-r($element: '.layouts-z-menu-grid') {
+	@include layouts-z-menu-grid($element:$element);
+}
+
+
+
+
+
+
+
+
+
+
+
+// ===============================================
+// layouts-z-menu: Style
+// ===============================================
+
+@mixin layouts-z-menu-style($element: '.layouts-z-menu-style') {
+	
+#{$element}	{	
+	
+	
+		
+} //Close Element
+} //Close Mixin
+
+
+
+
+// ===============================================
+// Combo
+// ===============================================
+
+@mixin layouts-z-menu-combo($element: '.layouts-z-menu-combo', $element: '.z-index', $z-ug: true, $z-ug-class: '.usergroup-manager, .usergroup-admin ', $z-top: $z-top, $z-tab: $z-tab, $z-tap: $z-tap) {
+	@include layouts-z-menu-layout($element: $element, $z-ug: $z-ug, $z-ug-class: $z-ug-class, $z-top: $z-top, $z-tab: $z-tab, $z-tap: $z-tap);
+	@include layouts-z-menu-grid-r($element: $element);
+	@include layouts-z-menu-style($element: $element);
+}
