@@ -122,3 +122,74 @@
 	@include bgcolor-footer-mono-secondary-3d;
 }
 
+
+
+/* ***************************************** */
+/* Font Classes */
+/* ***************************************** */
+
+body {
+	@include typeface-regular;
+}
+
+a {
+color:inherit;	
+}
+
+.typeface-light {
+	@include typeface-light;
+}
+
+.typeface-regular {
+	@include typeface-regular;
+}
+
+
+.typeface-medium {
+	@include typeface-medium;
+}
+
+
+.typeface-bold {
+	@include typeface-bold;
+}
+
+/* ***************************************** */
+/* Colour Classes */
+/* ***************************************** */
+.bgcolor-flat-primary {
+	@include bgcolor-flat-primary;
+}
+
+.bgcolor-gradient-primary {
+	@include bgcolor-gradient-primary;
+}
+
+.bgcolor-3d-primary {
+	@include bgcolor-3d-primary;
+}
+
+.bgcolor-flat-secondary {
+	@include bgcolor-flat-secondary;
+}
+
+.bgcolor-gradient-secondary {
+	@include bgcolor-gradient-secondary;
+}
+
+.bgcolor-3d-secondary {
+	@include bgcolor-3d-secondary;
+}
+
+
+.bgcolor-flat-accent {
+	@include bgcolor-flat-accent;
+}
+
+.bgcolor-gradient-accent {
+	@include bgcolor-gradient-accent;
+}
+
+.bgcolor-3d-accent {
+	@include bgcolor-3d-accent;
+}

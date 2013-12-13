@@ -4,42 +4,42 @@ $di-scale: true !default;
 @mixin  ic-slideshow($di-scale: $di-scale) {
 	
 	@if $di-scale == true {
-		.style-slideshow img {
+		.ic-slideshow img {
 		overflow:hidden;	
 		}
 	}
 	
 	
 	@include media($mob-p...){ 
-		.style-slideshow img {
+		.ic-slideshow img {
 			// width: 320px;
 			height: 63px;	
 		}
 	}
 	
 	@include media($mob-l...){ 
-		.style-slideshow img {
+		.ic-slideshow img {
 			// width: 115px;
 			height: 65px;	
 		}
 	}
 	
 	@include media($fab...){ 
-		.style-slideshow img {
+		.ic-slideshow img {
 			// width: 590px;
 			height: 233px;	
 		}
 	}
 		
 	@include media($tab...){ 
-		.style-slideshow img {
+		.ic-slideshow img {
 			// width: 760px;
 			height: 297px;	
 		}
 	}
 		
 	@include media($desk...){ 
-		.style-slideshow img {
+		.ic-slideshow img {
 			// width: 899px;
 			height: 290px;			
 		}

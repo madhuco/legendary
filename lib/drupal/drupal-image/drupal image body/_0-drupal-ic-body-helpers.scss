@@ -3,67 +3,67 @@ $di-scale: true !default;
 @mixin  ic-body($di-scale: $di-scale) {
 	
 	@if $di-scale == true {
-		.style-body {
+		.ic-body {
 		overflow:hidden;	
 		}
 	}
 	
 	
 	@include media($mob-p...){ 
-		.style-body {
+		.ic-body {
 			// width: 318px;
 			height: 232px;	
 		}
 	
-		.style-body-wide {
+		.ic-body-wide {
 			// width: 350px;
 			height: 245px;	
 		}
 	}
 	
 	@include media($mob-l...){ 
-		.style-body {
+		.ic-body {
 			// width: 437px;
 			height: 138px;	
 		}
 
-		.style-body-wide {
+		.ic-body-wide {
 			// width: 500px;
 			height: 100px;	
 		}
 	}
 	
 	@include media($fab...){ 
-		.style-body {
+		.ic-body {
 			// width: 399px;
 			height: 203px;	
 		}
 	
-		.style-body-wide {
+		.ic-body-wide {
 			// width: 405px;
 			height: 110px;	
 		}
 	}
 		
 	@include media($tab...){ 
-		.style-body {
+		.ic-body {
 			// width: 385px;
 			height: 187px;	
 		}
 	
-		.style-body-wide {
+		.ic-body-wide {
 			// width: 535px;
 			height: 160px;	
 		}
 	}
 		
 	@include media($desk...){ 
-		.style-body {
+		.ic-body {
 			// width: 326px;
 			height: 390px;			
 		}
 	
-		.style-body-wide {
+		.ic-body-wide {
 			// width: 600px;
 			height: 200px;	
 		}

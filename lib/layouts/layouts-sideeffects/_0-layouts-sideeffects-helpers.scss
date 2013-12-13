@@ -130,7 +130,7 @@ float:right;
 // sideeffects: Style
 // ===============================================
 
-@mixin layouts-sideeffects-style($element: '.layouts-sideeffects-style', $color: true) {
+@mixin layouts-sideeffects-style($element: '.layouts-sideeffects-style', $color: true, $purity: false) {
 
 #{$element} {
 @extend %t-pane-text-sidebar;
@@ -150,7 +150,16 @@ text-align:center;
 } //Close Pane Title, Unit title
 
 ul {
+@if $purity == true { 	
 @include scheme-purity($hover:false);
+}
+@if $purity == false { 	
+background: white;
+border: 1px solid $scratch;
+@include border-bottom-radius(10px);
+  @include box-shadow(rgba(50, 50, 50, 0.35) 0px 1px 1px);
+}
+
 @include border-top-radius(0);	
 }
 
@@ -170,8 +179,8 @@ ul {
 // Combo
 // ===============================================
 
-@mixin layouts-sideeffects-combo($element: '.layouts-sideeffects', $color: true) {
+@mixin layouts-sideeffects-combo($element: '.layouts-sideeffects', $color: true, $purity: false) {
 	@include layouts-sideeffects-layout($element: $element);
 	@include layouts-sideeffects-grid-r($element: $element);
-	@include layouts-sideeffects-style($element: $element, $color: $color);
+	@include layouts-sideeffects-style($element: $element, $color: $color, $purity: $purity);
 }

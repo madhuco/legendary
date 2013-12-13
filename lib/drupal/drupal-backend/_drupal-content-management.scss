@@ -26,6 +26,15 @@ clear:both;
 	
 		/* Content Management Pages */
 	
+	.views-field-nid {
+	display:none;	
+	}
+	
+	.usergroup-admin .views-field-nid {
+	display:block;	
+	}
+	
+	
 	
 }
 

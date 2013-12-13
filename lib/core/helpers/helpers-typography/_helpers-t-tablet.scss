@@ -117,7 +117,7 @@ letter-spacing:0;
 // ***************************************** 
 
 @mixin t-pane-heading-tab {
- @include rem('font-size', 19px);
+ @include rem('font-size', 17px);
  @include rem('line-height', 22px);
 
 }

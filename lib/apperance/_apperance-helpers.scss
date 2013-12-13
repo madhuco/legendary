@@ -1,3 +1,5 @@
+$highlighted: false !default; 
+
 
 @mixin typeface-light {
 	font-family: 'EauDouceSansLight', Arial, Helvetica, sans-serif;
@@ -61,7 +63,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: false) {
+@mixin  bgcolor-gradient-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: $highlighted) {
 	background-color: $c-primary; // Old browsers
 	
 	@if $c-primary-switch == false {
@@ -96,7 +98,7 @@ $c-accent-switch: $c-switch !default;
 }
 
 
-@mixin bgcolor-3d-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: false) {
+@mixin bgcolor-3d-primary($c-primary: $c-primary, $c-primary-dark: $c-primary-dark, $c-primary-light: $c-primary-light, $c-primary-switch: $c-primary-switch, $highlighted: $highlighted) {
 	background-color: $c-primary; // Old browsers
 	
 	@if $c-primary-switch == false {
@@ -144,7 +146,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: false) {
+@mixin  bgcolor-gradient-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: $highlighted) {
 	background-color: $c-secondary; // Old browsers
 	
 	@if $c-secondary-switch == false {
@@ -179,7 +181,7 @@ $c-accent-switch: $c-switch !default;
 }
 
 
-@mixin bgcolor-3d-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: false) {
+@mixin bgcolor-3d-secondary($c-secondary: $c-secondary, $c-secondary-dark: $c-secondary-dark, $c-secondary-light: $c-secondary-light, $c-secondary-switch: $c-secondary-switch, $highlighted: $highlighted) {
 	background-color: $c-secondary; // Old browsers
 	
 	@if $c-secondary-switch == false {
@@ -227,7 +229,7 @@ $c-accent-switch: $c-switch !default;
 
 }
 
-@mixin  bgcolor-gradient-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: false) {
+@mixin  bgcolor-gradient-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: $highlighted) {
 	background-color: $c-accent; // Old browsers
 	
 	@if $c-accent-switch == false {
@@ -262,7 +264,7 @@ $c-accent-switch: $c-switch !default;
 }
 
 
-@mixin bgcolor-3d-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: false) {
+@mixin bgcolor-3d-accent($c-accent: $c-accent, $c-accent-dark: $c-accent-dark, $c-accent-light: $c-accent-light, $c-accent-switch: $c-accent-switch, $highlighted: $highlighted) {
 	background-color: $c-accent; // Old browsers
 	
 	@if $c-accent-switch == false {

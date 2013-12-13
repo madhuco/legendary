@@ -24,3 +24,32 @@ display:none;
 }
 
 } /* user Profile */
+
+
+/* ***************************************** */
+/* User Login */
+/* ***************************************** */
+
+#user-login {
+	@include span-columns(6, 12);
+	@include pre(3); 
+}
+
+
+#user-login label {
+	@extend %t-title-3;
+	@extend %vr-title-3;
+	color: $darkest;	
+}
+
+#user-login input[type="submit"] {
+@include bonbon($c-primary);
+color:#FFF;	
+border:0;
+}
+
+.menu-name-menu-lost-password {
+float: right;	
+}
+
+@include ui-link($element: '.menu-name-menu-lost-password a');

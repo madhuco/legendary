@@ -4,42 +4,42 @@ $di-scale: true !default;
 @mixin  ic-thumbs($di-scale: $di-scale) {
 	
 	@if $di-scale == true {
-		.style-thumbs img {
+		.ic-thumbs img {
 		overflow:hidden;	
 		}
 	}
 	
 	
 	@include media($mob-p...){ 
-		.style-thumbs img {
+		.ic-thumbs img {
 			// width: 75px;
 			height: 68px;	
 		}
 	}
 	
 	@include media($mob-l...){ 
-		.style-thumbs img {
+		.ic-thumbs img {
 			// width: 75px;
 			height: 68px;	
 		}
 	}
 	
 	@include media($fab...){ 
-		.style-thumbs img {
+		.ic-thumbs img {
 			// width: 185px;
 			height: 70px;	
 		}
 	}
 		
 	@include media($tab...){ 
-		.style-thumbs img {
+		.ic-thumbs img {
 			// width: 226px;
 			height: 118px;	
 		}
 	}
 		
 	@include media($desk...){ 
-		.style-thumbs img {
+		.ic-thumbs img {
 			// width: 290px;
 			height: 118px;			
 		}

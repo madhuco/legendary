@@ -199,7 +199,7 @@ a:hover * {
 } //Close $element
 
 @include media($mob...){ 
-@include ui-taplist($element: #{$element}, $color: $default, $arrow-color: $lightest) ;	
+@include ui-taplist($element: #{$element}, $color: $default, $ui-arrow-color: $lightest) ;	
 }
 } //Close Mixin
 

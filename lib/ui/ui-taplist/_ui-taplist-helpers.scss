@@ -1,4 +1,7 @@
-@mixin taplist-icon($arrow-color: $lightest) {
+$ui-arrow-color: $lightest !default;
+
+
+@mixin taplist-icon($ui-arrow-color: $ui-arrow-color) {
 	
 a:before {
 float:right;
@@ -6,65 +9,25 @@ position:absolute;
 left:0;
 bottom:0;
 line-height:1em;
-color: $arrow-color;
+color: $ui-arrow-color;
 font-size:1em;
 top:1.2em;
+}
+
+a { 
+padding-left:20px;
+margin-left:10px;
 }
 
 
 	
 }
 
-@mixin ui-taplist($element: '.ui-taplist', $color: $default, $arrow-color: $lightest, $border: false, $tick: false, $num: false, $hover: false) {
 
-
-#{$element} {
-
-@if $border == true {
-ul {	
-@include box-sizing(border-box);
-border:1px solid $scratch;
-@include border-radius(10px);
-}
-
-li:last-child {
-border-bottom:0;	
-}
-
-}
-
-
-li {
-border-bottom: 1px solid $line;
-
-
-a {display:block;	
-@include rem('padding', 15px);
-@include rem('padding-right', 30px);
-text-align: left;
-position:relative;
-color: $color;
-
-
-/* Arrows */	
-&:after {
-@include icon($icon-chevron-right);
-float:right;
-position:absolute;
-right:0;
-bottom:0;
-line-height:1em;
-color: $arrow-color;
-font-size:1em;
-top:1.2em;
-}
-} //Close a
-
-
-@if $tick == true {
-@if $num == false {	
-	
+@mixin ui-tick-helper {
 @include taplist-icon;
+
+
 
 a:before {
 @include icon($icon-check-empty);
@@ -74,13 +37,19 @@ a:before {
 	@include icon($icon-check);
 }
 
-} //Close If
-} //Close If
+@include media($tabplus...){ 
+a {
+@include rem(margin-left, 10px);
+}
+}//Close MQ	
+} //Close ui-tick-helper
 
 
-@if $num == true {
+
+@mixin ui-num-helper($hover:false, $tick:false) {
 	
-@include taplist-icon($arrow-color: $arrow-color);
+	
+@include taplist-icon($ui-arrow-color: $ui-arrow-color);
 
 &:nth-child(1) a:before {
 content: "1";
@@ -124,15 +93,100 @@ content: "9";
 	@include icon($icon-check);
 }
 
+body {
+display:none;	
+}
+
 @if $hover == true {
 li a:hover {
 background: $offwhite;	
 }
+} //Close Hover true
+} //Close tick true	
+	
+} //Close Mixin
+
+
+
+@mixin ui-taplist($element: '.ui-taplist', $color: $default, $ui-arrow-color: $ui-arrow-color, $border: false, $tick: false, $num: false, $hover: false, $uimob: false) {
+
+
+
+#{$element} {
+
+@if $border == true {
+ul {	
+@include box-sizing(border-box);
+border:1px solid $scratch;
+@include border-radius(10px);
+}
+
+li:last-child {
+border-bottom:0;	
+}
+
 }
 
 
-} //Close tick true
+li {
+border-bottom: 1px solid $line;
+
+
+a {display:block;	
+@include rem('padding', 15px);
+@include rem('padding-right', 30px);
+text-align: left;
+position:relative;
+color: $color;
+
+
+/* Arrows */	
+&:after {
+@include icon($icon-chevron-right);
+float:right;
+position:absolute;
+right:0;
+bottom:0;
+line-height:1em;
+color: $ui-arrow-color;
+font-size:1em;
+top:1.2em;
+}
+} //Close a
+
+
+@if $tick == true {
+@if $num == false {	
+
+@if $uimob == false {	
+@include ui-tick-helper
+}
+
+@if $uimob == true {
+@include media($portables...){ 
+@include ui-tick-helper;
+}
+}
+
 } //Close If
+} //Close If
+
+
+@if $num == true {
+	
+@if $uimob == false {
+	@include ui-num-helper($tick: $tick, $hover: $hover);
+} //Close if uimob false
+
+
+@if $uimob == true {
+@include media($portables...){
+	@include ui-num-helper($tick: $tick, $hover: $hover);
+} //Close MQ
+} //Close if uimob false
+
+
+}//Close If $num true
 
 
 

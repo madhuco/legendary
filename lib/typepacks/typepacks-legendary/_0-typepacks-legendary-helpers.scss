@@ -14,7 +14,6 @@
 	  @extend %t-title-4;
 	  @extend %vr-title-4;
      text-align:left;
-    @include typeface-bold;
 	color: $default;
 }
  
@@ -111,7 +110,6 @@ margin-top:10px;
 	@extend %vr-breather;
 	@extend %t-cta-prompt;
 	display: block;
-	@extend %vr-section-bottom;
 	}
 	
 	a {
@@ -168,5 +166,18 @@ margin-top:10px;
 } //Close .role-edit
 
 
+body {
+p, label, a, textarea, input[type="text"] {
+	@extend %t-body-text;
+}
+} //Close Body
+
+.wrapper div {
+	@extend %t-body-text;
+}
+
+a {
+text-decoration: none;	
+}
 
 } //Close Main Mixin

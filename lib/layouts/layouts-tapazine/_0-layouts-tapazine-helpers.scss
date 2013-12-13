@@ -94,11 +94,11 @@ padding-right:4%;
 // Style
 // ===============================================
 
-@mixin layouts-tapazine-style($element: '.layouts-tapazine-style', $role: $role) {
+@mixin layouts-tapazine-style($element: '.layouts-tapazine-style', $role: $role, $tick: false, $uimob: true, $num: false) {
 
 #{$element}  {	
 
-@include ui-taplist('> .content-follower');
+@include ui-taplist('> .content-follower', $tick: $tick, $uimob: $uimob, $num: $num);
 
 > .content-leader {	
 @extend %vr-section;
@@ -173,7 +173,7 @@ position: relative;
 }
 
 
-@include media($fabplus...){ 
+
 #{$element} {	
 border: 1px solid $line;
 @include border-radius(10px);
@@ -184,7 +184,15 @@ background:#FFF;
 .black #{$element} {
 	border: 1px solid $darkest;
 }
-} // Close MQ
+
+
+@include media($mob...){ 
+
+.sub-page #wrapper #{$element} {
+border:none;	
+}
+
+}
 
 
 @include media($fab...){ 
@@ -213,12 +221,12 @@ border-right: 1px solid $darkest;
 // Combo
 // ===============================================
 
-@mixin layouts-tapazine-combo($element: '.layouts-tapazine', $role: $role) {
+@mixin layouts-tapazine-combo($element: '.layouts-tapazine', $role: $role, $tick: false, $uimob: true, $num:false) {
 #{$element} {
 
 }
 	@include layouts-tapazine-layout($element: $element);
 	@include layouts-tapazine-grid-r($element: $element);
-	@include layouts-tapazine-style($element: $element, $role: $role);
+	@include layouts-tapazine-style($element: $element, $role: $role, $tick: $tick, $uimob: $uimob, $num:$num);
 	
 }

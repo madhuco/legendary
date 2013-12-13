@@ -265,7 +265,7 @@ height:100%;
 		
 	} //Close Element
 	
-		@include ui-taplist($element: #{$element}, $color: $default, $arrow-color: $lightest) ;	
+		@include ui-taplist($element: #{$element}, $color: $default, $ui-arrow-color: $lightest) ;	
 	
 	} //Close MQ
 

@@ -163,10 +163,36 @@ color: $darker;
 .unit-intro {
 @extend %t-pane-text;
 @extend %vr-pane-text;	
-color: $default;
+color: $lighter;
 }
 } // Close $element
 
+
+@include media($mob...){ 
+#{$element} {
+.unit:nth-child(n) {
+padding:0;
+margin: 10px auto;
+border-bottom: 1px solid $scratch;	
+position:relative;
+margin-right:-15px;
+padding-right:15px;
+}
+
+.unit:after {
+@include icon($icon-chevron-right);
+float:right;
+position:absolute;
+right:0;
+bottom:0;
+line-height:1em;
+color: $ui-arrow-color;
+font-size:1em;
+top:0;	
+}
+
+} //Element
+} //Mob
 
 
 } // Close $Mixin
