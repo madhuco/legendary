@@ -9,7 +9,7 @@ $role: false !default;
 
 
 #{$element} {
-min-height:400px;
+
 }
 
 #{$element} .unit {
@@ -22,7 +22,9 @@ display:block;
 
 }
 
+}
 
+@include media($tabplus...){ 
 
 #{$element} > .content-follower {
 	height:100%;
@@ -33,9 +35,12 @@ display:block;
 height:100%;
 }
 
-
+#{$element} {
+min-height:400px;
+}
 
 }
+
 
 .ltie8 #wrapper #{$element} .unit-row-1 {
 display:block;	
@@ -105,9 +110,6 @@ padding-right:4%;
 @extend %vr-breather;
 }
 
-> .content-follower ul {	
-@extend %vr-section-inside-top;
-}
 
 @if $role == false {
 .unit-title {
@@ -211,7 +213,16 @@ border-right: 1px solid $line;
 border-right: 1px solid $darkest;
 }
 
+#{$element} > .content-follower ul {	
+@include vr-section-inside-top-desk;
+	goesi:green;
 }
+
+
+
+}
+
+
 
 
 } //Close Mixin

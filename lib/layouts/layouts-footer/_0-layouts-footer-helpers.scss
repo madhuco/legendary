@@ -4,7 +4,7 @@ $footer-social: html !default;
 // Footer: Layout
 // ===============================================
 
-@mixin layouts-footer-layout($element: '.layout-footer', $extra: false, $padsticky: true) {
+@mixin layouts-footer-layout($element: '.layout-footer', $extra: false, $padsticky: true, $desksticky: true) {
 	
 /* ***************************************** */
 /* Layouts Footer: Grid */
@@ -19,7 +19,7 @@ $footer-social: html !default;
 @include media($pads...){ 
 
 .wrapper {
-padding-bottom:50px;	
+padding-bottom:150px;	
 }
 
 
@@ -41,6 +41,9 @@ padding-bottom:50px;
 	}
 
 } //Close MQ
+
+
+
 
 
 

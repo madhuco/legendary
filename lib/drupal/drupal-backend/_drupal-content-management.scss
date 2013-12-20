@@ -46,3 +46,27 @@ clear:both;
 	}
 
 
+/* ***************************************** */
+/*  Node Add Page (where the user selects a content type)*/
+/* ***************************************** */
+
+.page-node-add .node-type-list li {
+@extend %vr-section;	
+}
+
+
+@include ui-taplist('.page-node-add .node-type-list');
+
+.page-node-add .node-type-list ul {
+border: 1px $scratch solid;
+@include border-radius(10px);	
+}
+
+.page-node-add .node-type-list li a{
+color: $darkest;
+}
+
+
+.page-node-add .node-type-list li p {
+color: $lightest;
+}

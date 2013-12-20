@@ -28,6 +28,7 @@ margin-bottom: 40px;
 	#{$element}  {
 	@include span-columns(12 omega, 12);
 	text-align:center;
+	width:auto;
 	}
 
 .intro-duo#{$element}  {

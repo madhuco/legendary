@@ -32,7 +32,7 @@ display:block;
 	
 	
 
-[class*="tap-btn"] {
+a[class*="tap-btn"] {
 	      text-align: left;
 	 @include border-radius(5px);
 	 @include box-sizing(border-box);
@@ -44,28 +44,29 @@ position:relative;
 }
 
 
-[class*="btn"] {
+a[class*="btn"]  {
 padding:15px;
 @extend %t-ui-navigation; 
 }
 
-[class*="tap-btn"].close:after {
+a[class*="tap-btn"].close:after {
+		content: "Close \f05c";
 		@include icon($icon-remove-circle);	
 		font-size: 13px;
 		content: "Close \f05c";
 		width:4em;
-
+		
 	}
 	
 	
-[class*="tap-btn"].close {
+a[class*="tap-btn"].close {
 	font-size:0;	
 	}
 
 
 	
 	
-	[class*="tap-btn-menu"]:after  {
+a[class*="tap-btn-menu"]:after  {
 		@include icon($icon-reorder);	
 		margin-left: 5px;
 	}

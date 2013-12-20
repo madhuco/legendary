@@ -24,8 +24,22 @@
 	.unit:nth-child(3n) {
 		@include omega;
 	}
+			
 	
 } // Close $element
+
+.ltie8 #{$element} .unit-row-3,
+.ltie8 #{$element} .unit-row-6,
+.ltie8 #{$element} .unit-row-9,
+.ltie8 #{$element} .unit-row-12,
+.ltie8 #{$element} .unit-row-15,
+.ltie8 #{$element} .unit-row-18  
+  {
+		@include omega;
+}
+
+
+
 } // Close $Mixin
 
 

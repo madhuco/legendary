@@ -1,7 +1,10 @@
 $highlighted: false !default; 
 
-
 @mixin typeface-light {
+	font-family: 'EauDouceSansLight', Arial, Helvetica, sans-serif;
+}
+
+@mixin typeface-light-italics {
 	font-family: 'EauDouceSansLight', Arial, Helvetica, sans-serif;
 }
 
@@ -9,16 +12,27 @@ $highlighted: false !default;
 	font-family: 'EauDouceSansRegular', Arial, Helvetica, sans-serif;
 }
 
-
+@mixin typeface-regular-italics {
+	font-family: 'EauDouceSansRegular', Arial, Helvetica, sans-serif;
+	font-style:italic;
+}
 
 @mixin typeface-medium {
 	font-family: 'EauDouceSansMedium', Arial, Helvetica, sans-serif;
 }
 
-
+@mixin typeface-medium-italics {
+	font-family: 'EauDouceSansMedium', Arial, Helvetica, sans-serif;
+	font-style:italic;
+}
 
 @mixin typeface-bold {
 	font-family: 'EauDouceSansBold', Arial, Helvetica, sans-serif;
+}
+
+@mixin typeface-bold-italics {
+	font-family: 'EauDouceSansBold', Arial, Helvetica, sans-serif;
+	font-style:italic;
 }
 
 
@@ -48,11 +62,11 @@ $c-secondary-switch: $c-switch !default;
 $c-accent-switch: $c-switch !default;
  
 
-/* ***************************************** */
-/* Colour Backgrounds Packages */
-/* ***************************************** */
+// ***************************************** */
+// Colour Backgrounds Packages */
+// ***************************************** */
 
-/* Primary Colour */
+// Primary Colour */
 
 @mixin bgcolor-flat-primary($c-primary: $c-primary) {
 	background-color: $c-primary;
@@ -135,7 +149,7 @@ $c-accent-switch: $c-switch !default;
 }
 
 
-/* secondary Colour */
+// secondary Colour */
 
 @mixin bgcolor-flat-secondary($c-secondary: $c-secondary) {
 	background-color: $c-secondary;
@@ -218,7 +232,7 @@ $c-accent-switch: $c-switch !default;
 }
 
 
-/* accent Colour */
+// accent Colour */
 
 @mixin bgcolor-flat-accent($c-accent: $c-accent) {
 	background-color: $c-accent;
@@ -304,9 +318,9 @@ $c-accent-switch: $c-switch !default;
 
 
 
-/* ***************************************** */
-/* Full Background */
-/* ***************************************** */
+// ***************************************** */
+// Full Background */
+// ***************************************** */
 @mixin bg-full-width {
 position: relative;
 margin:0 -9999px;

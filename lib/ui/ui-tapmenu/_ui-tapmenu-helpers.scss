@@ -102,7 +102,7 @@ bottom:0;
 
 @if $number == true {
 
-@include media($portables){ 
+@include media($portables...){ 
 
 #{$number-element} { 
  li a:before {

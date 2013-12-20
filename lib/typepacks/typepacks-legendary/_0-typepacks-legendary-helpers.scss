@@ -110,6 +110,7 @@ margin-top:10px;
 	@extend %vr-breather;
 	@extend %t-cta-prompt;
 	display: block;
+	margin-bottom:5px;
 	}
 	
 	a {
@@ -179,5 +180,31 @@ p, label, a, textarea, input[type="text"] {
 a {
 text-decoration: none;	
 }
+
+
+.region-content .unit-txt {
+	
+	strong {
+	@include typeface-medium;
+	color: $darkest;	
+	}
+	
+	em {
+	@include typeface-regular-italics;
+	color: $lighter;	
+	}
+	
+	em strong, strong em {
+	@include typeface-medium-italics;
+	color: $darkest;
+		goesi:green;
+	}
+	
+	pre {
+	font-family:"Courier New", Courier, monospace;	
+	}
+	
+	
+} //Close .region-content .unit-txt
 
 } //Close Main Mixin

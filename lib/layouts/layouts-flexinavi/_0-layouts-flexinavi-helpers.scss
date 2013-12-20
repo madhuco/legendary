@@ -27,7 +27,10 @@ display:table-cell;
 } //Close $element
 
 		 
-
+.ltie7 #{$element} .main li {
+	float:left;
+	margin-left:10px;
+}
 	
 @include media($portables...){ 
 	#{$element} .main  {

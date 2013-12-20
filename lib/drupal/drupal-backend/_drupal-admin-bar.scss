@@ -114,3 +114,10 @@ margin: 0 4px;
 	font-size:0;
 	}	
 }
+
+
+#adminbar.emptybar,
+.usergroup-anonymous-user #sidr-wrapper-0 {
+display:none !important;	
+}
+
