@@ -37,7 +37,6 @@ a[class*="tap-btn"] {
 	 @include border-radius(5px);
 	 @include box-sizing(border-box);
 	@include typeface-regular;	
-	@include rem(margin, 0 20px);
 @include rem(padding-right, 50px);
 position:relative;
 

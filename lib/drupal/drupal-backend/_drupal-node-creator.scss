@@ -212,11 +212,14 @@ margin-top:20px;
 	border-bottom: 1px $lightest solid;
 	}
 	
-.field-type-entityreference  .form-wrapper   .form-wrapper  {
-			border-bottom: 1px $lightest solid;
+	.field-type-entityreference  .form-wrapper   .form-wrapper  {
+	border-bottom: 1px $lightest solid;
 	}
 	
-	
+	.field-type-entityreference  .form-wrapper   .form-wrapper:last-of-type  {
+	border-bottom: 0 transparent solid;
+	}
+		
 	.form-actions.form-wrapper {
 	border-bottom: 0 transparent solid;	
 	}
@@ -280,11 +283,30 @@ margin-top:20px;
 /* ***************************************** */
 /* Speicific Action Buttons  */
 /* ***************************************** */
-		#edit-field-content-units-und-actions input {
-@extend %bonbon;
+
+@mixin drupal-raised-btn {
+// @extend %bonbon;
+@include  bonbon(#9ed55d);
 border: 1px #817d81 solid;
 border-top-color: #b8b8b8;	
 margin-right:10px;
+}
+
+
+#edit-field-content-units-und-actions input {
+	@include drupal-raised-btn;
+}
+
+
+input[type="submit"].ief-entity-submit.form-submit.ajax-processed {
+	@include drupal-raised-btn;
+}
+
+input[value="Add new Content Units"] {
+	@include drupal-raised-btn;
+	background:#9ed55d;
+	color:inherit;
+	
 }
 
 
@@ -294,16 +316,52 @@ margin-right:10px;
 }
 
 
+/* ***************************************** */
+/*  Advanced Image Options */
+/* ***************************************** */
+
+
+.img-adv {
+display:none;	
+background: $offwhite;
+padding:10px;
+@include box-sizing(border-box);
+}
 	
+	
+.field-type-entityreference  .form-wrapper .field-name-field-body-image.form-wrapper {
+border-bottom:0;	
+}
+
+.ief-row-form	.cta-sample-custom {
+		display:none;	
+		background: $offwhite;
+		}
+		
+		
+.ief-row-form .field-type-entityreference .form-wrapper .cta-sample-custom .form-wrapper  {
+		border-bottom:0;	
+		}
+		
+	.ief-row-form .field-name-field-call-to-action-setting.form-wrapper	{
+			border-bottom:0;	
+			border-top: 1px solid $scratch;
+	}
+		
 		
 			
 } //Close $node-creator
 
 .node-creator #edit-save-edit	{
-display:none;	
+// display:none;	
 }
 
+.node-creator .cta-intro.form-wrapper {
+		@include span-columns(9 omega, 9);	
+	}
+
 @include media($desk...){ 
+			
 	.node-creator .cta-intro .field-name-field-call-to-action-setting {
 	@include span-columns(3, 9);
 	}
@@ -312,4 +370,37 @@ display:none;
 	@include span-columns(6 omega, 9);		
 	}
 	
+}
+
+
+.node-creator.sub-page .wrapper > div {
+	display:block;
+}
+
+
+.node-creator .edit-footer {
+	margin-top:0;
+	padding-top:0;
+	text-align:center;
+	margin-bottom: 120px;
+}
+
+
+@include media($portables...){ 
+
+.node-creator.sub-page .edit-header {
+	display:none;
+}
+
+.node-creator.sub-page .edit-footer #edit-actions {
+	margin-top:0;
+	padding-top:0;
+	text-align:center;
+}
+
+body.node-creator #wrapper .tap-btn-menu-sideeffects {
+display:none;	
+}
+
+
 }

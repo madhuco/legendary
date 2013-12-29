@@ -42,14 +42,14 @@
 	
 	
 	%vr-section-bottom {
-	@include vr-section-inside-bottom-fab;
+	@include vr-section-bottom-fab;
 	}
 	
 
 
 
 %vr-section-box {
-	@include vr-section-box-top-fab;
+	@include vr-section-box-fab;
 }
 
 %vr-section-box-top {

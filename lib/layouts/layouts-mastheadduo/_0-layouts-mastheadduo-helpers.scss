@@ -115,7 +115,14 @@ body.sub-page #wrapper #{$element} [class*="btn"] {
 }
 
 body.sub-page #wrapper #{$element}  [class*="btn"].tap-btn-back {
-	display:block;
+	display:inline-block;
+	width:auto;
+	float:left;
+}
+
+
+body #wrapper #{$element} .tap-btn-menu {
+text-align:center;	
 }
 
 }

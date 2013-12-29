@@ -173,6 +173,12 @@ border: 1px solid $scratch;
 @include ui-taplist($element: '.nav-sideeffects-menu ul');
 }
 
+@include media($mini...){ 
+.sidebaractive .tap-btn-menu-sideeffects {
+text-align:center;	
+}
+}
+
 } // Close $Mixin
 	
 // ===============================================

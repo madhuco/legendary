@@ -32,7 +32,7 @@
 			$(this).removeClass("highlighted").removeClass("animated").removeClass("flipInX");
 			$(this).parent().addClass("highlighted").addClass("animated").addClass("flipInX");
 			$(this).addClass("visited");
-			$(".tap-btn-back").remove();
+			$(".masthead .tap-btn-back").remove();
 			$(".masthead").prepend('<a href="#" class="tap-btn tap-btn-back btn" data-title="Back"><b>Back</b></a>');
 		}).eq(0).addClass('selected');
 
@@ -56,7 +56,7 @@
 		$(".taptabs .page").addClass("animated").addClass("bounceOutLeft");
 		setTimeout(function() {
 			$(".taptabs .page").hide();
-			$(".tap-btn-back").remove();
+			$(".masthead .tap-btn-back").remove();
 			$(".taptabs .page").removeClass("animated").removeClass("bounceOutLeft");
 			$("body").removeClass('sub-page');
 		}, 500);

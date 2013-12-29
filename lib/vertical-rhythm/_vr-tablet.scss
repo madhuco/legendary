@@ -45,14 +45,14 @@
 	
 	
 	%vr-section-bottom {
-	@include vr-section-inside-bottom-tab;
+	@include vr-section-bottom-tab;
 	}
 	
 
 
 
 %vr-section-box {
-	@include vr-section-box-top-tab;
+	@include vr-section-box-tab;
 }
 
 %vr-section-box-top {

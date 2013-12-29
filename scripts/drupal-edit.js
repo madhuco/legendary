@@ -1,30 +1,40 @@
 // JavaScript Document
 (function($) {
 
-	function hideAllDivs() {
-		$(".cta-sample").hide();
-	}
+		function handleNewSelection() {
 
-	function handleNewSelection() {
-
-		hideAllDivs();
 
 		switch ($(this).val()) {
 		case 'cta_main':
 			$(".cta-sample-main").show();
+			$(".cta-sample-secondary").hide();
+			$(".cta-sample-custom").hide();
 			break;
 		case 'cta_secondary':
 			$(".cta-sample-secondary").show();
-			break;
+			$(".cta-sample-main").hide();
+			$(".cta-sample-custom").hide();
+				break;
 		case 'cta_custom':
 			$(".cta-sample-custom").show();
-			break;
+			$(".cta-sample-main").hide();
+			$(".cta-sample-secondary").hide();
+				break;
 		case 'cta_none':
-			$(".cta-sample").hide();
-			break;
+			$(".cta-sample-custom").hide();
+			$(".cta-sample-main").hide();
+			$(".cta-sample-secondary").hide();
+				break;
 		}
 	}
 
+
+	$(document).ready(function() {
+		$('.img-adv').hide();
+		$(".cta-sample-main").hide();
+		$(".cta-sample-secondary").hide();
+		$(".cta-sample-custom").hide();
+	});
 
 
 
@@ -40,26 +50,30 @@
 
 
 		//Drupal Call to Action Button
-
-		$("#edit-field-call-to-action-setting-und").change(handleNewSelection);
+		$(".cta-intro .field-name-field-call-to-action-setting select").change(handleNewSelection);
 
 		// Run the event handler once now to ensure everything is as it should be
-		handleNewSelection.apply($("#edit-field-call-to-action-setting-und"));
+		handleNewSelection.apply($(".cta-intro .field-name-field-call-to-action-setting select"));
 
+		//Drupal Image Advanced Options
+		$(".img-adv").hide();
 
-//	$("body").change(function() {
-//		$( '<div class="advance-wrapper"><p><a class="advance-trigger" href="#">Show Advance Image Options</a></p><div class="advance-options">' ).insertBefore( ".field-name-field-image-position" );
-//		$( "</div></div>" ).insertAfter( ".field-name-field-image-bleed" );
-//		
-//		$(".image-advance-options").hide();
-//		
-//		
-//			$('body').on('click', '.advance-trigger', function() {
-//				$(this).parents('.advance-wrapper').find('.advance-options').toggle();
-//			});
-//	}).change();
-
-
+		$('body').on('click', '.img-adv-trigger', function() {
+			$('.img-adv').toggle();
+		});
 
 	});
+
+
+	$(document).change(function() {
+
+		//Drupal Call to Action Button
+		$(".ief-row-form .field-name-field-call-to-action-setting select").change(handleNewSelection);
+
+		// Run the event handler once now to ensure everything is as it should be
+		handleNewSelection.apply($(".ief-row-form .field-name-field-call-to-action-setting select"));
+
+	});
+	
+	
 })(jQuery);

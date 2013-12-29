@@ -113,7 +113,7 @@ margin-top:10px;
 	margin-bottom:5px;
 	}
 	
-	a {
+	a.cta {
 	@extend %t-cta-secondary;	
 	display: inline-block;
 	margin-left: auto;
@@ -197,12 +197,29 @@ text-decoration: none;
 	em strong, strong em {
 	@include typeface-medium-italics;
 	color: $darkest;
-		goesi:green;
 	}
 	
 	pre {
 	font-family:"Courier New", Courier, monospace;	
 	}
+	
+	pre em {
+	font-family:"Courier New", Courier, monospace;
+	font-style:italic;
+	}
+	
+	pre strong {
+	font-family:"Courier New", Courier, monospace;
+	font-weight:bold;
+	}
+
+pre strong em, pre em strong  {
+	font-family:"Courier New", Courier, monospace;
+	font-weight:bold;
+	font-style:italic;
+	}
+		
+	
 	
 	
 } //Close .region-content .unit-txt
