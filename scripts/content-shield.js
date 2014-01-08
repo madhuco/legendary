@@ -13,7 +13,7 @@
 	
 			$('.close').on('click', function() {
 				$(this).parent().removeClass('shield-active');
-				$(this).removeClass('close');
+				// $(this).removeClass('close');
 			});
 
 
