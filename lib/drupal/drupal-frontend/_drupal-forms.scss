@@ -1,0 +1,16 @@
+@include ui-forms('input[type="password"], input[type="text"], input[type="email"]');
+
+input[type="submit"] {
+@include appearance(none);
+@extend %t-body-text;
+}
+
+input[type="submit"] + input[type="submit"] {
+	margin-left:10px;
+}
+
+#edit-submit {
+@include bonbon($c-primary);
+color:#FFF;	
+border:0;
+}

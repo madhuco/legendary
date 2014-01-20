@@ -1,0 +1,80 @@
+/* ***************************************** */
+/* Slideshow */
+/* ***************************************** */
+
+
+@include refineslide;
+
+@include media($fabplus...){ 
+.rs-caption {
+bottom:20px;	
+}
+}
+
+
+@include media($mob...){ 
+
+.front .role-lead-intro {
+	padding-bottom:10px;
+}
+
+.rs-slider  {
+
+	.rs-caption {
+	position:relative;	
+	}
+
+	.slide-leader {
+	text-align:center;
+	}
+	
+	.unit-link {
+	margin-top:10px;	
+	@include typeface-bold;
+	}
+	
+	@include ui-go('.unit-link');
+	
+
+.cta-intro {
+display:none;	
+}
+
+
+} //close rs-slider
+} //Close Mixin
+
+
+@include media($fabplus...){ 
+.rs-slider  {
+	
+	.slide-leader {
+		@include span-columns(6, 12);
+		@include bgcolor-3d-primary;
+		@include border-right-radius(5px);
+		color:#FFF;
+	}
+	
+	.slide-leader * {
+		text-align:left;
+		padding:0 10px;
+	}
+	
+	.slide-leader .unit-link {
+	display:none;	
+	}
+
+} //close rs-slider
+} //Close MQ
+
+
+@include media($desk...){ 
+
+.rs-slider  {
+	margin-bottom:-2px;
+}
+}
+
+.lteie8 .rs-slider > li {
+margin-bottom:-40px;	
+}

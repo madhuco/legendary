@@ -49,18 +49,13 @@ padding:15px;
 }
 
 a[class*="tap-btn"].close:after {
-		content: "Close \f05c";
 		@include icon($icon-remove-circle);	
 		font-size: 13px;
-		content: "Close \f05c";
 		width:4em;
-		
+		padding-left:12px;
 	}
 	
-	
-a[class*="tap-btn"].close {
-	font-size:0;	
-	}
+
 
 
 	

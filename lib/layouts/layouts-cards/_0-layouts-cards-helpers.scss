@@ -140,7 +140,7 @@ z-index:999;
 @include omega;
 } 
 
-.ltie8 .cards-back figure:first-child + figure, .ltie8 .cards-back figure:first-child + figure + figure + figure {
+.lteie8 .cards-back figure:first-child + figure, .lteie8 .cards-back figure:first-child + figure + figure + figure {
 	@include omega;
 }
 

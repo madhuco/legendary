@@ -20,7 +20,7 @@
 
 @include styles-minimal-buttons('.masthead [class*="tap-btn"]');
 
-.role-lead-intro {
+.role-lead-intro.unit-leader {
 @include bg-full-width;
 @include bgcolor-3d-secondary();
 }

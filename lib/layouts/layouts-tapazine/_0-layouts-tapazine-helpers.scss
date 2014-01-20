@@ -42,7 +42,7 @@ min-height:400px;
 }
 
 
-.ltie8 #wrapper #{$element} .unit-row-1 {
+.lteie8 #wrapper #{$element} .unit-row-1 {
 display:block;	
 	
 }
@@ -151,7 +151,7 @@ border-bottom: 1px solid $darkest;
 
 #{$element}  > .content-follower ul {
 	padding-top:0;
-	background:#FFF;
+//	background:#FFF;
 	@include border-radius(10px);
 }
 
@@ -199,8 +199,8 @@ border:none;
 
 @include media($fab...){ 
 .sub-page #{$element} {	
-border: 0;
-background:transparent;
+//border: 0;
+//background:transparent;
 }
 }
 

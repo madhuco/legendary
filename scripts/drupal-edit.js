@@ -61,6 +61,8 @@
 		$('body').on('click', '.img-adv-trigger', function() {
 			$('.img-adv').toggle();
 		});
+		
+
 
 	});
 

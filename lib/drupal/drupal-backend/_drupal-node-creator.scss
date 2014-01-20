@@ -124,7 +124,6 @@ font-weight:bold;
 /* ***************************************** */
 /*  Main Form Action Buttons */
 /* ***************************************** */	
-	
 
 #edit-submit {
 @extend .ad-btn;
@@ -147,29 +146,59 @@ clear:both;
 text-align:right;
 }
 
-@include media($mob...){ 
-#edit-actions {
-text-align:center;
-}
-}
-	
+
 .edit-header #edit-save-edit,
 .edit-header #edit-delete {
 display:none;	
 }
 
-@include media($mob...){ 
-.edit-header {
-text-align:center;	
-}
-}	
-	
 
 .edit-footer {
 clear:both;
 @extend %vr-spacer-box;	
 }
 
+.edit-header {
+position:relative;	
+}
+
+@include ui-link($element: '.cancel', $ui-link-back: true);	
+
+@include media($mob-lplus...){ 
+.cancel {
+position:absolute;
+top:50px;	
+}
+}
+
+
+@include media($mob-p...){ 
+.edit-header {
+text-align:center;
+margin-top:20px;
+}
+
+
+.edit-header .cancel {
+margin-bottom:10px;
+display:block;	
+}
+
+.edit-header #edit-actions {
+text-align:center;
+}
+
+.edit-header .form-wrapper {
+padding-bottom:0;
+padding-top:0;
+margin-top:10px;
+}
+
+.edit-footer #edit-actions {
+text-align:center;
+}
+
+}
 
 /* ***************************************** */
 /*  Manual Crop */
@@ -189,6 +218,21 @@ overflow:hidden;
 
 .manualcrop-style-thumb {
 margin-top:20px;	
+min-height:180px;
+}
+
+.manualcrop-style-thumb strong{
+min-height:50px;
+@include rem(font-size, 12px);
+@include rem(line-height, 14px);
+}
+
+.manualcrop-style-thumb, .manualcrop-style-thumb:hover, .manualcrop-style-thumb:focus {
+margin-right:2%;	
+}
+
+.manualcrop-thumblist {
+overflow:hidden;	
 }
 
 .contextual-links-region {
@@ -249,12 +293,37 @@ margin-top:20px;
 /*  Entity Reference Table*/
 /* ***************************************** */
 
+.field-type-entityreference	.tabledrag-toggle-weight-wrapper {
+		display:none;	
+		}
+
 		
 	.ief-entity-table {
 		width:100%;
+					
+		thead {
+		display:none;	
+		}
 		
 	.inline-entity-form-content_units-title {
 	@extend %t-body-label;	
+	}
+	
+	tr.even {
+	background: $offwhite;	
+	}
+	
+	tr.odd {
+	background: #ece7e7;		
+	}
+	
+		
+	div[id*="form-actions"] {
+	background:	#c4c4c4;
+	border:1px solid $darker;
+	text-align:center;
+	@include border-radius(10px);
+	@extend %vr-section-box;	
 	}
 	
 /* ***************************************** */
@@ -272,6 +341,14 @@ margin-top:20px;
 		
 	} //Close .ief-entity-table
 	
+	
+	.container-inline.form-wrapper {
+	background: $offwhite-alt;	
+	text-align:center;
+	@include border-radius(10px);	
+	border:1px solid $lighter;
+	@extend %vr-section-box;
+	}
 	
 
 /* ***************************************** */
@@ -347,6 +424,9 @@ border-bottom:0;
 			border-bottom:0;	
 			border-top: 1px solid $scratch;
 	}
+		
+		
+		
 		
 		
 			

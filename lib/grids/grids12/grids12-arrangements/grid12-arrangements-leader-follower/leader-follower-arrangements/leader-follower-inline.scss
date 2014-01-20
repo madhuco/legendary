@@ -1,0 +1,80 @@
+@mixin leader-follower-inline($element: '.leader-follower-inline' ) {
+/* ***************************************** */
+/*  Layotus: leader-follower-inline 
+Displays follower then leader with equal widths (e.g. two column layout)  */
+/* ***************************************** */
+
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	}
+	
+#{$element}	> .content-leader {
+		width:50%;
+		height:auto;	
+	}
+	
+	#{$element}.inline-left	> .content-leader {
+	float:left;
+	margin-right:3%;
+	}
+	
+	#{$element}.inline-right	> .content-leader {
+	float:right;
+	}
+	
+	
+	
+#{$element}	> .content-follower {
+width:100%;
+	}
+	
+
+} //$Close Mixin
+
+
+@mixin leader-follower-inline-mob-p($element: '.leader-follower-inline-mob-p', $r: false ) {
+
+	@if $r == false {
+	@include leader-follower-inline-mob-p($element: $element);
+	@include span-columns(12 omega, 12);		
+
+	}
+#{$element}	> .content-leader {
+		width:100%;	
+		margin-right:0;
+		margin-bottom:3%;
+	}
+	
+} //Close Mixin 
+
+@mixin leader-follower-inline-mob-l($element: '.leader-follower-inline-mob-l' ) {
+	@include leader-follower-inline-mob-p($element: $element);
+}
+
+@mixin leader-follower-inline-fab($element: '.leader-follower-inline-fab' ) {
+	@include leader-follower-mob-p($element: $element);
+}
+
+@mixin leader-follower-inline-tab($element: '.leader-follower-inline-tab' ) {
+	@include leader-follower-inline($element: $element);
+
+} //Close Mixin
+
+@mixin leader-follower-inline-desk($element: '.leader-follower-inline-desk' ) {
+	@include leader-follower-inline($element: $element);
+}
+
+
+@mixin leader-follower-inline-r($element: '.leader-follower-inline', $r: true) {
+
+@include leader-follower-inline($element: $element);
+
+@include media($mob...){ 
+@include leader-follower-inline-mob-p($element: $element, $r: $r);
+}
+
+@include media($fabplus...){ 
+@include leader-follower-inline($element: $element);
+} //Close fab
+
+} //close r

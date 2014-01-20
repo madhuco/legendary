@@ -17,7 +17,7 @@
 	color: $default;
 }
  
- .unit-intro {
+ .unit-intro,  .unit-intro p {
    @extend %t-intro-2;
    @extend %vr-intro-2;
    @extend %typeface-light;
@@ -27,11 +27,38 @@
  
  .unit-txt {
    @extend %t-body-text;
-   @extend %txtcolor-darkest;
+   @extend %txtcolor-default;
    @extend %vr-body-text;
 }
 
+.unit-txt li {
+margin-bottom:10px;	
+}
+
+.unit-txt ul, .unit-txt ol
+{
+list-style-position:outside;
+}
+
+.unit-txt ol
+{
+list-style:decimal;
+margin-left:20px;
+}
+
+
+
+
 } //Close .role-content
+
+
+
+.black .role-content {
+	 .unit-title {
+		   @extend %txtcolor-lightest; 
+	 }
+}
+
 
 
  .role-lead-intro {
@@ -39,7 +66,7 @@
  }
 
 
- .role-lead-intro.unit-leader {
+ .role-lead-intro {
  
  .unit-title {
 @extend %t-title-2;
@@ -49,7 +76,7 @@
  @extend %vr-section-top;
 }
  
- .unit-intro {
+ .unit-intro,  .unit-intro p  {
  @extend %t-intro-2;
  @extend %vr-intro-2;
  @extend %typeface-light;
@@ -57,24 +84,38 @@
  text-align:center;
 }
 
+} //Close .role-lead-intro
+
+
+.black .role-lead-intro {
+ 
+ .unit-title {
+ @extend %txtcolor-lightest;
+}
+ 
+ .unit-intro,  .unit-intro p {
+ @extend %txtcolor-darker;
+}
 
 } //Close .role-lead-intro
 
 
+
+
 @include media($tab...){ 
- .role-lead-intro.unit-leader .unit-title {
+ .role-lead-intro .unit-title {
 padding-top:0;
  }
 }
 
 @include media($desk...){ 
- .role-lead-intro.unit-leader .unit-title {
+ .role-lead-intro .unit-title {
 @include vr-title-2-desk;
  }
 }
 
 @include media($fab...){ 
- .role-lead-intro.unit-leader .unit-title {
+ .role-lead-intro .unit-title {
 @include vr-title-2-fab;
  }
 }
@@ -142,6 +183,13 @@ margin-top:10px;
 	
 }
 
+.role-tablist-large {
+.unit-title {
+	color: $lightest;
+}
+}
+
+
 .role-edit {
 
 	.unit-title {
@@ -167,11 +215,11 @@ margin-top:10px;
 } //Close .role-edit
 
 
-body {
+.wrapper {
 p, label, a, textarea, input[type="text"] {
 	@extend %t-body-text;
 }
-} //Close Body
+} //Close .wrapper
 
 .wrapper div {
 	@extend %t-body-text;
@@ -219,9 +267,27 @@ pre strong em, pre em strong  {
 	font-style:italic;
 	}
 		
-	
-	
-	
 } //Close .region-content .unit-txt
+
+
+.region-content .unit-txt {
+	
+	strong {
+	color: $lightest;	
+	}
+	
+	em {
+	color: $darker;	
+	}
+	
+	em strong, strong em {
+	color: $lightest;
+	}
+			
+} //Close .region-content .unit-txt
+
+
+
+
 
 } //Close Main Mixin

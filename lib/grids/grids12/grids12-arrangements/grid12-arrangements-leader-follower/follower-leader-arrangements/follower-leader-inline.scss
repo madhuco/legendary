@@ -1,0 +1,79 @@
+@mixin follower-leader-inline($element: '.follower-leader-inline' ) {
+/* ***************************************** */
+/*  Layotus: Follower-Leader-inline 
+Displays content in a magazine style  */
+/* ***************************************** */
+
+	#{$element} {
+		@include span-columns(12 omega, 12);		
+	}
+	
+#{$element}	 >	.content-follower > .content-leader {
+		width:50%;
+		height:auto;	
+	}
+	
+	#{$element}.inline-left >	.content-follower > .content-leader {
+	float:left;
+	margin-right:3%;
+	}
+	
+	#{$element}.inline-right  >	.content-follower > .content-leader {
+	float:right;
+	}
+	
+	
+	
+#{$element}	> .content-follower {
+width:100%;
+	}
+
+} //$Close Mixin
+
+
+@mixin follower-leader-inline-mob-p($element: '.follower-leader-inline-mob-p', $r: false ) {
+
+	@if $r == false {
+	@include follower-leader-inline-mob-p($element: $element);
+	@include span-columns(12 omega, 12);		
+
+	}
+#{$element}	 >	.content-follower >  .content-leader {
+		width:100%;	
+		margin-right:0;
+		margin-bottom:3%;
+	}
+	
+} //Close Mixin 
+
+@mixin follower-leader-inline-mob-l($element: '.follower-leader-inline-mob-l' ) {
+	@include follower-leader-inline-mob-p($element: $element);
+}
+
+@mixin follower-leader-inline-fab($element: '.follower-leader-inline-fab' ) {
+	@include follower-leader-mob-p($element: $element);
+}
+
+@mixin follower-leader-inline-tab($element: '.follower-leader-inline-tab' ) {
+	@include follower-leader-inline($element: $element);
+
+} //Close Mixin
+
+@mixin follower-leader-inline-desk($element: '.follower-leader-inline-desk' ) {
+	@include follower-leader-inline($element: $element);
+}
+
+
+@mixin follower-leader-inline-r($element: '.follower-leader-inline', $r: true) {
+
+@include follower-leader-inline($element: $element);
+
+@include media($mob...){ 
+@include follower-leader-inline-mob-p($element: $element, $r: $r);
+}
+
+@include media($fabplus...){ 
+@include follower-leader-inline($element: $element);
+} //Close fab
+
+} //close r
