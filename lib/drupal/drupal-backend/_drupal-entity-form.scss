@@ -4,7 +4,7 @@
 
 .page-entityform-submissions {
 	
-@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-form: true);
+@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-pill: true);
 	
 
 	table {
@@ -76,7 +76,7 @@ clear:both;
 padding-top:20px;	
 }
 
-@include ui-link($element: '.menu-name-menu-submission-forms a', $ui-link-override: true, $ui-link-back:true);
+@include ui-link($element: '.menu-name-menu-submission-forms a', $ui-link-override: true, $ui-link-arrow:back);
 
 		
 }

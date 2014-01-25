@@ -1,5 +1,12 @@
 @mixin typepacks-legendary($element: '.typepacks-legendary', $black: false, $drupal: true) {
   
+  * {
+	-webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;  
+  }
+  
  .role-content {
  
  .unit-title {
@@ -209,9 +216,12 @@ margin-top:10px;
 	}
 	
 	label {
-	color: $darkest;	
+	color: $darker;	
+	@extend %vr-spacer-bottom;
+	@include typeface-bold;	
 	}
-
+	
+	
 } //Close .role-edit
 
 

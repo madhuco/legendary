@@ -43,7 +43,7 @@ position:relative;
 }
 
 
-a[class*="btn"]  {
+a[class*="tap-btn"]  {
 padding:15px;
 @extend %t-ui-navigation; 
 }

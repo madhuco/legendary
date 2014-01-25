@@ -65,7 +65,11 @@ z-index: 99999999;
 display: block;
 position: absolute;
 top: 0;
-left: 0;
+left: -15px;
+}
+
+a[class*="tap-btn"].close:after {
+font-size:40px;	
 }
 
 
@@ -74,7 +78,12 @@ left: 0;
 
 
 
-
+@include media($mob...){ 
+#{$element} .close  {
+top: -5px;
+left: -25px;
+}
+}
 
 
 } // Close $Mixin
@@ -106,6 +115,7 @@ left: 0;
 #{$element} {
 .content-leader {
 	@include span-columns(12 omega,12);
+	text-align:center;
 }
 
 .content-follower {
@@ -124,7 +134,7 @@ left: 0;
 
 
 @mixin layouts-addtocart-grid-fab($element: '.layouts-addtocart-grid-fab') {
-	@include layouts-addtocart-grid($element:$element);
+	@include layouts-addtocart-mob-p($element:$element);
 }
 
 
@@ -153,9 +163,11 @@ left: 0;
 	
 @include layouts-addtocart-grid($element: $element);
 	
-@include layouts-addtocart-grid-desk($element: $element);
+	@include media($tabplus...){ 
+	@include layouts-addtocart-grid-desk($element: $element);
+	}
 
-@include media($mob-p...){ 
+@include media($portables...){ 
 @include layouts-addtocart-grid-mob-p($element: $element);
 }	
 
@@ -169,7 +181,7 @@ left: 0;
 @mixin layouts-addtocart-style($element: '.layouts-addtocart-style') {
 
 #{$element} {
-@include scheme-purity();
+@include scheme-purity($hover:false);
 	@extend %vr-bounding;
 
 .title {
@@ -203,13 +215,14 @@ clear:both;
 
 .cta {
 		@extend %t-cta-secondary;
-		display:block;
-		clear:both;
 		width:12em;
 		text-align:center;
 		@include box-sizing(border-box);
 		@extend %vr-spacer-inside;
 		@extend %vr-section;
+		display:block;
+		margin:20px auto;
+		clear:both;
 }
 
 .cta-muted {
@@ -221,6 +234,13 @@ clear:both;
 	border:1px solid $scratch;
 	@include border-radius(10px);
 	@extend %vr-breather;
+	margin:10px auto;
+}
+
+
+.cta-outline:hover {
+	background: $offwhite;
+	border: 1px solid $darkest;
 }
 
 
@@ -339,7 +359,7 @@ top:10px;
 }
 
 
-} //Close Element
+} //Close Element + arrow
 } //Close MQ
 
 
@@ -389,6 +409,7 @@ z-index: 5600;
 left:19%;
 }
 }
+
 
 
 } // Close $Mixin

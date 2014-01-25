@@ -119,6 +119,12 @@ filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr
 @include rem(padding-right, 30px);	
 font-weight:bold;
 }
+
+@include ui-link($element: '.action-link', $ui-link-arrow: false, $ui-link-pill: true);
+
+.action-link {
+margin-bottom:20px;	
+}
 	
 	
 /* ***************************************** */
@@ -162,7 +168,7 @@ clear:both;
 position:relative;	
 }
 
-@include ui-link($element: '.cancel', $ui-link-back: true);	
+@include ui-link($element: '.cancel', $ui-link-arrow: back);	
 
 @include media($mob-lplus...){ 
 .cancel {
@@ -239,9 +245,12 @@ overflow:hidden;
 	clear:both;
 }
 		
-	label {
-		@extend %vr-spacer-bottom;
-	}
+
+.form-item .form-item {
+color:$default;
+@include typeface-regular;	
+}
+
 	
 /* ***************************************** */
 /*  Form Wrapper */
@@ -354,7 +363,7 @@ overflow:hidden;
 /* ***************************************** */
 /* Action Links   */
 /* ***************************************** */
-@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-form: true);
+@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-pill: true);
 	
 		
 /* ***************************************** */
@@ -425,7 +434,11 @@ border-bottom:0;
 			border-top: 1px solid $scratch;
 	}
 		
-		
+	
+	
+	.ief-row-form .field-type-image	{
+	margin-bottom:0;	
+	}
 		
 		
 		
@@ -439,6 +452,9 @@ border-bottom:0;
 .node-creator .cta-intro.form-wrapper {
 		@include span-columns(9 omega, 9);	
 	}
+	
+	
+	
 
 @include media($desk...){ 
 			
@@ -448,6 +464,20 @@ border-bottom:0;
 	
 	.node-creator .cta-intro .cta-sample {
 	@include span-columns(6 omega, 9);		
+	}
+	
+}
+
+
+
+@include media($devices...){ 
+			
+	.node-creator .cta-intro .field-name-field-call-to-action-setting {
+	padding-bottom:0;
+	}
+	
+	.node-creator .cta-intro .cta-sample {
+padding-top:10px;
 	}
 	
 }
@@ -484,3 +514,23 @@ display:none;
 
 
 }
+
+
+/* ***************************************** */
+/*  Hide Text Formats */
+/* ***************************************** */
+
+
+.node-creator .filter-wrapper {
+display:none;	
+}
+
+.node-creator .field-name-field-body-text .filter-wrapper {
+display:block;	
+}
+
+
+.usergroup-administrator.node-creator .filter-wrapper {
+display:block;	
+} 
+

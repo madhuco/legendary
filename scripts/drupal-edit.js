@@ -43,7 +43,7 @@
 		"use strict";
 
 		//Drupal Manual Crop
-		$('body').on('click', '.manualcrop-thumblist .ad-btn', function() {
+		$('body').on('click', '.manualcrop-thumblist .action-link', function() {
 			$('.crop-image-display').toggle();
 			$('.manualcrop-thumblist').toggleClass('border');
 		});

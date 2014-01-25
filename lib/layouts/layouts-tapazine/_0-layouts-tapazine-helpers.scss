@@ -104,6 +104,8 @@ padding-right:4%;
 #{$element}  {	
 
 @include ui-taplist('> .content-follower', $tick: $tick, $uimob: $uimob, $num: $num);
+@extend %vr-section;
+
 
 > .content-leader {	
 @extend %vr-section;

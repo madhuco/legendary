@@ -1,7 +1,7 @@
 
 .page-admin-content {
 	
-	@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-form: true);
+	@include ui-link($element: 'input[type="submit"]', $ui-link-override: true, $ui-link-pill: true);
 	
 	.unit-title {
 clear:both;

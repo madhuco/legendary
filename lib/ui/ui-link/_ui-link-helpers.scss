@@ -1,4 +1,4 @@
-@mixin ui-link($element: '.ui-link', $color: $link, $ui-link-arrow: true, $ui-link-override: false, $ui-link-form: false, $ui-link-back: false) {
+@mixin ui-link($element: '.ui-link', $color: $link, $ui-link-arrow: true, $ui-link-override: false, $ui-link-pill: false) {
 
 #{$element} {
 /* ***************************************** */
@@ -11,13 +11,13 @@ color: $color;
 color: darken($color, 10%);
 border-bottom: 1px solid darken($color, 10%);	
 
-@if $ui-link-form == true {
+@if $ui-link-pill == true {
 background: $color;
 color:#fff;	
 } //Close If
 } //Close Hover
 
-@if $ui-link-back == true {
+@if $ui-link-arrow == back {
 $ui-link-arrow: false;
 	&:before {
 	@include icon($icon-caret-left);
@@ -41,9 +41,11 @@ background:transparent;
 border:1px solid transparent;	
 }
 
-@if $ui-link-form == true {
+@if $ui-link-pill == true {
 border: 1px solid $color;
 @include border-radius(10px);	
+padding:0.5em;
+display:inline-block;
 }
 
 

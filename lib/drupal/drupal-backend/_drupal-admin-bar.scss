@@ -72,7 +72,7 @@ float:right;
 	
 	#sidr-wrapper-0 a:before {
 	@include icon($icon-reorder);	
-	@extend .unit:before; 
+	font-size:24px;
 	}
 		
 	.unit.editnode a:before {
