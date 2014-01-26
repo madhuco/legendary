@@ -276,11 +276,31 @@ pre strong em, pre em strong  {
 	font-weight:bold;
 	font-style:italic;
 	}
+	
+	
+	h4 {
+	@extend %t-title-4;
+	@extend %vr-title-4;	
+	color: $darker;
+	@include typeface-bold;
+	}
+		
+	h5 {
+	@extend %t-title-5;
+	@extend %vr-title-5;	
+	@include typeface-bold;
+	}
+	
+	p {
+   @extend %t-body-text;
+   @extend %txtcolor-default;
+   @extend %vr-body-text;	
+	}
 		
 } //Close .region-content .unit-txt
 
 
-.region-content .unit-txt {
+.black .region-content .unit-txt {
 	
 	strong {
 	color: $lightest;	
@@ -294,7 +314,7 @@ pre strong em, pre em strong  {
 	color: $lightest;
 	}
 			
-} //Close .region-content .unit-txt
+} //Close .black .region-content .unit-txt
 
 
 
