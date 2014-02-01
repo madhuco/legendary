@@ -14,11 +14,16 @@
 /* ***************************************** */
 /*  Admin Bar */
 /* ***************************************** */
-#adminbar {
+
+@mixin adminbar-style {
 background: #333333;
 box-shadow: inset 0 0 5px 5px #222;
-overflow:hidden;
 border-bottom:1px sold #000;
+}
+
+#adminbar {
+overflow:hidden;
+@include adminbar-style;
 }
 
 .page-node-edit #adminbar {
@@ -92,6 +97,17 @@ float:right;
 	float: left;
 	padding-bottom:5px;
 	border-bottom: 1px solid transparent;	
+	}
+	
+	.gn-menu-main, .gn-menu-main ul {
+	background:transparent;
+	color:inherit;	
+	}
+	
+	
+	.gn-menu-main ul.gn-submenu {
+	@include adminbar-style;
+		goesi:green;
 	}
 	
 		
