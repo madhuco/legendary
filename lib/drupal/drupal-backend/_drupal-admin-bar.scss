@@ -53,7 +53,7 @@ float:right;
 	}
 	
 	.node-id {
-	margin-top: 20px;	
+	margin-top: 26px;	
 	}
 
 	a {
@@ -75,7 +75,8 @@ float:right;
 	margin-right:5px;
 	}
 	
-	#sidr-wrapper-0 a:before {
+	#sidr-wrapper-0 a:before,
+	.admin-menu-trigger:before {
 	@include icon($icon-reorder);	
 	font-size:24px;
 	}
@@ -158,4 +159,22 @@ display:none !important;
 #adminbar .node-id {
 	display:none;
 }
+}
+
+/* ***************************************** */
+/*  Admin Menu */
+/* ***************************************** */
+
+#adminmenu-solo {
+	@include adminbar-style;
+	max-width:320px;
+	
+	a {
+	@extend %t-ui-navigation;	
+	padding: 20px;
+	border-bottom:1px solid #000;
+	display:block;
+	color:#FFF;
+	}
+	
 }
