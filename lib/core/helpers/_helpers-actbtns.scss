@@ -1,0 +1,124 @@
+%actbtns {
+	@include rem(padding, 10px);
+	@include rem(margin-top, 5px);
+	@include rem(margin-bottom, 10px);
+	@include border-radius(5px);
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #9c9c9c;
+	/* Fallback style */
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	@include box-shadow(0 0 0.05em rgba(0, 0, 0, 0.4));
+
+	&:hover {
+		@include box-shadow(0 0 0.1em rgba(0, 0, 0, 0.4));
+	}
+
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}
+
+@mixin actbtns($element: ".act-btns", $extend: false) {
+
+	#{$element} {
+		@extend %actbtns;
+	}
+
+	#{$element}-green {
+
+		@if $extend == true {
+			@extend %actbtns;
+		}
+background-color: #a4b357; // Old browsers
+@include filter-gradient(#a4b357, #75890c, vertical); // IE6-9
+@include background-image(linear-gradient(top, #a4b357 0%,#75890c 100%));
+
+		&:hover {
+background-color: #75890c; // Old browsers
+@include filter-gradient(#75890c, #a4b357, vertical); // IE6-9
+@include background-image(linear-gradient(top, #75890c 0%,#a4b357 100%));
+		}
+
+		&:active {
+			background: #428739;
+		}
+	}
+
+	#{$element}-blue {
+
+		@if $extend == true {
+			@extend %actbtns;
+		}
+		background-color: #7abcff;
+		// Old browsers
+		@include filter-gradient(#7abcff, #4096ee, vertical);
+		// IE6-9
+		@include background-image(linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%));
+
+		&:hover {
+			background-color: #4096ee;
+			// Old browsers
+			@include filter-gradient(#4096ee, #7abcff, vertical);
+			// IE6-9
+			@include background-image(linear-gradient(top, #4096ee 0%, #60abf8 56%, #7abcff 100%));
+		}
+
+		&:active {
+			background: #4477a1;
+		}
+	}
+
+	#{$element}-red {
+
+		@if $extend == true {
+			@extend %actbtns;
+		}
+		background-color: #ff3019;
+		// Old browsers
+		@include filter-gradient(#ff3019, #cf0404, vertical);
+		// IE6-9
+		@include background-image(linear-gradient(top, #ff3019 0%, #cf0404 100%));
+
+		&:hover {
+			background-color: #cf0404;
+			// Old browsers
+			@include filter-gradient(#cf0404, #ff3019, vertical);
+			// IE6-9
+			@include background-image(linear-gradient(top, #cf0404 0%, #ff3019 100%));
+		}
+
+		&:active {
+			background: #D82741;
+		}
+	}
+
+	#{$element}-grey {
+
+		@if $extend == true {
+			@extend %actbtns;
+		}
+		csolor: #333;
+		background: #c5c5c5;
+		@include background-image(linear, left top, left bottom, from(#eaeaea), to(#c5c5c5));
+
+		&:hover {
+			background: #eaeaea;
+			@include background-image(linear, left top, left bottom, from(#c5c5c5), to(#eaeaea));
+		}
+
+		&:active {
+			background: #c5c5c5;
+		}
+	}
+
+	#{$element}-expanded {
+		@include rem(padding-left, 30px);
+		@include rem(padding-right, 30px);
+		font-weight: bold;
+	}
+}

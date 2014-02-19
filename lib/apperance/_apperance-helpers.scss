@@ -318,12 +318,3 @@ $c-accent-switch: $c-switch !default;
 
 
 
-// ***************************************** */
-// Full Background */
-// ***************************************** */
-@mixin bg-full-width {
-position: relative;
-margin:0 -9999px;
-padding:0 9999px;
-z-index: 0;	
-}

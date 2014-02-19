@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@mixin bg-full-width {
+position: relative;
+margin:0 -9999px;
+padding:0 9999px;
+z-index: 0;	
+max-width:100%;
+overflow-x:hidden;
+}
