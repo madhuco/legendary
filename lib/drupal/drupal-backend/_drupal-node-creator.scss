@@ -298,10 +298,6 @@
             }
         }
 
-        .content-cta-second-body {
-            display: none;
-        }
-
         .content-cta-custom-fields {
             display: none;
         }
@@ -314,6 +310,10 @@
             border-bottom: 0;
             margin: 0;
             padding: 0;
+        }
+
+        .cta-edit-active {
+            margin-top: 40px;
         }
     }
     /* ***************************************** */
@@ -331,14 +331,6 @@
             margin-bottom: -30px;
         }
 
-        .field-name-field-enable-second-cta {
-            margin-top: -30px;
-        }
-
-        .cta-edit-active .field-name-field-enable-second-cta {
-            margin-top: 10px;
-        }
-
         @include media($desk...) {
 
             .field-type-list-text {
@@ -349,11 +341,6 @@
                 @include span-columns(6 omega, 9);
             }
 
-            .field-name-field-enable-second-cta {
-                clear: both;
-                text-align: left;
-                padding-bottom: 0;
-            }
         }
 
         @include media($devices...) {

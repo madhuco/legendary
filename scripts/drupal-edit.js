@@ -1,7 +1,7 @@
 // JavaScript Document
 (function($) {
 
-	function handleNewSelectionFirst() {
+	function introctafirst() {
 
 
 		switch ($(this).val()) {
@@ -30,7 +30,7 @@
 	}
 
 
-	function handleNewSelectionSecond() {
+	function introctasecond() {
 
 
 		switch ($(this).val()) {
@@ -59,6 +59,44 @@
 	}
 
 
+	function contentctafirst() {
+
+		switch ($(this).val()) {
+
+			case "cta_custom":
+				$('.ief-row-form .cta-first .content-cta-custom-fields').show();
+				$('.ief-row-form .cta-first').addClass('cta-edit-active');
+				break;
+
+			default:
+				$('.ief-row-form .cta-first .content-cta-custom-fields').hide();
+				$('.ief-row-form .cta-first').removeClass('cta-edit-active');
+				break;
+
+		}
+	}
+
+
+
+	function contentctasecond() {
+
+		switch ($(this).val()) {
+
+			case "second_cta_custom":
+				$('.ief-row-form .cta-second .content-cta-custom-fields').show();
+				$('.ief-row-form .cta-second').addClass('cta-edit-active');
+				break;
+
+			default:
+				$('.ief-row-form .cta-second .content-cta-custom-fields').hide();
+				$('.ief-row-form .cta-second').removeClass('cta-edit-active');
+				break;
+
+		}
+	}
+
+
+
 	$(document).ready(function() {
 
 		"use strict";
@@ -82,24 +120,12 @@
 		$(".cta-sample-secondary").hide();
 		$(".cta-sample-custom").hide();
 
-		$(".cta-first .form-type-select select").change(handleNewSelectionFirst);
-		$(".cta-second .form-type-select select").change(handleNewSelectionSecond);
+		$(".cta-first .form-type-select select").change(introctafirst);
+		$(".cta-second .form-type-select select").change(introctasecond);
 
 		// Run the event handler once now to ensure everything is as it should be
-		handleNewSelectionFirst.apply($(".cta-first .form-type-select select"));
-		handleNewSelectionSecond.apply($(".cta-second .form-type-select select"));
-
-		//Drupal CTA second shield 
-		$('.cta-second-body').hide();
-		$('#edit-field-enable-second-cta-und').change(function() {
-			if ($(this).prop("checked")) {
-				$('.cta-second-body').show();
-				$('.cta-second').addClass("cta-edit-active");
-			} else {
-				$('.cta-second-body').hide();
-				$('.cta-second').removeClass("cta-edit-active");
-			}
-		});
+		introctafirst.apply($(".cta-first .form-type-select select"));
+		introctasecond.apply($(".cta-second .form-type-select select"));
 
 	});
 
@@ -107,47 +133,12 @@
 	$(document).change(function() {
 
 		//Drupal Call to Action Button
-		
-		$(".ief-row-form .field-name-field-call-to-action-setting select").change(function() {
 
-			if ($(this).val() === "cta_custom") {
-				$('.ief-row-form .cta-first .content-cta-custom-fields').show();
-				$('.ief-row-form .cta-first').addClass('cta-edit-active');
-			} else {
-				$('.ief-row-form .cta-first .content-cta-custom-fields').hide();
-				$('.ief-row-form .cta-first').removeClass('cta-edit-active');
-			}
-		});
+		contentctafirst.apply($(".ief-row-form .field-name-field-call-to-action-setting select"));
+		$(".ief-row-form .field-name-field-call-to-action-setting select").change(contentctafirst);
 
-
-
-
-
-		$(".ief-row-form .field-name-field-second-cta-setting select").change(function() {
-
-			if ($(this).val() === "second_cta_custom") {
-				$('.ief-row-form .content-cta-second-body .content-cta-custom-fields').show();
-				$('.ief-row-form .cta-second').addClass('cta-edit-active');
-			} else {
-				$('.ief-row-form .content-cta-second-body .content-cta-custom-fields').hide();
-				$('.ief-row-form .cta-second').removeClass('cta-edit-active');
-			}
-		});
-
-		// Run the event handler once now to ensure everything is as it should be
-		handleNewSelectionFirst.apply($(".ief-row-form .field-name-field-call-to-action-setting select"));
-
-		$('.content-cta-second #edit-field-content-units-und-entities-0-form-field-enable-second-cta-und').change(function() {
-			if ($(this).prop("checked")) {
-				$('.content-cta-second-body').show();
-				$('.content-cta-second').addClass("cta-edit-active");
-			} else {
-				$('.content-cta-second-body').hide();
-				$('.content-cta-second').removeClass("cta-edit-active");
-			}
-		});
-
-
+		contentctasecond.apply($(".ief-row-form .field-name-field-second-cta-setting select"));
+		$(".ief-row-form .field-name-field-second-cta-setting select").change(contentctasecond);
 
 	});
 
