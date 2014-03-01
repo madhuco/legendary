@@ -1,73 +1,75 @@
-@mixin themes-legendary($element: '.themes-legendary', $black: false, $drupal: true) {
+@mixin themes-legendary($element: ".themes-legendary", $black: false, $drupal: true) {
+	@include typepacks-legendary($element: $element);
+	@include styles-cta-extrude;
 
-@include typepacks-legendary($element: $element);
-@include styles-cta-extrude();
-
-.masthead {
-@include bgcolor-3d-primary;
-}
-
-.masthead a {
-	@include scheme-shadow;	
-	border: 1px solid transparent;
-	text-align:center;
-	@extend %vr-spacer-box;
-	
-	&:hover {
-		@include bgcolor-3d-primary($c-primary-switch:true);
+	.masthead {
+		@include bgcolor-3d-primary;
 	}
-	} // Close masthead a
 
-@include styles-minimal-buttons('.masthead [class*="tap-btn"]');
+	.masthead a {
+		@include scheme-shadow;
+		border: 1px solid transparent;
+		text-align: center;
+		@extend %vr-spacer-box;
 
-.role-lead-intro.unit-leader {
-@include bg-full-width;
-@include bgcolor-3d-secondary();
-}
-
-.cta-outro {
-	@include bgcolor-3d-primary;
-}
-
-
-[class*=tapazine] .cta-outro {
-padding-left: 6.5%;
-	padding-right: 6.5%;
-	margin-right: -6.5%;
-}
-
-.cta-outro .cta {
-	@extend %t-cta-secondary;
-	@include bonbon($c-accent); 
-}
-
-
-.cta-intro .cta {
-	@extend %t-cta-primary; 
-	@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
-	@include shadow;
-}
-
-
-.unit-link.cta {
-	@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
-}
-
-
-.rs-slider {
-	.unit-title {
-		@extend %t-title-3;
-		@extend %vr-title-5;
-		color:white;
+		&:hover {
+			@include bgcolor-3d-primary($c_primary_switch: true);
+		}
 	}
-	
-	.unit-intro, .unit-link {
-		@extend %t-intro-5;
-		@extend %vr-intro-5;
+	// Close masthead a
+	@include styles-minimal-buttons('.masthead [class*="tap-btn"]');
+
+	.role-lead-intro.unit-leader {
+		@include bg-full-width;
+		@include bgcolor-3d-secondary;
 	}
-		 
-} //close rs-slider
 
+	.cta-outro {
+		@include bgcolor-3d-primary;
+	}
 
+	[class*=tapazine] .cta-outro {
+		padding-left: 6.5%;
+		padding-right: 6.5%;
+		margin-right: -6.5%;
+	}
 
-} //Close Main Mixin
+	.cta-outro .cta {
+		@extend %t-cta-secondary;
+		@include bonbon($c-accent);
+	}
+
+	.cta-intro .cta {
+		@extend %t-cta-primary;
+		@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
+		@include shadow;
+	}
+
+	.cta-intro, .cta-outro {
+
+		.cta-second {
+			margin-left: 10px;
+		}
+	}
+
+	.unit-link.cta {
+		@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
+	}
+
+	.rs-slider {
+
+		.unit-title {
+			@extend %t-title-3;
+			@extend %vr-title-5;
+			color: white;
+		}
+
+		.unit-intro, .unit-link {
+			@extend %t-intro-5;
+			@extend %vr-intro-5;
+		}
+	}
+	//close rs-slider
+}
+
+//Close Main Mixin

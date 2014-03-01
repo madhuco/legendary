@@ -34,22 +34,22 @@
 
 
 		switch ($(this).val()) {
-			case 'second_cta_main':
+			case 'cta_main':
 				$(".cta-second .cta-sample-main").show();
 				$(".cta-second .cta-sample-secondary").hide();
 				$(".cta-second .cta-sample-custom").hide();
 				break;
-			case 'second_cta_secondary':
+			case 'cta_secondary':
 				$(".cta-second .cta-sample-secondary").show();
 				$(".cta-second .cta-sample-main").hide();
 				$(".cta-second .cta-sample-custom").hide();
 				break;
-			case 'second_cta_custom':
+			case 'cta_custom':
 				$(".cta-second .cta-sample-custom").show();
 				$(".cta-second .cta-sample-main").hide();
 				$(".cta-second .cta-sample-secondary").hide();
 				break;
-			case 'second_cta_none':
+			case 'cta_none':
 				$(".cta-second .cta-sample-custom").hide();
 				$(".cta-second .cta-sample-main").hide();
 				$(".cta-second .cta-sample-secondary").hide();
@@ -82,7 +82,7 @@
 
 		switch ($(this).val()) {
 
-			case "second_cta_custom":
+			case "cta_custom":
 				$('.ief-row-form .cta-second .content-cta-custom-fields').show();
 				$('.ief-row-form .cta-second').addClass('cta-edit-active');
 				break;
