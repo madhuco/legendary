@@ -5,26 +5,26 @@
 
 
 		switch ($(this).val()) {
-			case 'cta_main':
-				$(".cta-first .cta-sample-main").show();
-				$(".cta-first .cta-sample-secondary").hide();
-				$(".cta-first .cta-sample-custom").hide();
-				break;
-			case 'cta_secondary':
-				$(".cta-first .cta-sample-secondary").show();
-				$(".cta-first .cta-sample-main").hide();
-				$(".cta-first .cta-sample-custom").hide();
-				break;
-			case 'cta_custom':
-				$(".cta-first .cta-sample-custom").show();
-				$(".cta-first .cta-sample-main").hide();
-				$(".cta-first .cta-sample-secondary").hide();
-				break;
-			case 'cta_none':
-				$(".cta-first .cta-sample-custom").hide();
-				$(".cta-first .cta-sample-main").hide();
-				$(".cta-first .cta-sample-secondary").hide();
-				break;
+		case 'cta_main':
+			$(".cta-first .cta-sample-main").show();
+			$(".cta-first .cta-sample-secondary").hide();
+			$(".cta-first .cta-sample-custom").hide();
+			break;
+		case 'cta_secondary':
+			$(".cta-first .cta-sample-secondary").show();
+			$(".cta-first .cta-sample-main").hide();
+			$(".cta-first .cta-sample-custom").hide();
+			break;
+		case 'cta_custom':
+			$(".cta-first .cta-sample-custom").show();
+			$(".cta-first .cta-sample-main").hide();
+			$(".cta-first .cta-sample-secondary").hide();
+			break;
+		case 'cta_none':
+			$(".cta-first .cta-sample-custom").hide();
+			$(".cta-first .cta-sample-main").hide();
+			$(".cta-first .cta-sample-secondary").hide();
+			break;
 		}
 
 	}
@@ -34,26 +34,26 @@
 
 
 		switch ($(this).val()) {
-			case 'cta_main':
-				$(".cta-second .cta-sample-main").show();
-				$(".cta-second .cta-sample-secondary").hide();
-				$(".cta-second .cta-sample-custom").hide();
-				break;
-			case 'cta_secondary':
-				$(".cta-second .cta-sample-secondary").show();
-				$(".cta-second .cta-sample-main").hide();
-				$(".cta-second .cta-sample-custom").hide();
-				break;
-			case 'cta_custom':
-				$(".cta-second .cta-sample-custom").show();
-				$(".cta-second .cta-sample-main").hide();
-				$(".cta-second .cta-sample-secondary").hide();
-				break;
-			case 'cta_none':
-				$(".cta-second .cta-sample-custom").hide();
-				$(".cta-second .cta-sample-main").hide();
-				$(".cta-second .cta-sample-secondary").hide();
-				break;
+		case 'cta_main':
+			$(".cta-second .cta-sample-main").show();
+			$(".cta-second .cta-sample-secondary").hide();
+			$(".cta-second .cta-sample-custom").hide();
+			break;
+		case 'cta_secondary':
+			$(".cta-second .cta-sample-secondary").show();
+			$(".cta-second .cta-sample-main").hide();
+			$(".cta-second .cta-sample-custom").hide();
+			break;
+		case 'cta_custom':
+			$(".cta-second .cta-sample-custom").show();
+			$(".cta-second .cta-sample-main").hide();
+			$(".cta-second .cta-sample-secondary").hide();
+			break;
+		case 'cta_none':
+			$(".cta-second .cta-sample-custom").hide();
+			$(".cta-second .cta-sample-main").hide();
+			$(".cta-second .cta-sample-secondary").hide();
+			break;
 		}
 
 	}
@@ -63,15 +63,15 @@
 
 		switch ($(this).val()) {
 
-			case "cta_custom":
-				$('.ief-row-form .cta-first .content-cta-custom-fields').show();
-				$('.ief-row-form .cta-first').addClass('cta-edit-active');
-				break;
+		case "cta_custom":
+			$('.ief-row-form .cta-first .content-cta-custom-fields').show();
+			$('.ief-row-form .cta-first').addClass('cta-edit-active');
+			break;
 
-			default:
-				$('.ief-row-form .cta-first .content-cta-custom-fields').hide();
-				$('.ief-row-form .cta-first').removeClass('cta-edit-active');
-				break;
+		default:
+			$('.ief-row-form .cta-first .content-cta-custom-fields').hide();
+			$('.ief-row-form .cta-first').removeClass('cta-edit-active');
+			break;
 
 		}
 	}
@@ -82,15 +82,15 @@
 
 		switch ($(this).val()) {
 
-			case "cta_custom":
-				$('.ief-row-form .cta-second .content-cta-custom-fields').show();
-				$('.ief-row-form .cta-second').addClass('cta-edit-active');
-				break;
+		case "cta_custom":
+			$('.ief-row-form .cta-second .content-cta-custom-fields').show();
+			$('.ief-row-form .cta-second').addClass('cta-edit-active');
+			break;
 
-			default:
-				$('.ief-row-form .cta-second .content-cta-custom-fields').hide();
-				$('.ief-row-form .cta-second').removeClass('cta-edit-active');
-				break;
+		default:
+			$('.ief-row-form .cta-second .content-cta-custom-fields').hide();
+			$('.ief-row-form .cta-second').removeClass('cta-edit-active');
+			break;
 
 		}
 	}
@@ -133,14 +133,26 @@
 	$(document).change(function() {
 
 		//Drupal Call to Action Button
-
 		contentctafirst.apply($(".ief-row-form .field-name-field-call-to-action-setting select"));
 		$(".ief-row-form .field-name-field-call-to-action-setting select").change(contentctafirst);
 
 		contentctasecond.apply($(".ief-row-form .field-name-field-second-cta-setting select"));
 		$(".ief-row-form .field-name-field-second-cta-setting select").change(contentctasecond);
 
+
+		$(".form-type-textarea").hover(function() {
+		scrollTo(this);
+		}, function() {
+		});
+
+
 	});
+
+
+	
+
+
+
 
 
 })(jQuery);
