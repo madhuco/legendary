@@ -140,10 +140,12 @@
 		$(".ief-row-form .field-name-field-second-cta-setting select").change(contentctasecond);
 
 
-		$(".form-type-textarea").hover(function() {
-		scrollTo(this);
-		}, function() {
-		});
+
+// Fix CKeditor scrolling issue
+//		$(".form-type-textarea").hover(function() {
+//		scrollTo(this);
+//		}, function() {
+//		});
 
 
 	});
