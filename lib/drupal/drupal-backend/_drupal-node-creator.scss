@@ -10,10 +10,11 @@
     /*  Main Form Action Buttons */
     /* ***************************************** */
 
-    #edit-submit {
+    #edit-submit, #edit-save-edit-publish {
         @extend .ad-btn;
         @extend .ad-btn-green;
         text-transform: uppercase;
+        visibility: hidden;
     }
 
     #edit-save-edit {
@@ -391,7 +392,7 @@
 }
 
 /* ***************************************** */
-/*  Hide Text Formats */
+/*  Control display of certain elements */
 /* ***************************************** */
 
 .node-creator .filter-wrapper {
@@ -404,4 +405,25 @@
 
 .usergroup-administrator.node-creator .filter-wrapper {
     display: block;
+}
+
+ .node-creator.published-status-0 #edit-save-edit-publish {
+        visibility: visible;
+    }
+
+.node-creator.published-status-1 #edit-submit {
+    visibility: visible;
+}
+
+/* ***************************************** */
+/*  Unpublished Message box */
+/* ***************************************** */
+
+.messages.unpublished {
+ background-color:$offwhite;
+ margin-top:10px;   
+ text-align:center;
+
+@include ui-link($element:a, $ui-link-arrow:false);
+
 }
