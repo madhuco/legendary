@@ -10,3 +10,22 @@ z-index: 0;
 // max-width:100%;
 overflow-x:hidden;
 }
+
+@mixin fullwidth($element, $height:100px) {
+	#{$element} {
+		
+	&:after {
+		content:"";
+	position:absolute;
+	z-index:-1;
+	left:0;
+	right:0;
+	@include rem(height, $height);
+	@content;
+	}
+		
+		
+	}
+}
+
+

@@ -1,6 +1,9 @@
-@mixin themes-legendary($element: ".themes-legendary", $black: false, $drupal: true) {
+@mixin themes-legendary($element: ".themes-legendary", $black: false, $drupal: true, $expanded-bg: true, $colors: true) {
 	@include typepacks-legendary($element: $element);
 	@include styles-cta-extrude;
+
+
+@if $colors == true {
 
 	.masthead {
 		@include bgcolor-3d-primary;
@@ -17,13 +20,18 @@
 		}
 	}
 	// Close masthead a
+}
+
+
 	@include styles-minimal-buttons('.masthead [class*="tap-btn"]');
 
+
+@if $expanded-bg == true {
 	.role-lead-intro.unit-leader {
 		@include bg-full-width;
 		@include bgcolor-3d-secondary;
 	}
-
+}
 	.cta-outro {
 		@include bgcolor-3d-primary;
 	}
