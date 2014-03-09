@@ -1,7 +1,7 @@
 @mixin leader-follower-inline($element: '.leader-follower-inline' ) {
 /* ***************************************** */
 /*  Layotus: leader-follower-inline 
-Displays follower then leader with equal widths (e.g. two column layout)  */
+/* Displays the follower so it floats inline (e.g. the follower could be a photo and the leader is text. The text wraps around the photo.) */
 /* ***************************************** */
 
 	#{$element} {

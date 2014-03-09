@@ -1,3 +1,5 @@
+/*Resizes form elements such as text boxes to be easier to fill in. Changes the border colour to make them noticeable without weighing down a page.*/
+
 @mixin ui-forms($element: 'input[type="text"], input[type="password"], input[type="email"]') {
 
 #{$element} {

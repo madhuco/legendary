@@ -1,372 +1,370 @@
-@mixin typepacks-legendary($element: '.typepacks-legendary', $black: false, $drupal: true) {
-  
-// ===============================================
-// Animations
-// ===============================================
-  
-  a, button {
-	-webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;  
-  }
-  
-  
-// ===============================================
-// Role Content
-// ===============================================
-   
- .role-content {
- 
- .unit-title {
-   @extend %t-title-2;
-   @extend %vr-title-2;
-   @extend %txtcolor-darkest;
-   @extend %typeface-light;
-   text-align:center;
-}
+@mixin typepacks-legendary($element: ".typepacks-legendary", $black: false, $drupal: true) {
+	// ===============================================
+	// Animations
+	// ===============================================
 
-.page .page .unit-title {
-	  @extend %t-title-4;
-	  @extend %vr-title-4;
-     text-align:left;
-	color: $default;
-}
- 
- .unit-intro,  .unit-intro p {
-   @extend %t-intro-2;
-   @extend %vr-intro-2;
-   @extend %typeface-light;
-   @extend %txtcolor-lighter;
-   text-align:center;
-}
- 
- .unit-txt {
-   @extend %t-body-text;
-   @extend %txtcolor-default;
-   @extend %vr-body-text;
-}
-
-
-.unit-txt {
-	
-	li {
-	margin-bottom:10px;	
+	a, button {
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
 	}
-	
-	ul  ol
-	{
-	list-style-position:outside;
+	// ===============================================
+	// Role Content
+	// ===============================================
+
+	.role-content {
+
+		.unit-title {
+			@extend %t-title-2;
+			@extend %vr-title-2;
+			@extend %txtcolor-darkest;
+			@extend %typeface-light;
+			text-align: center;
+		}
+
+		.page .page .unit-title {
+			@extend %t-title-4;
+			@extend %vr-title-4;
+			text-align: left;
+			color: $default;
+		}
+
+		.unit-intro,  .unit-intro p {
+			@extend %t-intro-2;
+			@extend %vr-intro-2;
+			@extend %typeface-light;
+			@extend %txtcolor-lighter;
+			text-align: center;
+		}
+
+		.unit-txt {
+			@extend %t-body-text;
+			@extend %txtcolor-default;
+			@extend %vr-body-text;
+		}
+
+		.unit-txt {
+
+			li {
+				margin-bottom: 10px;
+			}
+
+			ul ol {
+				list-style-position: outside;
+			}
+
+			ol {
+				list-style: decimal;
+				margin-left: 20px;
+			}
+
+			strong {
+				@include typeface-medium;
+				color: $darkest;
+			}
+
+			em {
+				@include typeface-regular-italics;
+				color: $lighter;
+			}
+
+			em strong, strong em {
+				@include typeface-medium-italics;
+				color: $darkest;
+			}
+
+			pre, .code-inline {
+				font-family: "Courier New", Courier, monospace;
+				white-space: normal;
+			}
+
+			pre em {
+				font-family: "Courier New", Courier, monospace;
+				font-style: italic;
+			}
+
+			pre strong {
+				font-family: "Courier New", Courier, monospace;
+				font-weight: bold;
+			}
+
+			pre strong em, pre em strong {
+				font-family: "Courier New", Courier, monospace;
+				font-weight: bold;
+				font-style: italic;
+			}
+
+			h4 {
+				@extend %t-title-4;
+				@extend %vr-title-4;
+				color: $darker;
+				@include typeface-bold;
+			}
+
+			h5 {
+				@extend %t-title-5;
+				@extend %vr-title-5;
+				@include typeface-bold;
+			}
+
+			p {
+				@extend %t-body-text;
+				@extend %txtcolor-default;
+				@extend %vr-body-text;
+			}
+
+			a {
+				color: $link;
+				@include typeface-bold;
+				border-bottom: 1px dotted $link;
+			}
+
+			a:hover {
+				color: $link-hover;
+				border-bottom: 1px solid $link-hover;
+			}
+
+			p + h4 {
+				@extend %vr-section-box-top;
+			}
+
+			p + h5 {
+				@extend %vr-section-top;
+			}
+		}
+		//Close .unit-txt
+
 	}
-	
-	ol
-	{
-	list-style:decimal;
-	margin-left:20px;
-	}
-	
-	strong {
-	@include typeface-medium;
-	color: $darkest;	
-	}
-	
-	em {
-	@include typeface-regular-italics;
-	color: $lighter;	
-	}
-	
-	em strong, strong em {
-	@include typeface-medium-italics;
-	color: $darkest;
-	}
-	
-	pre, .code-inline {
-	font-family:"Courier New", Courier, monospace;	
-	white-space:normal;
-	}
-	
-	pre em {
-	font-family:"Courier New", Courier, monospace;
-	font-style:italic;
-	}
-	
-	pre strong {
-	font-family:"Courier New", Courier, monospace;
-	font-weight:bold;
+	//Close .role-content
+	// ===============================================
+	// Thumbs Support
+	// ===============================================
+
+	.role-content {
+
+		.layouts-thumbs .unit-intro {
+			margin-top: 0;
+		}
+
+		.layouts-thumbs .unit-title {
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
 	}
 
-pre strong em, pre em strong  {
-	font-family:"Courier New", Courier, monospace;
-	font-weight:bold;
-	font-style:italic;
+	@include media($mob...) {
+
+		.role-content .layouts-thumbs .unit-title, 
+		.role-content .layouts-thumbs .unit-txt,
+		.role-content .layouts-thumbs .unit-intro {
+			text-align: left;
+		}
 	}
-	
-	
-	h4 {
-	@extend %t-title-4;
-	@extend %vr-title-4;	
-	color: $darker;
-	@include typeface-bold;
+
+	.black .role-content {
+
+		.unit-title {
+			@extend %txtcolor-lightest;
+		}
+
+		.unit-txt {
+
+			strong {
+				color: $lightest;
+			}
+
+			em {
+				color: $darker;
+			}
+
+			em strong, strong em {
+				color: $lightest;
+			}
+		}
+		//Close .unit-txt
+
 	}
-		
-	h5 {
-	@extend %t-title-5;
-	@extend %vr-title-5;	
-	@include typeface-bold;
+	//Close .black .role-content
+	// ===============================================
+	// Role Lead Intro
+	// ===============================================
+
+	.role-lead-intro {
+		clear: both;
 	}
-	
-	p {
-   @extend %t-body-text;
-   @extend %txtcolor-default;
-   @extend %vr-body-text;	
+
+	.role-lead-intro {
+
+		.unit-title {
+			@extend %t-title-2;
+			@extend %txtcolor-darkest;
+			@extend %typeface-light;
+			text-align: center;
+			@extend %vr-section-top;
+		}
+
+		.unit-intro,  .unit-intro p {
+			@extend %t-intro-2;
+			@extend %vr-intro-2;
+			@extend %typeface-light;
+			@extend %txtcolor-lighter;
+			text-align: center;
+		}
 	}
-	
-	a {
-	color:$link;
-	@include typeface-bold;	
-	border-bottom:1px dotted $link;
+	//Close .role-lead-intro
+
+	.black .role-lead-intro {
+
+		.unit-title {
+			@extend %txtcolor-lightest;
+		}
+
+		.unit-intro,  .unit-intro p {
+			@extend %txtcolor-darker;
+		}
 	}
-	
-	a:hover {
-	color:$link-hover;
-	border-bottom:1px solid $link-hover;
+	//Close .role-lead-intro
+
+	@include media($tab...) {
+
+		.role-lead-intro .unit-title {
+			padding-top: 0;
+		}
 	}
-	
-	p + h4 {
-	@extend %vr-section-box-top;
+
+	@include media($desk...) {
+
+		.role-lead-intro .unit-title {
+			@include vr-title-2-desk;
+		}
 	}
-	
-	p + h5 {
-	@extend %vr-section-top;
+
+	@include media($fab...) {
+
+		.role-lead-intro .unit-title {
+			@include vr-title-2-fab;
+		}
 	}
-		
-} //Close .unit-txt
 
-} //Close .role-content
+	@include media($mob...) {
 
-
-
-.black .role-content {
-	 .unit-title {
-		   @extend %txtcolor-lightest; 
-	 }
-	
-	
-	.unit-txt {
-	strong {
-	color: $lightest;	
+		.role-lead-intro .unit-title {
+			margin-top: 10px;
+		}
 	}
-	
-	em {
-	color: $darker;	
+
+	@include media($tab...) {
+
+		.role-lead-intro .unit-title {
+			@include rem(padding-top, 30px);
+		}
 	}
-	
-	em strong, strong em {
-	color: $lightest;
+
+	@include media($desk) {
+
+		.role-lead-intro .unit-title {
+			@include rem(padding-top, 40px);
+		}
 	}
-	
-			
-} //Close .unit-txt
-} //Close .black .role-content
 
+	// ===============================================
+	// Cta Outro
+	// ===============================================
 
-// ===============================================
-// Role Lead Intro
-// ===============================================
+	.cta-outro {
+		text-align: center;
+		@extend %vr-section-box;
+		margin-bottom: 0;
 
+		p {
+			@extend %vr-breather;
+			@extend %t-cta-prompt;
+			display: block;
+			margin-bottom: 5px;
+		}
 
- .role-lead-intro {
-	clear:both; 
- }
-
-
- .role-lead-intro {
- 
- .unit-title {
-@extend %t-title-2;
- @extend %txtcolor-darkest;
- @extend %typeface-light;
- text-align:center;
- @extend %vr-section-top;
-}
- 
- .unit-intro,  .unit-intro p  {
- @extend %t-intro-2;
- @extend %vr-intro-2;
- @extend %typeface-light;
- @extend %txtcolor-lighter;
- text-align:center;
-}
-
-} //Close .role-lead-intro
-
-
-.black .role-lead-intro {
- 
- .unit-title {
- @extend %txtcolor-lightest;
-}
- 
- .unit-intro,  .unit-intro p {
- @extend %txtcolor-darker;
-}
-
-} //Close .role-lead-intro
-
-
-
-
-@include media($tab...){ 
- .role-lead-intro .unit-title {
-padding-top:0;
- }
-}
-
-@include media($desk...){ 
- .role-lead-intro .unit-title {
-@include vr-title-2-desk;
- }
-}
-
-@include media($fab...){ 
- .role-lead-intro .unit-title {
-@include vr-title-2-fab;
- }
-}
-
-
-
-@include media($mob...){ 
- .role-lead-intro .unit-title {
-margin-top:10px;
- }
-}
-
-@include media($tab...){ 
- .role-lead-intro .unit-title {
-@include rem(padding-top, 30px);	 
- }
-}
-
-
-@include media($desk){ 
- .role-lead-intro .unit-title {
-@include rem(padding-top, 40px);	 
- }
-}
-
-
-// ===============================================
-// Cta Outro
-// ===============================================
-
-.cta-outro {
-	text-align:center;
-	@extend %vr-section-box;
-	margin-bottom:0;
-	
-	p {
-	@extend %vr-breather;
-	@extend %t-cta-prompt;
-	display: block;
-	margin-bottom:5px;
+		.cta {
+			@extend %t-cta-secondary;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
-	
-	.cta {
-	@extend %t-cta-secondary;	
-	display: inline-block;
-	margin-left: auto;
-	margin-right:auto;
+	// ..cta-outro
+	// ===============================================
+	// Role Tablist
+	// ===============================================
+
+	.role-tablist-large {
+		@extend %vr-spacer;
+
+		.unit-title {
+			@extend %t-title-4;
+			color: $darkest;
+			text-align: right;
+		}
+
+		.unit-txt {
+			@extend %t-body-text;
+			color: $default;
+		}
 	}
-		
-} // ..cta-outro
 
-// ===============================================
-// Role Tablist
-// ===============================================
+	.role-tablist-large {
 
-.role-tablist-large {
-@extend %vr-spacer;
+		.unit-title {
+			color: $lightest;
+		}
+	}
+	// ===============================================
+	// Role Edit
+	// ===============================================
 
-.unit-title {
-	@extend %t-title-4;
-	color: $darkest;
-	text-align:right;
+	.role-edit {
 
-}
-	
-	.unit-txt {
+		.unit-title {
+			@extend %t-title-2;
+			margin-bottom: 0;
+			color: $lighter;
+			@include typeface-light;
+		}
+
+		.lead-title {
+			@extend %t-title-2;
+			margin-bottom: 0;
+			color: $lighter;
+			@include typeface-light;
+			text-align: center;
+			@extend %vr-section-box;
+		}
+
+		label {
+			color: $darker;
+			@extend %vr-spacer-bottom;
+			@include typeface-bold;
+		}
+	}
+	//Close .role-edit
+	// ===============================================
+	// Body Text and Links
+	// ===============================================
+
+	.wrapper {
+
+		p, label, a, textarea, input[type="text"] {
+			@extend %t-body-text;
+		}
+	}
+	//Close .wrapper
+
+	.wrapper div {
 		@extend %t-body-text;
-		color:$default;
 	}
-	
-	
-}
 
-.role-tablist-large {
-.unit-title {
-	color: $lightest;
-}
-}
-
-// ===============================================
-// Role Edit
-// ===============================================
-
-.role-edit {
-
-	.unit-title {
-	@extend %t-title-2;
-	margin-bottom:0;
-	color: $lighter;
-	@include typeface-light;
+	a {
+		text-decoration: none;
 	}
-	
-	.lead-title {
-	@extend %t-title-2;
-	margin-bottom:0;
-	color: $lighter;
-	@include typeface-light;
-	text-align:center;
-	@extend %vr-section-box;	
-	}
-	
-	label {
-	color: $darker;	
-	@extend %vr-spacer-bottom;
-	@include typeface-bold;	
-	}
-	
-	
-} //Close .role-edit
-
-
-// ===============================================
-// Body Text and Links
-// ===============================================
-
-
-.wrapper {
-p, label, a, textarea, input[type="text"] {
-	@extend %t-body-text;
-}
-} //Close .wrapper
-
-.wrapper div {
-	@extend %t-body-text;
 }
 
-a {
-text-decoration: none;	
-}
-
-
-
-
-
-
-
-
-
-
-} //Close Main Mixin
+//Close Main Mixin

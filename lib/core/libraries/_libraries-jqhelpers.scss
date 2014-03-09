@@ -1,6 +1,12 @@
 /* ***************************************** */
 /* Responsive Transition Classes  */
 /* These are used to hide elements when switching between mobile and tablet displays  */
+
+
+/*Collection of helper classes to show hide or hide elements depending on device.
+E.g. When mobhide is applied to an element, that element will be hidden on mobile. 
+These classes make use of hacks such as !important to ensure display. They are supposed to be used after jQuery has altered the display. */
+
 /* ***************************************** */
 
 $jq-top: 100px !default;

@@ -1,3 +1,6 @@
+/*Displays content in a pill like box. Useful for highlighting links or tags.*/
+
+
 @mixin ui-pills($element: '.ui-pills', $bgcolor: $crumbs, $color: #fff) {
 
 #{$element} > * {

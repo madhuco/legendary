@@ -1,3 +1,7 @@
+// Shorthand for creating media queries. Ensures Desktop queries will work with Internet Explorer.
+
+
+
 
 $media-queries: true !default;
 $media-query-free-breakpoint: 960px;

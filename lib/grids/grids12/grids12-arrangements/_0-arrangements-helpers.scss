@@ -1,2 +1,29 @@
+// Arrangements are groups of layouts designed to work with 12 column grids. It's primarily designed to group the 12 columns into 2 areas and to control how these areas are rendered on different devices.  
+
+// Within these 2 areas, there can be multi-column content. 
+
+// +++ Follower/Leader Concept
+
+// Each arrangement has a follower and a leader. The leader is the larger content area, while follower is the smaller content area.
+
+// Unlike article and aside in HTML, follower and leader do not define a semantic hierarchical relationship. They simply refer to visual size. E.g. Larger is the larger visual element, even though its contents may not always be more semantically more important the follower.
+
+// +++ Mobile Variations
+
+// Each arrangement has a mobile variation, which is stored as a separate mixin. The Combo mixin combines all these different variations and provides the appropriate media queries for each mixin. This allows the variations to be called with a single mixin. 
+
+// Depending on the device, the mobile leader may end up being the same size or even smaller than the follower.
+
+// As each device variation is stored as a mixin, they can be easily mixed and matched, by using the individual mixins instead of the combo mixins.
+
+// +++ Order of follower/leader
+
+// Each  arrangement has a leader-follower and a follower-leader mixin. Both are exactly the same, it's just the first element determines which comes first (e.g. in leader follower, the leader is display before the follower).
+
+// +++ Example
+
+// The key example would be a content shield that has a side navigation bar. The leader would be the content area, while the navigation bar would be the follower. In the leader-follower variation, the side bar is on the right. In the follower-leader variation, the sidebar is on the left.
+
+
 @import "a-leader-follower-helpers";
 @import "grids-quadro-helpers";

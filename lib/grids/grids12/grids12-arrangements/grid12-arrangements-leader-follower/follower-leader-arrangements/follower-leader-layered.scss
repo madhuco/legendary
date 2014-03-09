@@ -3,8 +3,7 @@
 @mixin follower-leader-layered($element: '.follower-leader-layered' ) {
 /* ***************************************** */
 /*  Layotus: Follower-Leader-layered 
-Leader Takes up the full width of the page.
-Follower is layered underneath it. */
+follower-leader-layered.scss arranges follower and leader into two 12 column grids that sit on top of each in horizontal fashion. 
 /* ***************************************** */
 
 	#{$element}, #{$element} > .content-leader, #{$element} > .content-follower, #{$element} > .content-footer  {

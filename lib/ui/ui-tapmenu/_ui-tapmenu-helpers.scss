@@ -1,3 +1,5 @@
+/*Creates iPhone style menus. Includes close buttons, menu buttons and fonts for headings.*/
+
 @mixin ui-tapmenu($element: '[class*="ui-tapmenu"]', $direction: right, $style: true, $number: false, $number-element: '.ui-tapmenu-numbered') {
 
 /* ***************************************** */

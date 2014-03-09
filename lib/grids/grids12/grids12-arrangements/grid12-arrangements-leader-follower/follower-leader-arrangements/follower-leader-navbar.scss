@@ -2,8 +2,10 @@
 @mixin follower-leader-navbar($element: '.follower-leader-navbar', $r: $r)  {
 /* ***************************************** */
 /*  Layotus: Follower-Leader-Nav 
-A two column layout often used to display a nav
-Follower is on the left */
+
+follower-leader-navbar.scss puts the follower into two columns.
+This is ideal for creating a wide sidebar. (The sidebar is 4 columns wide)
+
 /* ***************************************** */
 		
 	#{$element} {

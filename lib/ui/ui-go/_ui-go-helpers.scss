@@ -1,3 +1,6 @@
+/*Small arrows that are handy for making out a link or to emphasize the preferred button a user should click on.
+*/
+
 
 @mixin ui-go($element: '.ui-go') {
 #{$element}:after {

@@ -2,7 +2,8 @@
 @mixin follower-leader-sidebar($element: '.follower-leader-sidebar')  {
 /* ***************************************** */
 /*  Layotus: Follower-Leader-Sidebar 
-A two column layout often used to display a sidebar
+follower-leader-sidebar.scss puts the follower into two columns.
+This is ideal for creating a medium sized sidebar. (The sidebar is 4 columns)
 Follower is on the left */
 /* ***************************************** */
 		

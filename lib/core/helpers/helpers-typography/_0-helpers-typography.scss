@@ -1,3 +1,7 @@
+// helpers-typography & helpers-vertical-rhythm control font sizes and the spacing between elements (Vr is short for vertical rhythm). 
+
+// Both have media queries to ensure mobile font sizes are specifically adapted for mobile screens (instead of just generally resizing as in REM and EM based approaches). 
+
 @import "helpers-t-desktop";
 @import "helpers-t-fablet";
 @import "helpers-t-mobile-l";

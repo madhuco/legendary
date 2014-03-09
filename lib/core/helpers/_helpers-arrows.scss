@@ -1,3 +1,7 @@
+/*_helpers-arrows.scss makes arrow shaped buttons. They are primarily used for mobile to send the user back from a sub screen. However, they can be applied anywhere.
+
+Due to the way the CSS works, the colours are baked in. However, they can be overridden after the mixin is called.*/
+
 
 @import "compass/css3";
 @import "compass/support";

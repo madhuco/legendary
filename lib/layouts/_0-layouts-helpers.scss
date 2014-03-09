@@ -1,3 +1,35 @@
+/*Each layout is made up of 3 components which are all provided as individual mixins.
+
+Layouts mixin 
+
+This provides the main functionality of the mixin
+
+Grid Mixin
+
+This provides the grid structure of the mixin. It can often (although not always) be made of several mixins including:
+
+Mob-p - Mobile portrait version of the grid
+
+Mob-l - Mobile landscape version of the grid
+
+Fab - Fablet version of the grid
+
+Tab - Tablet version of the grid
+
+Desk - Desktop version of the grid
+
+R - Stands for responsive. It combines all the different variations (complete with media queries)  into a single mixin, allowing complex layouts to be called with just one line of code. 
+
+Styles
+
+This contains a set of default appearance related styles of the layout, such as colours and text.
+
+Combo
+
+The combo mixin brings the layout, grid and styles mixins into a single mixin. Allows an entire page to be laid out and styled with one line of code.*/
+
+
+
 @import "0-layouts-interface-helpers";
 @import "0-layouts-taptabs-helpers";
 @import "0-layouts-z-menu-helpers";

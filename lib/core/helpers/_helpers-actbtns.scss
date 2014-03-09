@@ -1,3 +1,5 @@
+ /*contains css for action buttons (e.g. Save, Delete).*/
+
 %actbtns {
 	@include rem(padding, 10px);
 	@include rem(margin-top, 5px);

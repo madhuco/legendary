@@ -1,3 +1,5 @@
+/*Highlights key pieces of information in a subtle grey box.*/
+
 @import "ui-0-globals";
 
 @mixin ui-spotbox($element: ".ui-spotbox", $style: default, $sub-class: ture) {

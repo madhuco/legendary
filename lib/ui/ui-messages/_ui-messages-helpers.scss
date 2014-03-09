@@ -1,3 +1,8 @@
+/*
+Displays error messages with a subtle animation to highlight when the user has made a mistake.
+*/
+
+
 @mixin ui-messages($element: '.ui-messages') {
 
 /* ***************************************** */

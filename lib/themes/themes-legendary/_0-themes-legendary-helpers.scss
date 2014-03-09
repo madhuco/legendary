@@ -1,4 +1,4 @@
-@mixin themes-legendary($element: ".themes-legendary", $black: false, $drupal: true, $expanded-bg: true, $colors: true) {
+@mixin themes-legendary($element: ".themes-legendary", $black: false, $drupal: true, $expanded-bg: true, $colors: true, $bonbon: true) {
 	@include typepacks-legendary($element: $element);
 	@include styles-cta-extrude;
 
@@ -32,6 +32,8 @@
 		@include bgcolor-3d-secondary;
 	}
 }
+
+
 	.cta-outro {
 		@include bgcolor-3d-primary;
 	}
@@ -44,13 +46,23 @@
 
 	.cta-outro .cta {
 		@extend %t-cta-secondary;
+	@if $bonbon == true {
 		@include bonbon($c-accent);
+	}
+	@if $bonbon == false {
+		@include bgcolor-3d-accent;
+	}	
 	}
 
 	.cta-intro .cta {
 		@extend %t-cta-primary;
+	@if $bonbon == true {		
 		@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
 		@include shadow;
+	}
+	@if $bonbon == false {
+		@include bgcolor-3d-accent;
+	}	
 	}
 
 	.cta-intro, .cta-outro {
@@ -61,7 +73,14 @@
 	}
 
 	.unit-link.cta {
+	
+	@if $bonbon == true {		
 		@include bonbon($color: $c-accent, $fx: gloss, $switch: true);
+		@include shadow;
+	}
+	@if $bonbon == false {
+		@include bgcolor-3d-accent;
+	}	
 	}
 
 	.rs-slider {

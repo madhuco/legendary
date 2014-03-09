@@ -1,3 +1,9 @@
+/*layouts-thumbs displays pages as a series of magazine style thumbnails. It's suited for an index page as it allows users to quickly get an overview of content.  
+
+On mobile it scales into a iPhone style listing menu.
+
+Documentation TO DO: Add more information, explain variable options and provide illustrated examples. */
+
 // ===============================================
 // thumbs: Layout
 // ===============================================
@@ -170,15 +176,17 @@ text-align:center;
 	
 .unit-title {
 @extend %t-pane-heading;
-@extend %vr-pane-heading;
+
 color: $darker;	
 }
 
 .unit-intro {
 @extend %t-pane-text;
-@extend %vr-pane-text;	
+
 color: $lighter;
 }
+
+
 } // Close $element
 
 

@@ -1,3 +1,6 @@
+/*
+A hidden menu that pops-up when a button is pressed. Useful for holding secondary information  or links to avoid cluttering the main screen..*/
+
 @mixin ui-popbox($element:'.ui-popbox', $bgcolor: $crumbs, $color: #fff, $direction: 'down') {
 
 %popbox {

@@ -1,3 +1,7 @@
+/*Makes a link blue and adds a left or right arrow.
+Useful for providing instructions that need direction.
+(e.g. " < Cancel without saving", "Continue >")*/
+
 @mixin ui-instruct($element: '.ui-instruct', $color: $link ) {
 
 /* ***************************************** */

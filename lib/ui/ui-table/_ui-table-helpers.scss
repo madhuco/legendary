@@ -1,3 +1,5 @@
+/*Provides a subtle grey scheme for tables, which makes them more readable. Includes fonts for headings and alternating rows*/
+
 	@import "ui-0-globals";
 
 @mixin ui-table($element: '.ui-table', $direction: right, $style: true) {

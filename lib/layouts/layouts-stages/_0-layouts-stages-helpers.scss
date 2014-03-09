@@ -1,10 +1,17 @@
+/*Displays stages in checkout.
+
+Documentation TO DO: Add more information, explain variable options and provide illustrated examples. */
+
+
+
+
 // ===============================================
 // stages: Layout
 // ===============================================
 
 @mixin layouts-stages-layout($element: '.layouts-stages-layout'){
 /* ***************************************** */
-/*  Layouts stages: Displays content in small 'tile' shapes */
+/*  Layouts stages: Shows stages in checkout */
 /* ***************************************** */
 #{$element} {
 

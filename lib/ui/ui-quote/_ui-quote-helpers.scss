@@ -1,3 +1,10 @@
+/*Displays beautiful oversized quote marks.
+
+Ideal for highlighting a pull quote on a page.
+
+Contains options for adding bars to further separate the quote for the page.
+Also options to use only an opening quote.*/
+
 
 @mixin ui-solo-quote($element: '.ui-solo-quote', $top: 0px, $margin-top: 86px) {
 

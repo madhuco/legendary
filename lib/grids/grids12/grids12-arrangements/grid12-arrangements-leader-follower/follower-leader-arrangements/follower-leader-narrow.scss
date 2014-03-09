@@ -2,8 +2,13 @@
 @mixin follower-leader-narrow($element: '.follower-leader-narrow', $r: $r)  {
 /* ***************************************** */
 /*  Layotus: Follower-Leader-Nav 
-A two column layout often used to display a nav
-Follower is on the left */
+
+follower-leader-narrow.scss puts the follower into two columns.
+This is ideal for creating a narrow sidebar. (The sidebar is 2 columns)
+
+Follower is on the left 
+
+*/
 /* ***************************************** */
 		
 	#{$element} {

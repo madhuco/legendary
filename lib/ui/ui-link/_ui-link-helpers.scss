@@ -1,3 +1,7 @@
+/*Makes links blue with options for adding arrows or a pill like rounded border to highlight the link.
+*/
+
+
 @mixin ui-link($element: '.ui-link', $color: $link, $ui-link-arrow: true, $ui-link-override: false, $ui-link-pill: false) {
 
 #{$element} {

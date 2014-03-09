@@ -1,3 +1,6 @@
+/*Weighty bullets with strong alignment. A huge improvement over the built in CSS version.*/
+
+
 @mixin ui-bullets($element: '.ui-bullets', $style: true) {
 
 #{$element} {
