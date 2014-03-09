@@ -23,8 +23,5 @@ At the moment, the framework must be imported via [Codekit](http://https://incid
 
 Creating a complex framework like this involves lots of learning and there will probably many mistakes over the way. Therefore, I see this as a 'test' framework. Once I have used it over several projects, I will probably create a new version from scratch so I can implement all the knowledge I have learnt along the way.  
 
-<<<<<<< HEAD
 In addition CSS, is undergoing some radical changes with regards to layouts, grids and images. By the time these changes become mainstream, a good chunk of this code can be streamlined and reworked for efficiency. 
-=======
-In addition CSS is undergoing some radical changes with regards to layouts, grids and images. By the time these changes become mainstream, a good chunk of this code can be streamlined and reworked for efficiency. 
->>>>>>> 2cbd013e8efa69cef62dc8d8daec6c18c4f6b6cf
+
