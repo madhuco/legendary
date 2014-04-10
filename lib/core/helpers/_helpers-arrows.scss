@@ -7,7 +7,7 @@ Due to the way the CSS works, the colours are baked in. However, they can be ove
 @import "compass/support";
 $experimental-support-for-svg: true;
 
-@mixin arrow ($element: '.tap-btn-back', $theme: none){
+@mixin ui-arrow($element: '.tap-btn-back', $theme: none){
 #{$element} {
   $button-color-bottom: #41618d;
   $button-color-top: #99aac2;
@@ -15,7 +15,6 @@ $experimental-support-for-svg: true;
   $button-text-shadow: 0 -1px 0 #474747;
   $button-text-color: #fff;
   
-
   
   @if $theme == 'white' {
     $button-color-bottom: #cccccc;
@@ -24,7 +23,7 @@ $experimental-support-for-svg: true;
     $button-text-shadow: 0 1px 0 #fff;
     $button-text-color: #474747;
   }
-   @else if $theme == 'black' {
+   @if $theme == 'black' {
     $button-color-bottom: #111;
     $button-color-top: #444;
     $button-border-color-bottom: lighten($button-color-bottom, 60%);

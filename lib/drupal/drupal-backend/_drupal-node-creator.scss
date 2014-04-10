@@ -351,9 +351,82 @@
             }
         }
     }
+
+
+/* ***************************************** */
+/*  Site Section link */
+/* ***************************************** */
+
+.site-section-options {
+
+.form-unit {
+ clear:both;
+ @extend %vr-section;
+}
+
+.form-unit span {
+    @extend %t-body-small;
+
+}
+
+.form-unit label {
+ margin-bottom:0;
+}
+
+.form-unit input {
+ float:left;
+}
+
+.form-item-menu-description,
+.form-item-nodehierarchy-menu-links-0-description {
+    display:none;
+}
+
+.form-item-nodehierarchy-menu-links-0-menu-name {
+    display:none;
+}
+
+.pane-title {
+    display:none;
+}
+
+#edit-menu-options-attributes {
+    display:none;
+}
+
+.site-section-navigation:after {
+clear:both;
+}
+
+.site-section-navigation.form-item-menu-parent {
+display:none;
+}
+
+
+.site-section-navigation.form-item-menu-weight {
+    display:none;
+}
+
+}
 }
 
 //Close $node-creator
+
+
+.usergroup-administrator.node-creator .site-section-navigation.form-item-menu-parent {
+display:block;
+}
+
+
+.usergroup-administrator.node-creator .site-section-navigation.form-item-menu-weight {
+    display:block;
+}
+
+
+.usergroup-administrator.node-creator #edit-menu-options-attributes {
+    display:block;
+}
+
 
 .node-creator #edit-save-edit {
     // display:none;

@@ -96,6 +96,29 @@
 	}
 
 
+	function sitesection() {
+
+		switch ($(this).val()) {
+
+		case "navigation":
+			$('.site-section-navigation').show();
+			$('.site-section-subsection').hide();
+			break;
+
+		case "subpage":
+			$('.site-section-navigation').hide();
+			$('.site-section-subsection').show();
+			break;
+		
+		case "nomenu":
+			$('.site-section-navigation').hide();
+			$('.site-section-subsection').hide();
+			break;
+		}
+
+	}
+
+
 
 	$(document).ready(function() {
 
@@ -127,6 +150,25 @@
 		introctafirst.apply($(".cta-first .form-type-select select"));
 		introctasecond.apply($(".cta-second .form-type-select select"));
 
+		$('#edit-menu-enabled').prop('checked', true);
+		$('.site-section-navigation .form-wrapper').show();
+		$('.site-section-navigation .form-type-checkbox').hide();
+		
+		$('.site-section-subsection #edit-nodehierarchy-menu-links-0-enabled').prop('checked', true);
+		$('.site-section-subsection .form-item-nodehierarchy-menu-links-0-enabled').hide();
+
+		$(".node-creator .form-unit input").change(sitesection);
+		sitesection.apply($(".node-creator .form-unit input"));
+
+
+    $("#edit-field-title-und-0-value").change(function() {                  // When the email is changed
+  if( $('#site-section-options #edit-menu-link-title').val().length === 0 ) {
+        $('#site-section-options #edit-menu-link-title').val(this.value);   // copy it over to the mail
+  }
+    });
+
+
+
 	});
 
 
@@ -141,17 +183,17 @@
 
 
 
-// Fix CKeditor scrolling issue
-//		$(".form-type-textarea").hover(function() {
-//		scrollTo(this);
-//		}, function() {
-//		});
-
-
+		// Fix CKeditor scrolling issue
+		//		$(".form-type-textarea").hover(function() {
+		//		scrollTo(this);
+		//		}, function() {
+		//		});
 	});
 
 
-	
+
+
+
 
 
 
