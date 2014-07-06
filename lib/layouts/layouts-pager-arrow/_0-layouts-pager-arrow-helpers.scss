@@ -131,7 +131,9 @@ Documentation TO DO: Add more information, explain variable options and provide 
 
 .pager a {
 	width:100%;
-	display:block;
+	position: absolute;
+	height:100%;
+	left:0;
 	padding:0 10px;
 }
 

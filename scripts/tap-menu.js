@@ -21,10 +21,7 @@
 
 	$(function() {
 		"use strict";
-
-
-
-		$(document).on('click', '.anchor', function() {
+		$('body').on('click', '.anchor', function() {
 
 			$('.ui-tapmenu').removeClass("animated bounceInDown");
 			$('.ui-tapmenu').hide();

@@ -325,7 +325,7 @@
 
 		.unit-title {
 			@extend %t-title-2;
-			margin-bottom: 0;
+			@extend %vr-title-2;
 			color: $lighter;
 			@include typeface-light;
 		}

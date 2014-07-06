@@ -17,6 +17,21 @@ Documentation TO DO: Add more information and explain variable options*/
   content: "";
   display: table;
   clear: both;
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li a {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
 }
 
 }

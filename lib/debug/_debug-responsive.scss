@@ -1,0 +1,45 @@
+@include media($mob-p...) {
+
+	body {
+		background: pink;
+	}
+}
+
+@include media($mini...) {
+
+	body {
+		background: grey;
+	}
+}
+
+
+@include media($mob-l...) {
+
+	body {
+		background: yellow;
+	}
+}
+
+
+@include media($fab...) {
+
+	body {
+		background: blue;
+	}
+}
+
+
+@include media($tab...) {
+
+	body {
+		background: green;
+	}
+}
+
+
+@include media($desk...) {
+
+	body {
+		background: red;
+	}
+}

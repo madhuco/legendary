@@ -1,4 +1,5 @@
 .node-creator {
+
     /* Ad Btn (Admin Btn)   */
     @include actbtns($element: ".ad-btn", $extend: false);
     @include ui-link($element: ".action-link", $ui_link_arrow: false, $ui_link_pill: true);
@@ -14,7 +15,10 @@
         @extend .ad-btn;
         @extend .ad-btn-green;
         text-transform: uppercase;
-        visibility: hidden;
+    }
+
+    #edit-save-edit-publish {
+        display:none;
     }
 
     #edit-save-edit {
@@ -316,6 +320,8 @@
         .cta-edit-active {
             margin-top: 40px;
         }
+
+
     }
     /* ***************************************** */
     /*   Call to Action (Intro) */
@@ -500,3 +506,4 @@ display:block;
 @include ui-link($element:a, $ui-link-arrow:false);
 
 }
+
